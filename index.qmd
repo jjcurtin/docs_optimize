@@ -1,0 +1,5 @@
+# Preface {.unnumbered}
+
+This is the project manual for John Curtin's Optimize grant.
+
+Analysis code is located in the [proj_optimize repo](https://github.com/jjcurtin/proj_optimize) (private). John will grant access on an as-needed basis.

@@ -1,0 +1,34 @@
+project:
+  type: book
+
+book:
+  title: "Project Manual - Optimize"
+  author: "JJCurtin & SEWanta"
+  date: "11/5/2025"
+  chapters:
+    - index.qmd
+    - overview.qmd
+    - part: method.qmd
+      chapters: 
+        - lab_notebook.qmd  
+        - measures.qmd
+        - prism.qmd
+    - part: admin.qmd
+      chapters:         
+        - qualtrics_links.qmd
+        - sops.qmd
+
+    
+    
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  # pdf:
+  #   documentclass: scrreprt
+
+
+

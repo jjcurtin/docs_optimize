@@ -1,0 +1,12 @@
+# Lab Notebook
+
+This is a running record of decisions made for the execution of this project
+
+## To Do
+
+* finalize prism documentation
+* move docker from docs arc?
+
+
+
+## Meeting Notes
