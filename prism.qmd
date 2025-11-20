@@ -10,6 +10,10 @@ Some PRISM configurations are not yet fully set up for running the live study. T
 
 1. Move or Copy: config, api, data files to S:
    * Discuss with JC & CM: pros/cons of having resources at least briefly live on the local VM. System wont fail if RD goes down or authentication fails, etc. The "master" copy would still be on S: (updated from the VM by a #x daily PRISM copy task)
+   * Data copy needs to go 2 directions if any task is updating data files on the S: drive
+   * Move current server folder (colin_test_upload) to data_raw
+2. Finish find_locations.R and enact as task
+
 2. Config RD api to use a service account or my account
 3. Replace nGrok with a UW webserver??
    * nGrok will need cybersecurity review if we don't go with the local server option
@@ -50,6 +54,7 @@ Notes:
 
 * The server must be restarted if any changes are made to api, config, etc files. 
 * It also must be restarted after the computer is rebooted (ie, for windows updates)
+* If you eliinate `-m prod` from the second command, it starts the server in test mode (does not actually send mesages)
 
 
 ## To start the PRISM "GUI"
@@ -63,10 +68,36 @@ Open a command prompt window (nb: cannot use git bash) and enter the following c
 The following is the map of menu items on the GUI home page. At the bottom of the home page is the command-line interface: `prism> >`. To execute these commands in PRISM you will type the command at that prompt
 
 ### help (recommended):  Help
+
+* readme - General info on using PRISM, especially for using commands. It notes that all commands are also accessible just by traversing the menu.
+* general - Not much here, mostly just defining PRISM and pointing to other documentation
+* ra - Documentation for research assistants.
+   * start
+   * navigation
+   * navigation advanced
+   * terminals
+   * task management
+   * participant management
+* dev - Developer documentation
+   * start - Getting started
+   * architecure - PRISM architecture overview
+   * backend - PRISM backend logic
+   * server - PRISM server and API endpoints
+   *ui - PRISM user interface
+   * qualtrics - Qualtrics user interface
+   
+
 ### command: Global Command Menu
+
+This lists all the commands that are available. You can use any of these from any menu, so we'll probably develop SOPs that use these instead of having RAs navigate the menu?
+
 ### assistant: PRISM Assistant
+
 ### check: System Status and Diagnostics
+
 ### tasks (recommended): Manage System Tasks/R Scripts
+
+This will showyou the rn status of tasks, for eaxample:
 
 a.	1: CHECK_SYSTEM @ 05:00:00 - Run Today: True
 b.	2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True
@@ -74,9 +105,27 @@ c.	3: PULLDOWN_QUALTRICS_DATA @ 05:35:00 - Run Today: True
 d.	4: RUN_R_SCRIPT @ 05:40:00 test2.R - Run Today: True
 
 ### participants (recommended): Manage Participants
+
+At the top of this page it lists active participants (NEED TO TEST: MAX DISPLAYED?)
+
+* add - Add a participant
+* schedule - Get participant task schedule
+* refresh - Full participant refresh from csv
+* announcement - Send study announcement
+* remove - Remove a participant
+* access - Access participant data
+* sort - Sort participants. It lists the default sort currently in use which is usualy unique_id
+* filter - Filter participants
+
 ### logs : View Logs
+
+
 ### settings: Settings
+
+
 ### shutdown: Shutdown PRISM
+
+
 ### exit:  Exit PRISM User Interface
 
 
