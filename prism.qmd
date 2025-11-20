@@ -83,7 +83,7 @@ The following is the map of menu items on the GUI home page. At the bottom of th
    * architecure - PRISM architecture overview
    * backend - PRISM backend logic
    * server - PRISM server and API endpoints
-   *ui - PRISM user interface
+   * ui - PRISM user interface
    * qualtrics - Qualtrics user interface
    
 
@@ -93,11 +93,19 @@ This lists all the commands that are available. You can use any of these from an
 
 ### assistant: PRISM Assistant
 
+This command runs a LLM instance to let users ask how-to questions in natural language.
+
+I'm not convinced of the utility of this - especially since it answers in single line responses that are cleared after only a few seconds and replaced by the next line, so hard to read even for me - not really helpful if I'm trying to write down the sequence of commands it is telling me!
+
 ### check: System Status and Diagnostics
+
+Tells you the mode in which it's currently running and the uptime. One submenu command:
+
+* Diagnostics - gives either a failure or success message (SW TO TEST: get it to fail and see what a failure message looks like.)
 
 ### tasks (recommended): Manage System Tasks/R Scripts
 
-This will showyou the rn status of tasks, for eaxample:
+This will show you the run status of tasks, for eaxample:
 
 a.	1: CHECK_SYSTEM @ 05:00:00 - Run Today: True
 b.	2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True
@@ -106,16 +114,27 @@ d.	4: RUN_R_SCRIPT @ 05:40:00 test2.R - Run Today: True
 
 ### participants (recommended): Manage Participants
 
-At the top of this page it lists active participants (NEED TO TEST: MAX DISPLAYED?)
+At the top of this page it lists active participants (SW NEED TO TEST: MAX DISPLAYED VS SCROLL?)
 
-* add - Add a participant
-* schedule - Get participant task schedule
+* add - Add a participant. Wil prompt you for the following: (SW ASK: ARE THESE IN CENTRAL TIME). SW NB I am hoping to replace this workflow by an automatic update to the participants.csv file.
+  * First name
+  * Last name
+  * Unique ID: This is a 9 digit number. For opt study we will be using subids in the 3000-3999 range, so you will need to prefix this by 5 0's.
+    * I note one problem: When you mistype, you have no opportunity to correct. There should be a double entry confirmation.
+    * If you type an invalid id (too few or too many digits), it auto-assigns one instead of letting you correct.
+  * On study? (y/n, default is n)
+  * Phone number (press enter to skip)
+  * EMA time (HH:MM:SS) - default is  8:00:00
+  * EMA reminder time (HH:MM:SS) - default is 08:15:00
+  * Feedback time (HH:MM:SS) - default is 18:00:00
+  * Feedback reminder time (HH:MM:SS) - default is 18:15:00
+* schedule - Get participant task schedule. This shows the participant task schedule
 * refresh - Full participant refresh from csv
 * announcement - Send study announcement
 * remove - Remove a participant
 * access - Access participant data
 * sort - Sort participants. It lists the default sort currently in use which is usualy unique_id
-* filter - Filter participants
+* filter - Filter participants. 
 
 ### logs : View Logs
 
