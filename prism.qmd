@@ -1,3 +1,273 @@
-# PRISM
+# STAR System Backend: PRISM
 
+PRISM is a system created by CM, a data science student in our lab. It is essentially an automated task scheduling system. In our implementation it will be used to automated data retrieval, processeing and participant messaging pipelines. 
+
+For ease of use, CM has crafted a command line style "GUI". It's not a GUI where you can point and click, but it displays helpful textual information in a menu-like format, with the command line instruction you can type for each "task" that you might need to perform in PRISM.
+
+
+## TO DO
+Some PRISM configurations are not yet fully set up for running the live study. These items need to be fixed/changed:
+
+1. Move or Copy: config, api, data files to S:
+   * Discuss with JC & CM: pros/cons of having resources at least briefly live on the local VM. System wont fail if RD goes down or authentication fails, etc. The "master" copy would still be on S: (updated from the VM by a #x daily PRISM copy task)
+2. Config RD api to use a service account or my account
+3. Replace nGrok with a UW webserver??
+   * nGrok will need cybersecurity review if we don't go with the local server option
+   * Need to ask JGov but this depends on me better understanding it. Need to walk through config with CM as it's currently a personal account. Less opportunity for user error because the qualtrics form would have double-entry validation for names, subids, etc.
+4. Replace hardcoded links to config files in py code with global vars (ie links_config.csv)
+5. Discuss with CM: Can we have another program update the participants.csv file rather than them being manually entered? IE we might use a session form to capture new participant information and download to that csv via the qualtrics API
+6. Ask CM: Can we move from `C:\github\prism\prism` to `C:\github\prism` for simplicity? Uncertain about the rationale for the double folder. 
+7. followmee_coords.csv:
+   * Instead of raw followmee fields it should have the places fields (geocoded address, placeID, etc)
+   * Need to document where in PRISM these are sent to be embedded in the EMA survey:
+      * It should send the placesID along with the lat/lon - both of which should be recorded with the qualtrics survey as embedded data
+      * Once the person has answered the EMA for that location, we need a mechanism to remove the location from this file. It should only be kept here until the EMA is answered. I think the solution for that would be to run find_new_places for all participants nightly; and use PRISM to build this anew from individual places files. That way, if the file also has context information (downloaded nightly from qualtrics) it will only send the newly detected or unanswerd places.
+      * If the person has no place in this file, the survey should not error, but instead give them a message that no new places were detected.
+8. in Qualtrics_js:
+   * Various files in here display an error message (in survey I think) to contact support if error. Need to edit these files to add contact info if indeed displayed to participants
+   * Note: Discuss if using Real Names, full first & last, just first, etc. Should we ask participants how they wish the system to address them?
+ 
+## Installation
+
+1. The repo holds the bulk of the code but there are additonal config and data files which are NOT saved to the repo. These will be found on S:/optimize/prism_config/
+2. Install python 3 (or higher) and all required python packages, including the pip package installer package (see requirements.txt)
+3. Update .api files with new credentials. Note that you CANNOT set up a second prod PRISM instance with existing ngrok account as you can’t have two live prods on one ngrok. If a second instance is needed (ie, not just replacing the existing instance) We could either set it up and run as a non prod test server, or add new credentials. See the "Qualtrics" section below as a new ngrok account needs to be oded in several places.
+4. R and RScript will also need to be installed to run the R script tasks 
+
+
+
+## Access to current PROD server
+Access through the win_optimize VM using the “ra” account. See Susan for more detailed login information.
+
+
+## To start the PRISM SERVER
+Open a command prompt window (nb: cannot use git bash) and enter the following commands
+
+* `cd ../../github/prism/prism/src`
+* `python run_prism.py -m prod`
+
+Notes:
+
+* The server must be restarted if any changes are made to api, config, etc files. 
+* It also must be restarted after the computer is rebooted (ie, for windows updates)
+
+
+## To start the PRISM "GUI"
+Open a command prompt window (nb: cannot use git bash) and enter the following commands
+
+* `cd ../../github/prism/prism/src`
+* `python  prism_interface.py`
+   
+## PRISM GUI
+
+The following is the map of menu items on the GUI home page. At the bottom of the home page is the command-line interface: `prism> >`. To execute these commands in PRISM you will type the command at that prompt
+
+### help (recommended):  Help
+### command: Global Command Menu
+### assistant: PRISM Assistant
+### check: System Status and Diagnostics
+### tasks (recommended): Manage System Tasks/R Scripts
+
+a.	1: CHECK_SYSTEM @ 05:00:00 - Run Today: True
+b.	2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True
+c.	3: PULLDOWN_QUALTRICS_DATA @ 05:35:00 - Run Today: True
+d.	4: RUN_R_SCRIPT @ 05:40:00 test2.R - Run Today: True
+
+### participants (recommended): Manage Participants
+### logs : View Logs
+### settings: Settings
+### shutdown: Shutdown PRISM
+### exit:  Exit PRISM User Interface
+
+
+<SW TO ADD SUBMENUS>
+
+## PRISM Code Documentation
+
+The PRISM repo runs out of `C:\github\prism\prism` on the VM.
+
+Starting in the root directory, the items are:
+
+### README.md 
+An explanatory listing of (most) the folder contents. More details on each below.
+
+* api - various api keys, will change to environment variables at some point for security purposes
+* config - Contains various configuration csv files for PRISM to work
+* data - Output for pulled-down data
+* logs - Contains transcripts and activity logs for Qualtrics surveys
+* qualtrics_js - Contains the JavaScript code used by the Qualtrics surveys to connect to the PRISM server
+* scripts- Contains R scripts used in the script pipeline (this is a task I have implemented, considering treating R scripts as tasks as well)
+* src - Contains the code for the PRISM server, interface, and system tasks
+
+### .gitignore 
+Includes the config/, data/, most of scripts/, and logs/ folders.
+
+NOTE: API folder was added by me 2025_1114. Need to make sure those credentials have not been ever committed.
+
+### .venv/
+Python environment code. NOTE: Many things in here may need to be edited if the installation moves.
+
+*	Include/ (empty)
+*	Lib/ - contains python packages required to run PRISM
+   * site-packages/ - A long list of packages 
+      * (SW ADD DETAILS HERE)
+* Scripts/ - various exe files, powershell, and batch files. 
+* .gitignore (empty)
+* pyvenv.cfg - specifies the locations of the home directory, python executable, and a couple other environmental variables. 
+
+### Api/ 
+Each of these .api files contains the credentials for that resource. 
+
+* README.md - this lists the required fields in each .api file
+* Azure.api
+* Followmee.api
+* Ngrok.api - if we want a second prod server on a separate VM we need to set up a separate ngrok account (update APIkey and the ngrok server link in here) AND the actual Qualtrics Surveys are configured to use the old ngrok account so would need to change the surveys
+* Qualtrics.api - this contains the surveyIDs as well as the API key. If we update the surveys in our account in a way that causes a new surveyID,(by copying or making new ones) this needs to be updated.
+* Research_drive.api – NB this contains a netID password, need to either use a service account use susan’s
+* Twilio.api - NB this contains a "from_number" phone number. Need to document where that number is.
+
+### Config/
+Contains csv files required to run the system
+
+* README.md - lists required fields for 4 of the below csv files (not including followmee_coords)
+* Followmee_coords.csv – this LOOKS like a raw followmee download for all participants (think gps.csv) but actually these are the coordinates of the "places" which are sent to qualtrics for the EMA. 11/14 I have tested this theory by changing from my old subid to my new one, and yes that gives me a map now - previously the EMA threw an error.
+   * CM does not have implemented the find new places script so this is not getting updated.
+* Saved_macros.txt - macro commands for the GUI to save typing. Nothing an RA would likely use.
+* Script_pipeline.csv – need further documentation on the arguments field SW ASK CM
+* Study_coordinators.csv – contains names and phone numbers of study coordinators. SW ASK CM how used
+* Study_participants.csv – contains names and phone numbers for ACTIVE participants. I removed a participant using the GUI and they were deleted. We need to think about backing up this file to S: without overwriting it, so we have a better record of historical participant EMA/feedback times.
+* System_prompt.txt – ChatGPT prompt for a staff member to ask about PRISM (using the `assistant` command on the GUI home menu)
+* System_task_schedule.csv  – names of scripts to be run along with run configs – see prism\scripts\README.md
+* Uiconfig.txt – GUI configuration optins (things like window width, color, etc)
+
+### Data/ 
+This folder needs to be on or at least copied to/from S: research drive instead
+
+* README.md – directory info as below:
+* messages – currently empty (and nothing in readme (since we arent currently generating real messages)
+* qualtrics
+   * processed
+      * filtered_qualtrics_ema_data.csv - ema answers downloaded from qualtrics
+      * filtered_qualtrics_feedback_data.csv - feedback survey "answers" downloaded from qualtrics. There re no actual answers (since no questions) but it displays the message the person gets: 
+         * It's time to view your recommendations for today.
+         * You're viewing today's recommendations again but have not acknowledged them with the button.
+         * You've already submitted the acknowledgement of your recommendations for today.
+   * raw
+      * raw_qualtrics_ema_data.csv
+      * raw_qualtrics_feedback_data.csv
+* followmee
+   * processed - currently only one file (my deviceID)
+      * {device_id}_processed_followmee_data.csv  - contains all data back to when I went on study
+   * raw - json files
+      * followmee_device_list.json - contains everyone who is currently in the followmee dashboard (although JC & CM have their tracker stopped)
+      * raw_followmee_data.json - currently only my data, and looks like only 2 days of data which is weird (I should have a 3 day history at least). NB SW ASK CM
+
+
+### Logs/
+Dated logs for each of the following
+
+* README – just a directory listing
+* Ema_logs/ - daily logs of ema activities (time opened/finished etc)
+* Feedback_logs/ - daily logs of feedback text activities (time opened/finished etc)
+* Interface_logs/ - just one test in here and it’s not mentioned in the readme – is this still needed? But it was updated today. BUT also there are no dates in here. Will that matter?
+* Transcripts/ - NB SW ask CM but I think this is a general task log, there is one for each day
+
+
+### Makefile
+Unclear if this is a note or a script. SW ASK CM
+
+* all:
+   * cd logs
+   * mkdir transcripts
+   * mkdir ema_logs
+   * mkdir feedback_logs
+   * cd ../config
+   * touch followmee_coords.csv
+   * touch script_pipeline.csv
+   * touch study_coordinators.csv
+   * touch study_participants.csv
+   * touch uiconfig.txt
+   * touch system_task_schedule.csv
+
+### Qualtrics_js/
+
+* README
+   * At the top it reads: "Note: not reimplemented yet in this version of PRISM"
+* EMA_load_logic.js - Used to determine if participant has opened/reopened/completed survey. Looks like this determines if they see “you have already completed X today” vs the full survey
+   * http://localhost:5000/EMA/access_ema/
+   * Status options?
+* EMA_request_display_coords.js
+   * It looks like the number of coordinates received are set into Embedded data here. Should probably also use this to embed the coords in each question. 
+   * // Clear default text – this is the default text of the map “question” in the ema? 
+   * fetchCoordsAndRender() – gets coordinats using GET to EMA/request_coords/
+* EMA_submit_logic.js - Sends a message to the server indicating that the participant has completed their daily ema survey
+* recommendationLoad.js - Loads the recommendations from the server and places them in Qualtrics
+   * This contains the text of that feedback question. “The most important feature relating to your lapse risk is…” NB in case we need to edit that it happens here!
+   * http://localhost:5000/feedback_survey/access_feedback/
+   * Note reads: 	// put ngrok link in Qualtrics but do not push – SW ask CM meaning?
+* recommendationSubmit.js - Sends a message to the server indicating that the participant has completed their daily feedback survey
+
+
+### Requirements.txt
+These are checks on required python packages. 
+
+Note: also need to install the PIP package manager – <pip install packagename> 
+
+* Flask==3.0.3
+* Flask-Cors==4.0.1
+* Flask-Limiter==3.8.0
+* waitress==3.0.2
+* requests==2.31.0
+* pandas==2.2.1
+* twilio==9.0.5
+* pytz==2024.1
+* pyngrok==7.2.11
+
+### scripts/
+* README - "Put R scripts in here, configure them in ../config/script_pipeline.csv and they will be run with the R script pipeline task. New functionality to run individual R scripts; place them in this directory then configure a task to be run with the script name from the perspective of this directory (e.g. test.R)" - SW ASK CM - are both instructions still valid options? Language is slighly unclear
+
+* test.R - sample test script
+* test2.R - sample test script
+
+### src/
+
+* README - explains a couple of the items below. Need to add additional documentation SW. Is also outdated (refers to tasks/ rather than task_managers/)
+* `__pycache__/` - contains 14 "compiled python files".
+   * NOTE: each of the next 3 folders contains it's own `__pycache__/` file with relevant compiled files.
+* system_tasks/
+   * README
+   * _check_system.py
+   * _pulldown_followmee_data.py
+   * -pulldown_qualtrics_data.py
+   * _push_data_to_research_drive.py
+   * _run_r_script.py
+   * _run_r_script_pipeline.py
+   * _system_task.py
+* task_managers/
+   * README
+   * _participant_manager.py
+   * _system_task_manager.py
+   * _task_manager.py
+* user_interface_menus/ - broadly, this contains the py scripts to execute the various GUI menu commands. 
+* _helper.py - Helper file for sending SMS via Twilio
+* _routes.py - This file contains every Flask route for the PRISM application. These routes are accessed by the ui or the Qualtrics interface (surveys)
+* check_loc.ps1 - powershell script, seems to be checking all of the various requirements are present
+* prism_interface.py - Connects to PRISM server on local machine port 5000, can be used to change current study data or shut down process.
+* run_prism.py - 3 notes:
+   * Runs PRISM server, serves flask app via Waitress
+   * Test mode has hot reloading for all modules meaning new modules can be added while server    
+   * Prod mode notifies coordinators about system task failures and sends sms to participants
+
+### TODO
+Notes to self about next implementations. Contents:
+
+* redirect standard error into logs
+* Security
+   * Database instead of CSV files
+   * Possible 2FA/confirmation that the correct person is receiving the message
+   * Better type checking
+
+* Considerations
+   * Is it necessary to send survey link every single time or will the text message reminder alone suffice?
+   * Reconfigure message generation as a task
 
