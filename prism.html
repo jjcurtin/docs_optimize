@@ -245,20 +245,23 @@ ul.task-list li input[type="checkbox"] {
 <h2 data-number="4.1" class="anchored" data-anchor-id="to-do"><span class="header-section-number">4.1</span> TO DO</h2>
 <p>Some PRISM configurations are not yet fully set up for running the live study. These items need to be fixed/changed:</p>
 <ol type="1">
-<li>Move or Copy: config, api, data files to S:
+<li><p>Move or Copy: config, api, data files to S:</p>
 <ul>
 <li>Discuss with JC &amp; CM: pros/cons of having resources at least briefly live on the local VM. System wont fail if RD goes down or authentication fails, etc. The “master” copy would still be on S: (updated from the VM by a #x daily PRISM copy task)</li>
+<li>Data copy needs to go 2 directions if any task is updating data files on the S: drive</li>
+<li>Move current server folder (colin_test_upload) to data_raw</li>
 </ul></li>
-<li>Config RD api to use a service account or my account</li>
-<li>Replace nGrok with a UW webserver??
+<li><p>Finish find_locations.R and enact as task</p></li>
+<li><p>Config RD api to use a service account or my account</p></li>
+<li><p>Replace nGrok with a UW webserver??</p>
 <ul>
 <li>nGrok will need cybersecurity review if we don’t go with the local server option</li>
 <li>Need to ask JGov but this depends on me better understanding it. Need to walk through config with CM as it’s currently a personal account. Less opportunity for user error because the qualtrics form would have double-entry validation for names, subids, etc.</li>
 </ul></li>
-<li>Replace hardcoded links to config files in py code with global vars (ie links_config.csv)</li>
-<li>Discuss with CM: Can we have another program update the participants.csv file rather than them being manually entered? IE we might use a session form to capture new participant information and download to that csv via the qualtrics API</li>
-<li>Ask CM: Can we move from <code>C:\github\prism\prism</code> to <code>C:\github\prism</code> for simplicity? Uncertain about the rationale for the double folder.</li>
-<li>followmee_coords.csv:
+<li><p>Replace hardcoded links to config files in py code with global vars (ie links_config.csv)</p></li>
+<li><p>Discuss with CM: Can we have another program update the participants.csv file rather than them being manually entered? IE we might use a session form to capture new participant information and download to that csv via the qualtrics API</p></li>
+<li><p>Ask CM: Can we move from <code>C:\github\prism\prism</code> to <code>C:\github\prism</code> for simplicity? Uncertain about the rationale for the double folder.</p></li>
+<li><p>followmee_coords.csv:</p>
 <ul>
 <li>Instead of raw followmee fields it should have the places fields (geocoded address, placeID, etc)</li>
 <li>Need to document where in PRISM these are sent to be embedded in the EMA survey:
@@ -268,7 +271,7 @@ ul.task-list li input[type="checkbox"] {
 <li>If the person has no place in this file, the survey should not error, but instead give them a message that no new places were detected.</li>
 </ul></li>
 </ul></li>
-<li>in Qualtrics_js:
+<li><p>in Qualtrics_js:</p>
 <ul>
 <li>Various files in here display an error message (in survey I think) to contact support if error. Need to edit these files to add contact info if indeed displayed to participants</li>
 <li>Note: Discuss if using Real Names, full first &amp; last, just first, etc. Should we ask participants how they wish the system to address them?</li>
@@ -299,6 +302,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>The server must be restarted if any changes are made to api, config, etc files.</li>
 <li>It also must be restarted after the computer is rebooted (ie, for windows updates)</li>
+<li>If you eliinate <code>-m prod</code> from the second command, it starts the server in test mode (does not actually send mesages)</li>
 </ul>
 </section>
 <section id="to-start-the-prism-gui" class="level2" data-number="4.5">
@@ -314,9 +318,31 @@ ul.task-list li input[type="checkbox"] {
 <p>The following is the map of menu items on the GUI home page. At the bottom of the home page is the command-line interface: <code>prism&gt; &gt;</code>. To execute these commands in PRISM you will type the command at that prompt</p>
 <section id="help-recommended-help" class="level3" data-number="4.6.1">
 <h3 data-number="4.6.1" class="anchored" data-anchor-id="help-recommended-help"><span class="header-section-number">4.6.1</span> help (recommended): Help</h3>
+<ul>
+<li>readme - General info on using PRISM, especially for using commands. It notes that all commands are also accessible just by traversing the menu.</li>
+<li>general - Not much here, mostly just defining PRISM and pointing to other documentation</li>
+<li>ra - Documentation for research assistants.
+<ul>
+<li>start</li>
+<li>navigation</li>
+<li>navigation advanced</li>
+<li>terminals</li>
+<li>task management</li>
+<li>participant management</li>
+</ul></li>
+<li>dev - Developer documentation
+<ul>
+<li>start - Getting started</li>
+<li>architecure - PRISM architecture overview</li>
+<li>backend - PRISM backend logic</li>
+<li>server - PRISM server and API endpoints *ui - PRISM user interface</li>
+<li>qualtrics - Qualtrics user interface</li>
+</ul></li>
+</ul>
 </section>
 <section id="command-global-command-menu" class="level3" data-number="4.6.2">
 <h3 data-number="4.6.2" class="anchored" data-anchor-id="command-global-command-menu"><span class="header-section-number">4.6.2</span> command: Global Command Menu</h3>
+<p>This lists all the commands that are available. You can use any of these from any menu, so we’ll probably develop SOPs that use these instead of having RAs navigate the menu?</p>
 </section>
 <section id="assistant-prism-assistant" class="level3" data-number="4.6.3">
 <h3 data-number="4.6.3" class="anchored" data-anchor-id="assistant-prism-assistant"><span class="header-section-number">4.6.3</span> assistant: PRISM Assistant</h3>
@@ -326,6 +352,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="tasks-recommended-manage-system-tasksr-scripts" class="level3" data-number="4.6.5">
 <h3 data-number="4.6.5" class="anchored" data-anchor-id="tasks-recommended-manage-system-tasksr-scripts"><span class="header-section-number">4.6.5</span> tasks (recommended): Manage System Tasks/R Scripts</h3>
+<p>This will showyou the rn status of tasks, for eaxample:</p>
 <ol type="a">
 <li>1: CHECK_SYSTEM @ 05:00:00 - Run Today: True</li>
 <li>2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True</li>
@@ -335,6 +362,17 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="participants-recommended-manage-participants" class="level3" data-number="4.6.6">
 <h3 data-number="4.6.6" class="anchored" data-anchor-id="participants-recommended-manage-participants"><span class="header-section-number">4.6.6</span> participants (recommended): Manage Participants</h3>
+<p>At the top of this page it lists active participants (NEED TO TEST: MAX DISPLAYED?)</p>
+<ul>
+<li>add - Add a participant</li>
+<li>schedule - Get participant task schedule</li>
+<li>refresh - Full participant refresh from csv</li>
+<li>announcement - Send study announcement</li>
+<li>remove - Remove a participant</li>
+<li>access - Access participant data</li>
+<li>sort - Sort participants. It lists the default sort currently in use which is usualy unique_id</li>
+<li>filter - Filter participants</li>
+</ul>
 </section>
 <section id="logs-view-logs" class="level3" data-number="4.6.7">
 <h3 data-number="4.6.7" class="anchored" data-anchor-id="logs-view-logs"><span class="header-section-number">4.6.7</span> logs : View Logs</h3>
