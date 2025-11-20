@@ -335,7 +335,8 @@ ul.task-list li input[type="checkbox"] {
 <li>start - Getting started</li>
 <li>architecure - PRISM architecture overview</li>
 <li>backend - PRISM backend logic</li>
-<li>server - PRISM server and API endpoints *ui - PRISM user interface</li>
+<li>server - PRISM server and API endpoints</li>
+<li>ui - PRISM user interface</li>
 <li>qualtrics - Qualtrics user interface</li>
 </ul></li>
 </ul>
@@ -346,13 +347,19 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="assistant-prism-assistant" class="level3" data-number="4.6.3">
 <h3 data-number="4.6.3" class="anchored" data-anchor-id="assistant-prism-assistant"><span class="header-section-number">4.6.3</span> assistant: PRISM Assistant</h3>
+<p>This command runs a LLM instance to let users ask how-to questions in natural language.</p>
+<p>I’m not convinced of the utility of this - especially since it answers in single line responses that are cleared after only a few seconds and replaced by the next line, so hard to read even for me - not really helpful if I’m trying to write down the sequence of commands it is telling me!</p>
 </section>
 <section id="check-system-status-and-diagnostics" class="level3" data-number="4.6.4">
 <h3 data-number="4.6.4" class="anchored" data-anchor-id="check-system-status-and-diagnostics"><span class="header-section-number">4.6.4</span> check: System Status and Diagnostics</h3>
+<p>Tells you the mode in which it’s currently running and the uptime. One submenu command:</p>
+<ul>
+<li>Diagnostics - gives either a failure or success message (SW TO TEST: get it to fail and see what a failure message looks like.)</li>
+</ul>
 </section>
 <section id="tasks-recommended-manage-system-tasksr-scripts" class="level3" data-number="4.6.5">
 <h3 data-number="4.6.5" class="anchored" data-anchor-id="tasks-recommended-manage-system-tasksr-scripts"><span class="header-section-number">4.6.5</span> tasks (recommended): Manage System Tasks/R Scripts</h3>
-<p>This will showyou the rn status of tasks, for eaxample:</p>
+<p>This will show you the run status of tasks, for eaxample:</p>
 <ol type="a">
 <li>1: CHECK_SYSTEM @ 05:00:00 - Run Today: True</li>
 <li>2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True</li>
@@ -362,16 +369,31 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="participants-recommended-manage-participants" class="level3" data-number="4.6.6">
 <h3 data-number="4.6.6" class="anchored" data-anchor-id="participants-recommended-manage-participants"><span class="header-section-number">4.6.6</span> participants (recommended): Manage Participants</h3>
-<p>At the top of this page it lists active participants (NEED TO TEST: MAX DISPLAYED?)</p>
+<p>At the top of this page it lists active participants (SW NEED TO TEST: MAX DISPLAYED VS SCROLL?)</p>
 <ul>
-<li>add - Add a participant</li>
-<li>schedule - Get participant task schedule</li>
+<li>add - Add a participant. Wil prompt you for the following: (SW ASK: ARE THESE IN CENTRAL TIME). SW NB I am hoping to replace this workflow by an automatic update to the participants.csv file.
+<ul>
+<li>First name</li>
+<li>Last name</li>
+<li>Unique ID: This is a 9 digit number. For opt study we will be using subids in the 3000-3999 range, so you will need to prefix this by 5 0’s.
+<ul>
+<li>I note one problem: When you mistype, you have no opportunity to correct. There should be a double entry confirmation.</li>
+<li>If you type an invalid id (too few or too many digits), it auto-assigns one instead of letting you correct.</li>
+</ul></li>
+<li>On study? (y/n, default is n)</li>
+<li>Phone number (press enter to skip)</li>
+<li>EMA time (HH:MM:SS) - default is 8:00:00</li>
+<li>EMA reminder time (HH:MM:SS) - default is 08:15:00</li>
+<li>Feedback time (HH:MM:SS) - default is 18:00:00</li>
+<li>Feedback reminder time (HH:MM:SS) - default is 18:15:00</li>
+</ul></li>
+<li>schedule - Get participant task schedule. This shows the participant task schedule</li>
 <li>refresh - Full participant refresh from csv</li>
 <li>announcement - Send study announcement</li>
 <li>remove - Remove a participant</li>
 <li>access - Access participant data</li>
 <li>sort - Sort participants. It lists the default sort currently in use which is usualy unique_id</li>
-<li>filter - Filter participants</li>
+<li>filter - Filter participants.</li>
 </ul>
 </section>
 <section id="logs-view-logs" class="level3" data-number="4.6.7">
