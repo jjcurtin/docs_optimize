@@ -43,6 +43,7 @@ Some PRISM configurations are not yet fully set up for running the live study. T
 ## Access to current PROD server
 Access through the win_optimize VM using the “ra” account. See Susan for more detailed login information.
 
+NOTE: Python is not installed on any other account so if you wish to use a different account that needs to be installed.
 
 ## To start the PRISM SERVER
 Open a command prompt window (nb: cannot use git bash) and enter the following commands
@@ -61,7 +62,14 @@ Notes:
 Open a command prompt window (nb: cannot use git bash) and enter the following commands
 
 * `cd ../../github/prism/prism/src`
-* `python  prism_interface.py`
+* `python prism_interface.py`
+
+## Exiting the PRISM Interface
+
+You MUST type "exit" to exit the interface when finished. Otherwise, the CPU usage will remain near 100% and it will attract the attention of the CCI process monitors.
+
+* You can leave the cmd window open. When you need to re-enter PRISM, just hit the up arrow to bring back the last command (which will be that to restart the interface)
+
    
 ## PRISM GUI
 

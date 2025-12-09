@@ -1,0 +1,59 @@
+# Literature
+
+Record of various lit searches in service of the project
+
+## Arousal/Valence
+
+2025_1130
+
+Per lab meeting: sticking with the 2 arousal/valance questions for the EMA
+
+* Pleasant/unpleasant for valance
+* But need better anchors for the arousal scale.
+
+1. Activated / Deactivated
+2. Active / Passive
+3. Sensory overload (Over alert) / Low arousal (Under-Alert)
+4. Energized / soporific [SW Note: soporific not a good word for readability!]
+5. Tense, excited / Tired, calm (double labels) 
+
+### Pediatric
+
+6. Too slow / too fast
+7. Too much energy / Lack of Energy
+8. Sleepy / Wide Awake 
+9. Excited / Calm (as midpoints around Neutral but scale extends beyond)
+
+
+### Other
+
+10. Listless, Slow / Restless, Fidgety
+11. Attentive / Inattentive
+12. Interested, Anxious / Content, Tired
+13. Affective slider (Pictorial anchors)
+14. Semantic Differential scale (multiple paired items):
+  * Relaxed-Stimulated
+  * Calm-Excited 
+  * Sluggish-Frenzied 
+  * Dull-Jittery
+  * Sleepy-Wide awake
+
+### Sources
+
+1. Posner, J.; Russell, J.A.; Peterson, B.S. The circumplex model of affect: An integrative approach to affective neuroscience, cognitive development, and psychopathology. Dev. Psychopathol. 2005, 17, 715–734 (cited in https://doi.org/10.3390/bs3030501)
+2. Wang, Yi & Huang, Zhiyi & McCane, Brendan & Neo, Phoebe. (2018). EmotioNet: A 3-D Convolutional Neural Network for EEG-based Emotion Recognition. 1-7. 10.1109/IJCNN.2018.8489715.
+3. (Blog needs citation) https://www.chronicresilienceot.com/blog/sensory-processing-systems-and-patterns
+4. Mehrabian, Albert (1980). Basic dimensions for a general psychological theory. Oelgeschlager, Gunn & Hain. pp. 39–53. ISBN 978-0-89946-004-8.
+5. Yu, Liang-Chih & Lee, Lung-Hao & Hao, Shuai & Wang, Jin & He, Yunchao & Hu, Jun & Lai, K. & Zhang, Xuejie. (2016). Building Chinese Affective Resources in Valence-Arousal Dimensions. 10.18653/v1/N16-1066.
+6. (Blog post) https://spot.com.hk/resources/arousal-level/
+7. (Blog post) https://yourtherapywithleah.co.uk/window_of_tolerance_and_emotion_regulation/
+8. Widen, Sherri & Russell, James. (2016). Children’s Scales of Pleasure and Arousal. Journal of Nonverbal Behavior. 40. 10.1007/s10919-016-0228-x.
+9. Khateeb Khan, Muhammad & Anwar, Syed & Alnowami, Majdi. (2021). Multi-Domain Feature Fusion for Emotion Classification Using DEAP Dataset. IEEE Access. 9. 12134-12142. 10.1109/ACCESS.2021.3051281.
+10. From PHQ-9 question text
+11. 
+12.Pablo Roca, Carmelo VÃzquez, Daniel Onde'.The Hedonic and Arousal Affect Scale (HAAS): A brief adjective checklist to assess affect states. Personality and Individual Differences, Volume 207,2023,112151,
+ISSN 0191-8869, https://doi.org/10.1016/j.paid.2023.112151. SW Note: See github repo in PDF for item selection notes
+13.  Betella, Alberto; Verschure, Paul F. M. J. (2016-02-05). "The Affective Slider: A Digital Self-Assessment Scale for the Measurement of Human Emotions". PLOS ONE. 11 (2) e0148037. Bibcode:2016PLoSO..1148037B. doi:10.1371/journal.pone.0148037. 
+14. Margaret M. Bradley, Peter J. Lang. Measuring emotion: The self-assessment manikin and the semantic differential. Journal of Behavior Therapy and Experimental Psychiatry, Volume 25, Issue 1, 1994:49-59
+
+
