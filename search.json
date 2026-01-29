@@ -84,7 +84,7 @@
     "href": "method.html#scripts",
     "title": "Methodology",
     "section": "Scripts",
-    "text": "Scripts\nThese live in the proj_optimize repo. More will be added as they are completed\nscripts_staff:\n\ndownload_qualtrics.qmd (should be reformatted as .R so can be automated)\ncreate_bulk_guid.qmd\nformat_nda_data.qmd\n\nformat_nda_templates.R (helper script for above)\n\n\nscripts_prism:\n\nfind_new_locations.R",
+    "text": "Scripts\nThese live in the proj_optimize repo. More will be added as they are completed\nscripts_staff: (note, automation scripts need to be moved to an “automation” folder directly under the main projec folder to run)\n\ndaily_download_opt.R\ntask_sceulter_opt.R\ndownload_qualtrics.qmd (should be reformatted as .R so can be automated)\ncreate_bulk_guid.qmd\nformat_nda_data.qmd\n\nformat_nda_templates.R (helper script for above)\n\n\nscripts_prism:\n\nfind_new_locations_opt.R",
     "crumbs": [
       "Methodology"
     ]
