@@ -94,7 +94,7 @@
     "href": "method.html#prism",
     "title": "Methodology",
     "section": "PRISM",
-    "text": "PRISM\nInput:\n\nSee csv files listed here - NB these can be updated from script OR manually\n\nOutput:\n\nEMA messages linkin to a qualtrics survey with location questions\nSee csv files listed here",
+    "text": "PRISM\nInput:\n\nSee csv files listed here - NB these can be updated from script OR manually\n\nOutput:\n\nEMA messages linked to a qualtrics survey with location questions\nSee csv files listed here",
     "crumbs": [
       "Methodology"
     ]
