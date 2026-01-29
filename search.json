@@ -212,5 +212,71 @@
     "crumbs": [
       "Administration"
     ]
+  },
+  {
+    "objectID": "sops.html",
+    "href": "sops.html",
+    "title": "6  SOPS",
+    "section": "",
+    "text": "6.1 Pre-enrollment SOPs",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
+    ]
+  },
+  {
+    "objectID": "sops.html#pre-enrollment-sops",
+    "href": "sops.html#pre-enrollment-sops",
+    "title": "6  SOPS",
+    "section": "",
+    "text": "Checking screening surveys\nScheduling consent/intake visits",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
+    ]
+  },
+  {
+    "objectID": "sops.html#visit-sops",
+    "href": "sops.html#visit-sops",
+    "title": "6  SOPS",
+    "section": "6.2 Visit SOPs",
+    "text": "6.2 Visit SOPs\n\nConsent/Intake Visit\nMidstudy Visit\nFinal Visit & Exit Interview\nRescheduling Instructions",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
+    ]
+  },
+  {
+    "objectID": "sops.html#data-sops",
+    "href": "sops.html#data-sops",
+    "title": "6  SOPS",
+    "section": "6.3 Data SOPs",
+    "text": "6.3 Data SOPs\n\nPRISM\n\n\nOnboarding\nUpdating\n\n\nFollowMee onboarding\n\n\nOnboarding\nUpdating\n\n\nStudy termnination/offboarding\nAdherence\nData integrity",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
+    ]
+  },
+  {
+    "objectID": "sops.html#administration-sops",
+    "href": "sops.html#administration-sops",
+    "title": "6  SOPS",
+    "section": "6.4 Administration SOPs",
+    "text": "6.4 Administration SOPs\n\nOncore\nParticipant payments\nCT oversight",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
+    ]
+  },
+  {
+    "objectID": "sops.html#participant-communication-sops-templates",
+    "href": "sops.html#participant-communication-sops-templates",
+    "title": "6  SOPS",
+    "section": "6.5 Participant communication SOPs & Templates",
+    "text": "6.5 Participant communication SOPs & Templates\n\nOnboarding\nTech troubleshootng\nReschedulng\nPayment\nAdherence",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
+    ]
   }
 ]
