@@ -175,8 +175,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#data-pipeline-overview" id="toc-data-pipeline-overview" class="nav-link active" data-scroll-target="#data-pipeline-overview">Data Pipeline Overview</a></li>
+  <li><a href="#qualtrics-forms" id="toc-qualtrics-forms" class="nav-link" data-scroll-target="#qualtrics-forms">Qualtrics forms</a>
+  <ul class="collapse">
+  <li><a href="#participant-facing" id="toc-participant-facing" class="nav-link" data-scroll-target="#participant-facing">Participant facing</a></li>
+  <li><a href="#ra-facing" id="toc-ra-facing" class="nav-link" data-scroll-target="#ra-facing">RA facing:</a></li>
+  </ul></li>
+  <li><a href="#followmee" id="toc-followmee" class="nav-link" data-scroll-target="#followmee">FollowMee</a></li>
+  <li><a href="#scripts" id="toc-scripts" class="nav-link" data-scroll-target="#scripts">Scripts</a></li>
+  <li><a href="#prism" id="toc-prism" class="nav-link" data-scroll-target="#prism">PRISM</a></li>
+  <li><a href="#nda-guid-tool" id="toc-nda-guid-tool" class="nav-link" data-scroll-target="#nda-guid-tool">NDA GUID tool</a></li>
+  <li><a href="#oncore" id="toc-oncore" class="nav-link" data-scroll-target="#oncore">OnCore</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -201,8 +217,112 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This section contains methodological information for the study.</p>
+<p>TO DISCUSS: * PRISM vs task scheduler to run R scripts? * Raw data storage: subid level or aggregate (the latter is needed for PRISM)</p>
+<section id="data-pipeline-overview" class="level2">
+<h2 class="anchored" data-anchor-id="data-pipeline-overview">Data Pipeline Overview</h2>
+<p>Data collection:</p>
+<ol type="1">
+<li>Qualtrics forms</li>
+<li>NDA GUID tool</li>
+<li>FollowMee</li>
+</ol>
+<p>Data manipulation for running the study:</p>
+<ol type="1">
+<li>Task scheduling script</li>
+<li>Scripts to pull &amp; clean qualtrics data</li>
+<li>Scripts to pull GPS data and create frequent location files</li>
+<li>Script to add qualtrics data to csv files for PRISM</li>
+<li>PRISM - takes script output csv files to administer qualtrics surveys (EMA &amp; Feedback)</li>
+<li>Staff scripts - adherence, payment, etc</li>
+<li>Data integrity check scripts, including those which copy data to &amp; from the PRISM VM.</li>
+</ol>
+<p>Data analysis:</p>
+<ul>
+<li>TBD</li>
+</ul>
+</section>
+<section id="qualtrics-forms" class="level2">
+<h2 class="anchored" data-anchor-id="qualtrics-forms">Qualtrics forms</h2>
+<section id="participant-facing" class="level3">
+<h3 class="anchored" data-anchor-id="participant-facing">Participant facing</h3>
+<ul>
+<li>Consent</li>
+<li>Onboard</li>
+<li>Birth data</li>
+<li>Messaging data (phone, EMA times, etc)</li>
+<li>Baseline measures</li>
+<li>Mid/end repeated measures</li>
+<li>EMA - note this is generate for each participant by PRISM</li>
+<li>Feedback</li>
+</ul>
+</section>
+<section id="ra-facing" class="level3">
+<h3 class="anchored" data-anchor-id="ra-facing">RA facing:</h3>
+<ul>
+<li>RA session form</li>
+<li>RA guid form</li>
+<li>Date log form</li>
+<li>WOG</li>
+<li>TLFB (gathered by interview)</li>
+</ul>
+</section>
+</section>
+<section id="followmee" class="level2">
+<h2 class="anchored" data-anchor-id="followmee">FollowMee</h2>
+<p>Input:</p>
+<ol type="1">
+<li>Installed with token on participant phones</li>
+<li>Administration done from web dashboard</li>
+</ol>
+<p>Output:</p>
+<ol type="1">
+<li>3-14 days of data.</li>
+<li>There will be 24x daily automated data pulls by script, saved as daily and study-longaggregate csv files (subid level vs all aggregate?).</li>
+</ol>
+</section>
+<section id="scripts" class="level2">
+<h2 class="anchored" data-anchor-id="scripts">Scripts</h2>
+<p>These live in the proj_optimize repo. More will be added as they are completed</p>
+<p>scripts_staff:</p>
+<ul>
+<li>download_qualtrics.qmd (should be reformatted as .R so can be automated)</li>
+<li>create_bulk_guid.qmd</li>
+<li>format_nda_data.qmd
+<ul>
+<li>format_nda_templates.R (helper script for above)</li>
+</ul></li>
+</ul>
+<p>scripts_prism: * find_new_locations.R</p>
+</section>
+<section id="prism" class="level2">
+<h2 class="anchored" data-anchor-id="prism">PRISM</h2>
+<p>Input:</p>
+<ol type="1">
+<li>See csv files listed <a href="https://jjcurtin.github.io/docs_optimize/prism.html#config">here</a> - NB these can be updated from script OR manually</li>
+</ol>
+<p>Output:</p>
+<ol type="1">
+<li>EMA messages linkin to a qualtrics survey with location questions</li>
+<li></li>
+</ol>
+</section>
+<section id="nda-guid-tool" class="level2">
+<h2 class="anchored" data-anchor-id="nda-guid-tool">NDA GUID tool</h2>
+<p>Input: RA batch loads CSV file pulled from Birth Data qualtrics form<br>
+Output: CSV file with GUID added for use in NDA</p>
+</section>
+<section id="oncore" class="level2">
+<h2 class="anchored" data-anchor-id="oncore">OnCore</h2>
+<p>Input:</p>
+<ul>
+<li>Participant ID information (batch upload or manual?)</li>
+<li>Participant eligibility information</li>
+<li>Participant visit information</li>
+</ul>
+<p>Output: Whatever the CT oversight group needs - Not for study data collection, although it will provide visit information</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

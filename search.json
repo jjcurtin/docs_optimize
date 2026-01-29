@@ -44,7 +44,77 @@
     "href": "method.html",
     "title": "Methodology",
     "section": "",
-    "text": "This section contains methodological information for the study.",
+    "text": "Data Pipeline Overview\nThis section contains methodological information for the study.\nTO DISCUSS: * PRISM vs task scheduler to run R scripts? * Raw data storage: subid level or aggregate (the latter is needed for PRISM)\nData collection:\nData manipulation for running the study:\nData analysis:",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#data-pipeline-overview",
+    "href": "method.html#data-pipeline-overview",
+    "title": "Methodology",
+    "section": "",
+    "text": "Qualtrics forms\nNDA GUID tool\nFollowMee\n\n\n\nTask scheduling script\nScripts to pull & clean qualtrics data\nScripts to pull GPS data and create frequent location files\nScript to add qualtrics data to csv files for PRISM\nPRISM - takes script output csv files to administer qualtrics surveys (EMA & Feedback)\nStaff scripts - adherence, payment, etc\nData integrity check scripts, including those which copy data to & from the PRISM VM.\n\n\n\nTBD",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#qualtrics-forms",
+    "href": "method.html#qualtrics-forms",
+    "title": "Methodology",
+    "section": "Qualtrics forms",
+    "text": "Qualtrics forms\n\nParticipant facing\n\nConsent\nOnboard\nBirth data\nMessaging data (phone, EMA times, etc)\nBaseline measures\nMid/end repeated measures\nEMA - note this is generate for each participant by PRISM\nFeedback\n\n\n\nRA facing:\n\nRA session form\nRA guid form\nDate log form\nWOG\nTLFB (gathered by interview)",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#followmee",
+    "href": "method.html#followmee",
+    "title": "Methodology",
+    "section": "FollowMee",
+    "text": "FollowMee\nInput:\n\nInstalled with token on participant phones\nAdministration done from web dashboard\n\nOutput:\n\n3-14 days of data.\nThere will be 24x daily automated data pulls by script, saved as daily and study-longaggregate csv files (subid level vs all aggregate?).",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#scripts",
+    "href": "method.html#scripts",
+    "title": "Methodology",
+    "section": "Scripts",
+    "text": "Scripts\nThese live in the proj_optimize repo. More will be added as they are completed\nscripts_staff:\n\ndownload_qualtrics.qmd (should be reformatted as .R so can be automated)\ncreate_bulk_guid.qmd\nformat_nda_data.qmd\n\nformat_nda_templates.R (helper script for above)\n\n\nscripts_prism: * find_new_locations.R",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#prism",
+    "href": "method.html#prism",
+    "title": "Methodology",
+    "section": "PRISM",
+    "text": "PRISM\nInput:\n\nSee csv files listed here - NB these can be updated from script OR manually\n\nOutput:\n\nEMA messages linkin to a qualtrics survey with location questions",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#nda-guid-tool",
+    "href": "method.html#nda-guid-tool",
+    "title": "Methodology",
+    "section": "NDA GUID tool",
+    "text": "NDA GUID tool\nInput: RA batch loads CSV file pulled from Birth Data qualtrics form\nOutput: CSV file with GUID added for use in NDA",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#oncore",
+    "href": "method.html#oncore",
+    "title": "Methodology",
+    "section": "OnCore",
+    "text": "OnCore\nInput:\n\nParticipant ID information (batch upload or manual?)\nParticipant eligibility information\nParticipant visit information\n\nOutput: Whatever the CT oversight group needs - Not for study data collection, although it will provide visit information",
     "crumbs": [
       "Methodology"
     ]
