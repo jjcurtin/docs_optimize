@@ -44,7 +44,7 @@
     "href": "method.html",
     "title": "Methodology",
     "section": "",
-    "text": "Data Pipeline Overview\nThis section contains methodological information for the study.\nTO DISCUSS: * PRISM vs task scheduler to run R scripts? * Raw data storage: subid level or aggregate (the latter is needed for PRISM)\nData collection:\nData manipulation for running the study:\nData analysis:",
+    "text": "Data Pipeline Overview\nThis section contains methodological information for the study.\nTO DISCUSS:\nData collection:\nData manipulation for running the study:\nData analysis:",
     "crumbs": [
       "Methodology"
     ]
