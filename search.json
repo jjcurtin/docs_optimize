@@ -54,7 +54,7 @@
     "href": "method.html#prelaunch-status",
     "title": "Methodology",
     "section": "",
-    "text": "TO DO:\n\nIRB submission\nUpdate CT.Gov office\nSet up OnCore & new Participant Payments\nData Management site initiation visit\nRecruitment plan\nSOP for fully putting someone on study using STAR\nfinal review of all implementations below",
+    "text": "TO DO:\n\nUpdate recruitment documents\nIRB submission\nUpdate CT.Gov office\nUpdate website\nSet up OnCore & new Participant Payments\nData Management site initiation visit\nRecruitment plan\nSOP for fully putting someone on study using STAR\nfinal review of all implementations below",
     "crumbs": [
       "Methodology"
     ]
@@ -84,7 +84,7 @@
     "href": "method.html#qualtrics-forms",
     "title": "Methodology",
     "section": "Qualtrics forms",
-    "text": "Qualtrics forms\n\nParticipant facing\n\nScreening\n\nneeds final review to ensure implementation matches finalized version\nneeds lab review\nuse responseID as screen_id which can be carried forward to consent (inserted in URL by RA)\n\nConsent\n\nneeds lab review\nwill need to be updated post-IRB change approval\nneeds forwarding to onboard survey\n\nOnboard\n\nneeds lab review\ncollects phone number and address for EMA & payment\nmay change per new participant payment regulations\nneeds forwarding to birth data survey\n\nBirth data\n\nneeds lab review\nsubid assigned here, unless decided otherwise\n\nBaseline measures\n\nneeds final review to ensure implementation matches finalized measures\nneeds lab review\nadd subid as embedded data\n\nMid/end repeated measures\n\nneeds final review to ensure implementation matches finalized measures\nneeds lab review\nadd subid as embedded data\n\n\nThe following are not finalized in qualtrics as significant revision is happening:\n\nDaily EMA\n\nMEASURE NOT FINALIZED\n\nvalence/arousal question\nadd #drinks question\nimplement flatpicker for lapse calendar date/time select\n\n\nLocation context (part of EMA after day 7)\n\nMEASURE NOT FINALIZED\nmodify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM\n\nDaily Feedback\n\nneeds update when we get final models\nmodify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM\n\n\n\n\nRA facing:\n\nRA session form\n\ncollects daily EMA times\n\nDate log form\nWOG\nTLFB (gathered by interview)\n\nNeeds calendar added and finalization of what is to be collected (only n drinks, also hours drinking, etc)\n\nExit Interview (gathered by interview)",
+    "text": "Qualtrics forms\n\nParticipant facing\n\nScreening\n\nneeds final review to ensure implementation matches finalized version\nneeds lab review\nuse responseID as screen_id which can be carried forward to consent (inserted in URL by RA)\n\nConsent\n\nneeds lab review\nwill need to be updated post-IRB change approval\nneeds forwarding to onboard survey\n\nOnboard\n\nneeds lab review\ncollects phone number and address for EMA & payment\nmay change per new participant payment regulations\nneeds forwarding to birth data survey\n\nBirth data\n\nneeds lab review\nsubid assigned here, unless decided otherwise\n\nBaseline measures\n\nneeds final review to ensure implementation matches finalized measures\n\ndo we ask about other drugs?\nits called the monthly survey\n\nneeds lab review\nadd subid as embedded data\n\nMid/end repeated measures\n\nneeds final review to ensure implementation matches finalized measures\nneeds lab review\nadd subid as embedded data\n\n\nThe following are not finalized in qualtrics as significant revision is happening:\n\nDaily EMA\n\nMEASURE NOT FINALIZED\n\nvalence/arousal question\nadd #drinks question\nimplement flatpicker for lapse calendar date/time select\n\n\nLocation context (part of EMA after day 7)\n\nMEASURE NOT FINALIZED\nmodify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM\n\nDaily Feedback\n\nneeds update when we get final models\nmodify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM\n\n\n\n\nRA facing:\n\nRA session form\n\ncollects daily EMA times\n\nDate log form\nWOG\nTLFB (gathered by interview)\n\nNeeds calendar added and finalization of what is to be collected (only n drinks, also hours drinking, etc)\n\nExit Interview (gathered by interview)",
     "crumbs": [
       "Methodology"
     ]
@@ -104,7 +104,7 @@
     "href": "method.html#scripts",
     "title": "Methodology",
     "section": "Scripts",
-    "text": "Scripts\nThese live in the proj_optimize repo. More will be added as they are completed\nautomation:\n\ntask_scheduler_opt.R - schedules R scripts to run\ndaily_download_opt.R - downloads GPS\ndownload_qualtrics.qmd (should be reformatted as .R so can be automated) - downloads survey data from qualtrics including EMA\n\npart of it will download EMA times from the RA session survey to be used by PRISM\n\n\nscripts_staff:\n\ncreate_bulk_guid.qmd - formats a dataframe downloaded from qualtrics to be used in the NDA GUID tool\nformat_nda_data.qmd - formats qualtrics data for NDA upload\n\nformat_nda_templates.R (helper script for above)\n\n\nscripts_prism:\n\nfind_new_locations_opt.R - pulls user GPS data and finds new locations to query in EMA location context questions",
+    "text": "Scripts\nThese live in the proj_optimize repo. More will be added as they are completed\nautomation:\n\ntask_scheduler_opt.R - schedules R scripts to run\ndaily_download_opt.R - downloads GPS\nmak_daily_qualtrics.R - downloads survey data from qualtrics including EMA\n\npart of it will download EMA times from the RA session survey to be used by PRISM\n\n\nscripts_staff:\n\ncreate_bulk_guid.qmd - formats a dataframe downloaded from qualtrics to be used in the NDA GUID tool\nformat_nda_data.qmd - formats qualtrics data for NDA upload\n\nformat_nda_templates.R (helper script for above)\n\n\nscripts_prism:\n\nfind_new_locations_opt.R - pulls user GPS data and finds new locations to query in EMA location context questions\n\nNEED TO ADD:\n\nJohn’s model script\nrecommendation script\nmak_payments\nchk_adherence",
     "crumbs": [
       "Methodology"
     ]
@@ -208,7 +208,29 @@
     "href": "measures.html",
     "title": "3  Measures",
     "section": "",
-    "text": "Add link to proj_opt repo",
+    "text": "3.1 Baseline Survey\nCopies of all measures can be found in the proj_optimize repo",
+    "crumbs": [
+      "Methodology",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Measures</span>"
+    ]
+  },
+  {
+    "objectID": "measures.html#baseline-survey",
+    "href": "measures.html#baseline-survey",
+    "title": "3  Measures",
+    "section": "",
+    "text": "3.1.1 ID:\n\nDemographics\nAlcohol Use History\nDSM Self-Report AUD\nWHO-Assist\nTrust ID\nTone preferences\n\n\n\n3.1.2 Repeated\n\nDrinking Motives Questionnaire for Adults (DMQ-A)\nFlourishing Measure\nGAD-7\nPHQ-9\nMultidimensional Inventory of Recovery Capital (MIRC)",
+    "crumbs": [
+      "Methodology",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Measures</span>"
+    ]
+  },
+  {
+    "objectID": "measures.html#mid-and-endpoint-repeated-measures-survey",
+    "href": "measures.html#mid-and-endpoint-repeated-measures-survey",
+    "title": "3  Measures",
+    "section": "3.2 Mid and Endpoint Repeated Measures Survey",
+    "text": "3.2 Mid and Endpoint Repeated Measures Survey\n8 & 16 weeks\nAlso TLFB (by interview)\nQualtrics:\n\nDrinking Motives Questionnaire for Adults (DMQ-A)\nTOAST Trust\nMessage Usefulness\nDigital Working Alliance Inventory (D-WAI)\nFlourishing Measure\nGAD-7\nPHQ-9\nMultidimensional Inventory of Recovery Capital (MIRC)",
     "crumbs": [
       "Methodology",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Measures</span>"
