@@ -211,7 +211,7 @@ Contains csv files required to run the system
 * Saved_macros.txt - macro commands for the GUI to save typing. Nothing an RA would likely use.
 * Script_pipeline.csv – need further documentation on the arguments field SW ASK CM
 * Study_coordinators.csv – contains names and phone numbers of study coordinators. SW ASK CM how used
-* Study_participants.csv – contains names and phone numbers for ACTIVE participants. I removed a participant using the GUI and they were deleted. We need to think about backing up this file to S: without overwriting it, so we have a better record of historical participant EMA/feedback times.
+* Study_participants.csv – contains names and phone numbers for ACTIVE participants. I removed a participant using the GUI and they were deleted. We need to think about backing up this file to S: without overwriting it, so we have a better record of historical participant EMA/feedback times.ALSO: We need to add a date-added column. Users will probably alter their EMA times over the study and we need to definitively ID when they were getting it for any given study day.
 * System_prompt.txt – ChatGPT prompt for a staff member to ask about PRISM (using the `assistant` command on the GUI home menu)
 * System_task_schedule.csv  – names of scripts to be run along with run configs – see prism\scripts\README.md
 * Uiconfig.txt – GUI configuration optins (things like window width, color, etc)

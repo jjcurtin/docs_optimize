@@ -1,3 +1,67 @@
 # SOPS
 
+TO DO:
+
+* ✓ Screening
+* Reminders & scheduling
+  - Need calendar solution
+* Session form qualtrics is script & SOP for visits
+  - Pre-visit checklist
+  - Consent needs to be revised
+* Install FollowMee instructions
+  - Android
+  - ✓ iOS
+* ✓ Administer FollowMee
+* Post-visit
+   - OnCore
+   - Create GUID
+* PRISM data updates
+* Payment
+* Compliance
+
+
+## Pre-enrollment SOPs
+
+1. Checking screening surveys
+2. Scheduling consent/intake visits
+
+
+## Visit SOPs
+
+1. Consent/Intake Visit
+2. Midstudy Visit
+3. Final Visit & Exit Interview
+4. Rescheduling Instructions
+
+
+## Data SOPs
+
+1. PRISM 
+  a. Onboarding
+  b. Updating
+2. FollowMee onboarding
+  a. Onboarding
+  b. Updating
+3. Study termnination/offboarding
+
+
+
+## Administration SOPs
+
+1. Oncore
+2. Participant payments
+3. CT oversight
+4. Adherence
+5. Data integrity
+
+## Participant communication SOPs & Templates
+
+1. Onboarding
+2. Tech troubleshootng
+3. Reschedulng
+4. Payment
+5. Adherence
+
+
+
 

@@ -2,4 +2,175 @@
 
 This section contains methodological information for the study.
 
+## PRELAUNCH STATUS
+
+### TO DO:
+* IRB submission
+* Update CT.Gov office
+* Set up OnCore & new Participant Payments
+* Data Management site initiation visit
+* Recruitment plan
+* SOP for fully putting someone on study using STAR
+* final review of all implementations below
+
+## Decisions
+* Raw data storage will be at both the subid level and aggregate
+  * both located on R drive
+* Processed data on S drive
+
+## Data Pipeline Overview
+
+Data collection:
+
+1. Qualtrics forms
+2. NDA GUID tool
+3. FollowMee
+
+Data manipulation for running the study:
+
+1. Task scheduling script
+2. Scripts to pull & clean qualtrics data
+3. Scripts to pull GPS data and create frequent location files
+4. Script to add qualtrics data to csv files for PRISM
+5. PRISM - takes script output csv files to administer qualtrics surveys (EMA & Feedback)
+6. Staff scripts - adherence, payment, etc
+7. Data integrity check scripts, including those which copy data to & from the PRISM VM.
+
+Data analysis:
+
+* TBD
+
+## Qualtrics forms
+
+### Participant facing
+
+* [Screening](https://uwmadison.co1.qualtrics.com/jfe/form/SV_eKvAYBgOhNYxjL0?practice=true)
+   - needs final review to ensure implementation matches finalized version
+   - needs lab review 
+   - use responseID as screen_id which can be carried forward to consent (inserted in URL by RA)
+* [Consent](https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?practice=true) 
+   - needs lab review
+   - will need to be updated post-IRB change approval
+   - needs forwarding to onboard survey
+* [Onboard](https://uwmadison.co1.qualtrics.com/jfe/form/SV_1NecAUeTKptN4ua?practice=true) 
+   - needs lab review
+   - collects phone number and address for EMA & payment
+   - may change per new participant payment regulations
+   - needs forwarding to birth data survey
+* [Birth data](https://uwmadison.co1.qualtrics.com/jfe/form/SV_9uCe7FPCGeHqriu?practice=true) 
+   - needs lab review
+   - subid assigned here, unless decided otherwise
+* [Baseline measures](https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?practice=true)
+   - needs final review to ensure implementation matches finalized measures
+   - needs lab review
+   - add subid as embedded data
+* [Mid/end repeated measures](https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?practice=true)
+   - needs final review to ensure implementation matches finalized measures
+   - needs lab review
+   - add subid as embedded data
+   
+The following are not finalized in qualtrics as significant revision is happening:
+
+* Daily EMA
+    - MEASURE NOT FINALIZED
+       - valence/arousal question
+       - add #drinks question
+       - implement flatpicker for lapse calendar date/time select 
+* Location context (part of EMA after day 7)
+    - MEASURE NOT FINALIZED
+    - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
+* Daily Feedback
+    - needs update when we get final models
+    - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
+
+
+
+### RA facing:
+* RA session form
+  - collects daily EMA times
+* Date log form
+* WOG
+* TLFB (gathered by interview)
+   - Needs calendar added and finalization of what is to be collected (only n drinks, also hours drinking, etc)
+* Exit Interview (gathered by interview)
+
+## FollowMee
+
+Input: 
+
+1. Installed with token on participant phones
+2. Administration done from web dashboard
+
+Output: 
+
+1. 3-14 days of data.
+2. There will be 24x daily automated data pulls by script, saved as daily and study-longaggregate csv files (subid level vs all aggregate?).
+
+## Scripts
+
+These live in the proj_optimize repo. More will be added as they are completed
+
+automation: 
+
+* task_scheduler_opt.R - schedules R scripts to run
+* daily_download_opt.R - downloads GPS
+* download_qualtrics.qmd (should be reformatted as .R so can be automated) - downloads survey data from qualtrics including EMA
+  * part of it will download EMA times from the RA session survey to be used by PRISM
+  
+scripts_staff:
+
+* create_bulk_guid.qmd - formats a dataframe downloaded from qualtrics to be used in the NDA GUID tool
+* format_nda_data.qmd - formats qualtrics data for NDA upload
+  * format_nda_templates.R (helper script for above)
+
+scripts_prism:
+
+* find_new_locations_opt.R - pulls user GPS data and finds new locations to query in EMA location context questions
+
+
+
+## PRISM
+
+Input:
+
+1. See csv files listed [here](https://jjcurtin.github.io/docs_optimize/prism.html#config) - NB these can be updated from script OR manually
+
+Output:
+
+1. EMA messages linked to a qualtrics survey with location questions
+2. See csv files listed [here](https://jjcurtin.github.io/docs_optimize/prism.html#data)
+
+
+## NDA GUID tool
+
+Input: RA batch loads CSV file pulled from Birth Data qualtrics form (Currently only Susan can do this)
+Output: CSV file with GUID added for use in NDA
+
+## OnCore
+
+Input:  
+
+* Participant ID information (batch upload or manual?) 
+* Participant eligibility information 
+* Participant visit information
+
+Output: Whatever the CT oversight group needs - Not for study data collection, although it will provide visit information
+
+
+## SOPS
+
+See [SOPs](sops.qmd)
+
+## Recruitment
+
+### Soft Launch
+* Craiglist ads in Madison/Milwaukee/Chicago
+* Possibly bulk email to UW staff & students?
+
+### Advertising
+* Craigslist
+* Reddit
+* Clinic partnerships, if we can find them
+
+
 
