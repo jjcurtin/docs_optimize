@@ -44,7 +44,27 @@
     "href": "method.html",
     "title": "Methodology",
     "section": "",
-    "text": "Data Pipeline Overview\nThis section contains methodological information for the study.\nTO DISCUSS:\nData collection:\nData manipulation for running the study:\nData analysis:",
+    "text": "PRELAUNCH STATUS\nThis section contains methodological information for the study.",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#prelaunch-status",
+    "href": "method.html#prelaunch-status",
+    "title": "Methodology",
+    "section": "",
+    "text": "TO DO:\n\nIRB submission\nUpdate CT.Gov office\nSet up OnCore & new Participant Payments\nData Management site initiation visit\nRecruitment plan\nSOP for fully putting someone on study using STAR\nfinal review of all implementations below",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#decisions",
+    "href": "method.html#decisions",
+    "title": "Methodology",
+    "section": "Decisions",
+    "text": "Decisions\n\nRaw data storage will be at both the subid level and aggregate\n\nboth located on R drive\n\nProcessed data on S drive",
     "crumbs": [
       "Methodology"
     ]
@@ -53,8 +73,8 @@
     "objectID": "method.html#data-pipeline-overview",
     "href": "method.html#data-pipeline-overview",
     "title": "Methodology",
-    "section": "",
-    "text": "Qualtrics forms\nNDA GUID tool\nFollowMee\n\n\n\nTask scheduling script\nScripts to pull & clean qualtrics data\nScripts to pull GPS data and create frequent location files\nScript to add qualtrics data to csv files for PRISM\nPRISM - takes script output csv files to administer qualtrics surveys (EMA & Feedback)\nStaff scripts - adherence, payment, etc\nData integrity check scripts, including those which copy data to & from the PRISM VM.\n\n\n\nTBD",
+    "section": "Data Pipeline Overview",
+    "text": "Data Pipeline Overview\nData collection:\n\nQualtrics forms\nNDA GUID tool\nFollowMee\n\nData manipulation for running the study:\n\nTask scheduling script\nScripts to pull & clean qualtrics data\nScripts to pull GPS data and create frequent location files\nScript to add qualtrics data to csv files for PRISM\nPRISM - takes script output csv files to administer qualtrics surveys (EMA & Feedback)\nStaff scripts - adherence, payment, etc\nData integrity check scripts, including those which copy data to & from the PRISM VM.\n\nData analysis:\n\nTBD",
     "crumbs": [
       "Methodology"
     ]
@@ -64,7 +84,7 @@
     "href": "method.html#qualtrics-forms",
     "title": "Methodology",
     "section": "Qualtrics forms",
-    "text": "Qualtrics forms\n\nParticipant facing\n\nConsent\nOnboard\nBirth data\nMessaging data (phone, EMA times, etc)\nBaseline measures\nMid/end repeated measures\nEMA - note this is generate for each participant by PRISM\nFeedback\n\n\n\nRA facing:\n\nRA session form\nRA guid form\nDate log form\nWOG\nTLFB (gathered by interview)",
+    "text": "Qualtrics forms\n\nParticipant facing\n\nScreening\n\nneeds final review to ensure implementation matches finalized version\nneeds lab review\nuse responseID as screen_id which can be carried forward to consent (inserted in URL by RA)\n\nConsent\n\nneeds lab review\nwill need to be updated post-IRB change approval\nneeds forwarding to onboard survey\n\nOnboard\n\nneeds lab review\ncollects phone number and address for EMA & payment\nmay change per new participant payment regulations\nneeds forwarding to birth data survey\n\nBirth data\n\nneeds lab review\nsubid assigned here, unless decided otherwise\n\nBaseline measures\n\nneeds final review to ensure implementation matches finalized measures\nneeds lab review\nadd subid as embedded data\n\nMid/end repeated measures\n\nneeds final review to ensure implementation matches finalized measures\nneeds lab review\nadd subid as embedded data\n\n\nThe following are not finalized in qualtrics as significant revision is happening:\n\nDaily EMA\n\nMEASURE NOT FINALIZED\n\nvalence/arousal question\nadd #drinks question\nimplement flatpicker for lapse calendar date/time select\n\n\nLocation context (part of EMA after day 7)\n\nMEASURE NOT FINALIZED\nmodify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM\n\nDaily Feedback\n\nneeds update when we get final models\nmodify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM\n\n\n\n\nRA facing:\n\nRA session form\n\ncollects daily EMA times\n\nDate log form\nWOG\nTLFB (gathered by interview)\n\nNeeds calendar added and finalization of what is to be collected (only n drinks, also hours drinking, etc)\n\nExit Interview (gathered by interview)",
     "crumbs": [
       "Methodology"
     ]
@@ -84,7 +104,7 @@
     "href": "method.html#scripts",
     "title": "Methodology",
     "section": "Scripts",
-    "text": "Scripts\nThese live in the proj_optimize repo. More will be added as they are completed\nscripts_staff: (note, automation scripts need to be moved to an “automation” folder directly under the main projec folder to run)\n\ndaily_download_opt.R\ntask_sceulter_opt.R\ndownload_qualtrics.qmd (should be reformatted as .R so can be automated)\ncreate_bulk_guid.qmd\nformat_nda_data.qmd\n\nformat_nda_templates.R (helper script for above)\n\n\nscripts_prism:\n\nfind_new_locations_opt.R",
+    "text": "Scripts\nThese live in the proj_optimize repo. More will be added as they are completed\nautomation:\n\ntask_scheduler_opt.R - schedules R scripts to run\ndaily_download_opt.R - downloads GPS\ndownload_qualtrics.qmd (should be reformatted as .R so can be automated) - downloads survey data from qualtrics including EMA\n\npart of it will download EMA times from the RA session survey to be used by PRISM\n\n\nscripts_staff:\n\ncreate_bulk_guid.qmd - formats a dataframe downloaded from qualtrics to be used in the NDA GUID tool\nformat_nda_data.qmd - formats qualtrics data for NDA upload\n\nformat_nda_templates.R (helper script for above)\n\n\nscripts_prism:\n\nfind_new_locations_opt.R - pulls user GPS data and finds new locations to query in EMA location context questions",
     "crumbs": [
       "Methodology"
     ]
@@ -104,7 +124,7 @@
     "href": "method.html#nda-guid-tool",
     "title": "Methodology",
     "section": "NDA GUID tool",
-    "text": "NDA GUID tool\nInput: RA batch loads CSV file pulled from Birth Data qualtrics form\nOutput: CSV file with GUID added for use in NDA",
+    "text": "NDA GUID tool\nInput: RA batch loads CSV file pulled from Birth Data qualtrics form (Currently only Susan can do this) Output: CSV file with GUID added for use in NDA",
     "crumbs": [
       "Methodology"
     ]
@@ -115,6 +135,26 @@
     "title": "Methodology",
     "section": "OnCore",
     "text": "OnCore\nInput:\n\nParticipant ID information (batch upload or manual?)\nParticipant eligibility information\nParticipant visit information\n\nOutput: Whatever the CT oversight group needs - Not for study data collection, although it will provide visit information",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#sops",
+    "href": "method.html#sops",
+    "title": "Methodology",
+    "section": "SOPS",
+    "text": "SOPS\nSee SOPs",
+    "crumbs": [
+      "Methodology"
+    ]
+  },
+  {
+    "objectID": "method.html#recruitment",
+    "href": "method.html#recruitment",
+    "title": "Methodology",
+    "section": "Recruitment",
+    "text": "Recruitment\n\nSoft Launch\n\nCraiglist ads in Madison/Milwaukee/Chicago\nPossibly bulk email to UW staff & students?\n\n\n\nAdvertising\n\nCraigslist\nReddit\nClinic partnerships, if we can find them",
     "crumbs": [
       "Methodology"
     ]
@@ -288,7 +328,7 @@
     "href": "sops.html",
     "title": "6  SOPS",
     "section": "",
-    "text": "6.1 Pre-enrollment SOPs",
+    "text": "6.1 Pre-enrollment SOPs\nTO DO:",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
@@ -321,7 +361,7 @@
     "href": "sops.html#data-sops",
     "title": "6  SOPS",
     "section": "6.3 Data SOPs",
-    "text": "6.3 Data SOPs\n\nPRISM\n\n\nOnboarding\nUpdating\n\n\nFollowMee onboarding\n\n\nOnboarding\nUpdating\n\n\nStudy termnination/offboarding\nAdherence\nData integrity",
+    "text": "6.3 Data SOPs\n\nPRISM\n\n\nOnboarding\nUpdating\n\n\nFollowMee onboarding\n\n\nOnboarding\nUpdating\n\n\nStudy termnination/offboarding",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
@@ -332,7 +372,7 @@
     "href": "sops.html#administration-sops",
     "title": "6  SOPS",
     "section": "6.4 Administration SOPs",
-    "text": "6.4 Administration SOPs\n\nOncore\nParticipant payments\nCT oversight",
+    "text": "6.4 Administration SOPs\n\nOncore\nParticipant payments\nCT oversight\nAdherence\nData integrity",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"

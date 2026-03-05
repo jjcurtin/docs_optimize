@@ -180,7 +180,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#data-pipeline-overview" id="toc-data-pipeline-overview" class="nav-link active" data-scroll-target="#data-pipeline-overview">Data Pipeline Overview</a></li>
+  <li><a href="#prelaunch-status" id="toc-prelaunch-status" class="nav-link active" data-scroll-target="#prelaunch-status">PRELAUNCH STATUS</a>
+  <ul class="collapse">
+  <li><a href="#to-do" id="toc-to-do" class="nav-link" data-scroll-target="#to-do">TO DO:</a></li>
+  </ul></li>
+  <li><a href="#decisions" id="toc-decisions" class="nav-link" data-scroll-target="#decisions">Decisions</a></li>
+  <li><a href="#data-pipeline-overview" id="toc-data-pipeline-overview" class="nav-link" data-scroll-target="#data-pipeline-overview">Data Pipeline Overview</a></li>
   <li><a href="#qualtrics-forms" id="toc-qualtrics-forms" class="nav-link" data-scroll-target="#qualtrics-forms">Qualtrics forms</a>
   <ul class="collapse">
   <li><a href="#participant-facing" id="toc-participant-facing" class="nav-link" data-scroll-target="#participant-facing">Participant facing</a></li>
@@ -191,6 +196,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#prism" id="toc-prism" class="nav-link" data-scroll-target="#prism">PRISM</a></li>
   <li><a href="#nda-guid-tool" id="toc-nda-guid-tool" class="nav-link" data-scroll-target="#nda-guid-tool">NDA GUID tool</a></li>
   <li><a href="#oncore" id="toc-oncore" class="nav-link" data-scroll-target="#oncore">OnCore</a></li>
+  <li><a href="#sops" id="toc-sops" class="nav-link" data-scroll-target="#sops">SOPS</a></li>
+  <li><a href="#recruitment" id="toc-recruitment" class="nav-link" data-scroll-target="#recruitment">Recruitment</a>
+  <ul class="collapse">
+  <li><a href="#soft-launch" id="toc-soft-launch" class="nav-link" data-scroll-target="#soft-launch">Soft Launch</a></li>
+  <li><a href="#advertising" id="toc-advertising" class="nav-link" data-scroll-target="#advertising">Advertising</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -217,11 +228,31 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>This section contains methodological information for the study.</p>
-<p>TO DISCUSS:</p>
+<section id="prelaunch-status" class="level2">
+<h2 class="anchored" data-anchor-id="prelaunch-status">PRELAUNCH STATUS</h2>
+<section id="to-do" class="level3">
+<h3 class="anchored" data-anchor-id="to-do">TO DO:</h3>
 <ul>
-<li>PRISM vs task scheduler to run R scripts?</li>
-<li>Raw data storage: subid level or aggregate (the latter is needed for PRISM)</li>
+<li>IRB submission</li>
+<li>Update CT.Gov office</li>
+<li>Set up OnCore &amp; new Participant Payments</li>
+<li>Data Management site initiation visit</li>
+<li>Recruitment plan</li>
+<li>SOP for fully putting someone on study using STAR</li>
+<li>final review of all implementations below</li>
 </ul>
+</section>
+</section>
+<section id="decisions" class="level2">
+<h2 class="anchored" data-anchor-id="decisions">Decisions</h2>
+<ul>
+<li>Raw data storage will be at both the subid level and aggregate
+<ul>
+<li>both located on R drive</li>
+</ul></li>
+<li>Processed data on S drive</li>
+</ul>
+</section>
 <section id="data-pipeline-overview" class="level2">
 <h2 class="anchored" data-anchor-id="data-pipeline-overview">Data Pipeline Overview</h2>
 <p>Data collection:</p>
@@ -250,24 +281,80 @@ ul.task-list li input[type="checkbox"] {
 <section id="participant-facing" class="level3">
 <h3 class="anchored" data-anchor-id="participant-facing">Participant facing</h3>
 <ul>
-<li>Consent</li>
-<li>Onboard</li>
-<li>Birth data</li>
-<li>Messaging data (phone, EMA times, etc)</li>
-<li>Baseline measures</li>
-<li>Mid/end repeated measures</li>
-<li>EMA - note this is generate for each participant by PRISM</li>
-<li>Feedback</li>
+<li><a href="https://uwmadison.co1.qualtrics.com/jfe/form/SV_eKvAYBgOhNYxjL0?practice=true">Screening</a>
+<ul>
+<li>needs final review to ensure implementation matches finalized version</li>
+<li>needs lab review</li>
+<li>use responseID as screen_id which can be carried forward to consent (inserted in URL by RA)</li>
+</ul></li>
+<li><a href="https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?practice=true">Consent</a>
+<ul>
+<li>needs lab review</li>
+<li>will need to be updated post-IRB change approval</li>
+<li>needs forwarding to onboard survey</li>
+</ul></li>
+<li><a href="https://uwmadison.co1.qualtrics.com/jfe/form/SV_1NecAUeTKptN4ua?practice=true">Onboard</a>
+<ul>
+<li>needs lab review</li>
+<li>collects phone number and address for EMA &amp; payment</li>
+<li>may change per new participant payment regulations</li>
+<li>needs forwarding to birth data survey</li>
+</ul></li>
+<li><a href="https://uwmadison.co1.qualtrics.com/jfe/form/SV_9uCe7FPCGeHqriu?practice=true">Birth data</a>
+<ul>
+<li>needs lab review</li>
+<li>subid assigned here, unless decided otherwise</li>
+</ul></li>
+<li><a href="https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?practice=true">Baseline measures</a>
+<ul>
+<li>needs final review to ensure implementation matches finalized measures</li>
+<li>needs lab review</li>
+<li>add subid as embedded data</li>
+</ul></li>
+<li><a href="https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?practice=true">Mid/end repeated measures</a>
+<ul>
+<li>needs final review to ensure implementation matches finalized measures</li>
+<li>needs lab review</li>
+<li>add subid as embedded data</li>
+</ul></li>
+</ul>
+<p>The following are not finalized in qualtrics as significant revision is happening:</p>
+<ul>
+<li>Daily EMA
+<ul>
+<li>MEASURE NOT FINALIZED
+<ul>
+<li>valence/arousal question</li>
+<li>add #drinks question</li>
+<li>implement flatpicker for lapse calendar date/time select</li>
+</ul></li>
+</ul></li>
+<li>Location context (part of EMA after day 7)
+<ul>
+<li>MEASURE NOT FINALIZED</li>
+<li>modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM</li>
+</ul></li>
+<li>Daily Feedback
+<ul>
+<li>needs update when we get final models</li>
+<li>modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM</li>
+</ul></li>
 </ul>
 </section>
 <section id="ra-facing" class="level3">
 <h3 class="anchored" data-anchor-id="ra-facing">RA facing:</h3>
 <ul>
-<li>RA session form</li>
-<li>RA guid form</li>
+<li>RA session form
+<ul>
+<li>collects daily EMA times</li>
+</ul></li>
 <li>Date log form</li>
 <li>WOG</li>
-<li>TLFB (gathered by interview)</li>
+<li>TLFB (gathered by interview)
+<ul>
+<li>Needs calendar added and finalization of what is to be collected (only n drinks, also hours drinking, etc)</li>
+</ul></li>
+<li>Exit Interview (gathered by interview)</li>
 </ul>
 </section>
 </section>
@@ -287,20 +374,26 @@ ul.task-list li input[type="checkbox"] {
 <section id="scripts" class="level2">
 <h2 class="anchored" data-anchor-id="scripts">Scripts</h2>
 <p>These live in the proj_optimize repo. More will be added as they are completed</p>
-<p>scripts_staff: (note, automation scripts need to be moved to an “automation” folder directly under the main projec folder to run)</p>
+<p>automation:</p>
 <ul>
-<li>daily_download_opt.R</li>
-<li>task_sceulter_opt.R</li>
-<li>download_qualtrics.qmd (should be reformatted as .R so can be automated)</li>
-<li>create_bulk_guid.qmd</li>
-<li>format_nda_data.qmd
+<li>task_scheduler_opt.R - schedules R scripts to run</li>
+<li>daily_download_opt.R - downloads GPS</li>
+<li>download_qualtrics.qmd (should be reformatted as .R so can be automated) - downloads survey data from qualtrics including EMA
+<ul>
+<li>part of it will download EMA times from the RA session survey to be used by PRISM</li>
+</ul></li>
+</ul>
+<p>scripts_staff:</p>
+<ul>
+<li>create_bulk_guid.qmd - formats a dataframe downloaded from qualtrics to be used in the NDA GUID tool</li>
+<li>format_nda_data.qmd - formats qualtrics data for NDA upload
 <ul>
 <li>format_nda_templates.R (helper script for above)</li>
 </ul></li>
 </ul>
 <p>scripts_prism:</p>
 <ul>
-<li>find_new_locations_opt.R</li>
+<li>find_new_locations_opt.R - pulls user GPS data and finds new locations to query in EMA location context questions</li>
 </ul>
 </section>
 <section id="prism" class="level2">
@@ -317,8 +410,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="nda-guid-tool" class="level2">
 <h2 class="anchored" data-anchor-id="nda-guid-tool">NDA GUID tool</h2>
-<p>Input: RA batch loads CSV file pulled from Birth Data qualtrics form<br>
-Output: CSV file with GUID added for use in NDA</p>
+<p>Input: RA batch loads CSV file pulled from Birth Data qualtrics form (Currently only Susan can do this) Output: CSV file with GUID added for use in NDA</p>
 </section>
 <section id="oncore" class="level2">
 <h2 class="anchored" data-anchor-id="oncore">OnCore</h2>
@@ -329,8 +421,30 @@ Output: CSV file with GUID added for use in NDA</p>
 <li>Participant visit information</li>
 </ul>
 <p>Output: Whatever the CT oversight group needs - Not for study data collection, although it will provide visit information</p>
+</section>
+<section id="sops" class="level2">
+<h2 class="anchored" data-anchor-id="sops">SOPS</h2>
+<p>See <a href="./sops.html">SOPs</a></p>
+</section>
+<section id="recruitment" class="level2">
+<h2 class="anchored" data-anchor-id="recruitment">Recruitment</h2>
+<section id="soft-launch" class="level3">
+<h3 class="anchored" data-anchor-id="soft-launch">Soft Launch</h3>
+<ul>
+<li>Craiglist ads in Madison/Milwaukee/Chicago</li>
+<li>Possibly bulk email to UW staff &amp; students?</li>
+</ul>
+</section>
+<section id="advertising" class="level3">
+<h3 class="anchored" data-anchor-id="advertising">Advertising</h3>
+<ul>
+<li>Craigslist</li>
+<li>Reddit</li>
+<li>Clinic partnerships, if we can find them</li>
+</ul>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
