@@ -1,4 +1,38 @@
 # Measures
 
+Copies of all measures can be found in the [proj_optimize repo](https://github.com/jjcurtin/proj_optimize/tree/main/methods/measures)
 
-Add link to proj_opt repo
+
+## Baseline Survey
+
+### ID:
+
+* Demographics 
+* Alcohol Use History 
+* WHO-Assist 
+* Trust ID 
+* Tone preferences 
+
+### Repeated
+
+* Drinking Motives Questionnaire for Adults (DMQ-A)
+* Flourishing Measure 
+* GAD-7 
+* PHQ-9
+* Multidimensional Inventory of Recovery Capital (MIRC) 
+
+## Mid and Endpoint Repeated Measures Survey
+
+* 8 & 16 weeks
+* Also TLFB by interview
+
+### Repeated
+
+* Drinking Motives Questionnaire for Adults (DMQ-A)
+* TOAST Trust 
+* Message Usefulness
+* Digital Working Alliance Inventory (D-WAI)
+* Flourishing Measure
+* GAD-7
+* PHQ-9
+* Multidimensional Inventory of Recovery Capital (MIRC) 

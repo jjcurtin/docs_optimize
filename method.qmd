@@ -5,8 +5,10 @@ This section contains methodological information for the study.
 ## PRELAUNCH STATUS
 
 ### TO DO:
+* Update recruitment documents
 * IRB submission
 * Update CT.Gov office
+* Update website
 * Set up OnCore & new Participant Payments
 * Data Management site initiation visit
 * Recruitment plan
@@ -61,9 +63,11 @@ Data analysis:
    - needs lab review
    - subid assigned here, unless decided otherwise
 * [Baseline measures](https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?practice=true)
-   - needs final review to ensure implementation matches finalized measures
+   - SW final review to match 2026_0309
+      * keep 2 optional questions on flourishing?
+      * inclusion and placement of STAR questions on trust_id?
    - needs lab review
-   - add subid as embedded data
+   - DONE add subid as embedded data
 * [Mid/end repeated measures](https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?practice=true)
    - needs final review to ensure implementation matches finalized measures
    - needs lab review
@@ -74,8 +78,9 @@ The following are not finalized in qualtrics as significant revision is happenin
 * Daily EMA
     - MEASURE NOT FINALIZED
        - valence/arousal question
-       - add #drinks question
-       - implement flatpicker for lapse calendar date/time select 
+       - add #drinks question?
+       - implement lapse calendar date/time select 
+          * easier if we limit the date range they can add unreported lapses - say, last 7 days?
 * Location context (part of EMA after day 7)
     - MEASURE NOT FINALIZED
     - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
@@ -114,7 +119,7 @@ automation:
 
 * task_scheduler_opt.R - schedules R scripts to run
 * daily_download_opt.R - downloads GPS
-* download_qualtrics.qmd (should be reformatted as .R so can be automated) - downloads survey data from qualtrics including EMA
+* mak_daily_qualtrics.R - downloads survey data from qualtrics including EMA
   * part of it will download EMA times from the RA session survey to be used by PRISM
   
 scripts_staff:
@@ -127,6 +132,12 @@ scripts_prism:
 
 * find_new_locations_opt.R - pulls user GPS data and finds new locations to query in EMA location context questions
 
+NEED TO ADD:
+
+* John's model script 
+* recommendation script
+* mak_payments
+* chk_adherence
 
 
 ## PRISM

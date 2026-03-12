@@ -21,6 +21,302 @@ Note: The procedure for obtaining transcripts and recordings is
 * Login to the wisc.edu instance of [copilot](https://it.wisc.edu/services/m365-copilot-chat/) with your netID. Upload the transcript (you can select the cloud document that you just saved) and ask copilot: "please provide a very detailed summary of the attached meeting transcript in markdown format". 
 * When it provides the summary, click the copy icon at the bottom and it will copy it in markdown format for pasting into a qmd. You'll have to do a small bit of cleanup (removing headers, section breaks, and footers) to paste here.
 
+### 2026_0305
+
+Absolutely — here is a **very detailed, well‑structured, full markdown summary** of the *2026‑03‑05 meeting notes* you provided.  
+It is organized for clarity, accuracy, and comprehensiveness, reflecting the entire transcript.
+
+***
+
+**📘 Detailed Summary of 2026‑03‑05 Meeting Notes**
+
+ **1. Meeting Context and Attendees**
+
+The meeting reconvened after last week’s discussion to review updates on the predictive modeling work for the alcohol‑use research project.  
+Attendees included:
+
+*   **Chris** (leading the modeling work)
+*   **Kendra**, **Claire**, **Coco**, **Susan**, **Andrew** (referenced), and others on the research team
+
+The first few minutes included informal coordination about schedules, practica, and waiting for Claire to arrive from a clinic intake.
+
+***
+
+**2. Modeling Updates (Version 26 → 28)**
+
+Chris presented extensive progress on model versions **v26 through v28**, primarily concerning how **emotion variables (PA/NA), GPS data, EMAs, and risk features** should be included in the lapse‑risk prediction model.
+
+***
+
+**2.1 Switching from Quadratic PANAS to Linear PANAS**
+
+Previously, the model used **quadratic terms** for PA (Positive Affect) and NA (Negative Affect).  
+A problem was identified:
+
+*   Quadratic PA/NA terms produce **U‑shaped relationships** — e.g., “risk is high if you’re *either* very sad *or* very elated.”
+*   This is **not easily interpretable** when giving feedback to participants.
+*   It leads to nonsensical participant messaging such as:
+    > *“Your risk is high because you're either angry or content.”*
+
+**Decision:**  
+Move to **linear PA/NA** terms instead of quadratic ones because:
+
+*   They are **more interpretable**.
+*   Predictive accuracy stayed nearly the same (quadratic AUC \~0.863 vs. linear \~0.862).
+*   The team prefers PANAS over valence/arousal due to interpretability and intervention relevance.
+
+***
+
+ **2.2 Reintroducing “Min” Features**
+
+“Min” values (minimum EMA levels across past week) were previously removed but now will be reintroduced because:
+
+*   Low PA / high NA minima matter (e.g., depressive affect has predictive value).
+*   Other features like “time at home” may also show important minimum-based effects.
+
+Kendra flagged this, and Chris agreed to re‑add minimums after Claire finishes current tests.
+
+***
+
+ **2.3 GPS Feature Corrections**
+
+Several GPS‑related improvements were made:
+
+ **2.3.1 Handling Missing GPS Correctly**
+
+Originally, if **no GPS points** existed for “locations where alcohol was present/drank,” the model incorrectly assigned **0** time at that location.
+
+Issue:
+
+*   **0 ≠ no risk.**  
+    Often the GPS simply failed.
+
+Fix:
+
+*   Replace missing values with **NA** rather than 0 so they are correctly imputed (e.g., median imputation) rather than treated as 0 risk.
+
+**2.3.2 Potential Future Idea: Missingness as Feature**
+
+Kendra asked whether missing GPS might be meaningful.  
+Chris explained:
+
+*   Missing EMA *is* meaningful (participant avoidance),  
+    but
+*   Missing GPS is usually **technical**, not behavioral.  
+    Thus, missingness is *not* used as a predictive feature.
+
+***
+
+**2.4 Transition to Total Effects Rather Than Direct Effects**
+
+Chris emphasized a major conceptual shift:
+
+Direct GLM coefficients are misleading
+
+Why?  
+Because in a logistic model, predictors can influence risk *indirectly through other variables.*  
+Example:
+
+*   Stress → expected increase in drinking likelihood  
+    But holding “predicted drinking” constant can **mask** the real causal effect.
+
+New approach
+
+Calculate **total effects** by:
+
+1.  Using model‑predicted **probabilities** for each observation
+2.  Convert to **odds → log‑odds**
+3.  Compute correlations between **log‑odds** and each predictor
+
+Reason:
+
+*   Log‑odds linearize the relationship, making them comparable.
+*   Probability is nonlinear and misleading for reasoning about feature effects.
+
+Outcome:
+
+*   Feature directions now align neatly with **domain expertise**.
+*   For example, stress becomes positively associated with lapse risk once total effects are used.
+
+***
+
+ **3. Features Retained in the V28 Model**
+
+The final v28 model includes:
+
+ **Positive Predictors of Lapse Risk**
+
+*   Time at places where participant drank
+*   Time at places where alcohol is present
+*   Time in restaurants
+*   Time in risky locations
+*   Future predicted drinking (EMA 10)
+*   Craving (EMA)
+*   Stress (EMA)
+*   Future risky situations (EMA 8)
+*   Activated NA (anger, agitation)
+*   Day‑of‑week effects (Friday, Saturday)
+
+**Negative Predictors of Lapse Risk**
+
+*   Time at home
+*   Time at pleasant locations
+*   Activated PA (energy, enthusiasm)
+*   Monday effect
+*   Abstinence goal commitment
+
+The model is now **consistent, interpretable, and aligned with clinical expectations.**
+
+***
+
+ **4. Discussion: Personalized Messaging Logic**
+
+A major focus of the meeting was how to choose **which feature** to show participants each day.
+
+Two strategies were compared:
+
+***
+
+ **4.1 Strategy 1: Always Use the Top Feature**
+
+*   Each day, the feature with highest log‑odds is chosen.
+
+**Pros:**
+
+*   Simple, interpretable
+
+**Cons:**
+
+*   Leads to long “runs” where the same feature is shown repeatedly (e.g., 40–70 days).
+*   Not engaging for participants.
+
+Many participants received only **2–4 distinct features** over months.  
+Some had the same feature 50–70 days in a row.
+
+This raised concerns about:
+
+*   Engagement
+*   Perceived personalization
+*   Perceived accuracy of the system
+
+***
+
+**4.2 Strategy 2: Allow Switching to the Second Feature**
+
+Rule:
+
+*   If the same feature appears **two+ days in a row**,
+*   AND the second‑most predictive feature is **not too much worse**,  
+    then switch.
+
+Threshold used:
+
+*   Second feature allowed if drop in log‑odds ≤ **75th percentile** (\~0.49).
+
+**Outcome:**
+
+*   Switching occurs \~20% of days.
+*   More diversity in displayed features (people average \~7–8 categories instead of 6).
+*   Much fewer extreme long runs.
+
+Still:
+
+*   Some participants remain with long runs (e.g., 40 days) due to genuinely dominant features.
+
+***
+
+**5. Further Ideas Discussed**
+
+**5.1 Expanding from 13 Categories to All 28 Features**
+
+The team strongly favored expanding:
+
+Benefits:
+
+*   More variation → less repetition
+*   Feels more “personalized”
+*   Messages can be more specific (e.g., “past 24 hours vs. past week”)
+*   Better reflection of the data structure
+*   More clinical nuance
+
+Risks:
+
+*   Greater precision may reveal model errors
+*   But participants can be onboarded to expect occasional inaccuracies
+
+Team consensus:  
+**Move toward 20–28 categories**, while still grouping features for intervention mapping.
+
+***
+
+**5.2 Alternative Switching Rules**
+
+Ideas captured:
+
+*   Switch based on **trend** (e.g., if primary feature is improving).
+*   Larger runs → increased willingness to switch to another feature.
+*   Consider not only drop in predictive value but **relative position in daily distribution** (quantiles).
+*   Use trajectory: “Your top feature is still X, but it’s improving.”
+
+***
+
+**5.3 Feedback Content Enhancements**
+
+Proposals:
+
+**a. Include trend direction**
+
+> “Your key risk factor today is craving — but it’s *improving* compared to yesterday.”
+
+**b. Provide both granular and coarse risk categories**
+
+Example:
+
+*   “Your recovery score is **87** (High).”
+
+This mirrors credit‑score style messaging.
+
+**c. Clarify the role of model error**
+
+Explain to participants that:
+
+*   GPS‑based features may be imperfect
+*   EMA features are extremely accurate (self‑report)
+
+***
+ **5.4 Key EDA Needed Before Final Decisions**
+
+The team planned exploratory data analysis to examine:
+
+*   Whether long runs correlate with being in very **low‑risk** or very **high‑risk** states
+*   Differences between participants enrolled for **1 month vs. 3+ months**
+*   Whether some features dominate simply because of participant profiles (e.g., always angry, or always going to risky places)
+
+***
+
+**6. Final Decisions & Action Items**
+
+ **Modeling Decisions**
+
+*   Continue refining v28 with linear PANAS + mins.
+*   Improve GPS imputation (NA instead of 0).
+*   Expand feature categories possibly to **20–28**.
+
+**Personalized Messaging Logic**
+
+*   Continue evaluating switching rules.
+*   Consider quantile‑based or trend‑based switching.
+*   Conduct EDA to guide thresholds.
+
+### **Feedback Design**
+
+*   Consider combining numeric and categorical risk displays.
+*   Possibly show feature trajectories.
+*   Ensure onboarding messaging addresses model imperfection.
+
+***
+
+NOTE: Interim meetings in this time gap were not about optimize
 
 ### 2025_1211
 
