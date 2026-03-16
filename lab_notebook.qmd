@@ -21,14 +21,242 @@ Note: The procedure for obtaining transcripts and recordings is
 * Login to the wisc.edu instance of [copilot](https://it.wisc.edu/services/m365-copilot-chat/) with your netID. Upload the transcript (you can select the cloud document that you just saved) and ask copilot: "please provide a very detailed summary of the attached meeting transcript in markdown format". 
 * When it provides the summary, click the copy icon at the bottom and it will copy it in markdown format for pasting into a qmd. You'll have to do a small bit of cleanup (removing headers, section breaks, and footers) to paste here.
 
-### 2026_0305
 
-Absolutely — here is a **very detailed, well‑structured, full markdown summary** of the *2026‑03‑05 meeting notes* you provided.  
-It is organized for clarity, accuracy, and comprehensiveness, reflecting the entire transcript.
+### 2026_0312
+
+**Meeting Focus Areas:**
+
+*   Discussion of a recent machine‑learning study on predicting alcohol lapses
+*   Comparison to the group’s ongoing work (RISK, OPTIMIZE)
+*   Feature‑selection critique
+*   Fairness, subgroup modeling, interactions
+*   EMA redesign for OPTIMIZE
+*   Additional methodological considerations
+
+1. **Overview of the Paper Being Discussed**
+
+The meeting starts with a discussion of a research paper analyzing heavy‑drinking prediction using machine‑learning models relying **primarily on baseline characteristics** rather than **proximal/dynamic factors**.
+
+Key Observations:
+
+*   Their reliance on **baseline variables** (static, individual‑difference measures) is conceptually different from the group’s approach, which emphasizes **proximal, time‑varying predictors** from EMA (e.g., craving, stress, context).
+*   The paper reports **substantial predictive signal** from baseline factors, but the group stresses that predicting *lapse timing* requires proximal information they did not include.
+*   The study also uses **sex‑stratified models**—building separate prediction models for participants identified male vs. female at birth—and finds differing sets of influential predictors.
+
+2. **Discussion of Modeling Workflow in the Paper**
+
+2.1 **Algorithms Used**
+
+*   Primary models appear to be **Random Forests**, possibly also **tree‑based gradient boosters**.
+*   The group compares these to *their* standard models (Random Forest, XGBoost/ExtraBoost).
+
+2.2 **Feature Engineering**
+
+*   Baseline characteristics only—no time‑varying covariates.
+*   Includes psychiatric measures, drinking history, social network characteristics, labs, demographics.
+
+2.3 **Feature Selection: Boruta Algorithm**
+
+A major discussion point.
+
+**Boruta** uses random “shadow” features, permutes values, and retains real variables that repeatedly outperform these noise variables.
+
+Group critique:
+
+*   Tree‑based models already handle irrelevant features reasonably well.
+*   Boruta may add **variance** since feature selection itself is a noisy process.
+*   Interpretation benefits are unclear; the group argues that permutation importance on the full model is often more transparent.
+*   They note the authors never provided justification for why feature selection was needed.
+
+3. **Concerns About Imputation and Missing Outcomes**
+
+The paper treated **all missing drinking observations as heavy drinking**.
+
+Group reactions:
+
+*   This resembles **“worst‑case” intent‑to‑treat** assumptions in clinical trials, but is odd in this context.
+*   The approach likely **decreases predictive performance** due to label noise.
+*   Alternatives discussed:
+    *   Last‑observation‑carried‑forward
+    *   Dropping uncertain observations (as their own group typically does)
+    *   Conservative vs. practical trade‑offs
+
+4. **Feature Differences by Sex at Birth**
+
+The paper finds **different feature sets** in male vs. female models.
+
+4.1 For male participants:
+
+Top features skew toward **alcohol‑dependence severity**, drinking history, and **biomarkers** (e.g., liver enzymes).
+
+4.2 For female participants:
+
+Top features include:
+
+*   **Psychiatric symptom measures**
+*   Emotional/mental health indicators
+
+This difference leads to:
+
+*   Discussion of interactions,
+*   Potential fairness implications,
+*   Importance of examining subgroup‑specific importance in the group’s own models.
+
+However, the group warns:
+
+*   Different features across stratified models may result from **variance**, **sample‑size imbalance**, or **correlated predictors**, not true moderation.
+
+5. **Fairness & Interaction Effects in Prediction Models**
+
+5.1 Current status in the group’s existing models:
+
+*   Prior RISK1 models showed fairness problems (e.g., poorer performance for women or certain racial groups).
+*   RISK2 appears more fair but still shows \~0.02 AUROC advantage for men.
+*   Demographic variables typically rank low in feature importance, suggesting **little evidence of strong interactions**.
+
+5.2 Challenges Identified:
+
+*   Tree‑based models can capture interactions, but:
+    *   They may miss **small‑effect** interactions.
+    *   Detection tools (e.g., Friedman’s H‑statistic) are underused or not well understood.
+*   Fitting **separate models** per subgroup is conceptually appealing but methodologically messy.
+
+5.3 Next Steps Proposed:
+
+*   Examine feature importance within subgroups more systematically.
+*   Investigate methods for identifying interactions in ML models (Friedman’s H, SHAP interaction values).
+*   Explore impacts of subgroup representation (e.g., racial/ethnic imbalance).
 
 ***
 
-**📘 Detailed Summary of 2026‑03‑05 Meeting Notes**
+6. **Discussion of Social Network Measures**
+
+Interest in incorporating social network variables (e.g., “percentage of drinkers in network,” “important person drinking status”), which showed importance in the paper.
+
+Concerns:
+
+*   Social network characteristics **change over time**, especially during early recovery.
+*   Baseline‑only measures may have limited value in day‑level prediction.
+
+Outcome:
+
+*   Group agrees they should learn how these social metrics were measured and consider adding or adapting them in future studies.
+
+***
+
+7. **Relevance for OPTIMIZE: Incorporating Baseline Features**
+
+The group debates whether adding baseline psychiatric or dependence variables would meaningfully improve their own predictions.
+
+Conclusions:
+
+*   Baseline variables usually **don’t improve AUROC**.
+*   They might, however, improve:
+    *   Calibration,
+    *   Spread of predicted probabilities,
+    *   Subgroup fairness.
+*   Theoretical models (e.g., relapse prevention) suggest distal factors may shape proximal factors (via mediation rather than direct moderation).
+
+8. **Redesigning the OPTIMIZE EMA**
+
+A major portion of the meeting discusses revising the **daily EMA** instrument.
+
+### 8.1 Required Additions for Lapse Reports
+
+New lapse‑related data to collect:
+
+*   **Day & time of drinking onset**
+*   **Number of standard drinks consumed**
+*   Maintain existing questions: “Did you drink?” + “Do you still want to remain abstinent?”
+*   Add drinking details per lapse event.
+
+**Handling multiple drinking episodes per day**:
+
+*   Group agrees:
+    *   Prefer capturing onset time(s) and total drinks.
+    *   Optional: allow multiple episodes (but complexity increases).
+*   Ultimately:  
+    **Collect at least onset time + drinks per episode**, with flexibility to refine later.
+
+8.2 Limiting retrospective window
+
+Implementation constraints in Qualtrics:
+
+*   Easier to allow reporting lapses only up to **\~15 days back** (not 30+).
+*   Group feels lapses older than 2 weeks are unlikely to be reported reliably anyway.
+*   15 days is acceptable.
+
+***
+
+9. **EMA Content Review & Revisions**
+
+9.1 Keep as is:
+
+*   Drinking report
+*   Goals (abstinence)
+*   Craving intensity
+*   Risky situations
+*   Hassles / stressors
+*   Positive events
+*   Mood (valence & arousal)
+*   Motivation & confidence
+
+9.2 Mood / Arousal Scale Revision
+
+Current arousal anchors ("aroused/alert") are misleading.
+
+Proposed alternatives:
+
+*   **High energy ↔ low energy**
+*   **Strong ↔ weak emotions**
+*   Provide **examples** across valence (e.g., excited vs. bored)
+
+Team wants to:
+
+*   Review published affect circumplex measures,
+*   Possibly adopt a **two‑axis mood grid**,
+*   Ensure lay‑friendly wording but good construct validity.
+
+9.3 Additions Under Consideration:
+
+*   **Daily social support** (“To what extent did you feel supported by friends/family today?”)
+*   Clarifying **stressful event** examples (include interpersonal conflict)
+*   Remove or avoid:
+    *   Sleep (has not emerged as important)
+    *   Daily companion drug‑use reports (rare, low variance)
+
+***
+
+## 10. **EMA Length Considerations**
+
+*   New EMA will have **\~16 questions** (previous Risk‑2 EMA had \~10–12).
+*   Once‑daily administration makes this acceptable.
+*   Further optimization may occur once pilot data are reviewed.
+
+
+
+11. **Next Steps / Action Items**
+ For Susan:
+
+*   Implement lapse‑report section with:
+    *   Date
+    *   Onset time
+    *   Drinks consumed
+    *   Max 15‑day retrospective window
+*   Add placeholder for social‑support item.
+*   Begin revising arousal scale + mood anchors.
+*   Show prototype of lapse‑reporting workflow.
+
+For the team:
+
+*   Review example implementations in Slack.
+*   Investigate interactions in ML models for future fairness analyses.
+*   Explore measurement options for social network metrics.
+
+
+
+
+### 2026_0305
 
  **1. Meeting Context and Attendees**
 
@@ -40,13 +268,10 @@ Attendees included:
 
 The first few minutes included informal coordination about schedules, practica, and waiting for Claire to arrive from a clinic intake.
 
-***
-
 **2. Modeling Updates (Version 26 → 28)**
 
 Chris presented extensive progress on model versions **v26 through v28**, primarily concerning how **emotion variables (PA/NA), GPS data, EMAs, and risk features** should be included in the lapse‑risk prediction model.
 
-***
 
 **2.1 Switching from Quadratic PANAS to Linear PANAS**
 
@@ -65,8 +290,6 @@ Move to **linear PA/NA** terms instead of quadratic ones because:
 *   Predictive accuracy stayed nearly the same (quadratic AUC \~0.863 vs. linear \~0.862).
 *   The team prefers PANAS over valence/arousal due to interpretability and intervention relevance.
 
-***
-
  **2.2 Reintroducing “Min” Features**
 
 “Min” values (minimum EMA levels across past week) were previously removed but now will be reintroduced because:
@@ -75,8 +298,6 @@ Move to **linear PA/NA** terms instead of quadratic ones because:
 *   Other features like “time at home” may also show important minimum-based effects.
 
 Kendra flagged this, and Chris agreed to re‑add minimums after Claire finishes current tests.
-
-***
 
  **2.3 GPS Feature Corrections**
 
@@ -104,8 +325,6 @@ Chris explained:
     but
 *   Missing GPS is usually **technical**, not behavioral.  
     Thus, missingness is *not* used as a predictive feature.
-
-***
 
 **2.4 Transition to Total Effects Rather Than Direct Effects**
 
@@ -138,8 +357,6 @@ Outcome:
 *   Feature directions now align neatly with **domain expertise**.
 *   For example, stress becomes positively associated with lapse risk once total effects are used.
 
-***
-
  **3. Features Retained in the V28 Model**
 
 The final v28 model includes:
@@ -167,7 +384,6 @@ The final v28 model includes:
 
 The model is now **consistent, interpretable, and aligned with clinical expectations.**
 
-***
 
  **4. Discussion: Personalized Messaging Logic**
 
@@ -175,7 +391,6 @@ A major focus of the meeting was how to choose **which feature** to show partici
 
 Two strategies were compared:
 
-***
 
  **4.1 Strategy 1: Always Use the Top Feature**
 
@@ -199,8 +414,6 @@ This raised concerns about:
 *   Perceived personalization
 *   Perceived accuracy of the system
 
-***
-
 **4.2 Strategy 2: Allow Switching to the Second Feature**
 
 Rule:
@@ -222,8 +435,6 @@ Threshold used:
 Still:
 
 *   Some participants remain with long runs (e.g., 40 days) due to genuinely dominant features.
-
-***
 
 **5. Further Ideas Discussed**
 
@@ -247,8 +458,6 @@ Risks:
 Team consensus:  
 **Move toward 20–28 categories**, while still grouping features for intervention mapping.
 
-***
-
 **5.2 Alternative Switching Rules**
 
 Ideas captured:
@@ -257,8 +466,6 @@ Ideas captured:
 *   Larger runs → increased willingness to switch to another feature.
 *   Consider not only drop in predictive value but **relative position in daily distribution** (quantiles).
 *   Use trajectory: “Your top feature is still X, but it’s improving.”
-
-***
 
 **5.3 Feedback Content Enhancements**
 
@@ -283,7 +490,6 @@ Explain to participants that:
 *   GPS‑based features may be imperfect
 *   EMA features are extremely accurate (self‑report)
 
-***
  **5.4 Key EDA Needed Before Final Decisions**
 
 The team planned exploratory data analysis to examine:
@@ -291,8 +497,6 @@ The team planned exploratory data analysis to examine:
 *   Whether long runs correlate with being in very **low‑risk** or very **high‑risk** states
 *   Differences between participants enrolled for **1 month vs. 3+ months**
 *   Whether some features dominate simply because of participant profiles (e.g., always angry, or always going to risky places)
-
-***
 
 **6. Final Decisions & Action Items**
 
@@ -314,7 +518,6 @@ The team planned exploratory data analysis to examine:
 *   Possibly show feature trajectories.
 *   Ensure onboarding messaging addresses model imperfection.
 
-***
 
 NOTE: Interim meetings in this time gap were not about optimize
 
@@ -2459,7 +2662,6 @@ David Mohr webinar - not specific to optimize, but has some useful engagement su
 3.  **Engagement** (continued interaction with system).
 4.  **Clinical outcomes** (heavy drinking days, drinking days) – **secondary**.
 
-***
 
 **Measurement Strategy**
 
