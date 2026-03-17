@@ -185,7 +185,12 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#to-do" id="toc-to-do" class="nav-link" data-scroll-target="#to-do">TO DO:</a></li>
   </ul></li>
   <li><a href="#decisions" id="toc-decisions" class="nav-link" data-scroll-target="#decisions">Decisions</a></li>
-  <li><a href="#data-pipeline-overview" id="toc-data-pipeline-overview" class="nav-link" data-scroll-target="#data-pipeline-overview">Data Pipeline Overview</a></li>
+  <li><a href="#data-pipeline-overview" id="toc-data-pipeline-overview" class="nav-link" data-scroll-target="#data-pipeline-overview">Data Pipeline Overview</a>
+  <ul class="collapse">
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data collection:</a></li>
+  <li><a href="#data-manipulation-for-running-the-study" id="toc-data-manipulation-for-running-the-study" class="nav-link" data-scroll-target="#data-manipulation-for-running-the-study">Data manipulation for running the study:</a></li>
+  <li><a href="#prism-daily-tasks" id="toc-prism-daily-tasks" class="nav-link" data-scroll-target="#prism-daily-tasks">PRISM daily tasks:</a></li>
+  </ul></li>
   <li><a href="#qualtrics-forms" id="toc-qualtrics-forms" class="nav-link" data-scroll-target="#qualtrics-forms">Qualtrics forms</a>
   <ul class="collapse">
   <li><a href="#participant-facing" id="toc-participant-facing" class="nav-link" data-scroll-target="#participant-facing">Participant facing</a></li>
@@ -257,13 +262,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="data-pipeline-overview" class="level2">
 <h2 class="anchored" data-anchor-id="data-pipeline-overview">Data Pipeline Overview</h2>
-<p>Data collection:</p>
+<section id="data-collection" class="level3">
+<h3 class="anchored" data-anchor-id="data-collection">Data collection:</h3>
 <ol type="1">
 <li>Qualtrics forms</li>
 <li>NDA GUID tool</li>
 <li>FollowMee</li>
 </ol>
-<p>Data manipulation for running the study:</p>
+</section>
+<section id="data-manipulation-for-running-the-study" class="level3">
+<h3 class="anchored" data-anchor-id="data-manipulation-for-running-the-study">Data manipulation for running the study:</h3>
 <ol type="1">
 <li>Task scheduling script</li>
 <li>Scripts to pull &amp; clean qualtrics data</li>
@@ -273,10 +281,41 @@ ul.task-list li input[type="checkbox"] {
 <li>Staff scripts - adherence, payment, etc</li>
 <li>Data integrity check scripts, including those which copy data to &amp; from the PRISM VM.</li>
 </ol>
+</section>
+<section id="prism-daily-tasks" class="level3">
+<h3 class="anchored" data-anchor-id="prism-daily-tasks">PRISM daily tasks:</h3>
+<p>Each night these events happen:</p>
+<ol type="1">
+<li>Downloads GPS to <code>R:/optimize/$subid/gps/</code> and <code>gps_$subid.csv</code> PRISM VS R</li>
+<li>Download qualtrics EMA to <code>R:/optimize/ema</code> and <code>ema_$subid.csv</code> PRISM VS R</li>
+<li>Detect new locations for each subid, save to <code>R:/optimize/$subid/places.csv</code></li>
+<li>Script feature engineers features from GPS and EMA - what is saved and where:
+<ol type="a">
+<li>not for participants who are not on study</li>
+<li>features run subject by subject and saved by subid - just append new features</li>
+<li>each subid folder will have a feature file</li>
+</ol></li>
+<li>Script that runs the prediction model for all active participants - also by individual subid
+<ol type="a">
+<li>saved as columns in the feature file</li>
+<li>current prob and cx in prob also saved</li>
+</ol></li>
+<li>Script to calculate feature importance for all active participants -
+<ol type="a">
+<li>run by subid for each day,</li>
+<li>they get an importance value for each feature. Use this + the previous day most important feature to select new most important feature which is also saved to a subid based file</li>
+</ol></li>
+<li>Script to create the daily support message for each participant - creates the daily message
+<ol type="a">
+<li>will include recovery activity from 5 &amp; 6- do we save that somewhere?</li>
+<li>also saves their yoked tone preference. Somewhere there’s a file for each participant with their singular tone and style</li>
+</ol></li>
+</ol>
 <p>Data analysis:</p>
 <ul>
 <li>TBD</li>
 </ul>
+</section>
 </section>
 <section id="qualtrics-forms" class="level2">
 <h2 class="anchored" data-anchor-id="qualtrics-forms">Qualtrics forms</h2>
@@ -382,7 +421,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="scripts" class="level2">
 <h2 class="anchored" data-anchor-id="scripts">Scripts</h2>
-<p>These live in the proj_optimize repo. More will be added as they are completed</p>
+<p>These live in the proj_optimize repo where they will be called by PRISM. More will be added as they are completed</p>
 <p>automation:</p>
 <ul>
 <li>task_scheduler_opt.R - schedules R scripts to run</li>
