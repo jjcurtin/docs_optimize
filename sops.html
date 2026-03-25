@@ -184,6 +184,15 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-sops" id="toc-data-sops" class="nav-link" data-scroll-target="#data-sops"><span class="header-section-number">6.3</span> Data SOPs</a></li>
   <li><a href="#administration-sops" id="toc-administration-sops" class="nav-link" data-scroll-target="#administration-sops"><span class="header-section-number">6.4</span> Administration SOPs</a></li>
   <li><a href="#participant-communication-sops-templates" id="toc-participant-communication-sops-templates" class="nav-link" data-scroll-target="#participant-communication-sops-templates"><span class="header-section-number">6.5</span> Participant communication SOPs &amp; Templates</a></li>
+  <li><a href="#sop-tech-components" id="toc-sop-tech-components" class="nav-link" data-scroll-target="#sop-tech-components"><span class="header-section-number">6.6</span> SOP tech components</a>
+  <ul class="collapse">
+  <li><a href="#consent-sop" id="toc-consent-sop" class="nav-link" data-scroll-target="#consent-sop"><span class="header-section-number">6.6.1</span> Consent SOP</a></li>
+  </ul></li>
+  <li><a href="#sops" id="toc-sops" class="nav-link" data-scroll-target="#sops"><span class="header-section-number">6.7</span> SOPS</a>
+  <ul class="collapse">
+  <li><a href="#scheduling-scripts-in-prism" id="toc-scheduling-scripts-in-prism" class="nav-link" data-scroll-target="#scheduling-scripts-in-prism"><span class="header-section-number">6.7.1</span> Scheduling Scripts in PRISM</a></li>
+  <li><a href="#nda-data-upload" id="toc-nda-data-upload" class="nav-link" data-scroll-target="#nda-data-upload"><span class="header-section-number">6.7.2</span> NDA Data upload</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -270,6 +279,7 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <ol start="3" type="1">
 <li>Study termnination/offboarding</li>
+<li>Scheduling Scripts</li>
 </ol>
 </section>
 <section id="administration-sops" class="level2" data-number="6.4">
@@ -280,6 +290,7 @@ ul.task-list li input[type="checkbox"] {
 <li>CT oversight</li>
 <li>Adherence</li>
 <li>Data integrity</li>
+<li>NDA data upload</li>
 </ol>
 </section>
 <section id="participant-communication-sops-templates" class="level2" data-number="6.5">
@@ -291,8 +302,70 @@ ul.task-list li input[type="checkbox"] {
 <li>Payment</li>
 <li>Adherence</li>
 </ol>
+</section>
+<section id="sop-tech-components" class="level2" data-number="6.6">
+<h2 data-number="6.6" class="anchored" data-anchor-id="sop-tech-components"><span class="header-section-number">6.6</span> SOP tech components</h2>
+<p>This section lists the required tech actions for each SOP</p>
+<section id="consent-sop" class="level3" data-number="6.6.1">
+<h3 data-number="6.6.1" class="anchored" data-anchor-id="consent-sop"><span class="header-section-number">6.6.1</span> Consent SOP</h3>
+<ol type="1">
+<li>Send participant the consent form link with their screen_id included in the URL</li>
+<li>Completion of the consent form leads to the onboarding form</li>
+<li>Completion of the onboarding form leads to the birth pedigree form</li>
+<li>Run the new_participant.qmd script</li>
+</ol>
+<ul>
+<li>Ask them to confirm their phone number</li>
+<li>Ask their EMA times</li>
+</ul>
+</section>
+</section>
+<section id="sops" class="level2" data-number="6.7">
+<h2 data-number="6.7" class="anchored" data-anchor-id="sops"><span class="header-section-number">6.7</span> SOPS</h2>
+<section id="scheduling-scripts-in-prism" class="level3" data-number="6.7.1">
+<h3 data-number="6.7.1" class="anchored" data-anchor-id="scheduling-scripts-in-prism"><span class="header-section-number">6.7.1</span> Scheduling Scripts in PRISM</h3>
+<p>PRISM now checks the proj_optimize repo (specifically, the automation subfolder at the root) for R scripts to be run.</p>
+<ul>
+<li>If we need to change the location of scripts to be run, or add a new location, first edit prism/prism/src/run_prism.py and prism/prism/src/task_managers/_run_r_script.py in prism/prism/src/task_managers. NOTE: this step will be deprecated after Colin moves these hardcoded paths to a config_paths.csv file</li>
+</ul>
+<ol type="1">
+<li>Put the script to be run in proj_optimize/automation</li>
+<li>Open prism/prism/config/system_task_schedule.csv</li>
+<li>Duplicate one of the lines that begins with “RUN_R_SCRIPT” and change the r_script_path to the name of your R script you wish to add</li>
+<li>Edit the system_time to the time you wish the script to be run.
+<ul>
+<li>NOTE: If you wish to run the script multiple times per day, it must have a row added with each time you wish it to run.</li>
+</ul></li>
+<li>You will then need to end and restart the PRISM server:
+<ul>
+<li>Go into the CMD window that shows the prism log.</li>
+<li>Hit ctrl-C a couple of times until it exits to the prompt.</li>
+<li>Then hit the up arrow to bring up the last command, and hit enter to restart the server!</li>
+</ul></li>
+<li>Note that PRISM does not save logs for each script individually, but saves all log events by day.</li>
+</ol>
+<ul>
+<li>Go to prism/prism/logs/transcripts and pick a log file by day.</li>
+<li>Open it in a text editor (Notepad is fastest) and search for “SUCCESS - RUN_R_SCRIPT”, hit Find Next till you locate your specific task, and you will see the script output below that.</li>
+</ul>
+</section>
+<section id="nda-data-upload" class="level3" data-number="6.7.2">
+<h3 data-number="6.7.2" class="anchored" data-anchor-id="nda-data-upload"><span class="header-section-number">6.7.2</span> NDA Data upload</h3>
+<ol type="1">
+<li>Check PRISM logs to make sure download_qualtrics.R has been run since the participant enrolled.</li>
+<li>Ensure that each new participant has had a GUID created with GUID data tool and create_bulk_guid.qmd (see Susan if uncertain)</li>
+<li>From a machine with restricted drive access, run format_nda_data.qmd</li>
+<li>Log into <a href="https://nda.nih.gov/">NDA</a> with your login.gov credentials</li>
+<li>Go to Tools, then “Validation and Upload Tool”, then click “Launch the HTML Validation and Upload Tool”.</li>
+<li>Hit “Create new submission”</li>
+<li>Drag the newly created files to the box and then hit Validate. If there are errors, they will need to be corrected - See Susan.</li>
+<li>Once there are only warnings and no errors, hit Build Package.</li>
+<li>Use today’s date to name the dataset and description: eg, “2026_1001 Upload” for both.</li>
+<li>Check the confirmation and hit Submit Data</li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
