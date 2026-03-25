@@ -22,13 +22,13 @@ This section contains methodological information for the study.
 
 ## Data Pipeline Overview
 
-Data collection:
+### Data collection:
 
 1. Qualtrics forms
 2. NDA GUID tool
 3. FollowMee
 
-Data manipulation for running the study:
+### Data manipulation for running the study:
 
 1. Task scheduling script
 2. Scripts to pull & clean qualtrics data
@@ -37,6 +37,31 @@ Data manipulation for running the study:
 5. PRISM - takes script output csv files to administer qualtrics surveys (EMA & Feedback)
 6. Staff scripts - adherence, payment, etc
 7. Data integrity check scripts, including those which copy data to & from the PRISM VM.
+
+### PRISM daily tasks:
+
+Each night these events happen:
+
+1. Downloads GPS to `R:/optimize/$subid/gps/` and `gps_$subid.csv` PRISM VS R
+2. Download qualtrics EMA to `R:/optimize/ema` and `ema_$subid.csv` PRISM VS R
+3. Detect new locations for each subid, save to `R:/optimize/$subid/places.csv` 
+4. Script feature engineers features from GPS and EMA - what is saved and where:
+   a) not for participants who are not on study
+   b) features run subject by subject and saved by subid - just append new features
+   c) each subid folder will have a feature file 
+5. Script that runs the prediction model for all active participants - also by individual subid
+   a) saved as columns in the feature file
+   c) current prob and cx in prob also saved
+6. Script to calculate feature importance for all active participants - 
+   a) run by subid for each day,
+   b) they get an importance value for each feature. Use this + the previous day most important feature to 
+    select new most important feature which is also saved to a subid based file
+7. Script to create the daily support message for each participant - creates the daily message
+   a) will include recovery activity from 5 & 6- do we save that somewhere?
+   b) also saves their yoked tone preference. Somewhere there's a file for each participant with
+      their singular tone and style
+
+
 
 Data analysis:
 
@@ -113,7 +138,7 @@ Output:
 
 ## Scripts
 
-These live in the proj_optimize repo. More will be added as they are completed
+These live in the proj_optimize repo where they will be called by PRISM. More will be added as they are completed
 
 automation: 
 

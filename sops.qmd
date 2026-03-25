@@ -43,6 +43,7 @@ TO DO:
   a. Onboarding
   b. Updating
 3. Study termnination/offboarding
+4. Scheduling Scripts
 
 
 
@@ -53,6 +54,7 @@ TO DO:
 3. CT oversight
 4. Adherence
 5. Data integrity
+6. NDA data upload
 
 ## Participant communication SOPs & Templates
 
@@ -63,5 +65,53 @@ TO DO:
 5. Adherence
 
 
+## SOP tech components
 
+This section lists the required tech actions for each SOP
+
+### Consent SOP
+1. Send participant the consent form link with their screen_id included in the URL
+2. Completion of the consent form leads to the onboarding form
+3. Completion of the onboarding form leads to the birth pedigree form
+4. Run the new_participant.qmd script
+  * Ask them to confirm their phone number
+  * Ask their EMA times
+  
+  
+
+
+
+## SOPS
+
+### Scheduling Scripts in PRISM
+
+PRISM now checks the proj_optimize repo (specifically, the automation subfolder at the root) for R scripts to be run.
+
+* If we need to change the location of scripts to be run, or add a new location, first edit prism/prism/src/run_prism.py and prism/prism/src/task_managers/_run_r_script.py in prism/prism/src/task_managers. NOTE: this step will be deprecated after Colin moves these hardcoded paths to a config_paths.csv file
+
+1. Put the script to be run in proj_optimize/automation
+2. Open prism/prism/config/system_task_schedule.csv
+3. Duplicate one of the lines that begins with "RUN_R_SCRIPT" and change the r_script_path to the name of your R script you wish to add
+4. Edit the system_time to the time you wish the script to be run. 
+   * NOTE: If you wish to run the script multiple times per day, it must have a row added with each time you wish it to run.
+5. You will then need to end and restart the PRISM server:
+   * Go into the CMD window that shows the prism log. 
+   * Hit ctrl-C a couple of times until it exits to the prompt. 
+   * Then hit the up arrow to bring up the last command, and hit enter to restart the server!
+6. Note that PRISM does not save logs for each script individually, but saves all log events by day. 
+  * Go to prism/prism/logs/transcripts and pick a log file by day. 
+  * Open it in a text editor (Notepad is fastest) and search for "SUCCESS - RUN_R_SCRIPT", hit Find Next till you locate your specific task, and you will see the script output below that.
+
+### NDA Data upload
+
+1. Check PRISM logs to make sure download_qualtrics.R has been run since the participant enrolled.
+2. Ensure that each new participant has had a GUID created with GUID data tool and create_bulk_guid.qmd (see Susan if uncertain)
+3. From a machine with restricted drive access, run format_nda_data.qmd
+4. Log into [NDA](https://nda.nih.gov/) with your login.gov credentials
+5. Go to Tools, then "Validation and Upload Tool", then click "Launch the HTML Validation and Upload Tool".
+6. Hit "Create new submission"
+7. Drag the newly created files to the box and then hit Validate. If there are errors, they will need to be corrected - See Susan.
+8. Once there are only warnings and no errors, hit Build Package.
+9. Use today's date to name the dataset and description: eg, "2026_1001 Upload" for both.
+10. Check the confirmation and hit Submit Data
 

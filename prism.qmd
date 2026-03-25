@@ -55,7 +55,7 @@ Notes:
 
 * The server must be restarted if any changes are made to api, config, etc files. 
 * It also must be restarted after the computer is rebooted (ie, for windows updates)
-* If you eliinate `-m prod` from the second command, it starts the server in test mode (does not actually send mesages)
+* If you eliminate `-m prod` from the second command, it starts the server in test mode (does not actually send mesages)
 
 
 ## To start the PRISM "GUI"
@@ -120,6 +120,13 @@ b.	2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True
 c.	3: PULLDOWN_QUALTRICS_DATA @ 05:35:00 - Run Today: True
 d.	4: RUN_R_SCRIPT @ 05:40:00 test2.R - Run Today: True
 
+You also have the option to remove and add tasks.
+
+To add tasks:
+
+* open the script_pipeline.csv file in C:\github\prism\prism\config. Manually add the task by the name of the script. 
+* return to the prism interface. 
+
 ### participants (recommended): Manage Participants
 
 At the top of this page it lists active participants (SW NEED TO TEST: MAX DISPLAYED VS SCROLL?)
@@ -172,7 +179,7 @@ An explanatory listing of (most) the folder contents. More details on each below
 * data - Output for pulled-down data
 * logs - Contains transcripts and activity logs for Qualtrics surveys
 * qualtrics_js - Contains the JavaScript code used by the Qualtrics surveys to connect to the PRISM server
-* scripts- Contains R scripts used in the script pipeline (this is a task I have implemented, considering treating R scripts as tasks as well)
+* scripts- Contains R scripts used in the script pipeline 
 * src - Contains the code for the PRISM server, interface, and system tasks
 
 ### .gitignore 
@@ -213,7 +220,7 @@ Contains csv files required to run the system
 * Study_coordinators.csv – contains names and phone numbers of study coordinators. SW ASK CM how used
 * Study_participants.csv – contains names and phone numbers for ACTIVE participants. I removed a participant using the GUI and they were deleted. We need to think about backing up this file to S: without overwriting it, so we have a better record of historical participant EMA/feedback times.ALSO: We need to add a date-added column. Users will probably alter their EMA times over the study and we need to definitively ID when they were getting it for any given study day.
 * System_prompt.txt – ChatGPT prompt for a staff member to ask about PRISM (using the `assistant` command on the GUI home menu)
-* System_task_schedule.csv  – names of scripts to be run along with run configs – see prism\scripts\README.md
+* System_task_schedule.csv  – names of scripts to be run along with run configs and times – see prism\scripts\README.md and SOP for Adding scripts to PRISM
 * Uiconfig.txt – GUI configuration optins (things like window width, color, etc)
 
 ### Data/ 
