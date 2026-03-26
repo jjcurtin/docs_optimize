@@ -219,7 +219,7 @@
     "href": "measures.html",
     "title": "3  Measures",
     "section": "",
-    "text": "3.1 Baseline Survey\nCopies of all measures can be found in the proj_optimize repo",
+    "text": "3.1 Baseline Survey\nCopies of all measures can be found in the proj_optimize repo\nQualtrics Survey",
     "crumbs": [
       "Methodology",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Measures</span>"
@@ -230,7 +230,7 @@
     "href": "measures.html#baseline-survey",
     "title": "3  Measures",
     "section": "",
-    "text": "3.1.1 ID:\n\nDemographics\nAlcohol Use History\nWHO-Assist\nTrust ID\nTone preferences\n\n\n\n3.1.2 Repeated\n\nDrinking Motives Questionnaire for Adults (DMQ-A)\nFlourishing Measure\nGAD-7\nPHQ-9\nMultidimensional Inventory of Recovery Capital (MIRC)",
+    "text": "3.1.1 ID:\n\nDemographics\nAlcohol Use History\nWHO-Assist\nTrust ID\nTone preferences\n\n\n\n3.1.2 Repeated\n\nDrinking Motives Questionnaire for Adults (DMQ-A)\nFlourishing Measure\nGAD-7\nPHQ-9\nMultidimensional Inventory of Recovery Capital (MIRC)\n\nQuestions for lab:\n\nkeep 2 optional questions on flourishing?\ninclusion and placement of STAR questions on trust_id?",
     "crumbs": [
       "Methodology",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Measures</span>"
