@@ -188,7 +188,6 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#data-pipeline-overview" id="toc-data-pipeline-overview" class="nav-link" data-scroll-target="#data-pipeline-overview">Data Pipeline Overview</a>
   <ul class="collapse">
   <li><a href="#data-collection-tools" id="toc-data-collection-tools" class="nav-link" data-scroll-target="#data-collection-tools">Data collection tools:</a></li>
-  <li><a href="#prism-data-fetch-scripts" id="toc-prism-data-fetch-scripts" class="nav-link" data-scroll-target="#prism-data-fetch-scripts">PRISM data fetch scripts:</a></li>
   <li><a href="#staff-data-manipulation-for-running-the-study" id="toc-staff-data-manipulation-for-running-the-study" class="nav-link" data-scroll-target="#staff-data-manipulation-for-running-the-study">Staff data manipulation for running the study:</a></li>
   </ul></li>
   <li><a href="#qualtrics-forms" id="toc-qualtrics-forms" class="nav-link" data-scroll-target="#qualtrics-forms">Qualtrics forms</a>
@@ -268,60 +267,12 @@ ul.task-list li input[type="checkbox"] {
 <li>Qualtrics forms</li>
 <li>NDA GUID tool</li>
 <li>FollowMee</li>
-</ol>
-</section>
-<section id="prism-data-fetch-scripts" class="level3">
-<h3 class="anchored" data-anchor-id="prism-data-fetch-scripts">PRISM data fetch scripts:</h3>
-<p>These R scripts are run by prism:</p>
-<ol type="1">
-<li>daily_download.R: Downloads GPS to <code>R:/optimize/$subid/gps/</code> and <code>gps_$subid.csv</code>
-<ol type="a">
-<li>Runs hourly on the hour</li>
-</ol></li>
-<li>download_qualtrics.R: Download qualtrics surveys:
-<ol type="a">
-<li>screen, guid pedigree, baseline, ema, feedback, bimonthly</li>
-<li>runs 4x day at 00:05, 06:05, 12:06, 18:05.</li>
-<li><strong>NEEDS UPDATE</strong>: Add consent, onboard, feedback (dependent on finalizing feedback survey form), and staff scripts.</li>
-</ol></li>
-<li>find_new_locations_opt.R: Detect new locations for each subid, save to <code>R:/optimize/$subid/places.csv</code>
-<ol type="a">
-<li>runs 4x day at 00:30, 06:30, 12:30, 18:30.</li>
-</ol></li>
-<li><strong>NEED SCRIPT.R</strong>: update_places.R. Checks downloaded ema.csv and updates places file for each participant with newly provided context.
-<ol type="a">
-<li>will run hourly? 4x? so that places are continually updated</li>
-</ol></li>
-<li><strong>NEED SCRIPT.R</strong>: Script to create new contact list and update it
-<ol type="a">
-<li>Update as participants are added/removed</li>
-<li>Update daily with gps locations which need context</li>
-</ol></li>
-<li><strong>NEED SCRIPT.R</strong>: Script feature engineers features from GPS and EMA - what is saved and where:
-<ol type="a">
-<li>not for participants who are not on study</li>
-<li>features run subject by subject and saved by subid - just append new features</li>
-<li>each subid folder will have a feature file</li>
-</ol></li>
-<li><strong>NEED SCRIPT.R</strong>: Script that runs the prediction model for all active participants - also by individual subid
-<ol type="a">
-<li>saved as columns in the feature file</li>
-<li>current prob and cx in prob also saved</li>
-</ol></li>
-<li><strong>NEED SCRIPT.R</strong>: Script to calculate feature importance for all active participants -
-<ol type="a">
-<li>run by subid for each day,</li>
-<li>they get an importance value for each feature. Use this + the previous day most important feature to select new most important feature which is also saved to a subid based file</li>
-</ol></li>
-<li><strong>NEED SCRIPT.R</strong>: Script to create the daily support message for each participant - creates the daily message
-<ol type="a">
-<li>will include recovery activity from 5 &amp; 6- do we save that somewhere?</li>
-<li>also saves their yoked tone preference. Somewhere there’s a file for each participant with their singular tone and style</li>
-</ol></li>
+<li>PRISM (by running scripts)</li>
 </ol>
 </section>
 <section id="staff-data-manipulation-for-running-the-study" class="level3">
 <h3 class="anchored" data-anchor-id="staff-data-manipulation-for-running-the-study">Staff data manipulation for running the study:</h3>
+<p>Susan: Update this section with path/input/output like on prism page</p>
 <ol type="1">
 <li>create_bulk_guid.qmd: creates identity file from Qualtrics onboarding script for NDA GUID creation tool</li>
 <li>format_nda_data.qmd: Creates the formatted template files for uploading data to NDA</li>

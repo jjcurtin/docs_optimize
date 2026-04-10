@@ -185,7 +185,10 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#access-to-current-prod-server" id="toc-access-to-current-prod-server" class="nav-link" data-scroll-target="#access-to-current-prod-server"><span class="header-section-number">4.3</span> Access to current PROD server</a></li>
   <li><a href="#to-start-the-prism-server" id="toc-to-start-the-prism-server" class="nav-link" data-scroll-target="#to-start-the-prism-server"><span class="header-section-number">4.4</span> To start the PRISM SERVER</a></li>
   <li><a href="#to-start-the-prism-gui" id="toc-to-start-the-prism-gui" class="nav-link" data-scroll-target="#to-start-the-prism-gui"><span class="header-section-number">4.5</span> To start the PRISM “GUI”</a></li>
-  <li><a href="#exiting-the-prism-interface" id="toc-exiting-the-prism-interface" class="nav-link" data-scroll-target="#exiting-the-prism-interface"><span class="header-section-number">4.6</span> Exiting the PRISM Interface</a></li>
+  <li><a href="#exiting-the-prism-interface" id="toc-exiting-the-prism-interface" class="nav-link" data-scroll-target="#exiting-the-prism-interface"><span class="header-section-number">4.6</span> Exiting the PRISM Interface</a>
+  <ul class="collapse">
+  <li><a href="#prism-data-scripts" id="toc-prism-data-scripts" class="nav-link" data-scroll-target="#prism-data-scripts"><span class="header-section-number">4.6.1</span> PRISM data scripts</a></li>
+  </ul></li>
   <li><a href="#prism-gui" id="toc-prism-gui" class="nav-link" data-scroll-target="#prism-gui"><span class="header-section-number">4.7</span> PRISM GUI</a>
   <ul class="collapse">
   <li><a href="#help-recommended-help" id="toc-help-recommended-help" class="nav-link" data-scroll-target="#help-recommended-help"><span class="header-section-number">4.7.1</span> help (recommended): Help</a></li>
@@ -302,7 +305,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>Notes:</p>
 <ul>
-<li>The server must be restarted if any changes are made to api, config, etc files.</li>
+<li>The server must be restarted if any changes are made to api, config, etc files. You can restart by hitting Ctrl-C until it shuts down, then re-running the above python command.</li>
 <li>It also must be restarted after the computer is rebooted (ie, for windows updates)</li>
 <li>If you eliminate <code>-m prod</code> from the second command, it starts the server in test mode (does not actually send mesages)</li>
 </ul>
@@ -321,6 +324,77 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>You can leave the cmd window open. When you need to re-enter PRISM, just hit the up arrow to bring back the last command (which will be that to restart the interface)</li>
 </ul>
+<section id="prism-data-scripts" class="level3" data-number="4.6.1">
+<h3 data-number="4.6.1" class="anchored" data-anchor-id="prism-data-scripts"><span class="header-section-number">4.6.1</span> PRISM data scripts</h3>
+<p>These R scripts are run by prism.</p>
+<ul>
+<li>NOTE these are initially in <code>optimize/automation/dev</code> until reviewed &amp; moved by John.</li>
+<li>I’ve ordered them by the order in which they must be used, ie. we have to download qualtrics data before we can add participants to followmee or prism.</li>
+</ul>
+<ol type="1">
+<li>optimize/automation/download_qualtrics.R: Download qualtrics surveys including screen, guid pedigree, baseline, ema, feedback, bimonthly
+<ol type="a">
+<li>Input: <code>S:/other/credentials.csv</code></li>
+<li>Output: <code>S:/optimize/data_raw/surveys/</code> (one csv file for each distinct survey)</li>
+<li>Run 4?x/day at 00:00, 06:00, 12:00, 18:00</li>
+<li><strong>ready for Review</strong></li>
+<li><strong>FUTURE UPDATE</strong>:Add consent, onboard, feedback (dependent on finalizing feedback survey form), and staff scripts.</li>
+</ol></li>
+<li>optimize/automation/update_participants.R:
+<ol type="a">
+<li>Input: <code>S:/other/credentials.csv</code>, <code>S:/optimize/data_raw/surveys/guid_pedigree.csv</code>, <code>S:/optimize/data_raw/surveys/onboard.csv</code>, <code>S:/optimize/data_raw/surveys/session_form.csv</code>, <code>S:/optimize/data_raw/surveys/wog.csv</code></li>
+<li>Output: <code>S:/optimize/data_raw/participants/study_participants.csv</code>, subset of columns to<code>C:/github/prism/prism/config/study_participants.csv</code> for use in PRISM.</li>
+<li>Run 4x day at 00:05, 06:05, 12:05, 18:05.</li>
+<li><strong>NEEDS CODING</strong> but before that need to finalize the session form and wog qualtrics surveys</li>
+</ol></li>
+<li>optimize/automation/make_tone_style.R: Half of participants will get their selected tone/style per baseline survey, half will be yoked to an existing tone/style. QUESTION: Do we instead use this to keep track of which of the 2x2x2x2 conditions each participant is assigned to, and tone/style are just part of that?
+<ol type="a">
+<li>Input: <code>S:/optimize/data_raw/surveys/baseline.csv</code></li>
+<li>Output: <code>S:/optimize/data_processed/tone_style_preferences.csv</code> (Aggregate across all subids)</li>
+<li>Run 1x day</li>
+<li><strong>NEEDS CODING</strong></li>
+</ol></li>
+<li>optimize/automation/download_followmee.R:
+<ol type="a">
+<li>Input: <code>S:/other/credentials.csv</code></li>
+<li>Output: <code>S:/optimize/data_raw/$subid/gps/</code> (daily subid level snapshots), <code>S:/optimize/data_raw/$subid/gps_$subid.csv</code> (combined subid level file of all sub GPS), <code>S:/optimize/data_processed/gps.csv</code> (all participant GPS)</li>
+<li>Run 4x day at 00:30, 06:30, 12:30, 18:30.</li>
+<li><strong>ready for Review</strong></li>
+</ol></li>
+<li>optimize/automation/find_new_places.R: Detect new locations for each subid,
+<ol type="a">
+<li>Input: S:/optimize/data_raw/</li>
+<li>Output: <code>S:/optimize/data_raw/$subid/places_$subid.csv</code></li>
+<li>Run 4x day at 00:40, 06:40, 12:40, 18:40.</li>
+<li><strong>ready for Review</strong></li>
+<li><strong>FUTURE UPDATE</strong>: Should also check downloaded ema.csv and updates places file for each participant with any newly provided context.</li>
+</ol></li>
+<li>optimize/automation/manage_contacts.R: Script to update qualtrics contact list for use with EMA/feedback surveys. Update as participants are added/removed and also update daily with gps locations which need context for on-study participants
+<ol type="a">
+<li>Input: <code>S:/optimize/data_raw/</code></li>
+<li>Output: <code>S:/optimize/data_raw/participants/qualtrics_contact_list/optimize_contacts.csv</code></li>
+<li>Run 4x day at 00:40, 06:40, 12:40, 18:40.</li>
+<li><strong>NEEDS CODING</strong></li>
+</ol></li>
+<li>optimize/automation/make_predictions.R:<br>
+</li>
+</ol>
+<ol type="a">
+<li>Input: <code>S:/optimize/data_raw/surveys/ema.csv</code>, <code>S:/optimize/data_processed/gps.csv</code></li>
+<li>Output: <code>S:/optimize/data_raw/$subid/predictions_$subid.csv</code></li>
+<li>Run 1x day</li>
+<li><strong>NEEDS CODING</strong></li>
+</ol>
+<ol start="7" type="1">
+<li>optimize/automation/make_feedback.R: Script to create the daily support/feedback message for each participant based on their prediction file - creates the daily message
+<ol type="a">
+<li>will include recovery activity from 5 &amp; 6- do we save that somewhere?</li>
+<li>also saves their yoked tone preference. Somewhere there’s a file for each participant with their singular tone and style</li>
+<li>Run 1x day</li>
+<li><strong>NEEDS CODING</strong></li>
+</ol></li>
+</ol>
+</section>
 </section>
 <section id="prism-gui" class="level2" data-number="4.7">
 <h2 data-number="4.7" class="anchored" data-anchor-id="prism-gui"><span class="header-section-number">4.7</span> PRISM GUI</h2>
@@ -373,7 +447,7 @@ ul.task-list li input[type="checkbox"] {
 <li>1: CHECK_SYSTEM @ 05:00:00 - Run Today: True</li>
 <li>2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True</li>
 <li>3: PULLDOWN_QUALTRICS_DATA @ 05:35:00 - Run Today: True</li>
-<li>4: RUN_R_SCRIPT @ 05:40:00 test2.R - Run Today: True</li>
+<li>4: RUN_R_SCRIPT @ 05:40:00 download_qualtrics.R - Run Today: True</li>
 </ol>
 <p>You also have the option to remove and add tasks.</p>
 <p>To add tasks:</p>
@@ -608,11 +682,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="scripts" class="level3" data-number="4.8.11">
 <h3 data-number="4.8.11" class="anchored" data-anchor-id="scripts"><span class="header-section-number">4.8.11</span> scripts/</h3>
-<ul>
-<li><p>README - “Put R scripts in here, configure them in ../config/script_pipeline.csv and they will be run with the R script pipeline task. New functionality to run individual R scripts; place them in this directory then configure a task to be run with the script name from the perspective of this directory (e.g.&nbsp;test.R)” - SW ASK CM - are both instructions still valid options? Language is slighly unclear</p></li>
-<li><p>test.R - sample test script</p></li>
-<li><p>test2.R - sample test script</p></li>
-</ul>
+<p>Scripts folder is no longer needed. PRISM has been reconfigured to run scripts from github/optimize/automation.</p>
 </section>
 <section id="src" class="level3" data-number="4.8.12">
 <h3 data-number="4.8.12" class="anchored" data-anchor-id="src"><span class="header-section-number">4.8.12</span> src/</h3>
