@@ -346,7 +346,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Run 4x day at 00:05, 06:05, 12:05, 18:05.</li>
 <li><strong>NEEDS CODING</strong> but before that need to finalize the session form and wog qualtrics surveys</li>
 </ol></li>
-<li>optimize/automation/make_tone_style.R: Half of participants will get their selected tone/style per baseline survey, half will be yoked to an existing tone/style. QUESTION: Do we instead use this to keep track of which of the 2x2x2x2 conditions each participant is assigned to, and tone/style are just part of that?
+<li>optimize/automation/make_tone_style.R: Half of participants will get their selected tone/style per baseline survey, half will be yoked to an existing tone/style. QUESTION: I think this should be renamed make_conditions and also track of which of the 2x2x2x2 conditions each participant is assigned to, and tone/style are just part of that.
 <ol type="a">
 <li>Input: <code>S:/optimize/data_raw/surveys/baseline.csv</code></li>
 <li>Output: <code>S:/optimize/data_processed/tone_style_preferences.csv</code> (Aggregate across all subids)</li>
@@ -380,18 +380,18 @@ ul.task-list li input[type="checkbox"] {
 </ol>
 <ol type="a">
 <li>Input: <code>S:/optimize/data_raw/surveys/ema.csv</code>, <code>S:/optimize/data_processed/gps.csv</code></li>
-<li>Output: <code>S:/optimize/data_raw/$subid/predictions_$subid.csv</code></li>
+<li>Output: <code>S:/optimize/data_raw/$subid/predictions_$subid.csv</code> (subid level, one row per day of their predictions, features, etc)</li>
 <li>Run 1x day</li>
 <li><strong>NEEDS CODING</strong></li>
 </ol>
 <ol start="7" type="1">
-<li>optimize/automation/make_feedback.R: Script to create the daily support/feedback message for each participant based on their prediction file - creates the daily message
+<li>optimize/automation/make_feedback.R: Script to create the daily support/feedback message for each participant based on their prediction file - creates the daily message</li>
+</ol>
 <ol type="a">
-<li>will include recovery activity from 5 &amp; 6- do we save that somewhere?</li>
-<li>also saves their yoked tone preference. Somewhere there’s a file for each participant with their singular tone and style</li>
+<li>Input: <code>S:/optimize/data_raw/$subid/predictions_$subid.csv</code> , <code>S:/optimize/data_processed/tone_style.csv</code> (or <code>conditions.csv</code>)</li>
+<li>Output: <code>S:/optimize/data_raw/$subid/predictions_$subid.csv</code> (subid level, every day has a new row for feedback)</li>
 <li>Run 1x day</li>
 <li><strong>NEEDS CODING</strong></li>
-</ol></li>
 </ol>
 </section>
 <section id="prism-gui" class="level2" data-number="4.8">
