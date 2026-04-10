@@ -27,41 +27,11 @@ This section contains methodological information for the study.
 1. Qualtrics forms
 2. NDA GUID tool
 3. FollowMee
-
-### PRISM data fetch scripts:
-
-These R scripts are run by prism:
-
-1. daily_download.R: Downloads GPS to `R:/optimize/$subid/gps/` and `gps_$subid.csv` 
-   a) Runs hourly on the hour
-2. download_qualtrics.R: Download qualtrics surveys:
-   a) screen, guid pedigree, baseline, ema, feedback, bimonthly
-   b) runs 4x day at 00:05, 06:05, 12:06, 18:05.
-   c) **NEEDS UPDATE**: Add consent, onboard, feedback (dependent on finalizing feedback survey form), and staff scripts.
-3. find_new_locations_opt.R: Detect new locations for each subid, save to `R:/optimize/$subid/places.csv` 
-   a) runs 4x day at 00:30, 06:30, 12:30, 18:30.
-4. **NEED SCRIPT.R**: update_places.R. Checks downloaded ema.csv and updates places file for each participant with newly provided context. 
-   a) will run hourly? 4x? so that places are continually updated
-5. **NEED SCRIPT.R**: Script to create new contact list and update it
-   a) Update as participants are added/removed
-   b) Update daily with gps locations which need context
-6. **NEED SCRIPT.R**: Script feature engineers features from GPS and EMA - what is saved and where:
-   a) not for participants who are not on study
-   b) features run subject by subject and saved by subid - just append new features
-   c) each subid folder will have a feature file 
-7. **NEED SCRIPT.R**: Script that runs the prediction model for all active participants - also by individual subid
-   a) saved as columns in the feature file
-   c) current prob and cx in prob also saved
-8. **NEED SCRIPT.R**: Script to calculate feature importance for all active participants - 
-   a) run by subid for each day,
-   b) they get an importance value for each feature. Use this + the previous day most important feature to 
-    select new most important feature which is also saved to a subid based file
-9. **NEED SCRIPT.R**: Script to create the daily support message for each participant - creates the daily message
-   a) will include recovery activity from 5 & 6- do we save that somewhere?
-   b) also saves their yoked tone preference. Somewhere there's a file for each participant with
-      their singular tone and style
+4. PRISM (by running scripts)
 
 ### Staff data manipulation for running the study:
+
+Susan: Update this section with path/input/output like on prism page
 
 1. create_bulk_guid.qmd: creates identity file from Qualtrics onboarding script for NDA GUID creation tool
 2. format_nda_data.qmd: Creates the formatted template files for uploading data to NDA
@@ -110,7 +80,7 @@ Data analysis:
    
 The following are not finalized in qualtrics as significant revision is happening:
 
-* Daily EMA
+* [Daily EMA](https://uwmadison.co1.qualtrics.com/jfe/form/SV_bdpR4B7K7Bc7nHE?practice=true)
     - MEASURE NOT FINALIZED
        - valence/arousal question
        - add #drinks question?
@@ -119,7 +89,7 @@ The following are not finalized in qualtrics as significant revision is happenin
 * Location context (part of EMA after day 7)
     - MEASURE NOT FINALIZED
     - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
-* Daily Feedback
+* [Daily Feedback](https://uwmadison.co1.qualtrics.com/jfe/form/SV_084MbCN54RfNrrU?practice=true)
     - needs update when we get final models
     - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
 

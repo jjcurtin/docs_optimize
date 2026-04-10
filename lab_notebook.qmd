@@ -8,7 +8,7 @@ This is a running record of meeting notes made for the execution of this project
 
 ## Notes
 
-EMA workflow:
+EMA workflow:  
 1. Original plan was for PRISM to update ema in real time as participants loaded the survey. This requires the use of a reverse proxy (ngrok) which will not be approved for use by Cybersecurity
 2. Revised plan was to have each participant have a single link for ema, which is updated daily by the API. Discovered 2026_0409 that although an update endpoint exists, it can ONLY update a very few specific fields and cannot update the whole survey.
 3. New plan: Use a qualtrics contact list with custom fields. Each participant will have a unique link to the ema survey. API *can* update the custom fields with lat/lon for uncontextualized places. We should probably save a version of this file dated each day so that we have a backup record of exactly who got what.

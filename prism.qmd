@@ -53,7 +53,7 @@ Open a command prompt window (nb: cannot use git bash) and enter the following c
 
 Notes:
 
-* The server must be restarted if any changes are made to api, config, etc files. 
+* The server must be restarted if any changes are made to api, config, etc files. You can restart by hitting Ctrl-C until it shuts down, then re-running the above python command.
 * It also must be restarted after the computer is rebooted (ie, for windows updates)
 * If you eliminate `-m prod` from the second command, it starts the server in test mode (does not actually send mesages)
 
@@ -69,6 +69,66 @@ Open a command prompt window (nb: cannot use git bash) and enter the following c
 You MUST type "exit" to exit the interface when finished. Otherwise, the CPU usage will remain near 100% and it will attract the attention of the CCI process monitors.
 
 * You can leave the cmd window open. When you need to re-enter PRISM, just hit the up arrow to bring back the last command (which will be that to restart the interface)
+
+
+### PRISM data scripts
+
+These R scripts are run by prism. 
+
+* NOTE these are initially in `optimize/automation/dev` until reviewed & moved by John.
+* I've ordered them by the order in which they must be used, ie. we have to download qualtrics data before we can add participants to followmee or prism.
+
+1. optimize/automation/download_qualtrics.R: Download qualtrics surveys including screen, guid pedigree, baseline, ema, feedback, bimonthly
+   a. Input: `S:/other/credentials.csv`
+   b. Output: `S:/optimize/data_raw/surveys/` (one csv file for each distinct survey)
+   c. Run 4?x/day at 00:00, 06:00, 12:00, 18:00
+   d. **ready for Review**
+   e. **FUTURE UPDATE**:Add consent, onboard, feedback (dependent on finalizing feedback survey form), and staff scripts. 
+
+2. optimize/automation/update_participants.R: 
+   a. Input: `S:/other/credentials.csv`, `S:/optimize/data_raw/surveys/guid_pedigree.csv`, `S:/optimize/data_raw/surveys/onboard.csv`, `S:/optimize/data_raw/surveys/session_form.csv`, `S:/optimize/data_raw/surveys/wog.csv`
+   b. Output: `S:/optimize/data_raw/participants/study_participants.csv`, subset of columns to`C:/github/prism/prism/config/study_participants.csv` for use in PRISM.
+   c. Run 4x day at 00:05, 06:05, 12:05, 18:05.
+   d. **NEEDS CODING** but before that need to finalize the session form and wog qualtrics surveys
+
+3. optimize/automation/make_tone_style.R: Half of participants will get their selected tone/style per baseline survey, half will be yoked to an existing tone/style. QUESTION: Do we instead use this to keep track of which of the 2x2x2x2 conditions each participant is assigned to, and tone/style are just part of that?
+   a. Input: `S:/optimize/data_raw/surveys/baseline.csv`
+   b. Output: `S:/optimize/data_processed/tone_style_preferences.csv` (Aggregate across all subids)
+   c. Run 1x day
+   d. **NEEDS CODING** 
+
+4. optimize/automation/download_followmee.R: 
+   a. Input: `S:/other/credentials.csv`
+   b. Output: `S:/optimize/data_raw/$subid/gps/` (daily subid level snapshots), `S:/optimize/data_raw/$subid/gps_$subid.csv` (combined subid level file of all sub GPS), `S:/optimize/data_processed/gps.csv` (all participant GPS)
+   c. Run 4x day at 00:30, 06:30, 12:30, 18:30.
+   d. **ready for Review**
+
+5. optimize/automation/find_new_places.R: Detect new locations for each subid, 
+   a. Input: S:/optimize/data_raw/
+   b. Output: `S:/optimize/data_raw/$subid/places_$subid.csv` 
+   c. Run 4x day at 00:40, 06:40, 12:40, 18:40.
+   d. **ready for Review**
+   e. **FUTURE UPDATE**: Should also check downloaded ema.csv and updates places file for each participant with any newly provided context. 
+
+6. optimize/automation/manage_contacts.R: Script to update qualtrics contact list for use with EMA/feedback surveys. Update as participants are added/removed and also update daily with gps locations which need context for on-study participants
+   a. Input: `S:/optimize/data_raw/`
+   b. Output: `S:/optimize/data_raw/participants/qualtrics_contact_list/optimize_contacts.csv` 
+   c. Run 4x day at 00:40, 06:40, 12:40, 18:40.
+   d. **NEEDS CODING**
+
+7. optimize/automation/make_predictions.R:  
+  a. Input: `S:/optimize/data_raw/surveys/ema.csv`, `S:/optimize/data_processed/gps.csv`
+  b. Output: `S:/optimize/data_raw/$subid/predictions_$subid.csv` 
+  c. Run 1x day
+  d. **NEEDS CODING**
+  
+7. optimize/automation/make_feedback.R: Script to create the daily support/feedback message for each participant based on their prediction file - creates the daily message
+   a. will include recovery activity from 5 & 6- do we save that somewhere?
+   b. also saves their yoked tone preference. Somewhere there's a file for each participant with
+      their singular tone and style
+   c. Run 1x day
+   d. **NEEDS CODING**
+
 
    
 ## PRISM GUI
@@ -118,7 +178,7 @@ This will show you the run status of tasks, for eaxample:
 a.	1: CHECK_SYSTEM @ 05:00:00 - Run Today: True
 b.	2: PULLDOWN_FOLLOWMEE_DATA @ 05:30:00 - Run Today: True
 c.	3: PULLDOWN_QUALTRICS_DATA @ 05:35:00 - Run Today: True
-d.	4: RUN_R_SCRIPT @ 05:40:00 test2.R - Run Today: True
+d.	4: RUN_R_SCRIPT @ 05:40:00 download_qualtrics.R - Run Today: True
 
 You also have the option to remove and add tasks.
 
@@ -307,10 +367,8 @@ Note: also need to install the PIP package manager – <pip install packagename>
 * pyngrok==7.2.11
 
 ### scripts/
-* README - "Put R scripts in here, configure them in ../config/script_pipeline.csv and they will be run with the R script pipeline task. New functionality to run individual R scripts; place them in this directory then configure a task to be run with the script name from the perspective of this directory (e.g. test.R)" - SW ASK CM - are both instructions still valid options? Language is slighly unclear
+Scripts folder is no longer needed. PRISM has been reconfigured to run scripts from github/optimize/automation.
 
-* test.R - sample test script
-* test2.R - sample test script
 
 ### src/
 
