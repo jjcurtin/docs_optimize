@@ -4,6 +4,7 @@ Copies of all measures can be found in the [proj_optimize repo](https://github.c
 
 
 ## Baseline Survey
+[Qualtrics Survey](https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?practice=true)
 
 ### ID:
 
@@ -12,6 +13,7 @@ Copies of all measures can be found in the [proj_optimize repo](https://github.c
 * WHO-Assist 
 * Trust ID 
 * Tone preferences 
+* Alcohol Abstinence Self-Efficacy Scale AASE (added 2026_0327)
 
 ### Repeated
 
@@ -20,6 +22,13 @@ Copies of all measures can be found in the [proj_optimize repo](https://github.c
 * GAD-7 
 * PHQ-9
 * Multidimensional Inventory of Recovery Capital (MIRC) 
+
+Questions for lab:
+
+* keep 2 optional questions on flourishing?
+* inclusion and placement of STAR questions on trust_id?
+
+
 
 ## Mid and Endpoint Repeated Measures Survey
 

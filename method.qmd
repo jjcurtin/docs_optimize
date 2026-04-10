@@ -22,45 +22,55 @@ This section contains methodological information for the study.
 
 ## Data Pipeline Overview
 
-### Data collection:
+### Data collection tools:
 
 1. Qualtrics forms
 2. NDA GUID tool
 3. FollowMee
 
-### Data manipulation for running the study:
+### PRISM data fetch scripts:
 
-1. Task scheduling script
-2. Scripts to pull & clean qualtrics data
-3. Scripts to pull GPS data and create frequent location files
-4. Script to add qualtrics data to csv files for PRISM
-5. PRISM - takes script output csv files to administer qualtrics surveys (EMA & Feedback)
-6. Staff scripts - adherence, payment, etc
-7. Data integrity check scripts, including those which copy data to & from the PRISM VM.
+These R scripts are run by prism:
 
-### PRISM daily tasks:
-
-Each night these events happen:
-
-1. Downloads GPS to `R:/optimize/$subid/gps/` and `gps_$subid.csv` PRISM VS R
-2. Download qualtrics EMA to `R:/optimize/ema` and `ema_$subid.csv` PRISM VS R
-3. Detect new locations for each subid, save to `R:/optimize/$subid/places.csv` 
-4. Script feature engineers features from GPS and EMA - what is saved and where:
+1. daily_download.R: Downloads GPS to `R:/optimize/$subid/gps/` and `gps_$subid.csv` 
+   a) Runs hourly on the hour
+2. download_qualtrics.R: Download qualtrics surveys:
+   a) screen, guid pedigree, baseline, ema, feedback, bimonthly
+   b) runs 4x day at 00:05, 06:05, 12:06, 18:05.
+   c) **NEEDS UPDATE**: Add consent, onboard, feedback (dependent on finalizing feedback survey form), and staff scripts.
+3. find_new_locations_opt.R: Detect new locations for each subid, save to `R:/optimize/$subid/places.csv` 
+   a) runs 4x day at 00:30, 06:30, 12:30, 18:30.
+4. **NEED SCRIPT.R**: update_places.R. Checks downloaded ema.csv and updates places file for each participant with newly provided context. 
+   a) will run hourly? 4x? so that places are continually updated
+5. **NEED SCRIPT.R**: Script to create new contact list and update it
+   a) Update as participants are added/removed
+   b) Update daily with gps locations which need context
+6. **NEED SCRIPT.R**: Script feature engineers features from GPS and EMA - what is saved and where:
    a) not for participants who are not on study
    b) features run subject by subject and saved by subid - just append new features
    c) each subid folder will have a feature file 
-5. Script that runs the prediction model for all active participants - also by individual subid
+7. **NEED SCRIPT.R**: Script that runs the prediction model for all active participants - also by individual subid
    a) saved as columns in the feature file
    c) current prob and cx in prob also saved
-6. Script to calculate feature importance for all active participants - 
+8. **NEED SCRIPT.R**: Script to calculate feature importance for all active participants - 
    a) run by subid for each day,
    b) they get an importance value for each feature. Use this + the previous day most important feature to 
     select new most important feature which is also saved to a subid based file
-7. Script to create the daily support message for each participant - creates the daily message
+9. **NEED SCRIPT.R**: Script to create the daily support message for each participant - creates the daily message
    a) will include recovery activity from 5 & 6- do we save that somewhere?
    b) also saves their yoked tone preference. Somewhere there's a file for each participant with
       their singular tone and style
 
+### Staff data manipulation for running the study:
+
+1. create_bulk_guid.qmd: creates identity file from Qualtrics onboarding script for NDA GUID creation tool
+2. format_nda_data.qmd: Creates the formatted template files for uploading data to NDA
+3. **NEED SCRIPT.R**: update_participants.R AND/OR qmd. (Might need both)
+  a) Updates a PRISM participant list on the R drive automatically so we have a running record of participants (PRISM list will only have on-study?) 
+  b) Also needs to be run by an RA manually after consent/interview to update when someone is added to or taken off study.
+4. **NEED SCRIPT**: check_adherence.qmd (start from Risk2 script)
+5. **NEED SCRIPT**: make_payment.qmd (start from Risk2 script) 
+6. **NEED SCRIPT**: enrollment_rppr.qmd (creates updated RPPR enrollment csv)
 
 
 Data analysis:

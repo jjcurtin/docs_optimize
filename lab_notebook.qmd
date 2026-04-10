@@ -6,6 +6,16 @@ This is a running record of meeting notes made for the execution of this project
 
 * finalize prism documentation
 
+## Notes
+
+EMA workflow:
+1. Original plan was for PRISM to update ema in real time as participants loaded the survey. This requires the use of a reverse proxy (ngrok) which will not be approved for use by Cybersecurity
+2. Revised plan was to have each participant have a single link for ema, which is updated daily by the API. Discovered 2026_0409 that although an update endpoint exists, it can ONLY update a very few specific fields and cannot update the whole survey.
+3. New plan: Use a qualtrics contact list with custom fields. Each participant will have a unique link to the ema survey. API *can* update the custom fields with lat/lon for uncontextualized places. We should probably save a version of this file dated each day so that we have a backup record of exactly who got what.
+  a. Download ema and add context to places file.
+  b. Update contact list with new uncontextualized places. 
+  c. Push up.
+  d. Need to modify PRISM to pull Twilio links from this file.
 
 
 
@@ -20,6 +30,277 @@ Note: The procedure for obtaining transcripts and recordings is
    * NB copilot will cheerfully tell you that it can transcribe an uploaded audio file, but that is incorrect: audio file types are not a permitted upload type.
 * Login to the wisc.edu instance of [copilot](https://it.wisc.edu/services/m365-copilot-chat/) with your netID. Upload the transcript (you can select the cloud document that you just saved) and ask copilot: "please provide a very detailed summary of the attached meeting transcript in markdown format". 
 * When it provides the summary, click the copy icon at the bottom and it will copy it in markdown format for pasting into a qmd. You'll have to do a small bit of cleanup (removing headers, section breaks, and footers) to paste here.
+
+
+### 2026_0326
+
+**Key Decisions**
+
+1.  **Feature Grouping Strategy**
+    *   Retain the expanded feature set (≈51 features) grouped into conceptual categories.
+    *   Avoid splitting **past day vs. past week** features in most cases, as the distinction adds limited clinical value.
+    *   Maintain a **max vs. median distinction only for pleasant events**, since they have opposite risk directions.
+
+2.  **Emotion-Based Location Features**
+    *   Acknowledge that **pleasant and unpleasant locations appear protective**, while **mixed-emotion locations increase risk**.
+    *   Treat this pattern as interpretable (re‑engagement, preparedness, predictability), not a modeling error.
+    *   Likely move toward **separating pleasant, unpleasant, and mixed-emotion locations into distinct categories** for more precise interventions.
+
+3.  **Efficacy/Motivation Measures**
+    *   Combine **most recent and past‑week efficacy/motivation EMA measures** into a single category rather than keeping them separate.
+    *   Continue to treat abstinence commitment as a standalone protective factor.
+
+4.  **EMA Design Philosophy**
+    *   Simplify daily EMAs to reduce burden and confusion.
+    *   Prioritize **actionable, interpretable signals** over granular but noisy inputs.
+
+5.  **Model Performance Interpretation**
+    *   Accept that GPS features are now appearing more frequently as important predictors after recent fixes.
+    *   Focus on representational balance (variety of feedback) rather than maximizing predictive gain alone.
+
+***
+
+**Action Items**
+
+1.  **Emotional Location Analysis (Claire)**
+    *   Split location EDA tables by **pleasant, unpleasant, mixed, neutral** in side‑by‑side columns.
+    *   Identify where unpleasant locations meaningfully diverge from overall trends.
+    *   Share updated comparison tables with the team.
+
+2.  **Feature Reconfiguration (John)**
+    *   Separate emotional-location categories (pleasant / unpleasant / mixed) in the model and re‑evaluate their frequency and impact.
+    *   Remove or down‑weight very small features (e.g., past‑day work exposure).
+    *   Recombine efficacy/motivation day vs. week measures into a single category.
+
+3.  **EMA Interface Updates (Susan)**
+    *   Redesign drinking report:
+        *   Ask only for **hour drinking started** (not duration).
+        *   Fix standard drink scale (include missing category).
+    *   Replace or prototype alternatives to **sliders** (e.g., Likert buttons).
+    *   Test usability of revised EMAs on mobile devices.
+
+4.  **Baseline Measure Review (Susan → John)**
+    *   Compile baseline measures from Risk‑1 (e.g., alcohol history, self‑efficacy, craving, stress, social support).
+    *   Flag items that could help **impute missing new EMA variables** (motivation, confidence, social support).
+
+5.  **Imputation Strategy (John)**
+    *   Develop imputation models for new EMA items using:
+        *   Existing EMA correlations (craving, stress, efficacy).
+        *   Selected baseline measures.
+    *   Avoid default median imputation when person‑specific predictors are available.
+
+6.  **Location Survey Compatibility**
+    *   Re‑add legacy GPS questions where needed:
+        *   “Is this a risky place?”
+        *   “Are you trying to avoid this place?”
+    *   Keep new harm/help and emotional grid questions in parallel to enable mapping between old and new features.
+
+7.  **Follow‑Up Preparation**
+    *   Circulate revised tables, EMA mockups, and baseline item lists via Slack.
+    *   Schedule follow‑up discussion focused on:
+        *   Final emotional-location handling.
+        *   EMA usability feedback.
+        *   Readiness for training next‑round models.
+
+
+**Detailed Notes**
+
+**1. Overview of Model Results and Feature Retention**
+
+1.1 The team reviewed a predictive lapse-risk model retaining **51 features**, most of which are intuitive and interpretable. 
+
+1.2 Features include **GPS-derived location behaviors**, **EMA self-reports**, **temporal patterns**, and **emotional/psychological indicators**.  
+
+1.3 These features were grouped into **28 conceptual categories**, though participants discussed whether some categories should be further split or collapsed.
+
+
+
+**2. GPS-Based Location Features and Their Associations**
+
+2.1 **Time spent in locations where alcohol is present** (past day and past week) is a clear risk factor.  
+2.2 **Time spent in places the participant wants to avoid** (past week) is also a risk factor.  
+2.3 **Time spent in locations where the participant drank in the past** (past day and week) increases risk.  
+2.4 **High-risk and medium-risk locations** increase risk, especially over the past day and week.  
+2.5 **AA meetings, friends’ homes, healthcare settings, and being at home** are protective.  
+2.6 **Restaurants** show a surprising pattern: time spent there (past day/week) is associated with increased risk.  
+2.7 **Work locations** show very small effects, with past-week work exposure slightly increasing risk and past-day exposure slightly decreasing risk; discussion suggested this may simply reflect **day-of-week effects** rather than meaningful causal relationships.  
+2.8 **Location entropy/variance** (irregular schedules, being “all over the place”) is consistently risky.
+
+
+
+**3. Emotional Location Ratings: Pleasant, Unpleasant, Mixed**
+
+3.1 Locations were labeled by participants as **pleasant, unpleasant, mixed, or neutral** (neutral dropped from the model).  
+3.2 **Mixed-emotion locations** modestly increase risk.  
+3.3 **Pleasant and unpleasant locations** are **protective**, with unpleasant being particularly counterintuitive.  
+3.4 The team flagged unpleasant locations as the **least intuitive finding**, deserving further investigation.  
+3.5 Exploratory analysis showed unpleasant locations are disproportionately associated with **high-risk categories** (e.g., liquor stores/bars) but may also reflect **re-engagement with real-life obligations** (errands, work).  
+3.6 Hypotheses for unpleasant locations being protective included:
+
+*   Preparedness/vigilance when entering known unpleasant environments
+*   Reconnecting with avoided but meaningful life domains (family, responsibilities)
+*   Reduced emotional unpredictability compared to mixed-valence locations  
+
+
+3.7 The group debated whether **pleasant, unpleasant, and mixed** should remain combined or become **separate intervention categories**, with growing support for splitting them.
+
+
+
+**4. EMA-Based Risk, Stress, and Motivation Features**
+
+
+4.1 **Craving**
+
+*   Maximum craving over the past week is a strong risk factor.
+
+4.2 **Risky Situations**
+
+*   Both **most recent** and **maximum risky situations** are associated with higher lapse risk.
+*   Past and future risky situations were separated into different conceptual categories to support tailored feedback.
+
+4.3 **Stressors/Hassles**
+
+*   Maximum stress over the past week and **most recent stressor reports** increase risk.
+*   Future anticipated stressors are also risky.
+
+4.4 **Pleasant Events**
+
+*   **Median pleasant event ratings** over the past week are protective.
+*   **Maximum pleasant event ratings** are risky, likely reflecting celebrations or partying.
+*   This distinction was considered **clinically actionable**, prompting either:
+    *   Increasing regular, healthy pleasant activities (low median), or
+    *   Reflecting on extreme celebratory events (high max).
+
+4.5 **Negative Affect**
+
+*   **Activated negative affect** (anger, irritation) increases risk.
+*   **Deactivated negative affect** (sad, depressed) is an even stronger risk factor.
+*   Low activation positive affect is interpreted as high risk via the opposite pole of the affect continuum.
+
+4.6 **Past Alcohol Use (Lapses)**
+
+*   Any recent drinking or lapse history strongly elevates current risk.
+
+
+
+**5. Efficacy, Motivation, and Abstinence Commitment**
+
+5.1 EMA item predicting likelihood of drinking next week shows strong predictive power.  
+5.2 Commitment to abstinence (coded no / uncertain / yes) is protective.  
+5.3 The team debated splitting **most recent vs. past-week averages** for efficacy/motivation, ultimately leaning toward **combining them** to reduce complexity and redundancy.
+
+
+
+**6. Time and Calendar Effects**
+
+6.1 **Friday and Saturday** are associated with increased risk.  
+6.2 **Monday and Tuesday** are protective.  
+6.3 These effects likely capture social norms and routine structure rather than individual behavior alone.
+
+
+
+**7. Category Selection, Frequency, and Personalization**
+
+7.1 A “max feature per day” approach with secondary-category selection was reviewed.  
+7.2 A second category is selected \~**21% of days** under the 25th-percentile importance criterion.  
+7.3 Most frequent top categories include:
+
+*   Efficacy/motivation
+*   Craving
+*   Future risky situations
+*   Past use
+*   Medium-risk locations
+*   Abstinence commitment
+    7.4 Rare categories include work, healthcare, and friends’ homes.  
+    7.5 Across participants:
+*   Minimum categories seen over 3 months: **\~3**
+*   Maximum: **\~16**
+*   Average: **\~10**, considered reasonable and comparable to structured therapy manuals.
+    7.6 Long consecutive runs of the same category occur mainly in participants with **very few total categories**.
+
+
+
+**8. Decisions About Day vs. Week Distinctions**
+
+8.1 The group largely agreed not to distinguish between past-day and past-week features, except where:
+
+*   Directionality differs (e.g., pleasant event median vs. max)
+*   Clinical interpretation clearly changes  
+    8.2 Day vs. week distinctions may add noise rather than actionable insight.
+
+
+
+**9. Improvements to EMA Design (Daily Surveys)**
+
+9.1 Drinking-report interface issues were discussed:
+
+*   Hour-by-hour scrolling was confusing (especially post-midnight drinking).
+*   Decision made to simplify by asking **only the hour drinking started**, not duration.
+    9.2 Standard drink count scale needed correction (missing category).
+    9.3 Sliders were criticized as:
+*   Annoying on mobile devices
+*   Prone to accidental or default responses
+    9.4 Alternatives proposed:
+*   Likert-style buttons with no default selection
+*   Clearly labeled anchors with mandatory response
+    9.5 Emotional arousal/valence (circumplex model) will be retained but with improved participant orientation.
+
+
+
+**10. New EMA Questions and Imputation Challenges**
+
+10.1 New EMA items added:
+
+*   Social support
+*   Future pleasant events
+*   Separate efficacy, motivation, and confidence questions
+    10.2 These new items are **missing in older datasets (Risk-1)**.
+    10.3 Without imputation, they would be weak predictors due to missingness.  
+    10.4 Proposed solutions:
+*   Impute using other EMA responses (e.g., craving, stress)
+*   Use baseline measures correlated with motivation/confidence
+
+
+
+**11. Baseline Measures Reviewed for Imputation Potential**
+
+11.1 Candidate measures included:
+
+*   Alcohol use history and past quit attempts
+*   Alcohol Abstinence Self-Efficacy Scale
+*   Craving scales
+*   Depression and perceived stress scales
+*   Quality of life and social support measures
+    11.2 DSM and family functioning measures were considered less directly useful.
+    11.3 Even weak-person-specific predictors were preferred over global median imputation.
+
+
+
+**12. GPS Location Survey and Feature Compatibility**
+
+12.1 The updated location context survey captures:
+
+*   Location type
+*   Alcohol availability
+*   Helpfulness or harmfulness to recovery
+*   Emotional valence via a 2D grid
+    12.2 Challenges identified:
+*   Old features (“riskiness,” “trying to avoid”) are not fully captured.
+*   Backward compatibility is needed to use past models.
+    12.3 Proposed solution:
+*   Add legacy questions back in alongside new ones temporarily.
+*   Use overlap data to map old features onto new formats.
+
+
+
+**13. Outstanding Questions and Next Steps**
+
+13.1 Split emotional categories (pleasant, unpleasant, mixed) for analysis.  
+13.2 Revisit the interpretation of unpleasant locations if they persist as protective.  
+13.3 Finalize EMA UI changes and test usability on phones.  
+13.4 Identify baseline variables most useful for imputing new EMA items.  
+13.5 Maintain consistency between GPS and EMA feature definitions across studies.
+
 
 
 ### 2026_0312
@@ -127,7 +408,7 @@ However, the group warns:
 *   Investigate methods for identifying interactions in ML models (Friedman’s H, SHAP interaction values).
 *   Explore impacts of subgroup representation (e.g., racial/ethnic imbalance).
 
-***
+
 
 6. **Discussion of Social Network Measures**
 
@@ -142,7 +423,7 @@ Outcome:
 
 *   Group agrees they should learn how these social metrics were measured and consider adding or adapting them in future studies.
 
-***
+
 
 7. **Relevance for OPTIMIZE: Incorporating Baseline Features**
 
@@ -186,7 +467,7 @@ Implementation constraints in Qualtrics:
 *   Group feels lapses older than 2 weeks are unlikely to be reported reliably anyway.
 *   15 days is acceptable.
 
-***
+
 
 9. **EMA Content Review & Revisions**
 
@@ -225,7 +506,7 @@ Team wants to:
     *   Sleep (has not emerged as important)
     *   Daily companion drug‑use reports (rare, low variance)
 
-***
+
 
 ## 10. **EMA Length Considerations**
 
