@@ -71,7 +71,7 @@ You MUST type "exit" to exit the interface when finished. Otherwise, the CPU usa
 * You can leave the cmd window open. When you need to re-enter PRISM, just hit the up arrow to bring back the last command (which will be that to restart the interface)
 
 
-### PRISM data scripts
+## PRISM data scripts
 
 These R scripts are run by prism. 
 
@@ -91,17 +91,17 @@ These R scripts are run by prism.
    c. Run 4x day at 00:05, 06:05, 12:05, 18:05.
    d. **NEEDS CODING** but before that need to finalize the session form and wog qualtrics surveys
 
-3. optimize/automation/make_tone_style.R: Half of participants will get their selected tone/style per baseline survey, half will be yoked to an existing tone/style. QUESTION: Do we instead use this to keep track of which of the 2x2x2x2 conditions each participant is assigned to, and tone/style are just part of that?
+3. optimize/automation/make_tone_style.R: Half of participants will get their selected tone/style per baseline survey, half will be yoked to an existing tone/style. QUESTION: I think this should be renamed make_conditions and also track of which of the 2x2x2x2 conditions each participant is assigned to, and tone/style are just part of that.
    a. Input: `S:/optimize/data_raw/surveys/baseline.csv`
    b. Output: `S:/optimize/data_processed/tone_style_preferences.csv` (Aggregate across all subids)
    c. Run 1x day
    d. **NEEDS CODING** 
 
-4. optimize/automation/download_followmee.R: 
+4. optimize/automation/get_followmee.R: 
    a. Input: `S:/other/credentials.csv`
    b. Output: `S:/optimize/data_raw/$subid/gps/` (daily subid level snapshots), `S:/optimize/data_raw/$subid/gps_$subid.csv` (combined subid level file of all sub GPS), `S:/optimize/data_processed/gps.csv` (all participant GPS)
-   c. Run 4x day at 00:30, 06:30, 12:30, 18:30.
-   d. **ready for Review**
+   c. Run 1x day at 00:00
+   d. Status: JC approved
 
 5. optimize/automation/find_new_places.R: Detect new locations for each subid, 
    a. Input: S:/optimize/data_raw/
@@ -118,14 +118,13 @@ These R scripts are run by prism.
 
 7. optimize/automation/make_predictions.R:  
   a. Input: `S:/optimize/data_raw/surveys/ema.csv`, `S:/optimize/data_processed/gps.csv`
-  b. Output: `S:/optimize/data_raw/$subid/predictions_$subid.csv` 
+  b. Output: `S:/optimize/data_raw/$subid/predictions_$subid.csv` (subid level, one row per day of their predictions, features, etc)
   c. Run 1x day
   d. **NEEDS CODING**
   
 7. optimize/automation/make_feedback.R: Script to create the daily support/feedback message for each participant based on their prediction file - creates the daily message
-   a. will include recovery activity from 5 & 6- do we save that somewhere?
-   b. also saves their yoked tone preference. Somewhere there's a file for each participant with
-      their singular tone and style
+  a. Input: `S:/optimize/data_raw/$subid/predictions_$subid.csv` , `S:/optimize/data_processed/tone_style.csv` (or `conditions.csv`)
+  b. Output: `S:/optimize/data_raw/$subid/predictions_$subid.csv` (subid level, every day has a new row for feedback)
    c. Run 1x day
    d. **NEEDS CODING**
 
