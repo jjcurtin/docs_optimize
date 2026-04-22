@@ -385,7 +385,7 @@ Scripts folder is no longer needed. PRISM has been reconfigured to run scripts f
    * _system_task.py
 * task_managers/
    * README
-   * _participant_manager.py
+   * _participant_manager.py - Note, this contains the text to be included with feedback/ema messages including the bulk of the URL. Survey ID is managed elsewhere (qualtrics.API)
    * _system_task_manager.py
    * _task_manager.py
 * user_interface_menus/ - broadly, this contains the py scripts to execute the various GUI menu commands. 

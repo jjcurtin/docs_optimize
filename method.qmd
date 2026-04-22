@@ -52,18 +52,18 @@ Data analysis:
 ### Participant facing
 
 * [Screening](https://uwmadison.co1.qualtrics.com/jfe/form/SV_eKvAYBgOhNYxjL0?practice=true)
-   - needs final review to ensure implementation matches finalized version
+   - 2026_0422 TB confirmed qualtrics implementation as definitive, other docs updated to match
    - needs lab review 
    - use responseID as screen_id which can be carried forward to consent (inserted in URL by RA)
 * [Consent](https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?practice=true) 
    - needs lab review
    - will need to be updated post-IRB change approval
-   - needs forwarding to onboard survey
+   - DONE needs forwarding to onboard survey
 * [Onboard](https://uwmadison.co1.qualtrics.com/jfe/form/SV_1NecAUeTKptN4ua?practice=true) 
    - needs lab review
    - collects phone number and address for EMA & payment
    - may change per new participant payment regulations
-   - needs forwarding to birth data survey
+   - DONE needs forwarding to birth data survey
 * [Birth data](https://uwmadison.co1.qualtrics.com/jfe/form/SV_9uCe7FPCGeHqriu?practice=true) 
    - needs lab review
    - subid assigned here, unless decided otherwise
@@ -74,21 +74,18 @@ Data analysis:
    - needs lab review
    - DONE add subid as embedded data
 * [Mid/end repeated measures](https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?practice=true)
-   - needs final review to ensure implementation matches finalized measures
+   - 2026_0422 TB confirmed matches qmd measures except:
+     * message_usefulness has a five-point scale, but message.qmd says it should have a seven-point scale - do we alter?
    - needs lab review
    - add subid as embedded data
-   
+* [Daily EMA](https://uwmadison.co1.qualtrics.com/jfe/form/SV_bdpR4B7K7Bc7nHE?practice=true)
+    - Finalized
+    * Location context (part of EMA after day 7)
+        - Finalized
+
+
 The following are not finalized in qualtrics as significant revision is happening:
 
-* [Daily EMA](https://uwmadison.co1.qualtrics.com/jfe/form/SV_bdpR4B7K7Bc7nHE?practice=true)
-    - MEASURE NOT FINALIZED
-       - valence/arousal question
-       - add #drinks question?
-       - implement lapse calendar date/time select 
-          * easier if we limit the date range they can add unreported lapses - say, last 7 days?
-* Location context (part of EMA after day 7)
-    - MEASURE NOT FINALIZED
-    - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
 * [Daily Feedback](https://uwmadison.co1.qualtrics.com/jfe/form/SV_084MbCN54RfNrrU?practice=true)
     - needs update when we get final models
     - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
