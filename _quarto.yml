@@ -17,6 +17,8 @@ book:
       chapters:         
         - qualtrics_links.qmd
         - sops.qmd
+        - oncore.qmd
+        - payments.qmd
 
     
     

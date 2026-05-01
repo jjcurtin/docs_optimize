@@ -45,3 +45,13 @@ Questions for lab:
 * GAD-7
 * PHQ-9
 * Multidimensional Inventory of Recovery Capital (MIRC) 
+
+
+### Daily
+* EMA 
+  * Will come at the end of the day, at 4pm local tz. People can choose their reminder time.
+  * They will have until noon of the following day to complete it.
+  * We will include location script calculations from day 1, because at intake we will get places they are trying to avoid. This can be asked immediately.
+  * After that we will ask only TWO locations per day max (decided by JC 2026_0501)
+* Feedback
+  * Will come at the start of the day, at 6am local tz.  People can choose their reminder time.

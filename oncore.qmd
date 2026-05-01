@@ -1,0 +1,135 @@
+# Oncore
+
+## System Links
+* SMPH Review Process: https://kb.wisc.edu/smph/informatics/internal/24722
+
+## Training & Reference Links
+
+* OnCore: Protocol Staff Roles (with mapping info): https://kb.wisc.edu/smph/informatics/internal/70715 
+* eBinders: Roles and Permissions: https://kb.wisc.edu/smph/informatics/internal/119475 
+* OnCore: Health Link Research Functionality in OnCore (includes mapping info): https://kb.wisc.edu/smph/informatics/internal/94285 
+
+* OnCore Integration for Participant Payments: https://kb.wisc.edu/smph/informatics/internal/132958 
+* Payments: Find Participants: https://kb.wisc.edu/smph/informatics/internal/page.php?id=133607 
+
+* OnCore: Interface between Oncore and Health Link - Protocol and Subject Status: https://kb.wisc.edu/smph/informatics/internal/27272 
+* OnCore and Health Link User Interface: https://kb.wisc.edu/smph/informatics/internal/page.php?id=58880 
+* OnCore: Study Status and Subject Registration Workflow in Health Link: https://kb.wisc.edu/smph/informatics/internal/page.php?id=25661 
+
+* Research Applications Knowledgebase: https://kb.wisc.edu/smph/informatics
+( Research Applications Support: https://smph-navigator.atlassian.net/servicedesk/customer/portal/69 
+
+
+## Reference Information
+
+The information on this page is taken from the Oncore training courses.
+
+### Protocol Integrations
+integrations with OnCore include:
+
+* Florence eBinders
+* Advarra Participant Payments
+* Power BI Data Quality Mart (not used by us)
+* EPIC Health Link (not used by us)
+
+"Library" field in your protocol drives the integration. (Non-oncology for us).  OnCore protocol number is used in each integrated system as a unique identifier and the format differs between the oncology (alphanumeric) and non-oncology (numeric) libraries
+
+### Florence eBinders
+
+eBinders is an electronic system that replaces paper documents and physical binders for human subject research study documents.
+
+It is an efficient, 21 CFR Part 11 compliant way to electronically sign, manage, store, and share documents.
+
+An eBinder is created in Florence when you answer the OnCore Annotations questions about eBinders. To create the binder, open the Annotations tab. You must create an Annotation for each OnCore protocol record, even if you aren't using eBinders.
+
+* In our case the binder type will be "Drug or Device"
+
+Role-based permission to access a study binder is granted through the OnCore Protocol Staff tab.
+
+A link to a document in eBinders is created and sent to OnCore as a deeplink in the Documents/Info tab when a Document Type is assigned in eBinders.
+
+* To locate our binder in Florence, use the Filter By tool. The binder name comes from Oncore as "Protocol Number - PI Name"
+
+#### Subfolders
+
+A drug/device binder contains two folders: Regulatory and Subject
+
+#### Roles
+
+Some (but not all) OnCore protocol staff roles map to eBinder roles. 
+
+Before assigning a mapped role in OnCore to a staff person, you must confirm that they have completed and documented the correct training to perform the duties of that role in eBinders.
+
+It is acceptable for the user to exceed the eBinders training requirements for a given role, but it is unacceptable for them to have insufficient training. Use the [UW Florence eBinders Access & Training Documentation Lookup](https://kb.wisc.edu/smph/informatics/internal/page.php?id=119475)
+
+* Read Only User - This may also be referred to as Basic training.
+* View and Sign User - This may also be referred to as Investigator or PI training. It covers basic navigation plus how to sign documents in eBinders. **John Needs This**
+* Super User - This may also be referred to as eReg user training, and is the most in-depth. In addition to navigation and signing, it covers how to upload and edit documents, among many other topics. **Susan and Thea**
+
+Some roles require two (2) entries in the Staff tab. One of the entries is to show their role on the study (e.g., Research Lab Staff), which the other is to map access for them to eBinders (i.e., eReg Mapped Sign).
+
+It is crucial that we update staff if they leave, so that access control is maintained
+
+#### Deeplinks
+
+A deeplink is a direct link available in OnCore to specific documents filed in eBinders. Deeplinks require the use of specific Document Type assignments in eBinders. Deeplinks are created through actions in eBinders that flow over to OnCore.
+
+* Deeplinks display in OnCore on the Documents/Info tab
+* file name starting with https://us.v2.researchbinders.com 
+* Created User is a long series of letters and numbers
+* [More info](https://kb.wisc.edu/smph/informatics/internal/page.php?id=116170)
+
+## Advarra Participant Payments
+
+Used to pay research participants for stipends and travel in a single system
+
+The interface between OnCore and Payments streamlines the maintenance of protocol and subject records used in Payments.
+
+* unidirectional; i.e., information only flows from OnCore to Payments (via Advarra Hub)
+* Some information still needs to be entered directly into Payments.
+* After your protocol is approved to use Payments through the intake process, the Dean's Finance Office notifies Application Support to enable the integration.
+* DO NOT edit OnCore field labeled "Enable Payments Integration" - that's for Admin only
+
+**Adding Subjects**
+
+* Search for existing participant records in Payments and use Epic MRNs in both Payments and OnCore PRIOR to registering, to prevent duplicates
+* you must register participants in OnCore (not in Payments) with their Epic Medical Record Number (MRN). 
+* The subject information will flow into Payments when you add each participant to the CRA Console in OnCore.
+* Participant records created from OnCore have a cloud icon and a message saying it was imported from the Advarra hub.
+* Some fields are read-only in Payments for records sent from OnCore, including first/middle/last name, suffix, address/city/state/zip, and gender (sex).
+* If you need to update these fields, you need to make those updates in OnCore
+*  Email address is editable directly in Payments BUT you will also have to edit Oncore. Best to edit it in Oncore so it is passed to Payments automatically
+* If a participant is incorrectly added to an OnCore protocol, contact the Application Support Team. They will provide instructions on how to delete the record appropriately from OnCore.
+
+### Things to edit in Payments
+
+One set of fields that is not integrated with OnCore and must be built within Payments is the list of visits:  
+* IRB number
+* Financial Reference Number
+* Internal reference number (subid)
+* keywords
+* Visits
+
+* You create the visits in Payments after the protocol is imported from OnCore.
+* You add stipend amounts for each visit you set up in Payments. 
+* [creating or updating Payments visits KB](https://kb.wisc.edu/smph/informatics/internal/page.php?id=132526)
+
+### Subject Integrations
+
+* Staff tab is NOT integrated in payments
+
+* Demographics can come from EPIC but we should NOT be using real MRNs as there is no need
+
+
+OnCore Subject Study Status:  
+
+* Consented
+* Eligible
+* On Study
+* Off Treatment
+* On Follow Up
+* On Follow Up with Patient Billing Complete Date
+* Consent Refused
+* Not Eligible
+* Withdrawn
+* Off Study
