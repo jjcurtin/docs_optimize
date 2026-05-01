@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="JJCurtin &amp; SEWanta">
-<meta name="dcterms.date" content="2025-11-05">
 
-<title>Project Manual - Optimize</title>
+<title>Project Manual - Optimize - 8&nbsp; Participant Payments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./overview.html" rel="next">
+<link href="./oncore.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -82,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Preface</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./payments.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -109,7 +107,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Preface</span></a>
   </div>
 </li>
@@ -177,7 +175,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./payments.html" class="sidebar-item-text sidebar-link">
+  <a href="./payments.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></span></a>
   </div>
 </li>
@@ -193,35 +191,48 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a></li>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview"><span class="header-section-number">8.1</span> Overview</a>
+  <ul class="collapse">
+  <li><a href="#paying-participants" id="toc-paying-participants" class="nav-link" data-scroll-target="#paying-participants"><span class="header-section-number">8.1.1</span> Paying participants</a></li>
+  <li><a href="#review-payments" id="toc-review-payments" class="nav-link" data-scroll-target="#review-payments"><span class="header-section-number">8.1.2</span> Review payments</a></li>
+  <li><a href="#reporting" id="toc-reporting" class="nav-link" data-scroll-target="#reporting"><span class="header-section-number">8.1.3</span> Reporting</a></li>
+  <li><a href="#manage-protocols-and-participants" id="toc-manage-protocols-and-participants" class="nav-link" data-scroll-target="#manage-protocols-and-participants"><span class="header-section-number">8.1.4</span> Manage Protocols and Participants</a></li>
+  <li><a href="#participants" id="toc-participants" class="nav-link" data-scroll-target="#participants"><span class="header-section-number">8.1.5</span> Participants</a></li>
+  <li><a href="#roles" id="toc-roles" class="nav-link" data-scroll-target="#roles"><span class="header-section-number">8.1.6</span> Roles</a></li>
+  </ul></li>
+  <li><a href="#addingmanaging-participant-records" id="toc-addingmanaging-participant-records" class="nav-link" data-scroll-target="#addingmanaging-participant-records"><span class="header-section-number">8.2</span> Adding/managing participant records</a>
+  <ul class="collapse">
+  <li><a href="#updating-participants" id="toc-updating-participants" class="nav-link" data-scroll-target="#updating-participants"><span class="header-section-number">8.2.1</span> Updating participants</a></li>
+  <li><a href="#error-messages" id="toc-error-messages" class="nav-link" data-scroll-target="#error-messages"><span class="header-section-number">8.2.2</span> Error messages</a></li>
+  </ul></li>
+  <li><a href="#adding-a-participant-to-a-protocol" id="toc-adding-a-participant-to-a-protocol" class="nav-link" data-scroll-target="#adding-a-participant-to-a-protocol"><span class="header-section-number">8.3</span> Adding a participant to a protocol</a></li>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation"><span class="header-section-number">8.4</span> Navigation</a></li>
+  <li><a href="#user-profile" id="toc-user-profile" class="nav-link" data-scroll-target="#user-profile"><span class="header-section-number">8.5</span> User Profile</a></li>
+  <li><a href="#contacts-page" id="toc-contacts-page" class="nav-link" data-scroll-target="#contacts-page"><span class="header-section-number">8.6</span> Contacts page</a></li>
+  <li><a href="#managing-protocols-in-payments" id="toc-managing-protocols-in-payments" class="nav-link" data-scroll-target="#managing-protocols-in-payments"><span class="header-section-number">8.7</span> Managing protocols in payments</a>
+  <ul class="collapse">
+  <li><a href="#protocol-creation-from-oncore" id="toc-protocol-creation-from-oncore" class="nav-link" data-scroll-target="#protocol-creation-from-oncore"><span class="header-section-number">8.7.1</span> Protocol creation from Oncore</a></li>
+  <li><a href="#editing-the-protocol" id="toc-editing-the-protocol" class="nav-link" data-scroll-target="#editing-the-protocol"><span class="header-section-number">8.7.2</span> Editing the Protocol</a></li>
+  <li><a href="#adding-visit-details" id="toc-adding-visit-details" class="nav-link" data-scroll-target="#adding-visit-details"><span class="header-section-number">8.7.3</span> Adding Visit Details</a></li>
+  <li><a href="#adding-protocol-users" id="toc-adding-protocol-users" class="nav-link" data-scroll-target="#adding-protocol-users"><span class="header-section-number">8.7.4</span> Adding protocol users</a></li>
+  </ul></li>
+  <li><a href="#reports-in-payments" id="toc-reports-in-payments" class="nav-link" data-scroll-target="#reports-in-payments"><span class="header-section-number">8.8</span> Reports in payments</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./payments.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Project Manual - Optimize</h1>
+<h1 class="title"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>JJCurtin &amp; SEWanta </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">November 5, 2025</p>
-    </div>
-  </div>
   
     
   </div>
@@ -231,10 +242,177 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="preface" class="level1 unnumbered">
-<h1 class="unnumbered">Preface</h1>
-<p>This is the <a href="https://jjcurtin.github.io/docs_optimize/">project manual</a> for John Curtin’s Optimize grant.</p>
-<p>Analysis code is located in the <a href="https://github.com/jjcurtin/proj_optimize">proj_optimize repo</a> (private). John will grant access on an as-needed basis.</p>
+<p>Payment is via a reloadable debit card or direct deposit.</p>
+<section id="overview" class="level2" data-number="8.1">
+<h2 data-number="8.1" class="anchored" data-anchor-id="overview"><span class="header-section-number">8.1</span> Overview</h2>
+<section id="paying-participants" class="level3" data-number="8.1.1">
+<h3 data-number="8.1.1" class="anchored" data-anchor-id="paying-participants"><span class="header-section-number">8.1.1</span> Paying participants</h3>
+<p>From Participant Search:</p>
+<ol type="1">
+<li>Search for the participant and click their name</li>
+<li>Select the appropriate study and visit</li>
+<li>Click Pay</li>
+</ol>
+</section>
+<section id="review-payments" class="level3" data-number="8.1.2">
+<h3 data-number="8.1.2" class="anchored" data-anchor-id="review-payments"><span class="header-section-number">8.1.2</span> Review payments</h3>
+<ul>
+<li>Any payments submitted for review will appear in the Payment console. * Here the UW financials team can review the payments and choose to Pay or Reject a stipend or reimbursement.</li>
+<li>Clicking on the payment anywhere in the table allows you to access the visit details. Here you can review reimbursement guidelines, amounts entered by study staff, and any comments and attachments.</li>
+<li>Once the reimbursement is reviewed, clicking Pay will release funds to the participant or clicking Reject will reject the payment.</li>
+<li>In addition to payment amounts and comments, reviewers can also access an audit trail with a full history of changes to the stipend or reimbursements.</li>
+</ul>
+</section>
+<section id="reporting" class="level3" data-number="8.1.3">
+<h3 data-number="8.1.3" class="anchored" data-anchor-id="reporting"><span class="header-section-number">8.1.3</span> Reporting</h3>
+<ul>
+<li>1099 report returns participant information (such as name, address, and SSN) as well as the total amount of payments they’ve received within the search window. It is designed to provide us with information to easily generate 1099 forms.</li>
+<li>The card inventory report lists the ICNs of cards at UW. The report will list the card status, when it was created, and the expiration date of the card.</li>
+<li>The itemized receipts report lists all of the stipends and reimbursements that have been remitted to participants, as well as associated fees. There is a tab for every protocol as well as a summary tab that lists the totals for each protocol.</li>
+<li>The sponsor invoicing report organizes all payments to participants by protocol. It lists payments as well as card fees to help efficiently invoice study sponsors. (NB We will not be using this as we do not receive sponsor payments)</li>
+</ul>
+</section>
+<section id="manage-protocols-and-participants" class="level3" data-number="8.1.4">
+<h3 data-number="8.1.4" class="anchored" data-anchor-id="manage-protocols-and-participants"><span class="header-section-number">8.1.4</span> Manage Protocols and Participants</h3>
+<ul>
+<li>All of your protocol records will be listed on the Protocols landing page.</li>
+<li>Further down the protocol record, you will find the visits and stipends information. This is also where financial specialists will be able to set up any applicable reimbursements.</li>
+<li>There are fields where you can define reimbursement maximums and mileage rates. These amounts flow to other areas of Payments so that study and financial teams have easy access to that information. You also can also add protocol users to grant them access to the protocol.</li>
+</ul>
+</section>
+<section id="participants" class="level3" data-number="8.1.5">
+<h3 data-number="8.1.5" class="anchored" data-anchor-id="participants"><span class="header-section-number">8.1.5</span> Participants</h3>
+<p>You can use Participant Search to find and manage participant records in Payments.</p>
+<ul>
+<li>After clicking Edit, you are able to view the participant’s contact information.</li>
+<li>you can click the All Visits/More Details link to see a full schedule of visits for that protocol. This also displays a history of any checked in and paid visits.</li>
+</ul>
+</section>
+<section id="roles" class="level3" data-number="8.1.6">
+<h3 data-number="8.1.6" class="anchored" data-anchor-id="roles"><span class="header-section-number">8.1.6</span> Roles</h3>
+<p>What each role does in Participant Payments:</p>
+<ul>
+<li>Participant Confirmation: Enrolls participants, marks visits as occurred</li>
+<li>Participant Confirmation +Pay: Enrolls participants, marks visits as occurred, and requests payments</li>
+<li>Financial/Protocol Coordinator: Creates visits/stipends in Payments’ protocol and adds staff</li>
+<li>Principal Investigator or Program Manager: Has ability to review assigned protocols and run reports (no PHI)</li>
+<li>Reviewer: Reviews initial stipends for approval and enters participants into ShopUW+ if &gt;$250</li>
+<li>Custodian: Has business unit oversight and manages cards</li>
+<li>Dean’s Office: Approves protocols to be in Payments; reviews and authorizes travel reimbursements</li>
+</ul>
+</section>
+</section>
+<section id="addingmanaging-participant-records" class="level2" data-number="8.2">
+<h2 data-number="8.2" class="anchored" data-anchor-id="addingmanaging-participant-records"><span class="header-section-number">8.2</span> Adding/managing participant records</h2>
+<ul>
+<li>Before adding a participant in Participant Payments, you should search for the participant to make sure they have not already been added to the system.
+<ul>
+<li><p>Go to Menu &gt; Payments &gt; Participant Check-in</p></li>
+<li><p>start typing in the Search field.</p></li>
+<li><p>Alternatively, you can use the Participant list to search for a participant: Menu &gt; Admin &gt; Participants</p></li>
+<li><p>If the participant has not yet been added, you will see a message that says No records found.</p></li>
+<li><p>If your protocol is in OnCore, you will need to register them to your protocol in OnCore, not in Payments. Registration in OnCore will create their record in Participant Payments.</p></li>
+</ul></li>
+<li>If you locate the participant’s record, you can tell at a glance whether the participant has been imported from OnCore or created manually - A participant’s record that is imported from OnCore will display a cloud symbol followed by a message stating that the participant was imported from the Advarra Hub</li>
+</ul>
+<section id="updating-participants" class="level3" data-number="8.2.1">
+<h3 data-number="8.2.1" class="anchored" data-anchor-id="updating-participants"><span class="header-section-number">8.2.1</span> Updating participants</h3>
+<p>To Edit, you must open the record through the Participant Check-In.</p>
+<ul>
+<li>buttons to indicate whether the participant will be paid by direct deposit to their checking account or by giving them a physical payment card.</li>
+<li>If the participant opts for direct deposit to their checking account, they will receive an email with instructions to set up an account. They will enter all of their checking account information there. You will not handle their account information.
+<ul>
+<li>IMPORTANT! We still have to collect the W9</li>
+</ul></li>
+<li>Add Card ICN if Issuing a Payment Card. The ICN is the 7-5 digit number below “Valued Cardholder” on the front of the card. It displays through the front of the sealed envelope holding the card. Do not open the envelope!</li>
+<li>Record the ICN of the card in the participant’s record in Payments at the time you give them the card.</li>
+<li>Do not enter a card ICN into a participant’s record until they have chosen card vs ACH (direct deposit/check).</li>
+<li>Entering a card early creates an unnecessary risk of giving the card to the incorrect participant!</li>
+</ul>
+</section>
+<section id="error-messages" class="level3" data-number="8.2.2">
+<h3 data-number="8.2.2" class="anchored" data-anchor-id="error-messages"><span class="header-section-number">8.2.2</span> Error messages</h3>
+<ul>
+<li>A yellow piggy bank icon may appear. This indicates there is something that needs attention.(Payment is not yet processed, acccount info incomplete, missing SSN)</li>
+<li>A red piggy bank icon would mean there is invalid information in the record that needs to be fixed.</li>
+<li>An uncolored piggy bank icon means the account is ready to use.
+<ul>
+<li>Hover over for the status (in our case, it says whether they will get funds in a checking account or on the prepaid card)</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="adding-a-participant-to-a-protocol" class="level2" data-number="8.3">
+<h2 data-number="8.3" class="anchored" data-anchor-id="adding-a-participant-to-a-protocol"><span class="header-section-number">8.3</span> Adding a participant to a protocol</h2>
+<p>After a participant is in the system, you can add them to a protocol.</p>
+<ul>
+<li>Search for the participant, and select them. You should see an area that says “Add Participant to:” with a box to Search for Protocol.</li>
+<li>You can search by protocol number, NCT number, or title.</li>
+<li>Click to select and add the participant to the protocol.</li>
+</ul>
+</section>
+<section id="navigation" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="navigation"><span class="header-section-number">8.4</span> Navigation</h2>
+<p>To add an item to the favorites bar, select the item through the Menu, then click the start next to that item. You can add either a category or a specific sub item in that category.</p>
+<p>You can move items by clicking and holding, then move it where you want it.</p>
+<p>You can remove the item by clicking the highlighted star again.</p>
+</section>
+<section id="user-profile" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="user-profile"><span class="header-section-number">8.5</span> User Profile</h2>
+<p>You have access to edit your title and contact numbers within your User Profile.</p>
+</section>
+<section id="contacts-page" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="contacts-page"><span class="header-section-number">8.6</span> Contacts page</h2>
+<p>These are not participants, but other users in the system.</p>
+</section>
+<section id="managing-protocols-in-payments" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="managing-protocols-in-payments"><span class="header-section-number">8.7</span> Managing protocols in payments</h2>
+<p>Before creating a protocol in Participant Payments, you will need to submit an intake form to get approval. More information about this process is covered in the Canvas course or <a href="https://kb.wisc.edu/smph/informatics/">here</a></p>
+<p>The protocols landing page will display all the available protocols.</p>
+<p>Info includes:</p>
+<ul>
+<li>Protocol Number</li>
+<li>NCT Number</li>
+<li>Protocol Name</li>
+<li>Participant Payments Status</li>
+</ul>
+<section id="protocol-creation-from-oncore" class="level3" data-number="8.7.1">
+<h3 data-number="8.7.1" class="anchored" data-anchor-id="protocol-creation-from-oncore"><span class="header-section-number">8.7.1</span> Protocol creation from Oncore</h3>
+<p>In OnCore, an Administrator will update the protocol to create the record in Payments automatically unless the protocol status is Abandoned, Terminated, or IRB Study Closure.</p>
+<ul>
+<li>DO NOT change the field “Enable Payments Integration” in OnCore.</li>
+<li>Oncore protocols will display a cloud symbol followed by a message stating that the protocol was imported from the Advarra Hub</li>
+<li>Imported protocols start as Inactive. After you have set up visits you can switch to Active.</li>
+</ul>
+</section>
+<section id="editing-the-protocol" class="level3" data-number="8.7.2">
+<h3 data-number="8.7.2" class="anchored" data-anchor-id="editing-the-protocol"><span class="header-section-number">8.7.2</span> Editing the Protocol</h3>
+<p>Can Edit: 1. IRB Number 2. Financial Reference Number (full funding string) 3. Internal Reference Number (this is “project number”) 4. Keywords, to help with protocol searches (like short title) 5. Business Unit (dropdown, select dept/division) 6. Whether Reimbursements are Allowed for this Protocol * Allowable: Parking, hotel stay, mileage, <strong>other</strong> (can we use this for EMA?) 7. Whether the Protocol is Active - click Yes when ready to start paying. All visits &amp; reimbursements with stipend amounts must be set up first. 8. Visit Information - you can add visits here, both scheduled and unscheduled</p>
+</section>
+<section id="adding-visit-details" class="level3" data-number="8.7.3">
+<h3 data-number="8.7.3" class="anchored" data-anchor-id="adding-visit-details"><span class="header-section-number">8.7.3</span> Adding Visit Details</h3>
+<ul>
+<li>In the Protocol Details, you will create an entry for every expected visit. You will need to add a description and stipend amount for each visit.</li>
+<li>If reimbursement is allowed, you will also add reimbursement types.</li>
+<li>After clicking Add Visit, you fill out name and stipend, and click again to add another field.
+<ul>
+<li>Use the order arrows to put them in the correct order. (Or click and drag)</li>
+</ul></li>
+<li>Unscheduled visits are those that may not be done for all participants, but they MUST be added</li>
+<li>A reimbursements field will appear once those are enabled and selected for each visit. Leave blank if not using it (aka hotel reimbursement)</li>
+</ul>
+</section>
+<section id="adding-protocol-users" class="level3" data-number="8.7.4">
+<h3 data-number="8.7.4" class="anchored" data-anchor-id="adding-protocol-users"><span class="header-section-number">8.7.4</span> Adding protocol users</h3>
+<p>After entering the protocol details, you can add staff to the Protocol Users list.</p>
+<ul>
+<li>click the add button above the list of protocol users. Search &amp; add.</li>
+<li>Once the user has been added, they will then be able to pay stipends and reimbursements for this protocol, if their Payments permissions allow.</li>
+</ul>
+</section>
+</section>
+<section id="reports-in-payments" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="reports-in-payments"><span class="header-section-number">8.8</span> Reports in payments</h2>
 
 
 </section>
@@ -651,11 +829,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
+      <a href="./oncore.html" class="pagination-link" aria-label="Oncore">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Oncore</span></span>
+      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./overview.html" class="pagination-link" aria-label="Overview">
-        <span class="nav-page-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Overview</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->
