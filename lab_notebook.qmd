@@ -31,6 +31,210 @@ Note: The procedure for obtaining transcripts and recordings is
 * Login to the wisc.edu instance of [copilot](https://it.wisc.edu/services/m365-copilot-chat/) with your netID. Upload the transcript (you can select the cloud document that you just saved) and ask copilot: "please provide a very detailed summary of the attached meeting transcript in markdown format". 
 * When it provides the summary, click the copy icon at the bottom and it will copy it in markdown format for pasting into a qmd. You'll have to do a small bit of cleanup (removing headers, section breaks, and footers) to paste here.
 
+### 2026_0430
+EMA Emotion Rating Discussion
+
+A significant portion of the meeting focused on how to explain **EMA emotion questions** to participants.
+
+1. Purpose of the EMA Emotion Measure
+
+The EMA (Ecological Momentary Assessment) emotion questions are intended to capture **participants’ momentary affective state** in a way that is:
+
+*   **Simple enough for repeated daily use**
+*   **Theoretically grounded in affect science**
+*   **Compatible with modeling approaches**
+*   **Minimally cognitively demanding for participants**
+
+The discussion emphasized that EMA responses are **not meant to capture discrete emotion labels** (e.g., “fear,” “sadness”) but rather a **continuous affective state** that can be quantified and modeled over time.
+
+2. Two-Dimensional Affect Model Underlying the EMA
+
+2.1. Core Dimensions
+
+The EMA emotion measure is explicitly grounded in a **two-dimensional model of affect**, consisting of:
+
+1.  **Pleasantness (Valence)**
+    *   Ranges from *unpleasant / unhappy* to *pleasant / happy*
+2.  **Activation (Energy/Arousal)**
+    *   Ranges from *still / quiet / low energy* to *energized / activated / high energy*
+
+Participants answer **two separate questions**, one for each dimension, rather than a single combined question.
+
+2.2. Independence of Dimensions (Critical Concept)
+
+A key conceptual point repeatedly emphasized is that **pleasantness and activation are independent dimensions**:
+
+*   A feeling can be:
+    *   Pleasant and high activation (e.g., excitement, joy)
+    *   Pleasant and low activation (e.g., calm, contentment)
+    *   Unpleasant and high activation (e.g., fear, alarm)
+    *   Unpleasant and low activation (e.g., depression, fatigue)
+
+This independence is central to:
+
+*   Accurate emotional modeling
+*   Avoiding forced assumptions about “intensity”
+*   Allowing nuanced emotional states to be represented.
+
+3. Challenges in Explaining the EMA to Participants
+
+3.1 Cognitive Load and Over-Explanation Risk
+
+The group identified a strong risk that:
+
+*   Overly technical explanations (e.g., circumplex models, rotated axes)
+*   Dense visuals
+*   Excessive terminology
+
+would **overwhelm participants**, particularly in an EMA context where questions must be quick and intuitive.
+
+A repeated concern was that *what makes sense to researchers* does not necessarily translate to participants.
+
+3.2. Problems with Emotion Labels and Discrete Categories
+
+Several issues were identified with using discrete emotion words too heavily:
+
+*   Participants may feel **conflicted** if they experience multiple emotions simultaneously (e.g., tired *and* frustrated).
+*   Discrete labels imply exclusivity or dominance that does not reflect lived experience.
+*   Emotion words can differ in meaning across individuals.
+
+As a result, the group emphasized:
+
+*   EMA questions should **not require participants to name or choose a single emotion**
+*   Emotion words should be used **only illustratively**, not as response options. 
+
+4. Visual Design Decisions: What *Not* to Show
+
+4.1. The Circumplex Model
+
+Although the circumplex model of emotion is theoretically accurate and useful for researchers, the group agreed that:
+
+*   Participants do **not** need to see a circle
+*   Explaining *why* emotions form a circle introduces unnecessary complexity
+*   Boundaries and geometry invite confusion (“Why a circle?” “Why these limits?”)
+
+**Decision:** Susan will re-format to not show a circumplex or circular model to participants.
+
+4.2 Two-Axis Grids
+
+Similarly, displaying a full 2D grid with intersecting axes was judged problematic:
+
+*   Participants will **never see a grid during actual EMA completion**
+*   The grid introduces a translation step (grid → sliders) that adds confusion
+*   Numeric tick marks and coordinates are meaningless in the EMA interface
+
+**Decision:** Avoid grids and focus instead on the **actual sliders participants will use**. 
+
+5. Recommended EMA Explanation Strategy
+
+5.1. Anchor the Explanation in the Actual Questions
+
+The group strongly recommended aligning training materials with the **exact EMA interface**:
+
+*   Show the **two slider questions directly**
+*   Emphasize that they are separate, independent ratings
+*   Avoid abstract terminology unless absolutely necessary
+
+Suggested framing:
+
+*   “You are going to answer two questions about how you feel right now.”
+*   “These two questions describe different aspects of how you’re feeling.”.
+
+5.2. Using Example Emotions Carefully
+
+Emotion words should be used **only as concrete examples** to illustrate how the dimensions work:
+
+*   Example contrasts discussed:
+    *   **Fearful vs. depressed**
+        *   Both unpleasant
+        *   Fearful = high activation
+        *   Depressed = low activation
+    *   **Overjoyed vs. tranquil**
+        *   Both pleasant
+        *   Overjoyed = high activation
+        *   Tranquil = low activation
+
+The purpose of these examples is **not classification**, but to demonstrate that:
+
+*   Pleasantness ≠ energy
+*   Unpleasantness ≠ intensity.
+
+5.3. Avoiding “Intensity” Language
+
+The group identified “intensity” as potentially misleading:
+
+*   High activation is not the same as “stronger emotion”
+*   Low activation emotions can still be highly important or impactful
+
+Recommended language:
+
+*   Use **energy**, **activation**, or **how still vs. energized you feel**
+*   Avoid asking participants to focus on “the most intense emotion”
+
+Instead, participants are encouraged to:
+
+*   Report how they feel **overall in the moment**
+*   Provide a subjective snapshot, not an emotional diagnosis.
+
+6. Handling Mixed or Simultaneous Emotions
+
+A recurring concern was how participants should respond if they feel multiple emotions at once.
+
+Key clarifications:
+
+*   EMA ratings are **not averages over named emotions**
+*   Participants do not need to resolve emotional conflicts explicitly
+*   They are simply rating their **current experiential state** along two dimensions
+
+The group described this as:
+
+> “Where you land in this space right now,”  
+> not  
+> “Which emotion is dominant.”
+
+This framing reduces anxiety about “getting it right”. 
+
+7. Instructional Tone and Participant Experience
+
+7.1. Emphasizing Subjectivity
+
+Participants should be clearly told:
+
+*   There is **no correct answer**
+*   People may experience and rate emotions differently
+*   They should answer based on **their own experience**, not how emotions “should” be rated
+
+This was seen as critical for:
+
+*   Data quality
+*   Participant confidence
+*   Reducing response fatigue. 
+
+7.2. Live or Interactive Examples (Optional)
+
+The group discussed—but did not commit to—interactive training elements such as:
+
+*   Asking participants to think of a recent situation
+*   Walking through how they might rate it on both sliders
+
+While potentially helpful, the consensus leaned toward:
+
+*   Keeping the explanation **lightweight**
+*   Avoiding excessive pre-training that could discourage participation. 
+
+8. Final Conceptual Takeaway
+
+The EMA emotion measure is designed to:
+
+*   Capture **momentary affective state**, not emotion labels
+*   Use **two independent dimensions**
+*   Minimize cognitive burden
+*   Align tightly with the participant-facing interface
+
+The guiding principle is:
+
+> *“Help participants understand just enough to answer confidently, without turning the explanation itself into a task.”*.
+
 
 ### 2026_0326
 
