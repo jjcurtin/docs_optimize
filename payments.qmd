@@ -86,7 +86,195 @@ After a participant is in the system, you can add them to a protocol.
 * You can search by protocol number, NCT number, or title.
 * Click to select and add the participant to the protocol.
 
+## Issuing Payments
+Requesting payment for a participant involves three quick steps:
 
+1. Select the Visit
+2. Confirm the visit stipend
+3. Request reimbursement (if applicable)
+
+* When you have opened the participant's record and located the protocol, the Next Visit to be documented will be listed. In Payments, you will click on "Next Visit: Visit X" to open that visit.
+* In the Visit Stipend section, the Occurred button is selected by default. The approved stipend amount is listed and cannot be edited. 
+* You will simply click Pay to submit the payment request.
+   * You may see an alternative button that says Submit For Review in place of Pay. Either button will submit the payment request.
+   * If a scheduled visit did not occur, you can mark it as Missed or N/A as appropriate. If Missed or N/A is marked, the participant will not be paid and you cannot request reimbursements for that visit.
+* If there will be reimbursements requested, select Yes next to Have Reimbursements? After selecting Yes, fields become available for you to enter information for the reimbursements. The comments field allows you to enter any info that you need to communicate to the financial team to review.
+* After entering all the pertinent reimbursement information, click Send for Review to complete the process.
+* You will see check marks next to both Visit Stipend and Visit Reimbursements after you have answered both sections.
+* Staff with a Financial Reviewer role in Participant Payments must review the initial visit for each participant after you have submitted that stipend request as shown above. When they confirm the visit occurred, they click a "Pay" button, which distributes the stipend to the participant's account.
+
+For subsequent visits:
+
+* If you have a Participant Confirmation +Pay role, you will see a Pay button and the funds will be distributed to the participant's card or ACH method of choice right away.
+*If you have a Participant Confirmation role (that does not include +Pay), you will still see a Submit For Review button, and a Reviewer must go into the system and click the Pay button.
+
+### Viewing Visits
+* You can view past visits in the participant's record by opening the All Visits / More Details hyperlink.
+* This is also where you go to ad Unscheduled visits. To open the Unscheduled Visit, in Participant Payments you click on the text that says Create Visit: Unscheduled Visit 1.
+
+### What if a request was rejected?
+
+If a stipend or reimbursement request you submitted was rejected:
+
+* The Reviewer is responsible for emailing the study team to let you know it was rejected
+* If you need to resubmit the request by amending the request, you will need to communicate the changes to the Reviewer through email.
+* If the changes are sufficient for the Reviewer to approve the request, the Reviewer will undo the rejection, make the change manually in Payments, and then approve the payment.
+
+ 
+
+If you are not a Reviewer, you can still see the progress in the Payments system if you look at the Visit Details.
+
+* It will tell you the payment status for individual requests.
+* Communicate with the Reviewer to resolve any issues.
+
+## Reviewing Payments
+
+In Advarra Participant Payments, if reimbursements have been submitted for review, or if a stipend payment has been requested by someone without the ability to approve payments, financial staff will see these appear in the payment review.
+
+Only Dean's Office staff should review and approve/reject Reimbursement requests. Reviewers outside of the Dean's Office can review stipend requests.
+
+* To open the Payments Review  list, click Menu > Payments > Payment Review.
+   * From the Payments Review list, you can quickly see payment details, such as the protocol number, visit details, payment type, and more.  You can also pay or reject payments.
+* If you would like to look at the details or edit the amounts before approving a payment, you can click the line of the payment you want to examine.
+* Use the pay and reject butons as quick actions
+
+When approving a payment:
+
+1. No matter what exploring or reviewing you do on a pending payment, clicking Pay is the only way you can approve that payment.
+2. Make sure you are on the correct line for the payment you are attempting to pay or reject. You may want to use filters to reduce the list size in order to minimize the risk of clicking on the wrong Pay or Reject button.
+3. When you click Pay or Reject on a line item, that item will disappear from your list (assuming the default Pending option is displayed in the Status field).
+
+### Rejecting payments
+
+There may be situations when you need to refuse or reject a reimbursement or stipend for a participant. 
+
+For example, you may need to reject a payment if the amount is more than allowed, or if the participant was added to the wrong protocol.
+
+**Notify the Study Team if you Reject a Payment**
+
+Participant Payments does NOT send a notification when a payment is rejected.
+
+As a result, if you are reviewing a payment request and reject it, you will need to email the study team to let them know it has been rejected.
+
+You may also enter a comment in Participant Payments in addition to the email communication.
+
+You are able to undo a rejection in Participant Payments if you clicked Reject by mistake or if the study team has made corrections to the request that make the request acceptable for payment.
+
+1. Update the Payment Status field to Rejected.
+2. Locate the rejected payment you wish to undo.
+3. Click the Undo Reject button in the far right column of that payment's row.
+
+
+## Replacing payment cards
+
+### Lost or Stolen cards
+
+* During normal business hours, participants should contact their study coordinator directly. This will ensure a new card is issued and no one else can use the funds on the card.
+* After normal business hours, participants should call Account Holder Services at 1-855-316-5166 to disable the card immediately. 
+   * Participants will need to contact you as soon as possible (the following business day) to have a new card issued.
+
+If the participant contacts you to report a lost or stolen card, you should immediately update the participant's record in Payments. You will need the following information:
+
+* Participant's name
+* ICN of new card that will need to be assigned to participant 
+
+You can instantly cancel a participant's card and transfer all funds to a new ICN within Participant Payments.
+
+1. navigate to Menu > Admin > Replace Payment Card.
+2. A search field will appear, where you type the name of the participant whose card needs to be replaced.
+3. After you select a participant, you will see the Replace Payment Card screen. It will display the participant's name, email address, date of birth, and any identifiers previously entered into Participant Payments. You will also see the old ICN number and a field to enter the new ICN. 
+4. To process the replacement, type the new ICN into the field, then click Replace. This will transfer all funds to the new card. Those funds will be available immediately.
+
+
+### If you get an error:
+
+If you encounter an error, contact Advarra Payments Support and they will replace the card for you.   
+
+* Phone: 608-826-7800
+* Email: paymentssupport@forteresearch.zendesk.com(opens in a new tab) 
+
+To protect PHI when emailing, do not send the participant's name, email address, or any screenshots of PHI. 
+
+Instead, send the URL for the participant page in Advarra Participant Payments.
+
+To locate the URL for the participant page:
+
+1. In the Participant list, search for and click on the participant's name
+2. Copy the URL from the participant's record within Participant Payments.
+3. Paste the URL into an email and send it to the Advarra Support team to research for you.
+
+Example email:
+
+> Hello,
+> 
+> I am trying to replace a payment card for one of our participants and have run into an issue. Can you please look into this for me? The participant's URL is: [insert URL here].
+> 
+> Please call me if you have any questions at [insert phone number].
+> 
+> Thank you!
+> 
+> My Name
+> UW-Madison
+
+
+Note: he participant's account and password on Hyperwallet, the website where they access their payment information, will remain the same even if they need a replacement card.
+
+### Expired cards
+
+As with most credit or debit cards, they have a shelf life or expiration date.  Expiration dates are placed on cards primarily for normal wear and tear.  The card can become worn out or the plastic can break. 
+
+Participant Payment cards are no different.
+
+Payment cards expire every three years from the date the card was issued to UW. 
+
+This means the start date of that three years is when the SMPH Dean's Office received it, not the date they issued it to your study team nor the date you issued the card to the participant.
+
+The funds do not expire, but the cards themselves do.  If the card has expired, it will automatically be disabled for the participant
+
+Participants must contact their study coordinator to request a replacement if their card has expired.  
+
+Follow the same process you would for replacing a lost or stolen card to replace an expired card.
+
+## Payment info for participants
+
+Any documents you plan to share with participants must be approved by the Institutional Review Board (IRB) of record for your study before you give those documents to the participants.
+
+
+Once you have IRB approval for payment-related documents, you will share them with your participants as appropriate. 
+
+There are separate documents available to give participants who choose a Payments Card versus participants who choose direct deposit (ACH), since their account setup process will be different.
+
+You will give each participant the corresponding cardholder or direct deposit informational sheet.
+
+You can find the most up-to-date resources, including document templates for you to submit for IRB approval, on the SMPH Informatics KnowledgeBase (KB) at https://kb.wisc.edu/smph/informatics/
+
+You are required to document confirmation that the participant received the appropriate cardholder or direct deposit information.
+
+
+Each payment-related document has a place to capture participant information that is necessary for their account setup in Payments, as well as their signature and date.
+
+
+Save a copy of the signed document(s) for each participant. 
+
+To do this, you can:
+
+* make a physical copy of the signed document, OR
+* scan the document and save it electronically, OR
+* take a picture of the document using a university-owned device (do not use a personal device to do this!) and upload the picture to your study file, OR
+* present two copies of the page to the participant, have them sign both, then you keep one for your files and they keep the other
+
+There is no location in the Participant Payments system to upload these documents. Your study team will need to identify a location to store these documents. 
+
+Your study team may opt to upload them into OnCore. In OnCore, the appropriate location would be in the Subject Console > Documents tab for each participant record.
+
+* You (the study coordinator) are responsible for making arrangements to get the new card to the participant.
+* You can mail it to the participant after confirming their address, or have them pick it up, for examples.
+
+ 
+
+What if I don't have any extra cards?
+
+* Contact your department's Custodian to acquire additional cards.
 
 
 ## Navigation
