@@ -7,7 +7,7 @@ This section contains methodological information for the study.
 ### TO DO:
 * Update recruitment documents
 * IRB submission
-* Update CT.Gov office
+* Update CT.Gov office DONE
 * Update website
 * Set up OnCore & new Participant Payments
 * Data Management site initiation visit
