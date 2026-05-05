@@ -350,3 +350,51 @@ After entering the protocol details, you can add staff to the Protocol Users lis
 
 ## Reports in payments
 
+The ability to run reports in Participant Payments requires specific permission. If you should have this permission but are unable to run reports, contact the Support Team to request it be added to your account.
+
+The reports available come standard with Participant Payments. At this time, we do not have the ability to create custom reports.
+
+* In Menu > Reports, you will see a list of the standard reports available. 
+* To select a report, click on the hyperlinked name of that report.
+* After selecting a report, if there are report parameters, you will be taken to the appropriate screen to set those parameters.
+   * You can also select in which format you want the report to be delivered.
+* Clicking Run will generate the report.
+* Download it by clicking View Output in the Queued Tasks 
+
+### Available reports
+
+* The 1099 Report provides information for all participants that have received payment within the search period. It shows a sum of all stipends paid to participants, contact information, and SSN. The amounts reflected in this report do not include reimbursements.
+   * There is also an Invalid SSN identifier that flags participants who have been paid more than $249 and do not have a valid SSN on file. 
+* All transactions report lists all paid transactions within a specified date range. This report contains protocol and visit information, and amounts paid. It also contains patient identifiers, if used, but does not contain additional identifying information such as patient names and addresses. 
+* Card inventory report shows all cards at UW-Madison, as well as their assigned status and expiration dates. 
+* Incomplete participant registrations report lists participants enrolled on a protocol that need to have their payment account registration completed. 
+* Itemized receipt report lists all participant payment and fees within a specified date range. The spreadsheet has a separate tab for each protocol and a summary of the protocols on the Total tab.
+* Payment Audit report shows any changes made to payments within a specified time period. For example, if a reimbursement is approved, rejected, or modified, these changes will be listed.
+* Payments Contact Audit report lists a report of all users in our instance of Participant Payments and their associated User Roles as well as other user information such as last login date and time. 
+   * There is also a Payment Contact Audit Report by Protocol option.
+* Sponsor invoicing report lists payments and associated fees, organized by protocol. There are columns to show the payment type, amount, any associated fees, and the total. 
+
+
+
+## Using participant pauyments at UW Madison
+
+[SMPH Research Informatics KB](https://kb.wisc.edu/smph/informatics/internal/search.php?cat=13860) has reference info.
+
+* FAQs
+* Workflows
+* Data Field Definitions
+* Card Management Information
+* How-To Instructions for Payments Tasks
+* Links to Required Forms and Participant Resources
+
+If you cant find the info ask the [Application Support Team](https://smph-navigator.atlassian.net/servicedesk/customer/portal/69/group/217)
+
+
+* If you have questions about a specific protocol record, include the protocol number in the description.
+* If you have questions about a specific participant's record, include the URL from their record (you can retrieve this through the Participants list or Participant Check-In after searching for the participant in question).
+   * This allows you to communicate the record without including PHI in the description.
+* Do not include PHI when using the JIRA portal to contact the Support Team.
+
+When you have completed all the required modules for your role(s), submit your course completion using the link provided in the email preiously sent to you with a subject of "Participant Payments Training for UW-Madison".
+
+
