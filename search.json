@@ -44,7 +44,7 @@
     "href": "method.html",
     "title": "Methodology",
     "section": "",
-    "text": "PRELAUNCH STATUS",
+    "text": "PRELAUNCH STATUS\nThis section contains methodological information for the study.",
     "crumbs": [
       "Methodology"
     ]
@@ -54,7 +54,7 @@
     "href": "method.html#prelaunch-status",
     "title": "Methodology",
     "section": "",
-    "text": "TO DO:\n\nUpdate recruitment documents\nIRB submission\nUpdate CT.Gov office\nUpdate website\nSet up OnCore & new Participant Payments\nData Management site initiation visit\nRecruitment plan\nSOP for fully putting someone on study using STAR\nfinal review of all implementations below",
+    "text": "TO DO:\n\nUpdate recruitment documents\nIRB submission\nUpdate CT.Gov office DONE\nUpdate website\nSet up OnCore & new Participant Payments\nData Management site initiation visit\nRecruitment plan\nSOP for fully putting someone on study using STAR\nfinal review of all implementations below",
     "crumbs": [
       "Methodology"
     ]
@@ -164,7 +164,7 @@
     "href": "lab_notebook.html",
     "title": "2  Lab Notebook",
     "section": "",
-    "text": "2.1 To Do",
+    "text": "2.1 To Do\nThis is a running record of meeting notes made for the execution of this project",
     "crumbs": [
       "Methodology",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Lab Notebook</span>"
@@ -230,7 +230,7 @@
     "href": "measures.html",
     "title": "3  Measures",
     "section": "",
-    "text": "3.1 Baseline Survey\nQualtrics Survey",
+    "text": "3.1 Baseline Survey\nCopies of all measures can be found in the proj_optimize repo\nQualtrics Survey",
     "crumbs": [
       "Methodology",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Measures</span>"
@@ -263,7 +263,7 @@
     "href": "prism.html",
     "title": "4  STAR System Backend: PRISM",
     "section": "",
-    "text": "4.1 TO DO\nSome PRISM configurations are not yet fully set up for running the live study. These items need to be fixed/changed:",
+    "text": "4.1 TO DO\nPRISM is a system created by CM, a data science student in our lab. It is essentially an automated task scheduling system. In our implementation it will be used to automated data retrieval, processeing and participant messaging pipelines.\nFor ease of use, CM has crafted a command line style “GUI”. It’s not a GUI where you can point and click, but it displays helpful textual information in a menu-like format, with the command line instruction you can type for each “task” that you might need to perform in PRISM.\nSome PRISM configurations are not yet fully set up for running the live study. These items need to be fixed/changed:",
     "crumbs": [
       "Methodology",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>STAR System Backend: PRISM</span>"
@@ -383,7 +383,7 @@
     "href": "sops.html",
     "title": "6  SOPS",
     "section": "",
-    "text": "6.1 Pre-enrollment SOPs",
+    "text": "6.1 Pre-enrollment SOPs\nTO DO:",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>SOPS</span>"
@@ -471,7 +471,7 @@
     "href": "oncore.html",
     "title": "7  Oncore",
     "section": "",
-    "text": "7.1 System Links",
+    "text": "7.1 System Links\nOur protocol is 236476",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Oncore</span>"
@@ -482,7 +482,7 @@
     "href": "oncore.html#system-links",
     "title": "7  Oncore",
     "section": "",
-    "text": "SMPH Review Process: https://kb.wisc.edu/smph/informatics/internal/24722",
+    "text": "Login: https://one.advarracloud.com/\nSMPH Review Process: https://kb.wisc.edu/smph/informatics/internal/24722",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>7</span>  <span class='chapter-title'>Oncore</span>"
@@ -526,7 +526,7 @@
     "href": "payments.html",
     "title": "8  Participant Payments",
     "section": "",
-    "text": "8.1 Overview",
+    "text": "8.1 Overview\nPayment is via a reloadable debit card or direct deposit.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
@@ -566,11 +566,55 @@
     ]
   },
   {
+    "objectID": "payments.html#issuing-payments",
+    "href": "payments.html#issuing-payments",
+    "title": "8  Participant Payments",
+    "section": "8.4 Issuing Payments",
+    "text": "8.4 Issuing Payments\nRequesting payment for a participant involves three quick steps:\n\nSelect the Visit\nConfirm the visit stipend\nRequest reimbursement (if applicable)\n\n\nWhen you have opened the participant’s record and located the protocol, the Next Visit to be documented will be listed. In Payments, you will click on “Next Visit: Visit X” to open that visit.\nIn the Visit Stipend section, the Occurred button is selected by default. The approved stipend amount is listed and cannot be edited.\nYou will simply click Pay to submit the payment request.\n\nYou may see an alternative button that says Submit For Review in place of Pay. Either button will submit the payment request.\nIf a scheduled visit did not occur, you can mark it as Missed or N/A as appropriate. If Missed or N/A is marked, the participant will not be paid and you cannot request reimbursements for that visit.\n\nIf there will be reimbursements requested, select Yes next to Have Reimbursements? After selecting Yes, fields become available for you to enter information for the reimbursements. The comments field allows you to enter any info that you need to communicate to the financial team to review.\nAfter entering all the pertinent reimbursement information, click Send for Review to complete the process.\nYou will see check marks next to both Visit Stipend and Visit Reimbursements after you have answered both sections.\nStaff with a Financial Reviewer role in Participant Payments must review the initial visit for each participant after you have submitted that stipend request as shown above. When they confirm the visit occurred, they click a “Pay” button, which distributes the stipend to the participant’s account.\n\nFor subsequent visits:\n\nIf you have a Participant Confirmation +Pay role, you will see a Pay button and the funds will be distributed to the participant’s card or ACH method of choice right away. *If you have a Participant Confirmation role (that does not include +Pay), you will still see a Submit For Review button, and a Reviewer must go into the system and click the Pay button.\n\n\n8.4.1 Viewing Visits\n\nYou can view past visits in the participant’s record by opening the All Visits / More Details hyperlink.\nThis is also where you go to ad Unscheduled visits. To open the Unscheduled Visit, in Participant Payments you click on the text that says Create Visit: Unscheduled Visit 1.\n\n\n\n8.4.2 What if a request was rejected?\nIf a stipend or reimbursement request you submitted was rejected:\n\nThe Reviewer is responsible for emailing the study team to let you know it was rejected\nIf you need to resubmit the request by amending the request, you will need to communicate the changes to the Reviewer through email.\nIf the changes are sufficient for the Reviewer to approve the request, the Reviewer will undo the rejection, make the change manually in Payments, and then approve the payment.\n\nIf you are not a Reviewer, you can still see the progress in the Payments system if you look at the Visit Details.\n\nIt will tell you the payment status for individual requests.\nCommunicate with the Reviewer to resolve any issues.",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
+    ]
+  },
+  {
+    "objectID": "payments.html#reviewing-payments",
+    "href": "payments.html#reviewing-payments",
+    "title": "8  Participant Payments",
+    "section": "8.5 Reviewing Payments",
+    "text": "8.5 Reviewing Payments\nIn Advarra Participant Payments, if reimbursements have been submitted for review, or if a stipend payment has been requested by someone without the ability to approve payments, financial staff will see these appear in the payment review.\nOnly Dean’s Office staff should review and approve/reject Reimbursement requests. Reviewers outside of the Dean’s Office can review stipend requests.\n\nTo open the Payments Review list, click Menu &gt; Payments &gt; Payment Review.\n\nFrom the Payments Review list, you can quickly see payment details, such as the protocol number, visit details, payment type, and more. You can also pay or reject payments.\n\nIf you would like to look at the details or edit the amounts before approving a payment, you can click the line of the payment you want to examine.\nUse the pay and reject butons as quick actions\n\nWhen approving a payment:\n\nNo matter what exploring or reviewing you do on a pending payment, clicking Pay is the only way you can approve that payment.\nMake sure you are on the correct line for the payment you are attempting to pay or reject. You may want to use filters to reduce the list size in order to minimize the risk of clicking on the wrong Pay or Reject button.\nWhen you click Pay or Reject on a line item, that item will disappear from your list (assuming the default Pending option is displayed in the Status field).\n\n\n8.5.1 Rejecting payments\nThere may be situations when you need to refuse or reject a reimbursement or stipend for a participant.\nFor example, you may need to reject a payment if the amount is more than allowed, or if the participant was added to the wrong protocol.\nNotify the Study Team if you Reject a Payment\nParticipant Payments does NOT send a notification when a payment is rejected.\nAs a result, if you are reviewing a payment request and reject it, you will need to email the study team to let them know it has been rejected.\nYou may also enter a comment in Participant Payments in addition to the email communication.\nYou are able to undo a rejection in Participant Payments if you clicked Reject by mistake or if the study team has made corrections to the request that make the request acceptable for payment.\n\nUpdate the Payment Status field to Rejected.\nLocate the rejected payment you wish to undo.\nClick the Undo Reject button in the far right column of that payment’s row.",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
+    ]
+  },
+  {
+    "objectID": "payments.html#replacing-payment-cards",
+    "href": "payments.html#replacing-payment-cards",
+    "title": "8  Participant Payments",
+    "section": "8.6 Replacing payment cards",
+    "text": "8.6 Replacing payment cards\n\n8.6.1 Lost or Stolen cards\n\nDuring normal business hours, participants should contact their study coordinator directly. This will ensure a new card is issued and no one else can use the funds on the card.\nAfter normal business hours, participants should call Account Holder Services at 1-855-316-5166 to disable the card immediately.\n\nParticipants will need to contact you as soon as possible (the following business day) to have a new card issued.\n\n\nIf the participant contacts you to report a lost or stolen card, you should immediately update the participant’s record in Payments. You will need the following information:\n\nParticipant’s name\nICN of new card that will need to be assigned to participant\n\nYou can instantly cancel a participant’s card and transfer all funds to a new ICN within Participant Payments.\n\nnavigate to Menu &gt; Admin &gt; Replace Payment Card.\nA search field will appear, where you type the name of the participant whose card needs to be replaced.\nAfter you select a participant, you will see the Replace Payment Card screen. It will display the participant’s name, email address, date of birth, and any identifiers previously entered into Participant Payments. You will also see the old ICN number and a field to enter the new ICN.\nTo process the replacement, type the new ICN into the field, then click Replace. This will transfer all funds to the new card. Those funds will be available immediately.\n\n\n\n8.6.2 If you get an error:\nIf you encounter an error, contact Advarra Payments Support and they will replace the card for you.\n\nPhone: 608-826-7800\nEmail: paymentssupport@forteresearch.zendesk.com(opens in a new tab)\n\nTo protect PHI when emailing, do not send the participant’s name, email address, or any screenshots of PHI.\nInstead, send the URL for the participant page in Advarra Participant Payments.\nTo locate the URL for the participant page:\n\nIn the Participant list, search for and click on the participant’s name\nCopy the URL from the participant’s record within Participant Payments.\nPaste the URL into an email and send it to the Advarra Support team to research for you.\n\nExample email:\n\nHello,\nI am trying to replace a payment card for one of our participants and have run into an issue. Can you please look into this for me? The participant’s URL is: [insert URL here].\nPlease call me if you have any questions at [insert phone number].\nThank you!\nMy Name UW-Madison\n\nNote: he participant’s account and password on Hyperwallet, the website where they access their payment information, will remain the same even if they need a replacement card.\n\n\n8.6.3 Expired cards\nAs with most credit or debit cards, they have a shelf life or expiration date. Expiration dates are placed on cards primarily for normal wear and tear. The card can become worn out or the plastic can break.\nParticipant Payment cards are no different.\nPayment cards expire every three years from the date the card was issued to UW.\nThis means the start date of that three years is when the SMPH Dean’s Office received it, not the date they issued it to your study team nor the date you issued the card to the participant.\nThe funds do not expire, but the cards themselves do. If the card has expired, it will automatically be disabled for the participant\nParticipants must contact their study coordinator to request a replacement if their card has expired.\nFollow the same process you would for replacing a lost or stolen card to replace an expired card.",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
+    ]
+  },
+  {
+    "objectID": "payments.html#payment-info-for-participants",
+    "href": "payments.html#payment-info-for-participants",
+    "title": "8  Participant Payments",
+    "section": "8.7 Payment info for participants",
+    "text": "8.7 Payment info for participants\nAny documents you plan to share with participants must be approved by the Institutional Review Board (IRB) of record for your study before you give those documents to the participants.\nOnce you have IRB approval for payment-related documents, you will share them with your participants as appropriate.\nThere are separate documents available to give participants who choose a Payments Card versus participants who choose direct deposit (ACH), since their account setup process will be different.\nYou will give each participant the corresponding cardholder or direct deposit informational sheet.\nYou can find the most up-to-date resources, including document templates for you to submit for IRB approval, on the SMPH Informatics KnowledgeBase (KB) at https://kb.wisc.edu/smph/informatics/\nYou are required to document confirmation that the participant received the appropriate cardholder or direct deposit information.\nEach payment-related document has a place to capture participant information that is necessary for their account setup in Payments, as well as their signature and date.\nSave a copy of the signed document(s) for each participant.\nTo do this, you can:\n\nmake a physical copy of the signed document, OR\nscan the document and save it electronically, OR\ntake a picture of the document using a university-owned device (do not use a personal device to do this!) and upload the picture to your study file, OR\npresent two copies of the page to the participant, have them sign both, then you keep one for your files and they keep the other\n\nThere is no location in the Participant Payments system to upload these documents. Your study team will need to identify a location to store these documents.\nYour study team may opt to upload them into OnCore. In OnCore, the appropriate location would be in the Subject Console &gt; Documents tab for each participant record.\n\nYou (the study coordinator) are responsible for making arrangements to get the new card to the participant.\nYou can mail it to the participant after confirming their address, or have them pick it up, for examples.\n\nWhat if I don’t have any extra cards?\n\nContact your department’s Custodian to acquire additional cards.",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
+    ]
+  },
+  {
     "objectID": "payments.html#navigation",
     "href": "payments.html#navigation",
     "title": "8  Participant Payments",
-    "section": "8.4 Navigation",
-    "text": "8.4 Navigation\nTo add an item to the favorites bar, select the item through the Menu, then click the start next to that item. You can add either a category or a specific sub item in that category.\nYou can move items by clicking and holding, then move it where you want it.\nYou can remove the item by clicking the highlighted star again.",
+    "section": "8.8 Navigation",
+    "text": "8.8 Navigation\nTo add an item to the favorites bar, select the item through the Menu, then click the start next to that item. You can add either a category or a specific sub item in that category.\nYou can move items by clicking and holding, then move it where you want it.\nYou can remove the item by clicking the highlighted star again.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
@@ -580,8 +624,8 @@
     "objectID": "payments.html#user-profile",
     "href": "payments.html#user-profile",
     "title": "8  Participant Payments",
-    "section": "8.5 User Profile",
-    "text": "8.5 User Profile\nYou have access to edit your title and contact numbers within your User Profile.",
+    "section": "8.9 User Profile",
+    "text": "8.9 User Profile\nYou have access to edit your title and contact numbers within your User Profile.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
@@ -591,8 +635,8 @@
     "objectID": "payments.html#contacts-page",
     "href": "payments.html#contacts-page",
     "title": "8  Participant Payments",
-    "section": "8.6 Contacts page",
-    "text": "8.6 Contacts page\nThese are not participants, but other users in the system.",
+    "section": "8.10 Contacts page",
+    "text": "8.10 Contacts page\nThese are not participants, but other users in the system.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
@@ -602,8 +646,8 @@
     "objectID": "payments.html#managing-protocols-in-payments",
     "href": "payments.html#managing-protocols-in-payments",
     "title": "8  Participant Payments",
-    "section": "8.7 Managing protocols in payments",
-    "text": "8.7 Managing protocols in payments\nBefore creating a protocol in Participant Payments, you will need to submit an intake form to get approval. More information about this process is covered in the Canvas course or here\nThe protocols landing page will display all the available protocols.\nInfo includes:\n\nProtocol Number\nNCT Number\nProtocol Name\nParticipant Payments Status\n\n\n8.7.1 Protocol creation from Oncore\nIn OnCore, an Administrator will update the protocol to create the record in Payments automatically unless the protocol status is Abandoned, Terminated, or IRB Study Closure.\n\nDO NOT change the field “Enable Payments Integration” in OnCore.\nOncore protocols will display a cloud symbol followed by a message stating that the protocol was imported from the Advarra Hub\nImported protocols start as Inactive. After you have set up visits you can switch to Active.\n\n\n\n8.7.2 Editing the Protocol\nCan Edit: 1. IRB Number 2. Financial Reference Number (full funding string) 3. Internal Reference Number (this is “project number”) 4. Keywords, to help with protocol searches (like short title) 5. Business Unit (dropdown, select dept/division) 6. Whether Reimbursements are Allowed for this Protocol * Allowable: Parking, hotel stay, mileage, other (can we use this for EMA?) 7. Whether the Protocol is Active - click Yes when ready to start paying. All visits & reimbursements with stipend amounts must be set up first. 8. Visit Information - you can add visits here, both scheduled and unscheduled\n\n\n8.7.3 Adding Visit Details\n\nIn the Protocol Details, you will create an entry for every expected visit. You will need to add a description and stipend amount for each visit.\nIf reimbursement is allowed, you will also add reimbursement types.\nAfter clicking Add Visit, you fill out name and stipend, and click again to add another field.\n\nUse the order arrows to put them in the correct order. (Or click and drag)\n\nUnscheduled visits are those that may not be done for all participants, but they MUST be added\nA reimbursements field will appear once those are enabled and selected for each visit. Leave blank if not using it (aka hotel reimbursement)\n\n\n\n8.7.4 Adding protocol users\nAfter entering the protocol details, you can add staff to the Protocol Users list.\n\nclick the add button above the list of protocol users. Search & add.\nOnce the user has been added, they will then be able to pay stipends and reimbursements for this protocol, if their Payments permissions allow.",
+    "section": "8.11 Managing protocols in payments",
+    "text": "8.11 Managing protocols in payments\nBefore creating a protocol in Participant Payments, you will need to submit an intake form to get approval. More information about this process is covered in the Canvas course or here\nThe protocols landing page will display all the available protocols.\nInfo includes:\n\nProtocol Number\nNCT Number\nProtocol Name\nParticipant Payments Status\n\n\n8.11.1 Protocol creation from Oncore\nIn OnCore, an Administrator will update the protocol to create the record in Payments automatically unless the protocol status is Abandoned, Terminated, or IRB Study Closure.\n\nDO NOT change the field “Enable Payments Integration” in OnCore.\nOncore protocols will display a cloud symbol followed by a message stating that the protocol was imported from the Advarra Hub\nImported protocols start as Inactive. After you have set up visits you can switch to Active.\n\n\n\n8.11.2 Editing the Protocol\nCan Edit: 1. IRB Number 2. Financial Reference Number (full funding string) 3. Internal Reference Number (this is “project number”) 4. Keywords, to help with protocol searches (like short title) 5. Business Unit (dropdown, select dept/division) 6. Whether Reimbursements are Allowed for this Protocol * Allowable: Parking, hotel stay, mileage, other (can we use this for EMA?) 7. Whether the Protocol is Active - click Yes when ready to start paying. All visits & reimbursements with stipend amounts must be set up first. 8. Visit Information - you can add visits here, both scheduled and unscheduled\n\n\n8.11.3 Adding Visit Details\n\nIn the Protocol Details, you will create an entry for every expected visit. You will need to add a description and stipend amount for each visit.\nIf reimbursement is allowed, you will also add reimbursement types.\nAfter clicking Add Visit, you fill out name and stipend, and click again to add another field.\n\nUse the order arrows to put them in the correct order. (Or click and drag)\n\nUnscheduled visits are those that may not be done for all participants, but they MUST be added\nA reimbursements field will appear once those are enabled and selected for each visit. Leave blank if not using it (aka hotel reimbursement)\n\n\n\n8.11.4 Adding protocol users\nAfter entering the protocol details, you can add staff to the Protocol Users list.\n\nclick the add button above the list of protocol users. Search & add.\nOnce the user has been added, they will then be able to pay stipends and reimbursements for this protocol, if their Payments permissions allow.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
@@ -613,8 +657,19 @@
     "objectID": "payments.html#reports-in-payments",
     "href": "payments.html#reports-in-payments",
     "title": "8  Participant Payments",
-    "section": "8.8 Reports in payments",
-    "text": "8.8 Reports in payments",
+    "section": "8.12 Reports in payments",
+    "text": "8.12 Reports in payments\nThe ability to run reports in Participant Payments requires specific permission. If you should have this permission but are unable to run reports, contact the Support Team to request it be added to your account.\nThe reports available come standard with Participant Payments. At this time, we do not have the ability to create custom reports.\n\nIn Menu &gt; Reports, you will see a list of the standard reports available.\nTo select a report, click on the hyperlinked name of that report.\nAfter selecting a report, if there are report parameters, you will be taken to the appropriate screen to set those parameters.\n\nYou can also select in which format you want the report to be delivered.\n\nClicking Run will generate the report.\nDownload it by clicking View Output in the Queued Tasks\n\n\n8.12.1 Available reports\n\nThe 1099 Report provides information for all participants that have received payment within the search period. It shows a sum of all stipends paid to participants, contact information, and SSN. The amounts reflected in this report do not include reimbursements.\n\nThere is also an Invalid SSN identifier that flags participants who have been paid more than $249 and do not have a valid SSN on file.\n\nAll transactions report lists all paid transactions within a specified date range. This report contains protocol and visit information, and amounts paid. It also contains patient identifiers, if used, but does not contain additional identifying information such as patient names and addresses.\nCard inventory report shows all cards at UW-Madison, as well as their assigned status and expiration dates.\nIncomplete participant registrations report lists participants enrolled on a protocol that need to have their payment account registration completed.\nItemized receipt report lists all participant payment and fees within a specified date range. The spreadsheet has a separate tab for each protocol and a summary of the protocols on the Total tab.\nPayment Audit report shows any changes made to payments within a specified time period. For example, if a reimbursement is approved, rejected, or modified, these changes will be listed.\nPayments Contact Audit report lists a report of all users in our instance of Participant Payments and their associated User Roles as well as other user information such as last login date and time.\n\nThere is also a Payment Contact Audit Report by Protocol option.\n\nSponsor invoicing report lists payments and associated fees, organized by protocol. There are columns to show the payment type, amount, any associated fees, and the total.",
+    "crumbs": [
+      "Administration",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"
+    ]
+  },
+  {
+    "objectID": "payments.html#using-participant-pauyments-at-uw-madison",
+    "href": "payments.html#using-participant-pauyments-at-uw-madison",
+    "title": "8  Participant Payments",
+    "section": "8.13 Using participant pauyments at UW Madison",
+    "text": "8.13 Using participant pauyments at UW Madison\nSMPH Research Informatics KB has reference info.\n\nFAQs\nWorkflows\nData Field Definitions\nCard Management Information\nHow-To Instructions for Payments Tasks\nLinks to Required Forms and Participant Resources\n\nIf you cant find the info ask the Application Support Team\n\nIf you have questions about a specific protocol record, include the protocol number in the description.\nIf you have questions about a specific participant’s record, include the URL from their record (you can retrieve this through the Participants list or Participant Check-In after searching for the participant in question).\n\nThis allows you to communicate the record without including PHI in the description.\n\nDo not include PHI when using the JIRA portal to contact the Support Team.\n\nWhen you have completed all the required modules for your role(s), submit your course completion using the link provided in the email preiously sent to you with a subject of “Participant Payments Training for UW-Madison”.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Participant Payments</span>"

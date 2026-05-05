@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.6.40">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Manual - Optimize - 8&nbsp; Participant Payments</title>
+<title>8&nbsp; Participant Payments – Project Manual - Optimize</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -36,10 +36,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -77,13 +77,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./payments.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Methodology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -150,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Administration</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -206,17 +206,37 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#error-messages" id="toc-error-messages" class="nav-link" data-scroll-target="#error-messages"><span class="header-section-number">8.2.2</span> Error messages</a></li>
   </ul></li>
   <li><a href="#adding-a-participant-to-a-protocol" id="toc-adding-a-participant-to-a-protocol" class="nav-link" data-scroll-target="#adding-a-participant-to-a-protocol"><span class="header-section-number">8.3</span> Adding a participant to a protocol</a></li>
-  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation"><span class="header-section-number">8.4</span> Navigation</a></li>
-  <li><a href="#user-profile" id="toc-user-profile" class="nav-link" data-scroll-target="#user-profile"><span class="header-section-number">8.5</span> User Profile</a></li>
-  <li><a href="#contacts-page" id="toc-contacts-page" class="nav-link" data-scroll-target="#contacts-page"><span class="header-section-number">8.6</span> Contacts page</a></li>
-  <li><a href="#managing-protocols-in-payments" id="toc-managing-protocols-in-payments" class="nav-link" data-scroll-target="#managing-protocols-in-payments"><span class="header-section-number">8.7</span> Managing protocols in payments</a>
+  <li><a href="#issuing-payments" id="toc-issuing-payments" class="nav-link" data-scroll-target="#issuing-payments"><span class="header-section-number">8.4</span> Issuing Payments</a>
   <ul class="collapse">
-  <li><a href="#protocol-creation-from-oncore" id="toc-protocol-creation-from-oncore" class="nav-link" data-scroll-target="#protocol-creation-from-oncore"><span class="header-section-number">8.7.1</span> Protocol creation from Oncore</a></li>
-  <li><a href="#editing-the-protocol" id="toc-editing-the-protocol" class="nav-link" data-scroll-target="#editing-the-protocol"><span class="header-section-number">8.7.2</span> Editing the Protocol</a></li>
-  <li><a href="#adding-visit-details" id="toc-adding-visit-details" class="nav-link" data-scroll-target="#adding-visit-details"><span class="header-section-number">8.7.3</span> Adding Visit Details</a></li>
-  <li><a href="#adding-protocol-users" id="toc-adding-protocol-users" class="nav-link" data-scroll-target="#adding-protocol-users"><span class="header-section-number">8.7.4</span> Adding protocol users</a></li>
+  <li><a href="#viewing-visits" id="toc-viewing-visits" class="nav-link" data-scroll-target="#viewing-visits"><span class="header-section-number">8.4.1</span> Viewing Visits</a></li>
+  <li><a href="#what-if-a-request-was-rejected" id="toc-what-if-a-request-was-rejected" class="nav-link" data-scroll-target="#what-if-a-request-was-rejected"><span class="header-section-number">8.4.2</span> What if a request was rejected?</a></li>
   </ul></li>
-  <li><a href="#reports-in-payments" id="toc-reports-in-payments" class="nav-link" data-scroll-target="#reports-in-payments"><span class="header-section-number">8.8</span> Reports in payments</a></li>
+  <li><a href="#reviewing-payments" id="toc-reviewing-payments" class="nav-link" data-scroll-target="#reviewing-payments"><span class="header-section-number">8.5</span> Reviewing Payments</a>
+  <ul class="collapse">
+  <li><a href="#rejecting-payments" id="toc-rejecting-payments" class="nav-link" data-scroll-target="#rejecting-payments"><span class="header-section-number">8.5.1</span> Rejecting payments</a></li>
+  </ul></li>
+  <li><a href="#replacing-payment-cards" id="toc-replacing-payment-cards" class="nav-link" data-scroll-target="#replacing-payment-cards"><span class="header-section-number">8.6</span> Replacing payment cards</a>
+  <ul class="collapse">
+  <li><a href="#lost-or-stolen-cards" id="toc-lost-or-stolen-cards" class="nav-link" data-scroll-target="#lost-or-stolen-cards"><span class="header-section-number">8.6.1</span> Lost or Stolen cards</a></li>
+  <li><a href="#if-you-get-an-error" id="toc-if-you-get-an-error" class="nav-link" data-scroll-target="#if-you-get-an-error"><span class="header-section-number">8.6.2</span> If you get an error:</a></li>
+  <li><a href="#expired-cards" id="toc-expired-cards" class="nav-link" data-scroll-target="#expired-cards"><span class="header-section-number">8.6.3</span> Expired cards</a></li>
+  </ul></li>
+  <li><a href="#payment-info-for-participants" id="toc-payment-info-for-participants" class="nav-link" data-scroll-target="#payment-info-for-participants"><span class="header-section-number">8.7</span> Payment info for participants</a></li>
+  <li><a href="#navigation" id="toc-navigation" class="nav-link" data-scroll-target="#navigation"><span class="header-section-number">8.8</span> Navigation</a></li>
+  <li><a href="#user-profile" id="toc-user-profile" class="nav-link" data-scroll-target="#user-profile"><span class="header-section-number">8.9</span> User Profile</a></li>
+  <li><a href="#contacts-page" id="toc-contacts-page" class="nav-link" data-scroll-target="#contacts-page"><span class="header-section-number">8.10</span> Contacts page</a></li>
+  <li><a href="#managing-protocols-in-payments" id="toc-managing-protocols-in-payments" class="nav-link" data-scroll-target="#managing-protocols-in-payments"><span class="header-section-number">8.11</span> Managing protocols in payments</a>
+  <ul class="collapse">
+  <li><a href="#protocol-creation-from-oncore" id="toc-protocol-creation-from-oncore" class="nav-link" data-scroll-target="#protocol-creation-from-oncore"><span class="header-section-number">8.11.1</span> Protocol creation from Oncore</a></li>
+  <li><a href="#editing-the-protocol" id="toc-editing-the-protocol" class="nav-link" data-scroll-target="#editing-the-protocol"><span class="header-section-number">8.11.2</span> Editing the Protocol</a></li>
+  <li><a href="#adding-visit-details" id="toc-adding-visit-details" class="nav-link" data-scroll-target="#adding-visit-details"><span class="header-section-number">8.11.3</span> Adding Visit Details</a></li>
+  <li><a href="#adding-protocol-users" id="toc-adding-protocol-users" class="nav-link" data-scroll-target="#adding-protocol-users"><span class="header-section-number">8.11.4</span> Adding protocol users</a></li>
+  </ul></li>
+  <li><a href="#reports-in-payments" id="toc-reports-in-payments" class="nav-link" data-scroll-target="#reports-in-payments"><span class="header-section-number">8.12</span> Reports in payments</a>
+  <ul class="collapse">
+  <li><a href="#available-reports" id="toc-available-reports" class="nav-link" data-scroll-target="#available-reports"><span class="header-section-number">8.12.1</span> Available reports</a></li>
+  </ul></li>
+  <li><a href="#using-participant-pauyments-at-uw-madison" id="toc-using-participant-pauyments-at-uw-madison" class="nav-link" data-scroll-target="#using-participant-pauyments-at-uw-madison"><span class="header-section-number">8.13</span> Using participant pauyments at UW Madison</a></li>
   </ul>
 </nav>
     </div>
@@ -351,22 +371,191 @@ ul.task-list li input[type="checkbox"] {
 <li>Click to select and add the participant to the protocol.</li>
 </ul>
 </section>
-<section id="navigation" class="level2" data-number="8.4">
-<h2 data-number="8.4" class="anchored" data-anchor-id="navigation"><span class="header-section-number">8.4</span> Navigation</h2>
+<section id="issuing-payments" class="level2" data-number="8.4">
+<h2 data-number="8.4" class="anchored" data-anchor-id="issuing-payments"><span class="header-section-number">8.4</span> Issuing Payments</h2>
+<p>Requesting payment for a participant involves three quick steps:</p>
+<ol type="1">
+<li>Select the Visit</li>
+<li>Confirm the visit stipend</li>
+<li>Request reimbursement (if applicable)</li>
+</ol>
+<ul>
+<li>When you have opened the participant’s record and located the protocol, the Next Visit to be documented will be listed. In Payments, you will click on “Next Visit: Visit X” to open that visit.</li>
+<li>In the Visit Stipend section, the Occurred button is selected by default. The approved stipend amount is listed and cannot be edited.</li>
+<li>You will simply click Pay to submit the payment request.
+<ul>
+<li>You may see an alternative button that says Submit For Review in place of Pay. Either button will submit the payment request.</li>
+<li>If a scheduled visit did not occur, you can mark it as Missed or N/A as appropriate. If Missed or N/A is marked, the participant will not be paid and you cannot request reimbursements for that visit.</li>
+</ul></li>
+<li>If there will be reimbursements requested, select Yes next to Have Reimbursements? After selecting Yes, fields become available for you to enter information for the reimbursements. The comments field allows you to enter any info that you need to communicate to the financial team to review.</li>
+<li>After entering all the pertinent reimbursement information, click Send for Review to complete the process.</li>
+<li>You will see check marks next to both Visit Stipend and Visit Reimbursements after you have answered both sections.</li>
+<li>Staff with a Financial Reviewer role in Participant Payments must review the initial visit for each participant after you have submitted that stipend request as shown above. When they confirm the visit occurred, they click a “Pay” button, which distributes the stipend to the participant’s account.</li>
+</ul>
+<p>For subsequent visits:</p>
+<ul>
+<li>If you have a Participant Confirmation +Pay role, you will see a Pay button and the funds will be distributed to the participant’s card or ACH method of choice right away. *If you have a Participant Confirmation role (that does not include +Pay), you will still see a Submit For Review button, and a Reviewer must go into the system and click the Pay button.</li>
+</ul>
+<section id="viewing-visits" class="level3" data-number="8.4.1">
+<h3 data-number="8.4.1" class="anchored" data-anchor-id="viewing-visits"><span class="header-section-number">8.4.1</span> Viewing Visits</h3>
+<ul>
+<li>You can view past visits in the participant’s record by opening the All Visits / More Details hyperlink.</li>
+<li>This is also where you go to ad Unscheduled visits. To open the Unscheduled Visit, in Participant Payments you click on the text that says Create Visit: Unscheduled Visit 1.</li>
+</ul>
+</section>
+<section id="what-if-a-request-was-rejected" class="level3" data-number="8.4.2">
+<h3 data-number="8.4.2" class="anchored" data-anchor-id="what-if-a-request-was-rejected"><span class="header-section-number">8.4.2</span> What if a request was rejected?</h3>
+<p>If a stipend or reimbursement request you submitted was rejected:</p>
+<ul>
+<li>The Reviewer is responsible for emailing the study team to let you know it was rejected</li>
+<li>If you need to resubmit the request by amending the request, you will need to communicate the changes to the Reviewer through email.</li>
+<li>If the changes are sufficient for the Reviewer to approve the request, the Reviewer will undo the rejection, make the change manually in Payments, and then approve the payment.</li>
+</ul>
+<p>If you are not a Reviewer, you can still see the progress in the Payments system if you look at the Visit Details.</p>
+<ul>
+<li>It will tell you the payment status for individual requests.</li>
+<li>Communicate with the Reviewer to resolve any issues.</li>
+</ul>
+</section>
+</section>
+<section id="reviewing-payments" class="level2" data-number="8.5">
+<h2 data-number="8.5" class="anchored" data-anchor-id="reviewing-payments"><span class="header-section-number">8.5</span> Reviewing Payments</h2>
+<p>In Advarra Participant Payments, if reimbursements have been submitted for review, or if a stipend payment has been requested by someone without the ability to approve payments, financial staff will see these appear in the payment review.</p>
+<p>Only Dean’s Office staff should review and approve/reject Reimbursement requests. Reviewers outside of the Dean’s Office can review stipend requests.</p>
+<ul>
+<li>To open the Payments Review list, click Menu &gt; Payments &gt; Payment Review.
+<ul>
+<li>From the Payments Review list, you can quickly see payment details, such as the protocol number, visit details, payment type, and more. You can also pay or reject payments.</li>
+</ul></li>
+<li>If you would like to look at the details or edit the amounts before approving a payment, you can click the line of the payment you want to examine.</li>
+<li>Use the pay and reject butons as quick actions</li>
+</ul>
+<p>When approving a payment:</p>
+<ol type="1">
+<li>No matter what exploring or reviewing you do on a pending payment, clicking Pay is the only way you can approve that payment.</li>
+<li>Make sure you are on the correct line for the payment you are attempting to pay or reject. You may want to use filters to reduce the list size in order to minimize the risk of clicking on the wrong Pay or Reject button.</li>
+<li>When you click Pay or Reject on a line item, that item will disappear from your list (assuming the default Pending option is displayed in the Status field).</li>
+</ol>
+<section id="rejecting-payments" class="level3" data-number="8.5.1">
+<h3 data-number="8.5.1" class="anchored" data-anchor-id="rejecting-payments"><span class="header-section-number">8.5.1</span> Rejecting payments</h3>
+<p>There may be situations when you need to refuse or reject a reimbursement or stipend for a participant.</p>
+<p>For example, you may need to reject a payment if the amount is more than allowed, or if the participant was added to the wrong protocol.</p>
+<p><strong>Notify the Study Team if you Reject a Payment</strong></p>
+<p>Participant Payments does NOT send a notification when a payment is rejected.</p>
+<p>As a result, if you are reviewing a payment request and reject it, you will need to email the study team to let them know it has been rejected.</p>
+<p>You may also enter a comment in Participant Payments in addition to the email communication.</p>
+<p>You are able to undo a rejection in Participant Payments if you clicked Reject by mistake or if the study team has made corrections to the request that make the request acceptable for payment.</p>
+<ol type="1">
+<li>Update the Payment Status field to Rejected.</li>
+<li>Locate the rejected payment you wish to undo.</li>
+<li>Click the Undo Reject button in the far right column of that payment’s row.</li>
+</ol>
+</section>
+</section>
+<section id="replacing-payment-cards" class="level2" data-number="8.6">
+<h2 data-number="8.6" class="anchored" data-anchor-id="replacing-payment-cards"><span class="header-section-number">8.6</span> Replacing payment cards</h2>
+<section id="lost-or-stolen-cards" class="level3" data-number="8.6.1">
+<h3 data-number="8.6.1" class="anchored" data-anchor-id="lost-or-stolen-cards"><span class="header-section-number">8.6.1</span> Lost or Stolen cards</h3>
+<ul>
+<li>During normal business hours, participants should contact their study coordinator directly. This will ensure a new card is issued and no one else can use the funds on the card.</li>
+<li>After normal business hours, participants should call Account Holder Services at 1-855-316-5166 to disable the card immediately.
+<ul>
+<li>Participants will need to contact you as soon as possible (the following business day) to have a new card issued.</li>
+</ul></li>
+</ul>
+<p>If the participant contacts you to report a lost or stolen card, you should immediately update the participant’s record in Payments. You will need the following information:</p>
+<ul>
+<li>Participant’s name</li>
+<li>ICN of new card that will need to be assigned to participant</li>
+</ul>
+<p>You can instantly cancel a participant’s card and transfer all funds to a new ICN within Participant Payments.</p>
+<ol type="1">
+<li>navigate to Menu &gt; Admin &gt; Replace Payment Card.</li>
+<li>A search field will appear, where you type the name of the participant whose card needs to be replaced.</li>
+<li>After you select a participant, you will see the Replace Payment Card screen. It will display the participant’s name, email address, date of birth, and any identifiers previously entered into Participant Payments. You will also see the old ICN number and a field to enter the new ICN.</li>
+<li>To process the replacement, type the new ICN into the field, then click Replace. This will transfer all funds to the new card. Those funds will be available immediately.</li>
+</ol>
+</section>
+<section id="if-you-get-an-error" class="level3" data-number="8.6.2">
+<h3 data-number="8.6.2" class="anchored" data-anchor-id="if-you-get-an-error"><span class="header-section-number">8.6.2</span> If you get an error:</h3>
+<p>If you encounter an error, contact Advarra Payments Support and they will replace the card for you.</p>
+<ul>
+<li>Phone: 608-826-7800</li>
+<li>Email: paymentssupport@forteresearch.zendesk.com(opens in a new tab)</li>
+</ul>
+<p>To protect PHI when emailing, do not send the participant’s name, email address, or any screenshots of PHI.</p>
+<p>Instead, send the URL for the participant page in Advarra Participant Payments.</p>
+<p>To locate the URL for the participant page:</p>
+<ol type="1">
+<li>In the Participant list, search for and click on the participant’s name</li>
+<li>Copy the URL from the participant’s record within Participant Payments.</li>
+<li>Paste the URL into an email and send it to the Advarra Support team to research for you.</li>
+</ol>
+<p>Example email:</p>
+<blockquote class="blockquote">
+<p>Hello,</p>
+<p>I am trying to replace a payment card for one of our participants and have run into an issue. Can you please look into this for me? The participant’s URL is: [insert URL here].</p>
+<p>Please call me if you have any questions at [insert phone number].</p>
+<p>Thank you!</p>
+<p>My Name UW-Madison</p>
+</blockquote>
+<p>Note: he participant’s account and password on Hyperwallet, the website where they access their payment information, will remain the same even if they need a replacement card.</p>
+</section>
+<section id="expired-cards" class="level3" data-number="8.6.3">
+<h3 data-number="8.6.3" class="anchored" data-anchor-id="expired-cards"><span class="header-section-number">8.6.3</span> Expired cards</h3>
+<p>As with most credit or debit cards, they have a shelf life or expiration date. Expiration dates are placed on cards primarily for normal wear and tear. The card can become worn out or the plastic can break.</p>
+<p>Participant Payment cards are no different.</p>
+<p>Payment cards expire every three years from the date the card was issued to UW.</p>
+<p>This means the start date of that three years is when the SMPH Dean’s Office received it, not the date they issued it to your study team nor the date you issued the card to the participant.</p>
+<p>The funds do not expire, but the cards themselves do. If the card has expired, it will automatically be disabled for the participant</p>
+<p>Participants must contact their study coordinator to request a replacement if their card has expired.</p>
+<p>Follow the same process you would for replacing a lost or stolen card to replace an expired card.</p>
+</section>
+</section>
+<section id="payment-info-for-participants" class="level2" data-number="8.7">
+<h2 data-number="8.7" class="anchored" data-anchor-id="payment-info-for-participants"><span class="header-section-number">8.7</span> Payment info for participants</h2>
+<p>Any documents you plan to share with participants must be approved by the Institutional Review Board (IRB) of record for your study before you give those documents to the participants.</p>
+<p>Once you have IRB approval for payment-related documents, you will share them with your participants as appropriate.</p>
+<p>There are separate documents available to give participants who choose a Payments Card versus participants who choose direct deposit (ACH), since their account setup process will be different.</p>
+<p>You will give each participant the corresponding cardholder or direct deposit informational sheet.</p>
+<p>You can find the most up-to-date resources, including document templates for you to submit for IRB approval, on the SMPH Informatics KnowledgeBase (KB) at https://kb.wisc.edu/smph/informatics/</p>
+<p>You are required to document confirmation that the participant received the appropriate cardholder or direct deposit information.</p>
+<p>Each payment-related document has a place to capture participant information that is necessary for their account setup in Payments, as well as their signature and date.</p>
+<p>Save a copy of the signed document(s) for each participant.</p>
+<p>To do this, you can:</p>
+<ul>
+<li>make a physical copy of the signed document, OR</li>
+<li>scan the document and save it electronically, OR</li>
+<li>take a picture of the document using a university-owned device (do not use a personal device to do this!) and upload the picture to your study file, OR</li>
+<li>present two copies of the page to the participant, have them sign both, then you keep one for your files and they keep the other</li>
+</ul>
+<p>There is no location in the Participant Payments system to upload these documents. Your study team will need to identify a location to store these documents.</p>
+<p>Your study team may opt to upload them into OnCore. In OnCore, the appropriate location would be in the Subject Console &gt; Documents tab for each participant record.</p>
+<ul>
+<li>You (the study coordinator) are responsible for making arrangements to get the new card to the participant.</li>
+<li>You can mail it to the participant after confirming their address, or have them pick it up, for examples.</li>
+</ul>
+<p>What if I don’t have any extra cards?</p>
+<ul>
+<li>Contact your department’s Custodian to acquire additional cards.</li>
+</ul>
+</section>
+<section id="navigation" class="level2" data-number="8.8">
+<h2 data-number="8.8" class="anchored" data-anchor-id="navigation"><span class="header-section-number">8.8</span> Navigation</h2>
 <p>To add an item to the favorites bar, select the item through the Menu, then click the start next to that item. You can add either a category or a specific sub item in that category.</p>
 <p>You can move items by clicking and holding, then move it where you want it.</p>
 <p>You can remove the item by clicking the highlighted star again.</p>
 </section>
-<section id="user-profile" class="level2" data-number="8.5">
-<h2 data-number="8.5" class="anchored" data-anchor-id="user-profile"><span class="header-section-number">8.5</span> User Profile</h2>
+<section id="user-profile" class="level2" data-number="8.9">
+<h2 data-number="8.9" class="anchored" data-anchor-id="user-profile"><span class="header-section-number">8.9</span> User Profile</h2>
 <p>You have access to edit your title and contact numbers within your User Profile.</p>
 </section>
-<section id="contacts-page" class="level2" data-number="8.6">
-<h2 data-number="8.6" class="anchored" data-anchor-id="contacts-page"><span class="header-section-number">8.6</span> Contacts page</h2>
+<section id="contacts-page" class="level2" data-number="8.10">
+<h2 data-number="8.10" class="anchored" data-anchor-id="contacts-page"><span class="header-section-number">8.10</span> Contacts page</h2>
 <p>These are not participants, but other users in the system.</p>
 </section>
-<section id="managing-protocols-in-payments" class="level2" data-number="8.7">
-<h2 data-number="8.7" class="anchored" data-anchor-id="managing-protocols-in-payments"><span class="header-section-number">8.7</span> Managing protocols in payments</h2>
+<section id="managing-protocols-in-payments" class="level2" data-number="8.11">
+<h2 data-number="8.11" class="anchored" data-anchor-id="managing-protocols-in-payments"><span class="header-section-number">8.11</span> Managing protocols in payments</h2>
 <p>Before creating a protocol in Participant Payments, you will need to submit an intake form to get approval. More information about this process is covered in the Canvas course or <a href="https://kb.wisc.edu/smph/informatics/">here</a></p>
 <p>The protocols landing page will display all the available protocols.</p>
 <p>Info includes:</p>
@@ -376,8 +565,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Protocol Name</li>
 <li>Participant Payments Status</li>
 </ul>
-<section id="protocol-creation-from-oncore" class="level3" data-number="8.7.1">
-<h3 data-number="8.7.1" class="anchored" data-anchor-id="protocol-creation-from-oncore"><span class="header-section-number">8.7.1</span> Protocol creation from Oncore</h3>
+<section id="protocol-creation-from-oncore" class="level3" data-number="8.11.1">
+<h3 data-number="8.11.1" class="anchored" data-anchor-id="protocol-creation-from-oncore"><span class="header-section-number">8.11.1</span> Protocol creation from Oncore</h3>
 <p>In OnCore, an Administrator will update the protocol to create the record in Payments automatically unless the protocol status is Abandoned, Terminated, or IRB Study Closure.</p>
 <ul>
 <li>DO NOT change the field “Enable Payments Integration” in OnCore.</li>
@@ -385,12 +574,12 @@ ul.task-list li input[type="checkbox"] {
 <li>Imported protocols start as Inactive. After you have set up visits you can switch to Active.</li>
 </ul>
 </section>
-<section id="editing-the-protocol" class="level3" data-number="8.7.2">
-<h3 data-number="8.7.2" class="anchored" data-anchor-id="editing-the-protocol"><span class="header-section-number">8.7.2</span> Editing the Protocol</h3>
+<section id="editing-the-protocol" class="level3" data-number="8.11.2">
+<h3 data-number="8.11.2" class="anchored" data-anchor-id="editing-the-protocol"><span class="header-section-number">8.11.2</span> Editing the Protocol</h3>
 <p>Can Edit: 1. IRB Number 2. Financial Reference Number (full funding string) 3. Internal Reference Number (this is “project number”) 4. Keywords, to help with protocol searches (like short title) 5. Business Unit (dropdown, select dept/division) 6. Whether Reimbursements are Allowed for this Protocol * Allowable: Parking, hotel stay, mileage, <strong>other</strong> (can we use this for EMA?) 7. Whether the Protocol is Active - click Yes when ready to start paying. All visits &amp; reimbursements with stipend amounts must be set up first. 8. Visit Information - you can add visits here, both scheduled and unscheduled</p>
 </section>
-<section id="adding-visit-details" class="level3" data-number="8.7.3">
-<h3 data-number="8.7.3" class="anchored" data-anchor-id="adding-visit-details"><span class="header-section-number">8.7.3</span> Adding Visit Details</h3>
+<section id="adding-visit-details" class="level3" data-number="8.11.3">
+<h3 data-number="8.11.3" class="anchored" data-anchor-id="adding-visit-details"><span class="header-section-number">8.11.3</span> Adding Visit Details</h3>
 <ul>
 <li>In the Protocol Details, you will create an entry for every expected visit. You will need to add a description and stipend amount for each visit.</li>
 <li>If reimbursement is allowed, you will also add reimbursement types.</li>
@@ -402,8 +591,8 @@ ul.task-list li input[type="checkbox"] {
 <li>A reimbursements field will appear once those are enabled and selected for each visit. Leave blank if not using it (aka hotel reimbursement)</li>
 </ul>
 </section>
-<section id="adding-protocol-users" class="level3" data-number="8.7.4">
-<h3 data-number="8.7.4" class="anchored" data-anchor-id="adding-protocol-users"><span class="header-section-number">8.7.4</span> Adding protocol users</h3>
+<section id="adding-protocol-users" class="level3" data-number="8.11.4">
+<h3 data-number="8.11.4" class="anchored" data-anchor-id="adding-protocol-users"><span class="header-section-number">8.11.4</span> Adding protocol users</h3>
 <p>After entering the protocol details, you can add staff to the Protocol Users list.</p>
 <ul>
 <li>click the add button above the list of protocol users. Search &amp; add.</li>
@@ -411,8 +600,61 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="reports-in-payments" class="level2" data-number="8.8">
-<h2 data-number="8.8" class="anchored" data-anchor-id="reports-in-payments"><span class="header-section-number">8.8</span> Reports in payments</h2>
+<section id="reports-in-payments" class="level2" data-number="8.12">
+<h2 data-number="8.12" class="anchored" data-anchor-id="reports-in-payments"><span class="header-section-number">8.12</span> Reports in payments</h2>
+<p>The ability to run reports in Participant Payments requires specific permission. If you should have this permission but are unable to run reports, contact the Support Team to request it be added to your account.</p>
+<p>The reports available come standard with Participant Payments. At this time, we do not have the ability to create custom reports.</p>
+<ul>
+<li>In Menu &gt; Reports, you will see a list of the standard reports available.</li>
+<li>To select a report, click on the hyperlinked name of that report.</li>
+<li>After selecting a report, if there are report parameters, you will be taken to the appropriate screen to set those parameters.
+<ul>
+<li>You can also select in which format you want the report to be delivered.</li>
+</ul></li>
+<li>Clicking Run will generate the report.</li>
+<li>Download it by clicking View Output in the Queued Tasks</li>
+</ul>
+<section id="available-reports" class="level3" data-number="8.12.1">
+<h3 data-number="8.12.1" class="anchored" data-anchor-id="available-reports"><span class="header-section-number">8.12.1</span> Available reports</h3>
+<ul>
+<li>The 1099 Report provides information for all participants that have received payment within the search period. It shows a sum of all stipends paid to participants, contact information, and SSN. The amounts reflected in this report do not include reimbursements.
+<ul>
+<li>There is also an Invalid SSN identifier that flags participants who have been paid more than $249 and do not have a valid SSN on file.</li>
+</ul></li>
+<li>All transactions report lists all paid transactions within a specified date range. This report contains protocol and visit information, and amounts paid. It also contains patient identifiers, if used, but does not contain additional identifying information such as patient names and addresses.</li>
+<li>Card inventory report shows all cards at UW-Madison, as well as their assigned status and expiration dates.</li>
+<li>Incomplete participant registrations report lists participants enrolled on a protocol that need to have their payment account registration completed.</li>
+<li>Itemized receipt report lists all participant payment and fees within a specified date range. The spreadsheet has a separate tab for each protocol and a summary of the protocols on the Total tab.</li>
+<li>Payment Audit report shows any changes made to payments within a specified time period. For example, if a reimbursement is approved, rejected, or modified, these changes will be listed.</li>
+<li>Payments Contact Audit report lists a report of all users in our instance of Participant Payments and their associated User Roles as well as other user information such as last login date and time.
+<ul>
+<li>There is also a Payment Contact Audit Report by Protocol option.</li>
+</ul></li>
+<li>Sponsor invoicing report lists payments and associated fees, organized by protocol. There are columns to show the payment type, amount, any associated fees, and the total.</li>
+</ul>
+</section>
+</section>
+<section id="using-participant-pauyments-at-uw-madison" class="level2" data-number="8.13">
+<h2 data-number="8.13" class="anchored" data-anchor-id="using-participant-pauyments-at-uw-madison"><span class="header-section-number">8.13</span> Using participant pauyments at UW Madison</h2>
+<p><a href="https://kb.wisc.edu/smph/informatics/internal/search.php?cat=13860">SMPH Research Informatics KB</a> has reference info.</p>
+<ul>
+<li>FAQs</li>
+<li>Workflows</li>
+<li>Data Field Definitions</li>
+<li>Card Management Information</li>
+<li>How-To Instructions for Payments Tasks</li>
+<li>Links to Required Forms and Participant Resources</li>
+</ul>
+<p>If you cant find the info ask the <a href="https://smph-navigator.atlassian.net/servicedesk/customer/portal/69/group/217">Application Support Team</a></p>
+<ul>
+<li>If you have questions about a specific protocol record, include the protocol number in the description.</li>
+<li>If you have questions about a specific participant’s record, include the URL from their record (you can retrieve this through the Participants list or Participant Check-In after searching for the participant in question).
+<ul>
+<li>This allows you to communicate the record without including PHI in the description.</li>
+</ul></li>
+<li>Do not include PHI when using the JIRA portal to contact the Support Team.</li>
+</ul>
+<p>When you have completed all the required modules for your role(s), submit your course completion using the link provided in the email preiously sent to you with a subject of “Participant Payments Training for UW-Madison”.</p>
 
 
 </section>
@@ -453,18 +695,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -496,7 +727,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -504,7 +755,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -601,7 +852,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
