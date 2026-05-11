@@ -1,0 +1,32 @@
+# Florence eBinders
+
+## Training Links
+* https://university.florencehc.com/
+   * self-register for the Study Staff training
+* [Training Environment](https://login.uatv2.researchbinders.com/u/login/identifier?state=hKFo2SBwa2FqWl9kdXdTZElsc3R4bUdxcUZrN19MTU5VMlUwVaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFlZSlVkd1hRMnYzMm1jNndPUXhXTHhPR3hhbHk5ZXNho2NpZNkgR0N3Z3ZHamF1YlNrMkRybWJycFpuS3VRVnNkUXhpYVA)
+
+## Navigation
+
+* When you sign in you will be taken to the binders page which is like the homepage. You'll see any binders you have access to.
+* Search bar lets you search for documents or placeholder. Click blue box to see list of results. Click to go to that item
+* Use filter box to reduce the results on any page.
+* Breadcrumb link may be truncated to save space, click the folder icon for the dropdown to expand
+* Top right is settings and user profile dropdown.
+* The florence logo upper left will take you back to the teams page if you have multiple teams.
+
+### Profile
+* Edit profile (includes password change)
+* Edit Email notifications on the your-name dropdown - the option  can be used to set up frequency and time
+
+## Global View 
+* See summary of binder or folder
+* See placeholders left in study startup
+* Select the checkbox near the binder or folder and select Global View under the dropdown. 
+   * OR select GlobalView in the left-hand sidebar
+* Use the + to see what's inside it or click the + by a location to open every folder and subfolder. Clickable colored boxes can filter the view. Click again to undo the filter. (You can still use the filter View box but it will only look for binder and document names and not placeholders
+
+
+
+
+Sidebar items all have their own training modules
+* Binder link on sidebar - back to homepage
