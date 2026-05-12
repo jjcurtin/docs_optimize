@@ -1,11 +1,16 @@
 # Florence eBinders
 
+## 1. Registration & Navigation
+
 ## Training Links
 * https://university.florencehc.com/
    * self-register for the Study Staff training
 * [Training Environment](https://login.uatv2.researchbinders.com/u/login/identifier?state=hKFo2SBwa2FqWl9kdXdTZElsc3R4bUdxcUZrN19MTU5VMlUwVaFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIFlZSlVkd1hRMnYzMm1jNndPUXhXTHhPR3hhbHk5ZXNho2NpZNkgR0N3Z3ZHamF1YlNrMkRybWJycFpuS3VRVnNkUXhpYVA)
 
 ## Navigation
+
+Sidebar items all have their own training modules
+* Binder link on sidebar - back to homepage
 
 * When you sign in you will be taken to the binders page which is like the homepage. You'll see any binders you have access to.
 * Search bar lets you search for documents or placeholder. Click blue box to see list of results. Click to go to that item
@@ -25,8 +30,182 @@
    * OR select GlobalView in the left-hand sidebar
 * Use the + to see what's inside it or click the + by a location to open every folder and subfolder. Clickable colored boxes can filter the view. Click again to undo the filter. (You can still use the filter View box but it will only look for binder and document names and not placeholders
 
+## Need help 
+* Sidebar or under your name
+* Contact for our team
+* Or go to the helpdesk which is their KB. You can also chat 
+
+## 2. Documents & Signatures
+
+## Uploading a document
+
+0. Use global view to get to the place the document needs to live.
+1. Once you're in the folder you'll see a box in the lefthand sidebar. Drag here or select browse to find on your computer. 
+2. Docs live alphabetically
+3. If you see "Preview not available" florence recommends converting to a regular PDF to permit the preview.
+
+## emailing docs into florence
+* navigate to the correct location
+* Sidebar - "Import via email" box
+  * Copy that email address
+* forward an email to that address, or BCC the florence address (in case someone might reply all)
+  * If you reply, you need to re-attach attachments
+  * Subject of email will be title of florence doc
+* Everything is converted to PDF
+
+## Annotations & redactions
+* 4 buttons at top of document view: View, Annotate, Redact, Sign
+* Annotations create new versions. You'll need to confirm
+   * Highlight works if the document hasnt been flattened
+   * Rectangle works for flat documents. It creates a rectangle around an area of attention.
+      * You can propegate a rectangle to all pages by the Propegate button (looks like copy icon)
+   * Free text, click anywhere and type. Color, background, font, style
+   * Strikeout allows UNFLATTENED docs to be struck out.
+   * Timestamp - select and click anwhere to get it to show up.
+ * Redaction: protect PHI/PII
+   * Only those with "View PHI" permission can see the unredacted version
+   * Can also use propegate here
+ * BE SURE TO CLICK SAVE. If you navigate away all changes are lost. 
+ 
+## Downloads
+ *  Any doc can be downloaded if you have poermission. From folder view, select Download from actions dropdown in the folder, or from the Manage dropdown in document view.
+ *  You can select to include signature addendums, and whether you wish to get all versions or just the current version.
+ *  My Downloads shows all your downloads (left sidebar)
+ 
+## Moving documents (or placeholder or folder)
+ 
+ * Select and navigate to Actions -> Move
+ * Only like items can be moved at the same time.
+ * You'll see a tree with the current location in blue. Once it moves you'll see a link in the new location.
+
+## Uploading a new version
+* Navigate to where the document lives and select the Version dropdown
+* Drag & drop or browse, or select Email to import that way.
+* Provide the reason aka "expired, updated" etc and change names as needed
+* Can also clear expiration dates and rename shortcuts
+
+## Duplicating docs, folders, or placeholders
+* Select the item(s) and go to Duplicate in actions dropdown. (must have permission)
+* Tree shown with destinations (blue is current location)
+* If you only select 1 item you can include versions and rename (handy if say you duplicate a set of docs for all sub investigators)
+
+## Signing a document
+* You van get an email notification of a signature requests. 
+* GO to notifications to turn these emails on
+* Blue bar at top of screen lets you know you have signatures needed
+* Viewing your queue goes to reports section; click any doc to go there
+
+Signature types:  
+* Addendum
+* Stamp
+
+(Discussed later)  
+* Form
+* eLog
+
+Addendum:  
+* Clicking "Sign" pops up the signing modum. 
+* Adds a page to the end of doc with the signature.
+* Left hand panel shows last update
+
+Stamp: Physically stamps. 
+* You click & drag to put it where you want it.
+* Creates a new eversion of the doc
+
+If you attempt to sign an expired document, the "Sign" button won't be available. Check the date in the audit trail. Contact the person who requested your signature and have them update the date.
+
+You can also decline to sign, if either it doesnt require, or if the doc is inaccurate, or if the sig type requested is wrong.
+
+* Select decline and enter your reason. This goes in audit trail and emails requestor
+* If it's just because the signature type requested is wrong, you first decline and then can go back and sign with any signature.
+
+## Requesting a signature
+
+* Can request from folder View by selecting the checkbox then actions dropdown -> request signatures
+* You can select other documents from the next modal from anywhere in your structure.
+* Then select siganture type and reason why for each document.
+  * If some needs to sign approval and others to acknowledge, you should send those separately to each group.
+* GO to signers tab and start selecting users. THere is NO option to select all.
+* If someone has permission they will get a request. Only select users who can sign all docs.
+* YOu can add a sign-by date and whether you want to be notified of signatures, and if you want to email them the request. They only get one notification per request, not a separate email for each doc.
+*Pending tab shows if some are already in progress. If someone is here, they won't show up in the Signers tab. 
+* Gold arrow by name or doc means a signature is in progress.
+* Lock shows who don't have access to certain documents. They wont get the request for those docs.
+
+## Sending a signature reminder
+* Navigate to document, from Manage tab select request signatures, and look at Pending tab. YOu can select to send a reminder.
+* Or navitate to report section and select Signatures Pending. Click any and click Send reminder to send.
+
+## Cancel a signature request
+* Navigate to the document and select Request Signatures from Manage dropdown. 
+* Go into Pending tab and select which people to cancel. Under Actions click cancel
 
 
+## 3. Shortcuts, due dates, placeholders
 
-Sidebar items all have their own training modules
-* Binder link on sidebar - back to homepage
+## Shortcuts
+* Helps you maintain docs in one central folder but access from anywhere.
+* Create a shortcut in the "to" document > Create a new shortcut tto it elsewhere
+   * Select document in folder and under Actions > Create shortcut.
+   * This brings up the tree for where you want to PUT the shortcut.
+* Or Import - start with the new location where it should live, and > Import a new shortcut to it.
+  * Navigate to the location where the shortcut should live. Create New > Import Shortcut. You;ll be taken to the tree, and can select the items. 
+  * All have "shortcut" after the document title.
+  * In shortcut view, you can see a link in the sidebar to the original site.
+  
+  If you delete a doc you should also delete the shortcut
+  
+## Due dates
+  
+  * Keep track of placeholders that need to be filled.
+  * Set a due date, open placehodler, and cliock Set Due Date in left sidebar. You can subscribe to notifications under your name for "Documents due in..."
+  * Global view shows upcoming dates or overdue date
+  * You can run reports for placeholders
+  
+## Expiration dates  
+* When uploading a doc set an expiration date to remind users when it needs to be updated "Set expiration date" in sidebar. 
+* Subscribe to Notifications under your name. It will also be in orange or red in the global view
+* Also available in reports section
+
+## Bulk due dates and expiration dates
+* These can be uploaded in bulk from the folder level. Add due dates/expiration dates for all in folder by adding everything.
+* Under Actions click "Update expirations/due dates"
+* Select bulk assign in top right, select all, then set the date in the first view. 
+* There's a calendar view or quick options.
+* When Bulk assign is toggled off, you can set individual dates
+* Can only do this on a folder by folder basis.
+
+
+## Placeholders 
+* Keeps track of expected documents
+* Can create in standard folder in excel for easy uploading, and use due dates
+* Or individually, navigate to the desired location and clic Create New > Placeholder
+
+## Filling a placeholder
+* Navigate to the placeholder either by global view or click through to where it lives
+* Drag and drop or browse for the document
+* It will take on placeholder name after upload
+* Lefthand placeholder has original name
+* You can also fill with an existing doc in Florence or email it in.
+   * Open placeholder and open Version dropdown to select Email (attachment will replace placeholder and email is created as a new file)
+   * Fill with ebinder doc:
+   	* Move, duplicate, or shortcut. 
+   	* Find in tree (blue is where your placeholder is you're filling)
+   	* Add name
+
+ 
+## 4. eLogs & forms
+ 
+## 5. Structure
+ 
+## 6. Access Management
+ 
+## 7. Admin Tasks (team setup, etc)
+ 
+## 8. Reporting tools (tags, labels, tasks)
+ 
+## 9. MRM & Study profile management
+ 
+## 10. ePrinter
+ 
+## 11. Quiz
