@@ -195,17 +195,352 @@ You can also decline to sign, if either it doesnt require, or if the doc is inac
 
  
 ## 4. eLogs & forms
+
+
+## Using elogs
+
+When it's time to start filling out your e-log, click Add Entries
+
+* You can start populating info row by row -  staff, role, start and end date
+* Use the commments section to indicated what changes are being made to store in the audit trail
+* Add as many rows as needed.
+* Make edits with Actions dropdown. Audit trail, edit, sign, or request signatures
+* Any change made to ENTIRE log is under the Manage tab dropdown.
+* note that changing a row, makes a new version ON THAT ROW (not to all the versions)
+* Signatures previously gatehred to not show on the new version.
+* After saving changes, enter the reason for these chnages (might be same as notes)
+* To see prevous versions use the v at the far right of the row
+
+ ## Signing
+ 
+ * You'll be notified of signatures needed by you
+ * scroll for the log and look for the yellow signature field that says "sign here". Ignore all other fields
+ * Toggle on actions dropdown "my pending signatures" hides rows not requiring your signatures. 
+ * YOu can sign individually, or checkbox all and go to Actions > Sign.
+ 
+ ## Requesting signatures
+ 
+ * Select the row and choose Request signatures under the Actions dropdown.
+ * If the ENTIRE log needs signing - ie the PI signs off on an entire log at the end of the study - use the manage dropdown > request signatures. This sig goes to the WHOLE log
+ * When you open the request sig modal, team members will prepopulate, but you can also select in the user search box.
+ * If someone needs to sign twice, you have to request the first signature, have them sign, then request the second signature.
+ * Select what column to sign, and reason. 
+ * Remember if you add a sign by date and they don't meet it, you'll need to go into Pending and change the date (you can also send reminders here)
+ * You can request notification of completed signatures and to notify the signers.
+ * Back in the row view - "Sign unrequested" means you havent requested any sigs for that row. "Pending other user" means a signature HAS been requested.
+    * Any user can sign in a "sign unrequested area" if they choose, but best practice is always to request
+    
+## Bulk signature reuqests
+* Can be sent in bulk.
+* First, log template needs to be updated to include the "Team members" row.
+* Select the rows and use Actions |> Request signatures
+   * A dropdownn lets you specify for any given column: do you need multiple signatures from multiple signers, or multiple signatures for same signer
+   * For multiple signers, they'll be populated use the bulk assign or assign reasons individually. You can click the row number to doublecheck the info. **It's not clear how each row gets assigned - in her example**
+   * For a single person with multiple signers you get prompted immediately to select the signer. (like the PI needs to sign off on multiple rows)
+   
+ ## Bulk upload of rows in eLog  
+ 
+ * You can add multople team mmebers to say the DOA log this way.
+ * Go to Manage > Import Rows
+    * Download excel template, view tutoarial
+    * **DD/MM/YYYY** for date formats but excel defaults to 2 digit Y. So you have to highlight entire doc and change to "text" so excel doesnt change it
+  * You'll get an error message once any errors are corrected/
+  * Florence only ADDS NEW ROWS. You cannot import missing data to existing rows - this has to be done row by row
+ 
+## Fillable forms 
+* Created in adobe and uploaded in documents (ie 1572, fin disclosures)
+* You can create multiple signature fields but florence only allows one signer per document. So if you need muttiple signatures it's better to use elogs. 
+* Can't create contiuation pages - these must be created and uploaded from outside
+* NO dropdowns, just check box and radio
+* You can create required fields which FLorence highlights as red
+* Options are save as draft, or finalize.
+* Confirm you are ready to flatten the document (remove the fillable fields) and it becomes a flat pdf. After this you can use annotation to change (creates new version and may require a new signatuer)
+
+## Signing fillable form
+* the sign button is greyed out, click once in yellow signature field once and then click save to sign.
  
 ## 5. Structure
+
+## Creating binders
+* Log in go to Binders page and you should see "Create binder" just above the list of binders. If not you dont have create permissions
+* Name the binder according to naming convention and add labels and assign then click create. Appears in alpha order with other binders
+
+## Creating folders
+* Navigate to where you want it to live
+* Click into Create New and select Folder. Add lables, click assign, click create. Number prefexes can help order them
+
+## Importing folder structure
+* You can upload an excel structure file which creates folders, subfolders, labels, due/expiration dates, and placeholders.
+* Team admin may have already created these and stored in UAT environment
+* Once you have created the structure, click the checkbox where you want it to live, go to Actions, and select Apply Structure.
+* 2 options: Single use to copy a structure from Excel, or Reusable Structure from Template, which is created in your team.
+* So for excel, Navigate to the folder (aka root of binder) and click Action > Add structure > Single use. Modal shows a structure for creating the excel file from scratch. YOu can copy from your excel and paste into the modal box to copy your entire structure.
+  * Click preview to see what it looks like.
+  * Red indicates a formatting issue, it says what line the error is on and how to fix.
+* Click save. It takes a minute.
  
 ## 6. Access Management
+
+## Team Members
+* IF you have permission to invite users to team
+* Under Settings in top right >> Team Members. You see every person invited to your team and their email and role. You may see a warning that they have no roles.
+* Add members at top. Enter their email address (separate by comma). Check to send an email invite.
+* If you use SSO DO NOT CHECK THAT!!!
+* Give them a role on the checkbox to the left of their name, actions dropdown > Manage Access, type in name of existing role. MAKE SURE TO TURN THE ROLE ON with the toggle and set start/end date
+* Top of page: report dropdown to view reports on all users, role given, whether access will expire. Can download to CSV or filter. Also gives audit trail of who invited who
+ 
+## Permissions overview 
+* It's how you find out what permissions were granted to a specific user OR role.
+* Settings > Permssions Overview
+* Select user or role (Like in dionysus) - shows all binders/folders they can acccess OR not access.
+   * Use plus by each item to see nested items
+   * Hit edit to change role/user perms
+
+## Create a role
+* You can edit pre-created roles if you have permission with limited scope
+* Settings > Roles shwos all created. Top left is Create Role
+* Name the role (very specific!)
+* Then select that new role from the list and click Role Permissions to give it permissions
+   * Create New > then select either Team level, Binder level, or Folder level permissions.
+   * Work on each location permission separately.
+   * Next takes you to the permissions tree where you can select any permission.
+   * You may also need to add View Permissions to navigate there, it will remind you.
+   * Edit menu gives you remove or update permisison options
+* Finally add users to that role.
+
+## Duplicate a role
+* If you need a very similar role but not exact permissions, you can duplicate.
+* Settings > Roles
+* Check the role and on the meatball menu select Duplicate. Give it a new, specific name.
+* Open meatball menu by new role. You need to make ABSOLUTELY SURE you get it right.
+* Click meatball by old role and a tree appears, UNCHECK the old location and selec the NEW location. As long as the permissions can be exactly the same, you can click save, or edit the permissions here.
+  * Repeat for all old locations
+
  
 ## 7. Admin Tasks (team setup, etc)
  
+## Announcements
+* Announce new folder structure with link to the new folders
+* Left sidebar "Announcements"
+* Send Announcement, Your inbox, and Team inbox.
+
+* Enter a title and add message content, then select one or more binders, folders, documents
+* Next screen you can select by user or role (they must have team inbox permission turned on)
+* An email is sent and it's in Announcements. 
+* Think about creating Announcement specific roles
+
+## Team notifications
+* You can control email notifications for your whole team
+* Settings > Team notifications (you can search by user)
+
+## eLog templates
+* Navigate to Settings > Log Templates
+* Create OR update here so you can create any master then send to applicable studies
+* Some will already be created for you and you can use the meatball menu to edit, OR create new. 
+* In Creating, make sure the details here are generic so they can be applied to any study.
+* Add detail to include more information
+* Create a legend just like for paper logs.
+* Provide info on General Info
+* Build out log columns. Enter title then change type (text, Team Member, Date, Signature). They cannot be changed after sent to a study so make sure they're right.
+* Use Version comments if you're changing an existing log (for audit trail)
+
+## eLogs - Adding to study
+* When ready to add a template eLog to study, navigate to where log should live. 
+* Create New |> Log. Give it a name and then select the template. 
+* You'll be asked to enter the log details specific to this study's log. (You can edit this later) 
+* Log details appear in left sidebar, legend and instructions appear at top. Below that is where you start adding entries.
+
+## Structure templates
+* Settings > Structure Templates
+* Here you can see list of imported templates (with right perms)
+* Top of page: Audit Trail and Assign Structure
+* meatball on a template lets you see the audit trail or preview
+
+To add a new template:
+
+* Click Import excel structure templates
+* Browse to excel. Errors are flagged. Click next when fixed
+* Name template and add description.
+
+## Assigning a structure to a binder or folder
+* TO use a template, either "Assign Structure" at template page, or Actions > Apply Structure at the binder or folder level.
+* From template page you can select either a binder or folder structure.
+   * Create new OR add to existing binder.
+   * For folder level, you first select the binder you use. Either Create a new folder in the binder or Assign to existing folder.  
+* From binder page, Actions > Apply Structure > Reusable template chooses from the templates in Florence. Select the model.
+   * The binder or folder needs to exist BEFORE you Apply the structure.
+   * You can also apply expiration dates (documents) and due dates (placeholders). Apply one by one, or click the folder icon itself and all placeholders get selected.
+
+## Audit trails
+
+* On Document, Folder, Binder, Role, and Users
+* On any object or Roles, check the box next to the item and click Actions > Audit trail and use filters to drill down. You can also download
+* On documents, left sidebar near bottom has the audit trail button
+* For team member audits only, go to Settings |> TeamMembers to look at these audits. Audits are under the Reports dropdown. These only show role and permission changes not like every action they have taken in Florence
+
+## Document locking
+* This allows you to disable certain actions (limits it to View and download only)
+* Select one or more documents, then Actions > Lock Document (reverse, Actions > Unlock). They'll have a lock-doc icon. If you open the document you'll see it's locked by a red message and a watermark (removed when unlocked)
+* Locking a document will prevent the doc from being signed or tasks being completed. The request and task will still show as open but the user can't make any updates. So be sure there are none pending!!
+* This is useful near end of study - ie locking shortcuts no longer receives updates from the original document. 
+* Also template docs that can be duplicated but not edited or moved itself.
+
+ 
 ## 8. Reporting tools (tags, labels, tasks)
  
+## Reports
+* In left sidebar select available reports
+* Some don't work yet, but it's random rare ones.
+* After selecting report choose folder or folders (but only ONE binder ) or select all for team level
+* You can filter or download
+* Task/signature reports allow you to send reminders right from the report location
+
+## Labels
+* Assign attributes like PIs, study IDs, etc. (Like current paper coversheet)
+* Labels are under Settings > Teams.
+* On top of report are Florence-level labels. It must have a value to be assigned.
+* Create to give it a Label, Description, and values (like, list all PIs or list all Sites)
+* Changes are captured in the audit trail.
+* Select the item you want to apply a label to. Meatball > Rename/Update. First you select the label name, then the value of the label to include.
+* On binder level, a label goes to ALL folders and docs under it. On folder level, all sub folders and docs.
+* Label reports: select label, value, and binder or folder,
+
+
+## Tags
+* Tags are just like social. IE, you can tag all docs in any location (ie "IRB").
+* YOu can also tag placeholders.
+* Create list of tags in Settings > Tags
+* Make sure you dont duplicate an existing tag!
+* Open the item you want to tag, select Manage > Assign tags
+* Appear at bottom of left document sidebar
+
+## Creating a task
+* Like a todo list
+* Can track progress and check pending
+* Go to the item and hit Manage > Create Task
+* Add a task title and message for the assignee. Set notification preferences, Assign with the filter for users.
+* When they complete the task they can change the status to Complete and assign back to you before marking it as close to end the task
+
+## Completing a task
+* On the binder page a Green bar at the top takes you to pending tasks
+* Or, you can check your notification emails and click through from there to go directly to the task
+* Or, in reports, select Tasks - My Queue 
+* In global view they are in a colored box above tree
+* Status can be To Do, In Progress, Complete, and Close
+* When you finish your part set status as complete and assign back to creator.
+
+ 
+ 
 ## 9. MRM & Study profile management
+
+## Study Profiles
+* Track your study and get advanced reporting
+* Add this workflow immediately after importing folder structure. Go to Settings > Team Settings. Top tabs includes Study Profiles
+* Create Study near the top: Enter all required information and at least one study. Click "Save and connect study"
+* On the next page click "Connect binders and folders" button and select the new binder matching the study.
+* You can also apply it to your site
+* Reports > Study profiles Reports and select your study profile. You will download as csv to see all advanced reporting in one place
+
+## Remote Monitoring in Florence
+* Tag documents you think are ready for monitor review and assign those to the monitors with Create Task 
+* At the document level there is a Monitor Review module allowing monitors to Approve or Create Query for documents inside the study you've given them access to.
+* Both options allow remote monitoring 
+* **It may not be enabled for our team**
+
+## Using the monitor review module as Study Team
+* To allow this use, we need to make sure it's been turned on for our team (lol)
+* Add the protocol ID label to the study which needs monitoring.
+* Make sure monitor and staff have role/permission access to both the study and to use the monitor review module.
+* Monitor will create queries for documents that need further action or Approve if ready for trial master file
+* A query can send notifiations to study team members. OR, go to Reports |> Monitor Reviews Open Queries > Select study 
+* You can click each item that has an open query to be taken to that document.
+* Queries section is bottom left sidebar. Open to see what the monitor found. Take the requested action and then respond through the modal. They can review and mark document as approved  
+* You can also see open queries and approvals at the folder level by looking at the icons. 
+* Or in goblal view there's a box for Approved & for Open query
+
+ 
  
 ## 10. ePrinter
+
+Apparently this is a plugin (maybe?) that allows you to print items on your computer INTO florence?? It looks like its a selectable printer in your default print menu from your workstation.
+
+Select your documents in File Explorer, then right click Print and shomehow eBinder Printer Console (installed locally) is open? (It's not clear)
+
+Then the lefthand side it shows your tree and I guess you pick where you want them to live and hit Upload. This is just what I'm guessing watching the video about PHI.
+
+## ePrinter PHI Flag
+* when using the eprinter, you can flag PII/PHI containing documents at import.
+* In your print dialogue, check PII/PHI docs and hit Actions > Mark as PHI. They get an icon with a person and a lock.
+* You can select each doc one by one and choose where to upload, or in bulk to upload to same location
+* The result is only people with PHI access permissions can see the document if it's flagged this way
+
+# ePrinter Document Rename
+* Actions > Rename OR select Rename next to the document
+
  
-## 11. Quiz
+## 11. Quiz (14)
+```
+Anyone can set Team notifications on behalf of other users.
+True
+> False
+
+What do you click on to begin the importation of a structure template?
+> Import Structure Template
+Delete Folder
+Lock Document
+
+The blue highlighted item indicates the current location of the item you're duplicating.
+False
+> True
+
+You can view your personal information in Florence by...
+Looking at the Global View
+> Clicking your name in the top right corner of Florence
+Clicking the Settings Menu then click Team Members
+
+Reports can only be run on one binder at a time.
+> False
+True
+
+Expiration dates should be used for documents that...
+Need to be signed
+Need to be deleted
+> Need to be updated periodically
+
+Users cannot finalize a form without completing all required fields.
+False
+> True
+
+When using the date column type, dates should be formatted as day, month, and year with four digits for the year.
+False
+> True
+
+You can't choose which notifications you would like to receive; they are pre-selected for you.
+True
+> False
+
+You can browse the Florence Help Desk and review useful articles whether or not your Team Admin has filled out our Support information.
+False
+> True
+
+From which of the following locations can you request a signature?
+Folder view of the document only; document view only
+Global view and Folder view of the document
+> Folder view of the document and document view
+
+Which of the following is not an annotation option in Florence?
+> Underline
+Redact
+Highlight
+
+Which of the following workflows allows Monitors to conduct remote monitoring sessions inside of Florence?
+> Tags, Tasks, and Monitor Review Module
+Monitor Review Module, Announcements, and Labels
+Dashboard, Labels, and Tags
+
+The team members audit trail shows what information?
+Every time a user logs in or out
+Every action a user has taken in Florence
+> What access has been granted, changed, or removed from a user
+
+```
