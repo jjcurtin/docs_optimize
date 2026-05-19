@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.40">
+<meta name="generator" content="quarto-1.4.552">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>6&nbsp; SOPS – Project Manual - Optimize</title>
+<title>Project Manual - Optimize - SOPS</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,17 +30,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./oncore.html" rel="next">
-<link href="./qualtrics_links.html" rel="prev">
+<link href="./sop_screening.html" rel="next">
+<link href="./payments.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-549806ee2085284f45b00abea8c6df48.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-8da5b4427184b79ecddefad3d342027e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -78,13 +78,13 @@ ul.task-list li input[type="checkbox"] {
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./sops.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SOPS</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sops.html">SOPS</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -122,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Methodology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -151,7 +151,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Administration</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -164,20 +164,37 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sops.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SOPS</span></span></a>
+  <a href="./oncore.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Oncore</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./oncore.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Oncore</span></span></a>
+  <a href="./florence.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Florence eBinders</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./payments.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./sops.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">SOPS</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./sop_screening.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Screening &amp; Scheduling SOP</span></span></a>
   </div>
 </li>
       </ul>
@@ -192,19 +209,19 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#pre-enrollment-sops" id="toc-pre-enrollment-sops" class="nav-link active" data-scroll-target="#pre-enrollment-sops"><span class="header-section-number">6.1</span> Pre-enrollment SOPs</a></li>
-  <li><a href="#visit-sops" id="toc-visit-sops" class="nav-link" data-scroll-target="#visit-sops"><span class="header-section-number">6.2</span> Visit SOPs</a></li>
-  <li><a href="#data-sops" id="toc-data-sops" class="nav-link" data-scroll-target="#data-sops"><span class="header-section-number">6.3</span> Data SOPs</a></li>
-  <li><a href="#administration-sops" id="toc-administration-sops" class="nav-link" data-scroll-target="#administration-sops"><span class="header-section-number">6.4</span> Administration SOPs</a></li>
-  <li><a href="#participant-communication-sops-templates" id="toc-participant-communication-sops-templates" class="nav-link" data-scroll-target="#participant-communication-sops-templates"><span class="header-section-number">6.5</span> Participant communication SOPs &amp; Templates</a></li>
-  <li><a href="#sop-tech-components" id="toc-sop-tech-components" class="nav-link" data-scroll-target="#sop-tech-components"><span class="header-section-number">6.6</span> SOP tech components</a>
+  <li><a href="#pre-enrollment-sops" id="toc-pre-enrollment-sops" class="nav-link active" data-scroll-target="#pre-enrollment-sops">Pre-enrollment SOPs</a></li>
+  <li><a href="#visit-sops" id="toc-visit-sops" class="nav-link" data-scroll-target="#visit-sops">Visit SOPs</a></li>
+  <li><a href="#data-sops" id="toc-data-sops" class="nav-link" data-scroll-target="#data-sops">Data SOPs</a></li>
+  <li><a href="#administration-sops" id="toc-administration-sops" class="nav-link" data-scroll-target="#administration-sops">Administration SOPs</a></li>
+  <li><a href="#participant-communication-sops-templates" id="toc-participant-communication-sops-templates" class="nav-link" data-scroll-target="#participant-communication-sops-templates">Participant communication SOPs &amp; Templates</a></li>
+  <li><a href="#sop-tech-components" id="toc-sop-tech-components" class="nav-link" data-scroll-target="#sop-tech-components">SOP tech components</a>
   <ul class="collapse">
-  <li><a href="#consent-sop" id="toc-consent-sop" class="nav-link" data-scroll-target="#consent-sop"><span class="header-section-number">6.6.1</span> Consent SOP</a></li>
+  <li><a href="#consent-sop" id="toc-consent-sop" class="nav-link" data-scroll-target="#consent-sop">Consent SOP</a></li>
   </ul></li>
-  <li><a href="#sops" id="toc-sops" class="nav-link" data-scroll-target="#sops"><span class="header-section-number">6.7</span> SOPS</a>
+  <li><a href="#sops" id="toc-sops" class="nav-link" data-scroll-target="#sops">SOPS</a>
   <ul class="collapse">
-  <li><a href="#scheduling-scripts-in-prism" id="toc-scheduling-scripts-in-prism" class="nav-link" data-scroll-target="#scheduling-scripts-in-prism"><span class="header-section-number">6.7.1</span> Scheduling Scripts in PRISM</a></li>
-  <li><a href="#nda-data-upload" id="toc-nda-data-upload" class="nav-link" data-scroll-target="#nda-data-upload"><span class="header-section-number">6.7.2</span> NDA Data upload</a></li>
+  <li><a href="#scheduling-scripts-in-prism" id="toc-scheduling-scripts-in-prism" class="nav-link" data-scroll-target="#scheduling-scripts-in-prism">Scheduling Scripts in PRISM</a></li>
+  <li><a href="#nda-data-upload" id="toc-nda-data-upload" class="nav-link" data-scroll-target="#nda-data-upload">NDA Data upload</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -212,9 +229,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./sops.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SOPS</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">SOPS</span></h1>
+<h1 class="title">SOPS</h1>
 </div>
 
 
@@ -258,15 +275,15 @@ ul.task-list li input[type="checkbox"] {
 <li>Payment</li>
 <li>Compliance</li>
 </ul>
-<section id="pre-enrollment-sops" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="pre-enrollment-sops"><span class="header-section-number">6.1</span> Pre-enrollment SOPs</h2>
+<section id="pre-enrollment-sops" class="level2">
+<h2 class="anchored" data-anchor-id="pre-enrollment-sops">Pre-enrollment SOPs</h2>
 <ol type="1">
 <li>Checking screening surveys</li>
 <li>Scheduling consent/intake visits</li>
 </ol>
 </section>
-<section id="visit-sops" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="visit-sops"><span class="header-section-number">6.2</span> Visit SOPs</h2>
+<section id="visit-sops" class="level2">
+<h2 class="anchored" data-anchor-id="visit-sops">Visit SOPs</h2>
 <ol type="1">
 <li>Consent/Intake Visit</li>
 <li>Midstudy Visit</li>
@@ -274,8 +291,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Rescheduling Instructions</li>
 </ol>
 </section>
-<section id="data-sops" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="data-sops"><span class="header-section-number">6.3</span> Data SOPs</h2>
+<section id="data-sops" class="level2">
+<h2 class="anchored" data-anchor-id="data-sops">Data SOPs</h2>
 <ol type="1">
 <li>PRISM</li>
 </ol>
@@ -295,8 +312,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Scheduling Scripts</li>
 </ol>
 </section>
-<section id="administration-sops" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="administration-sops"><span class="header-section-number">6.4</span> Administration SOPs</h2>
+<section id="administration-sops" class="level2">
+<h2 class="anchored" data-anchor-id="administration-sops">Administration SOPs</h2>
 <ol type="1">
 <li>Oncore</li>
 <li>Participant payments</li>
@@ -306,8 +323,8 @@ ul.task-list li input[type="checkbox"] {
 <li>NDA data upload</li>
 </ol>
 </section>
-<section id="participant-communication-sops-templates" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="participant-communication-sops-templates"><span class="header-section-number">6.5</span> Participant communication SOPs &amp; Templates</h2>
+<section id="participant-communication-sops-templates" class="level2">
+<h2 class="anchored" data-anchor-id="participant-communication-sops-templates">Participant communication SOPs &amp; Templates</h2>
 <ol type="1">
 <li>Onboarding</li>
 <li>Tech troubleshootng</li>
@@ -316,11 +333,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Adherence</li>
 </ol>
 </section>
-<section id="sop-tech-components" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="sop-tech-components"><span class="header-section-number">6.6</span> SOP tech components</h2>
+<section id="sop-tech-components" class="level2">
+<h2 class="anchored" data-anchor-id="sop-tech-components">SOP tech components</h2>
 <p>This section lists the required tech actions for each SOP</p>
-<section id="consent-sop" class="level3" data-number="6.6.1">
-<h3 data-number="6.6.1" class="anchored" data-anchor-id="consent-sop"><span class="header-section-number">6.6.1</span> Consent SOP</h3>
+<section id="consent-sop" class="level3">
+<h3 class="anchored" data-anchor-id="consent-sop">Consent SOP</h3>
 <ol type="1">
 <li>Send participant the consent form link with their screen_id included in the URL</li>
 <li>Completion of the consent form leads to the onboarding form</li>
@@ -333,10 +350,10 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="sops" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="sops"><span class="header-section-number">6.7</span> SOPS</h2>
-<section id="scheduling-scripts-in-prism" class="level3" data-number="6.7.1">
-<h3 data-number="6.7.1" class="anchored" data-anchor-id="scheduling-scripts-in-prism"><span class="header-section-number">6.7.1</span> Scheduling Scripts in PRISM</h3>
+<section id="sops" class="level2">
+<h2 class="anchored" data-anchor-id="sops">SOPS</h2>
+<section id="scheduling-scripts-in-prism" class="level3">
+<h3 class="anchored" data-anchor-id="scheduling-scripts-in-prism">Scheduling Scripts in PRISM</h3>
 <p>PRISM now checks the proj_optimize repo (specifically, the automation subfolder at the root) for R scripts to be run.</p>
 <ul>
 <li>If we need to change the location of scripts to be run, or add a new location, first edit prism/prism/src/run_prism.py and prism/prism/src/task_managers/_run_r_script.py in prism/prism/src/task_managers. NOTE: this step will be deprecated after Colin moves these hardcoded paths to a config_paths.csv file</li>
@@ -362,8 +379,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Open it in a text editor (Notepad is fastest) and search for “SUCCESS - RUN_R_SCRIPT”, hit Find Next till you locate your specific task, and you will see the script output below that.</li>
 </ul>
 </section>
-<section id="nda-data-upload" class="level3" data-number="6.7.2">
-<h3 data-number="6.7.2" class="anchored" data-anchor-id="nda-data-upload"><span class="header-section-number">6.7.2</span> NDA Data upload</h3>
+<section id="nda-data-upload" class="level3">
+<h3 class="anchored" data-anchor-id="nda-data-upload">NDA Data upload</h3>
 <ol type="1">
 <li>Check PRISM logs to make sure download_qualtrics.R has been run since the participant enrolled.</li>
 <li>Ensure that each new participant has had a GUID created with GUID data tool and create_bulk_guid.qmd (see Susan if uncertain)</li>
@@ -417,7 +434,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const onCopySuccess = function(e) {
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -449,27 +477,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
   });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
-    });
-    clipboardModal.on('success', onCopySuccess);
-  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -477,7 +485,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -574,6 +582,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
+      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -801,13 +810,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./qualtrics_links.html" class="pagination-link" aria-label="Qualtrics Links">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Qualtrics Links</span></span>
+      <a href="./payments.html" class="pagination-link" aria-label="Participant Payments">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./oncore.html" class="pagination-link" aria-label="Oncore">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Oncore</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./sop_screening.html" class="pagination-link" aria-label="Screening &amp; Scheduling SOP">
+        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Screening &amp; Scheduling SOP</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
