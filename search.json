@@ -1328,7 +1328,7 @@
     "href": "sops.html#pre-enrollment-sops",
     "title": "SOPS",
     "section": "",
-    "text": "Checking screening surveys\nScheduling consent/intake visits",
+    "text": "Scheduling consent/intake visits\nDirectly screening from voicemails",
     "crumbs": [
       "SOPS"
     ]
@@ -1348,7 +1348,7 @@
     "href": "sops.html#data-sops",
     "title": "SOPS",
     "section": "Data SOPs",
-    "text": "Data SOPs\n\nPRISM\n\n\nOnboarding\nUpdating\n\n\nFollowMee onboarding\n\n\nOnboarding\nUpdating\n\n\nStudy termnination/offboarding\nScheduling Scripts",
+    "text": "Data SOPs\n\nPRISM\n\n\nOnboarding\nUpdating\n\n\nFollowMee onboarding\n\n\nOnboarding\nUpdating\n\n\nStudy termination/offboarding\nScheduling Scripts",
     "crumbs": [
       "SOPS"
     ]
@@ -1394,58 +1394,91 @@
     ]
   },
   {
-    "objectID": "sop_screening.html",
-    "href": "sop_screening.html",
-    "title": "9  Screening & Scheduling SOP",
+    "objectID": "sop_recruiting.html",
+    "href": "sop_recruiting.html",
+    "title": "9  Recruitment SOP",
     "section": "",
-    "text": "9.1 Check screening surveys",
+    "text": "9.1 Materials",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Recruitment SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_recruiting.html#materials",
+    "href": "sop_recruiting.html#materials",
+    "title": "9  Recruitment SOP",
+    "section": "",
+    "text": "IRB approved recruitment materials are in Florence under Regulatory/Recruitment_Materials\nThe recruitment activity log is in S:\\optimize\\administration\\recruitment_materials\nThe posting request text is in posting_request.txt in the same folder.",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Recruitment SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_recruiting.html#posting-recruitment-ads",
+    "href": "sop_recruiting.html#posting-recruitment-ads",
+    "title": "9  Recruitment SOP",
+    "section": "9.2 Posting recruitment ads",
+    "text": "9.2 Posting recruitment ads\nFIRST THING: Always search the spreadsheet for the location you are posting. Even if you think it’s new, SEARCH TO MAKE SURE. We don’t want to accidently double post and be banned!\n\n9.2.1 New Postings\n\nOnce you’ve identified somewhere to post, add a new log entry. Contact_date should be the date you post (if permission is not needed) or the date you are seeking permission.\nUse the posting_request.txt to send the request. Note that you messaged.\nOnce you post (or receive permission to post) update the log entry with the correct posted_date.\nAdd any notes you may have about the request or the posting.\nAdd the expiration terms (ie, if postings must be 60 days apart, add 60 days from today as the expiration.)\n\n\n\n9.2.2 Repeat Postings\n\nSome places allow us to repost periodically. You can review the spreadsheet for renewable postings and sort by expiration date to find any that are ready to repost.\nIf it states that permission is needed, contact the listed moderator with the posting_request text. Add the text “Our last post was on DATE and we are seeking permission before reposting”.\nAs above, you will always add a new log entry and document your request to that add location. DO NOT overwrite older log entries.",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Recruitment SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_screening.html",
+    "href": "sop_screening.html",
+    "title": "10  Screening & Scheduling SOP",
+    "section": "",
+    "text": "10.1 Direct phone screening\nIf you have a voicemail about screening, you can call them back and use the [Screening Survey](https://uwmadison.co1.qualtrics.com/jfe/form/SV_eKvAYBgOhNYxjL0] as your SOP script.",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
     ]
   },
   {
     "objectID": "sop_screening.html#check-screening-surveys",
     "href": "sop_screening.html#check-screening-surveys",
-    "title": "9  Screening & Scheduling SOP",
-    "section": "",
-    "text": "Every morning run the check_screening.R script in scripts_staff. It will output new eligible screening surveys who have not yet been scheduled.",
+    "title": "10  Screening & Scheduling SOP",
+    "section": "10.2 Check screening surveys",
+    "text": "10.2 Check screening surveys\n\nEvery morning run the check_screening.R script in scripts_staff. It will output new eligible screening surveys who have not yet been scheduled (Status will be UNCONTACTED”.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
     ]
   },
   {
     "objectID": "sop_screening.html#phone-scheduling",
     "href": "sop_screening.html#phone-scheduling",
-    "title": "9  Screening & Scheduling SOP",
-    "section": "9.2 Phone scheduling",
-    "text": "9.2 Phone scheduling\n\nBe sure you have the STAR calendar open in Outlook.\nSelect “scheduling call” in R. The Qualtrics script survey will open showing their name and number.\nMake sure you’re calling between 9-5 in their time zone!\nCall the participant using the Qualtrics script.",
+    "title": "10  Screening & Scheduling SOP",
+    "section": "10.3 Phone scheduling",
+    "text": "10.3 Phone scheduling\n\nBe sure you have the STAR calendar open in Outlook.\nSelect “scheduling call” in R. The Qualtrics script survey will open showing their name and number.\nMake sure you’re calling between 9-5 in their time zone!\nCall the participant using the Qualtrics script.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
     ]
   },
   {
     "objectID": "sop_screening.html#email-scheduling",
     "href": "sop_screening.html#email-scheduling",
-    "title": "9  Screening & Scheduling SOP",
-    "section": "9.3 Email scheduling",
-    "text": "9.3 Email scheduling\n\nOpen both the star_psych mailbox and the STAR calendar in Outlook.\nSelect “scheduling email” in R. It will provide the eligible name and email for your to copy and paste into the email\nSelect an upcoming 1 hour calendar slot in an AVAILABLE block. Schedule a 1 hour event titled “Hold for Scheduling” and paste their  from R into the event body. DO NOT include name/email or any other PII.\nCompose your email:\n\nSubject: Scheduling research study visit Body:\nHello, this is &lt;YOUR NAME&gt; from the University of Wisconsin. You recently filled out a survey saying you'd like to participant in our research study about a mobile phone recovery support system. \n\nThis first visit will be a video call lasting about an hour. We can also do a non-video call if that works better. We have an opening on **&lt;First available date/time&gt;** If this doesn't work, can you let me know what days of the week work best for you, and what time of day is best?\n\nI look forward to hearing back from you! Please feel free to give us a call at 608-262-1362 if you'd prefer to chat in person.\n\nBest,  \n&lt;YOUR NAME&gt;, Star Study  \nWhen they reply: 1. If the selected time works, update the “Hold for Scheduling” event in the calendar: * Enter the event title as “ Consent/Intake”. Copy from R to be sure it is correct. * Invite the staff member who will run the visit so it is added to their calendar. * Enter the event body as “  by /” (whatever they indicated) * Be sure to hit save! 2. If it does not work: * Remove the original “Hold for Scheduling” event to free up that time. * Select two dates/times that would work for them from the calendar. If they offer multiple possible days, make sure to select one from each day * In both, add a 1 hour event titled “Hold for Scheduling” with their screen_id in the body. 3. Respond to their email:\nHello, thank you for letting us know! \n\nWould either of these dates work for you?\n\n[DATE/TIME1]  \n[DATE/TIME2]  \n\nI look forward to hearing back from you!  \nBest,  \nNAME, Star Study  \nRepeat until they are scheduled.",
+    "title": "10  Screening & Scheduling SOP",
+    "section": "10.4 Email scheduling",
+    "text": "10.4 Email scheduling\n\nOpen both the star_psych mailbox and the STAR calendar in Outlook.\nSelect “scheduling email” in R. It will provide the eligible name and email for your to copy and paste into the email\nSelect an upcoming 1 hour calendar slot in an AVAILABLE block. Schedule a 1 hour event titled “Hold for Scheduling” and paste their  from R into the event body. DO NOT include name/email or any other PII.\nCompose your email:\n\nSubject: Scheduling research study visit Body:\nHello, this is &lt;YOUR NAME&gt; from the University of Wisconsin. You recently filled out a survey saying you'd like to participant in our research study about a mobile phone recovery support system. \n\nThis first visit will be a video call lasting about an hour. We can also do a non-video call if that works better. We have an opening on **&lt;First available date/time&gt;** If this doesn't work, can you let me know what days of the week work best for you, and what time of day is best?\n\nI look forward to hearing back from you! Please feel free to give us a call at 608-262-1362 if you'd prefer to chat in person.\n\nBest,  \n&lt;YOUR NAME&gt;, Star Study  \nWhen they reply: 1. If the selected time works, update the “Hold for Scheduling” event in the calendar: * Enter the event title as “ Consent/Intake”. Copy from R to be sure it is correct. * Invite the staff member who will run the visit so it is added to their calendar. * Enter the event body as “  by /” (whatever they indicated) * Be sure to hit save! 2. If it does not work: * Remove the original “Hold for Scheduling” event to free up that time. * Select two dates/times that would work for them from the calendar. If they offer multiple possible days, make sure to select one from each day * In both, add a 1 hour event titled “Hold for Scheduling” with their screen_id in the body. 3. Respond to their email:\nHello, thank you for letting us know! \n\nWould either of these dates work for you?\n\n[DATE/TIME1]  \n[DATE/TIME2]  \n\nI look forward to hearing back from you!  \nBest,  \nNAME, Star Study  \nRepeat until they are scheduled.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
     ]
   },
   {
-    "objectID": "sop_screening.html#direct-phone-screening",
-    "href": "sop_screening.html#direct-phone-screening",
-    "title": "9  Screening & Scheduling SOP",
-    "section": "9.4 Direct phone screening",
-    "text": "9.4 Direct phone screening\nIf you have a voicemail about screening, you can call them back and use the [Screening Survey](https://uwmadison.co1.qualtrics.com/jfe/form/SV_eKvAYBgOhNYxjL0] as your SOP script.",
+    "objectID": "sop_screening.html#post-scheduling",
+    "href": "sop_screening.html#post-scheduling",
+    "title": "10  Screening & Scheduling SOP",
+    "section": "10.5 Post scheduling",
+    "text": "10.5 Post scheduling\n\nIn R, complete the required fields in the script. This will update which screening surveys are changed to SCHEDULED vs PENDING SCHEDULE",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>Screening & Scheduling SOP</span>"
     ]
   }
 ]
