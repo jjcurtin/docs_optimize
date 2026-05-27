@@ -1,0 +1,7 @@
+# Florence SOP
+
+This SOP lists critical information about using eBinders
+
+## Required Signature Types
+
+Before requesting any signature verify the [type required](https://kb.wisc.edu/smph/informatics/internal/page.php?id=118307#SignatureRequestTypeReasonByDocumentType)

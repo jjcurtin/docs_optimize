@@ -136,3 +136,314 @@ OnCore Subject Study Status:
 * Not Eligible
 * Withdrawn
 * Off Study
+
+
+## Financials Training
+
+There are two themes to this training - building the calendar and entering financial info. 
+
+1. Create Protocol calendar (identify visits and procedures)
+2. Assign  financial information which includes associateing charge master events or CPT codes with procedures
+
+After calendar you need Ancillary Services Review to approve
+
+To create the calendar:  
+1. Create arms in PC > Treatment
+2. Copy Protocol Specifical template
+3. Identify Visits and when they occur
+4. Identify Procedures and associate with visits
+
+In the financials console:  
+1. Complete the parameters tab
+2. Identifdy cost centers for proceudres
+3. Upload Clincial trial billing checklist
+4. Click Complete on calendar to submit for ASR
+
+End result: You can tell in Oncore...  
+* Who will perform each procecure (CRU vs study staff)
+* What procedure will be done
+* Where procedure will be done
+* When procedure is scheduled
+* Which procedure is SOC or waived fees
+* Procedure costs
+* Health link billing codes for each billable procedure
+
+
+### Calendar building - Setting up Arms
+
+#### Steps, arms, levels
+
+In OnCore, a step is a group of treatment arms. It is for organizational purposes only; it does not drive any OnCore functionality.
+
+* STEPS: Choose Registration or Randomization as applicable to the protocol.
+    * A protocol must have at least one step defined before treatment arms can be added. Protocols may have one or multiple steps.
+    The Steps will appear in order in which they are entered (Step 1, Step 2, etc.)
+    
+* Within a step, one arm or multiple arms can be defined.
+
+    * Protocols must have at least one arm for subjects to be able to have a status of On Treatment. A study can have one arm or multiple arms, and OnCore will permit subjects to be assigned to multiple arms.
+        * On Treatment is not a required status. It is a tool you can use if it will be helpful to your protocol setup.
+            * If you use On Treatment, you will need to make sure your study coordinators are aware they will need to document an On Treatment date and an Off Treatment date for each participant, to avoid discrepancy queries.
+    * Each arm can be associated with drugs, devices, and/or modalities being studied through the data collected for subjects on that arm.
+ 
+ * LEVELS: Within an arm additional groups can be defined, e.g. the dosage levels being tested.
+   * Levels are displayed for study coordinators to select when documenting Arms for a participant, but levels do not drive any functionality in OnCore. Differences in calendars or procedures are controlled by Arm.
+ 
+Use Arms to separate groups if:
+
+* participant cohorts will have different schedules of events
+* participant cohorts consistently need different procedures at their visits
+* you want to record which participants are assigned to each treatment cohort 
+
+* What if I don't know which arm participants will be in?
+  * If you do not have any indication of which cohorts your participants are in (e.g., if you have a double-blind study), you may simply create a Step 1. You do not need to create Arms in this case, because you would not know which assignment each participant would receive.
+  * However, if you **wanted** to use the On Treatment status, then you would need to build an arm. In this case, you could build a single arm and keep the description generic enough to encompass all participants.
+  
+Arms and Levels are available for you to build as needed, but if they don't apply, you do not need to build them.  
+* Randomized double blind: In this study, you will not know which participants get which treatment. All will have the same calendar in OnCore. You may choose to set up a single Arm to use the On Treatment status in OnCore.
+* Open label study treating different groups: Arms should be built for each group if groups have different procedures or different schedules throughout the study, or if you want to record the group assignments in OnCore.
+* Crossover study: Each participant will start in one group and switch to the other. Build arms in OnCore for each group. The study coordinator can then move them from one to another.
+
+* When you have determined what steps, arms, and levels to create (if any), you can proceed to configure them in OnCore in the PC Console > Treatment tab. This is in the horizontal Details tab.
+* Click the arrows on the sides or numbers at the bottom of this section to explore the steps in setting up Step Codes, Arms, and Levels, as applicable.
+* Click Update to add at least 1 step. This allows you to build Arms
+* When you will add one or more arms to the protocol, click the Arms hyperlink to open the Arms configuration area.
+* For each arm you build, you will need a unique Arm Code and Arm Description.
+   * Arm Code is a short but meaningful identifier of that individual arm.
+   * Arm Description is a slightly longer (but still brief) description of that individual arm.
+   * Each Arm Code and Arm Description must be unique.
+   * Click Add to save.
+* Use levels to identify subgroups of arms if needed, After adding an Arm, you can create subgroups of that arm by clicking the hyperlink to Levels on that arm entry line. These are for study coordinators to assign to participants
+
+#### Modalities, Drugs, and Devices
+For each Arm, you have the ability to identify modalities, drugs, and devices.
+
+This is required for all protocols.
+* Device: identify the device(s) used for this Arm. If a modality, drug, or device you need is not appearing on the list, contact the Support Team.
+
+#### Updating arms
+* Deleting an Arm
+   * You may have noticed a Delete box for each Arm listing.
+   * You are able to delete an arm as long as no participants have yet been assigned to that arm.
+* Updating arms   
+   * Contact the Support Team anytime you need to make changes to Arms. It is important that you contact the Support Team to make sure the updates get communicated appropriately to Health Link. Without that communication, updates to Arm Codes or Arm Descriptions may cause errors that would result in extra or duplicative work for your study team.
+
+* Suspending an Arm
+   * To suspend an Arm in OnCore, click the corresponding box and Submit.
+   * You also have the option to Suspend each Arm. This option is available throughout the course of the study.
+   * Suspending an Arm in OnCore will make that Arm unavailable for Study Coordinators to add to a participant's record.
+   * This can be very useful if you have one Arm that is enrolling fewer participants, or is a specialized Arm that has filled, for example. 
+
+
+### Assigning a Specification to the Protocol
+
+A Protocol Specification is the base of the calendar for a protocol. It is a visual schematic of the visit dates and the procedures associated with each visit.
+
+When you are ready to start building your calendar, you will want to have two pieces of information available:  
+1. OnCore Protocol Number
+2. OnCore library
+
+When you have those, you can proceed with these steps to select your protocol specification.
+
+Go to eCRFs/Calendars under Menu to choose your specification template, 
+DO NOT start adding Treatment Visits or Procedures to the template.
+You will need to save it to your protocol first by selecting the Save As tab.
+
+When you click Save, the specification template will save to your protocol. To verify this, when you look at the top banner of the Study Specification, you should see your protocol number next to Protocol No. , your protocol's short title next to Title, and Version: 1.
+
+### Creating Visit Segments
+
+Segments are chunks of time that contain a group of related visits, such as all treatment visits, or all follow up visits.
+
+You might have one segment with one visit (if you have a single-visit study) or multiple segments where some have single visits and others with multiple visits.
+
+Each segment must have a trigger or anchor date that signals the beginning of the segments. For example, a participant's treatment visits might be triggered by the participant's status changing to On Study or On Treatment, at which point the treatment related visits can be checked in. This anchor date is captured in the "Start Date" field in OnCore.
+
+As you look at the segments of your calendar, it is important to determine what event will trigger each segment to begin, such as consent being signed, a patient going on treatment, or simply the end of the previous segment.
+
+Also, note that the anchor dates of On Arm and On Treatment require that at least one arm has been configured in the PC Console > Treatment tab in order for them to function properly.
+
+Each calendar segment in OnCore is created using either a cycle based pattern of visits or by listing out the specific enumerated visits that should occur during the segment.
+
+If your segment is scheduled in cycles, you will program repetitions of visits.
+
+If you segments is scheduled in enumerated visits, you will enter specific day(s) that your visits will occur.
+
+Pro Tip: The first segment should have an Anchor Date of Consent Signed.
+
+Why? The Anchor Date on the Calendar is associated with that same date in the Subject Console. When a Study Coordinator registers a participant in OnCore, they need to document the corresponding anchor date for that individual participant in order for the visits to appear. 
+
+Having the first segment tied to Consent Signed ensures that Study Coordinators are able to document the first visit(s) as soon as they have documented the Consent Signed Date.
+
+This is especially important so they can document screen failures (ineligible participants) without having to document additional study statuses that don't apply.
+
+### Designating Arms on Visit Segments
+
+It is possible to limit visit segments so that only participants on a particular treatment arm will have those visit segments available on their calendar. 
+
+
+### Using calendar features
+* If you have a lot of procedures or visits, you may want to use the Freeze Panes feature for viewing. No matter where your cursor is it freezes the top and leftmost row/col
+
+
+### Renaming Visits on the Calendar Display and Setting Visit Tolerances
+
+If no tolerances are listed; you can have visits before but not after
+
+### Adding Procedures to the Calendar and Associating Visits
+
+After you have added the segments for your calendar, you can add the procedures that will be performed throughout the study.
+
+The first step is to add procedures to your Calendar.
+
+Often, a protocol has a Schedule of Events or similar list or grid. You can add all the procedures listed on that schedule to your OnCore calendar.
+
+
+The "Add Procedures/Labs" button is available for you to create your list of procedures for your protocol.
+add procedures button.png
+
+Add Procedures/Labs popup
+
+When you click the "Add Procedures/Labs" button, a popup will open.
+
+The procedure name is meant as a description. There is no functionality behind the procedure name.
+For example, if your study requires two blood draws at each visit, having a procedure name of "Blood Draws x2" will not communicate to Patient Billing that there should be two blood draws. This is set up elsewhere
+
+The procedure list will display in the order you added the procedures, from top to bottom, with the procedure you listed first on top.
+
+OnCore has a feature that allows you to reorder the procedures. You can move one or multiple procedures at a time.
+
+Click on the procedure's line, not the hyperlink, to highlight that procedure for selection
+
+Adding procedures to visits: Procedure Details page.
+
+For each segment with enumerated visits, you can click the box in the blue area to select all visits in that segment (S's on the diagram) or you can click the boxes in the white/gray areas to select individual visits (V's on diagram).
+
+Setting Up Procedures on Cycle-Based Visits
+
+If your protocol has any segments configured as cycles, you will see a different or an additional tab in the Browse Results popup, called Treatment Schedules. These are set up differently from the enumerated visits.
+
+Reminder: Cycles are most commonly used for oncology (cancer-related) studies.
+
+Click through these slides to learn about setting up cycle-based visits for procedure associations.
+
+* Open the Treatment Schedules tab on the Schedules/Visits popup.
+* Any segments that were configured as cycles will be available in the Treatment Schedules tab.  Select the segment for which you want to configure visits. Then select for which cycles the customization will apply. Finally, enter the days within each cycle that you want to designate at least one procedure will occur.
+
+### Preview the Calendar
+
+Before you get too far in associating your procedures with visits or schedules, it is a good idea to use the Preview Calendar feature to confirm your Treatment Visit segments are set up properly
+
+When you multi-select procedures and click Visits/Schedules, the popup will display all visits or schedules as unselected, even if any of the procedures you highlighted have visits or schedules selected on the calendar.
+
+This is even true if you multi-select procedures that have all the same visits selected; the popup will still have no visits or schedules selected.
+
+If you select visits or schedules for this group of procedures and Submit to save, any previous selections will be overwritten for all of the selected procedures.
+
+
+## Programming the financials console
+
+https://kb.wisc.edu/smph/informatics/internal/59921
+
+### Parameters Tab
+* Under Menu, select Financials, then Financial Console.
+* Automatically opens in the Parameters tabs
+* Check right away:
+   * In correct protocol
+   * Contract number NOT funding account number
+   * Make sure you have a sponsor listed in header. Can be added under Sponsor in main PC console
+* Scroll to bottom and click update
+
+Important fields:  
+* Rate Base
+* Sponsor Settings - make sure it matches the Rate Base above.
+* Withholding % is in your clinical trial agreement (uncommon with grants)
+* Inflation Multiplier is flat rate unless you think they will increase by inflation.
+* Overhead rate and indirect rate: DIFFERENT.
+   * Indirect is required see https://rsp.wisc.edu/rates/
+   * Overhead rate is by department (blank for us)
+
+
+### Adding Charge Master Events and Cost Centers
+* Click to Subject Related under Budget. This is where you set cost centers and CPT codes.
+* Click into a procedure and go to Events, Add Events
+   * 3 tabs, same in all, just searches different ways.
+   * When you find the procedure, it has the CPT code. Select and Add.
+   * Back on the subtab, you set cost center under Actions.
+      * Always select the box for "Update negotiated costs" before you submit.
+* Zero cost procedures wont show up in the main view
+
+FOR US ALL COST CENTER ARE RU, which means the research team completes the procedure and no charges are applied (cost of $0)
+    
+
+### Adding Multiple Charge Master Events to a Procedure
+* Same as above, go into procedure and add events.
+* Add the related event in the same way. In her example, vital signs and a physical are both done at the Physical Exam procedure.
+* Are these alternatives? Toggle can be yes or no.
+
+
+### Creating Procedure Alternatives
+* Click the alternative toggle if you have two events where the coordinator can select one or the other and not both at your procedure
+* If a procedure has items that are prefilled you can set the cost center at the event level OR the item level but not both. Toggle "Use item cost centers" to use the item level.
+* Toggle Roll Up Item Charges to bring negotiated costs up top and/or edit the negotiated costs to what your contract says (none of this applicable to us)
+
+### Clinic Visit Procedure Details and More, Lab Events and Other Items
+* https://kb.wisc.edu/smph/informatics/internal/13748    
+
+### Visit Overrides
+* Really just for invoicing. 
+
+### Standard of Care and Charge Types
+* You can set if it's SOC or Milestone (ie, is with visit)
+* Go to Charge Type for the Event   
+* SOC goes to insurance or patient
+* Q0 or Q1 for SOC modifier - MOST are Q1
+
+## Preparing for Ancillary Services Review and Other Scenarios
+
+### Ancillary Services Review Report
+#### Ancillary Services Review Report
+https://kb.wisc.edu/smph/informatics/internal/141371
+
+At any point while building your calendar or adding financial information in OnCore, you are welcome to run the Cost Center Verification report to check your entries for completeness. This report is available in Advarra Analytics.
+
+One caveat is that the data shared from OnCore to Analytics is not instantaneous. It takes 1-2 hours for new data to appear in Analytics after you have entered it in OnCore, so this is currently not a tool where you can immediately check after you have added procedure or event/cost center information. 
+
+When you would like to view the report, follow these steps:
+
+* In Advarra One, open Advarra Analytics.
+* Custom reports
+* Oncore folder
+* Open the Financial folder. 
+* Open WISC306 - Ancillary Services_Cost Center Verification.
+* In the report, you will specify the protocol you want to view. On the bottom of the page, you can view two different tabs. The first (and default) is the Cost Centers view. You can also look at the Ancillary Services portion of the report after selecting your protocol on the Cost Centers tab.
+
+
+### Change of Protocol Before Initial Version Completion
+* Like adding a new visit before initial completion.    
+
+
+https://kb.wisc.edu/smph/informatics/internal/117779
+
+https://kb.wisc.edu/smph/informatics/internal/page.php?id=77492
+
+### Charge Master Version; Budget Summary, Budget Calendar
+* Go back to Subject Related. 
+* Down at the bottom is Update Charge Master Version which is good for 3 years
+* After 3 years, you'll get an email warning you to update CM version.
+* Go to Budget Summary and click Summary and you'll get a sample budget showign the actual costs for 1 subject on the selected arm.
+
+### Protocol Related Budget Items
+* We wont use these but, say, IRB fees, translation services, etc. Really only if you're using invoicing    
+
+### Clinical Trial Billing Checklist and Final Ancillary Services Review Prep
+* Upload Clin Trials Billing Checklist under Documents/Info
+* Add protocol
+* Add consent form
+
+https://kb.wisc.edu/smph/informatics/internal/24463 for more details
+
+
+## Accessing Financials in OnCore Production
+
+### OnCore Financial Management Exercise

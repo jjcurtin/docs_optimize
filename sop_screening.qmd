@@ -1,0 +1,71 @@
+# Screening & Scheduling SOP
+
+This SOP outlines how to contact eligible screened-in participants and schedule them for the consent/intake visit.
+
+## Direct phone screening
+
+If you have a voicemail about screening, you can call them back and use the [Screening Survey](https://uwmadison.co1.qualtrics.com/jfe/form/SV_eKvAYBgOhNYxjL0) as your SOP script.
+
+## Check screening surveys
+
+First Step: 
+1. Open the `check_screening.qmd` script in scripts_staff.
+2. Be sure you have the STAR calendar open in Outlook.
+
+### Call scheduling
+
+1. Run the CALLS section to loop through unscheduled eligible screenings who wanted to be called.
+2. The qmd will open the Qualtrics script survey showing the uncontacted persons' name and number, as well as their state.
+3. Make sure you're calling between 9-5 in their state's time zone!
+4. Call the participant using the Qualtrics script.
+
+### Email scheduling
+
+1. Run the EMAILS section  to loop through unscheduled eligible screenings who wanted to be emailed
+3. Select an upcoming 1 hour calendar slot in an AVAILABLE block. Schedule a 1 hour event titled "Hold for Scheduling" and paste their `screen_id` from R into the event body. DO NOT include name/email or any other PII. 
+4. Compose your email:
+
+Subject: `Scheduling research study visit`  
+Body:
+
+```
+Hello, this is <YOUR NAME> from the University of Wisconsin. You recently filled out a survey saying you'd like to participant in our research study about a mobile phone recovery support system. 
+
+This first visit will be a video call lasting about an hour. We can also do a non-video call if that works better. We have an opening on **<First available date/time>** If this doesn't work, can you let me know what days of the week work best for you, and what time of day is best?
+
+I look forward to hearing back from you! Please feel free to give us a call at 608-262-1362 if you'd prefer to chat in person.
+
+Best,  
+<YOUR NAME>, Star Study  
+```
+
+When they reply:
+
+1. If the selected time works, update the "Hold for Scheduling" event in the calendar:
+   * Enter the event title as "`screen_id` Consent/Intake". Copy from R to be sure it is correct.
+   * Invite the staff member who will run the visit so it is added to their calendar. 
+   * Enter the event body as "`screen_id` `their_timezone` by `Zoom/Phone`" (whatever they indicated)
+   * Be sure to hit save!
+2. If it does not work:
+   * Remove the original "Hold for Scheduling" event to free up that time.
+   * Select two dates/times that would work for them from the calendar. If they offer multiple possible days, make sure to select one from each day
+   * In both, add a 1 hour event titled "Hold for Scheduling" with their screen_id in the body.
+3. Respond to their email:
+
+```
+Hello, thank you for letting us know! 
+
+Would either of these dates work for you?
+
+[DATE/TIME1]  
+[DATE/TIME2]  
+
+I look forward to hearing back from you!  
+Best,  
+NAME, Star Study  
+```
+
+Repeat until they are scheduled.
+
+## Post scheduling  
+1. After each person is scheduled, answer the prompt about if they were scheduled in the qmd file. This will update which screening surveys are changed to SCHEDULED 

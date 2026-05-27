@@ -1,3 +1,34 @@
 # Qualtrics Links
+* Data from these is fetched by automation/get_qualtrics.R
+* Be sure to remove ?practice=true before using these to send to a participant
+
+## Participant facing
+
+* [Screening](https://uwmadison.co1.qualtrics.com/jfe/form/SV_eKvAYBgOhNYxjL0?practice=true)
+* [Consent](https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?practice=true) 
+* [Onboard](https://uwmadison.co1.qualtrics.com/jfe/form/SV_1NecAUeTKptN4ua?practice=true) 
+* [Birth data](https://uwmadison.co1.qualtrics.com/jfe/form/SV_9uCe7FPCGeHqriu?practice=true) 
+* [Baseline measures](https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?practice=true)
+* [Mid/end repeated measures](https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?practice=true)
+* [Daily EMA](https://uwmadison.co1.qualtrics.com/jfe/form/SV_bdpR4B7K7Bc7nHE?practice=true)
+
+The following are not finalized in qualtrics as significant revision is happening:
+
+* [Daily Feedback](https://uwmadison.co1.qualtrics.com/jfe/form/SV_084MbCN54RfNrrU?practice=true)
+    - needs update when we get final models
+    - modify for the survey to be rebuilt from data daily by script, rather than have qualtrics pull from PRISM
+
+
+
+### RA facing:
+* RA session form
+
+* Date log form
+
+* WOG
+
+* TLFB (gathered by interview)
+
+* Exit Interview (gathered by interview)
 
 

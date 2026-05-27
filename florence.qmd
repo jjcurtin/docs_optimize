@@ -462,6 +462,8 @@ To add a new template:
  
 ## 10. ePrinter
 
+* If you need an ePrinter installed on a computer for printing documents directly into Florence, see https://kb.wisc.edu/smph/informatics/internal/page.php?id=112884 for instructions.
+
 Apparently this is a plugin (maybe?) that allows you to print items on your computer INTO florence?? It looks like its a selectable printer in your default print menu from your workstation.
 
 Select your documents in File Explorer, then right click Print and shomehow eBinder Printer Console (installed locally) is open? (It's not clear)

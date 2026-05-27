@@ -1,0 +1,24 @@
+# Recruitment SOP
+
+This SOP outlines how to post recruitment ads
+
+## Materials
+1. IRB approved recruitment materials are in Florence under `Regulatory/Recruitment_Materials`
+2. The recruitment activity log is in `S:\optimize\administration\recruitment_materials`
+3. The posting request text is in posting_request.txt in the same folder.
+
+## Posting recruitment ads
+
+FIRST THING: Always search the spreadsheet for the location you are posting. Even if you think it's new, SEARCH TO MAKE SURE. We don't want to accidently double post and be banned!
+
+### New Postings
+1. Once you've identified somewhere to post, add a new log entry. Contact_date should be the date you post (if permission is not needed) or the date you are seeking permission.
+2. Use the posting_request.txt to send the request. Note that you messaged. 
+3. Once you post (or receive permission to post) update the log entry with the correct posted_date.
+4. Add any notes you may have about the request or the posting.
+5. Add the expiration terms (ie, if postings must be 60 days apart, add 60 days from today as the expiration.)
+
+### Repeat Postings
+1. Some places allow us to repost periodically. You can review the spreadsheet for renewable postings and sort by expiration date to find any that are ready to repost.
+2. If it states that permission is needed, contact the listed moderator with the posting_request text. Add the text "Our last post was on DATE and we are seeking permission before reposting".
+3. As above, you will always add a new log entry and document your request to that add location. DO NOT overwrite older log entries.

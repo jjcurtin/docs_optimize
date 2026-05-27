@@ -1,10 +1,9 @@
 # SOPS
 
+Remember, all necessary credentials can be retrieved with `get_credentials("resource_name")` - See Susan if issues
+
 TO DO:
 
-* ✓ Screening
-* Reminders & scheduling
-  - Need calendar solution
 * Session form qualtrics is script & SOP for visits
   - Pre-visit checklist
   - Consent needs to be revised
@@ -22,9 +21,8 @@ TO DO:
 
 ## Pre-enrollment SOPs
 
-1. Checking screening surveys
-2. Scheduling consent/intake visits
-
+1. [Scheduling](https://jjcurtin.github.io/docs_optimize/sop_screening.html) consent/intake visits
+2. [Directly screening](https://jjcurtin.github.io/docs_optimize/sop_screening.html#direct-phone-screening) from voicemails
 
 ## Visit SOPs
 
@@ -42,7 +40,7 @@ TO DO:
 2. FollowMee onboarding
   a. Onboarding
   b. Updating
-3. Study termnination/offboarding
+3. Study termination/offboarding
 4. Scheduling Scripts
 
 

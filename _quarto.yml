@@ -16,9 +16,14 @@ book:
     - part: admin.qmd
       chapters:         
         - qualtrics_links.qmd
-        - sops.qmd
+        - qualtrics_mappings.qmd
         - oncore.qmd
+        - florence.qmd
         - payments.qmd
+    - part: sops.qmd
+      chapters: 
+        - sop_recruiting.qmd
+        - sop_screening.qmd  
 
     
     

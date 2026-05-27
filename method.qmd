@@ -5,12 +5,9 @@ This section contains methodological information for the study.
 ## PRELAUNCH STATUS
 
 ### TO DO:
-* Update recruitment documents
-* IRB submission
+
 * Update CT.Gov office DONE
-* Update website
-* Set up OnCore & new Participant Payments
-* Data Management site initiation visit
+* Set up Participant Payments
 * Recruitment plan
 * SOP for fully putting someone on study using STAR
 * final review of all implementations below

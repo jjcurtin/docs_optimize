@@ -1,0 +1,58 @@
+# Qualtrics survey mappings
+
+## EMA
+
+Date field numbering & display order
+
+```
+"Choices":{
+"1":{"Display":"${e:\/\/Field\/date1}"},
+"2":{"Display":"${e:\/\/Field\/date2}"},
+"3":{"Display":"${e:\/\/Field\/date3}"},
+"4":{"Display":"${e:\/\/Field\/date4}"},
+"5":{"Display":"${e:\/\/Field\/date5}"},
+"6":{"Display":"${e:\/\/Field\/date6}"},
+"7":{"Display":"${e:\/\/Field\/date7}"},
+"8":{"Display":"${e:\/\/Field\/date8}"},
+"9":{"Display":"${e:\/\/Field\/date9}"},
+"10":{"Display":"${e:\/\/Field\/date10}"},
+"12":{"Display":"${e:\/\/Field\/date11}"},
+"13":{"Display":"${e:\/\/Field\/date12}"},
+"14":{"Display":"${e:\/\/Field\/date13}"},
+"15":{"Display":"${e:\/\/Field\/date14}"},
+"19":{"Display":"${e:\/\/Field\/date15}"}},
+
+"ChoiceOrder":["1","2","3","4","5","6","7","8","9","10","12","13","14","15","19"]
+```
+
+"Please indicate the hour which you started drinking on this day:"
+
+```
+"Choices":{
+"52":{"Display":"12:00 AM"},
+"77":{"Display":"1:00 AM"},
+"78":{"Display":"2:00 AM"},
+"79":{"Display":"3:00 AM"},
+"80":{"Display":"4:00 AM"},
+"81":{"Display":"5:00 AM"},
+"82":{"Display":"6:00 AM"},
+"83":{"Display":"7:00 AM"},
+"84":{"Display":"8:00 AM"},
+"85":{"Display":"9:00 AM"},
+"86":{"Display":"10:00 AM"},
+"87":{"Display":"11:00 AM"},
+"90":{"Display":"12:00 PM"},
+"91":{"Display":"1:00 PM"},
+"92":{"Display":"2:00 PM"},
+"93":{"Display":"3:00 PM"},
+"94":{"Display":"4:00 PM"},
+"95":{"Display":"5:00 PM"},
+"96":{"Display":"6:00 PM"},
+"97":{"Display":"7:00 PM"},
+"98":{"Display":"8:00 PM"},
+"99":{"Display":"9:00 PM"},
+"100":{"Display":"10:00 PM"},
+"101":{"Display":"11:00 PM"}
+}
+
+```
