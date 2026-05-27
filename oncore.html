@@ -2,13 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.552">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Project Manual - Optimize - 6&nbsp; Oncore</title>
+<title>7&nbsp; Oncore – Project Manual - Optimize</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -31,16 +34,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./florence.html" rel="next">
-<link href="./qualtrics_links.html" rel="prev">
-<script src="site_libs/quarto-html/quarto.js"></script>
+<link href="./qualtrics_mappings.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-9e3e5b9121e68b3f077afb32f2c64d95.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -72,19 +76,19 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-sidebar floating">
+<body class="nav-sidebar floating quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
   <nav class="quarto-secondary-nav">
     <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./oncore.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Oncore</span></a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./oncore.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Oncore</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
@@ -122,7 +126,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./method.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Methodology</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -151,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./admin.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Administration</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -164,20 +168,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./qualtrics_mappings.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Qualtrics survey mappings</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./oncore.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Oncore</span></span></a>
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Oncore</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./florence.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Florence eBinders</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Florence eBinders</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./payments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Participant Payments</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Participant Payments</span></span></a>
   </div>
 </li>
       </ul>
@@ -186,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="./sops.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">SOPS</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
@@ -194,13 +204,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sop_recruiting.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Recruitment SOP</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Recruitment SOP</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./sop_screening.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Screening &amp; Scheduling SOP</span></span></a>
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Screening &amp; Scheduling SOP</span></span></a>
   </div>
 </li>
       </ul>
@@ -215,50 +225,50 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#system-links" id="toc-system-links" class="nav-link active" data-scroll-target="#system-links"><span class="header-section-number">6.1</span> System Links</a></li>
-  <li><a href="#training-reference-links" id="toc-training-reference-links" class="nav-link" data-scroll-target="#training-reference-links"><span class="header-section-number">6.2</span> Training &amp; Reference Links</a></li>
-  <li><a href="#reference-information" id="toc-reference-information" class="nav-link" data-scroll-target="#reference-information"><span class="header-section-number">6.3</span> Reference Information</a>
+  <li><a href="#system-links" id="toc-system-links" class="nav-link active" data-scroll-target="#system-links"><span class="header-section-number">7.1</span> System Links</a></li>
+  <li><a href="#training-reference-links" id="toc-training-reference-links" class="nav-link" data-scroll-target="#training-reference-links"><span class="header-section-number">7.2</span> Training &amp; Reference Links</a></li>
+  <li><a href="#reference-information" id="toc-reference-information" class="nav-link" data-scroll-target="#reference-information"><span class="header-section-number">7.3</span> Reference Information</a>
   <ul class="collapse">
-  <li><a href="#protocol-integrations" id="toc-protocol-integrations" class="nav-link" data-scroll-target="#protocol-integrations"><span class="header-section-number">6.3.1</span> Protocol Integrations</a></li>
-  <li><a href="#florence-ebinders" id="toc-florence-ebinders" class="nav-link" data-scroll-target="#florence-ebinders"><span class="header-section-number">6.3.2</span> Florence eBinders</a></li>
+  <li><a href="#protocol-integrations" id="toc-protocol-integrations" class="nav-link" data-scroll-target="#protocol-integrations"><span class="header-section-number">7.3.1</span> Protocol Integrations</a></li>
+  <li><a href="#florence-ebinders" id="toc-florence-ebinders" class="nav-link" data-scroll-target="#florence-ebinders"><span class="header-section-number">7.3.2</span> Florence eBinders</a></li>
   </ul></li>
-  <li><a href="#advarra-participant-payments" id="toc-advarra-participant-payments" class="nav-link" data-scroll-target="#advarra-participant-payments"><span class="header-section-number">6.4</span> Advarra Participant Payments</a>
+  <li><a href="#advarra-participant-payments" id="toc-advarra-participant-payments" class="nav-link" data-scroll-target="#advarra-participant-payments"><span class="header-section-number">7.4</span> Advarra Participant Payments</a>
   <ul class="collapse">
-  <li><a href="#things-to-edit-in-payments" id="toc-things-to-edit-in-payments" class="nav-link" data-scroll-target="#things-to-edit-in-payments"><span class="header-section-number">6.4.1</span> Things to edit in Payments</a></li>
-  <li><a href="#subject-integrations" id="toc-subject-integrations" class="nav-link" data-scroll-target="#subject-integrations"><span class="header-section-number">6.4.2</span> Subject Integrations</a></li>
+  <li><a href="#things-to-edit-in-payments" id="toc-things-to-edit-in-payments" class="nav-link" data-scroll-target="#things-to-edit-in-payments"><span class="header-section-number">7.4.1</span> Things to edit in Payments</a></li>
+  <li><a href="#subject-integrations" id="toc-subject-integrations" class="nav-link" data-scroll-target="#subject-integrations"><span class="header-section-number">7.4.2</span> Subject Integrations</a></li>
   </ul></li>
-  <li><a href="#financials-training" id="toc-financials-training" class="nav-link" data-scroll-target="#financials-training"><span class="header-section-number">6.5</span> Financials Training</a>
+  <li><a href="#financials-training" id="toc-financials-training" class="nav-link" data-scroll-target="#financials-training"><span class="header-section-number">7.5</span> Financials Training</a>
   <ul class="collapse">
-  <li><a href="#calendar-building---setting-up-arms" id="toc-calendar-building---setting-up-arms" class="nav-link" data-scroll-target="#calendar-building---setting-up-arms"><span class="header-section-number">6.5.1</span> Calendar building - Setting up Arms</a></li>
-  <li><a href="#assigning-a-specification-to-the-protocol" id="toc-assigning-a-specification-to-the-protocol" class="nav-link" data-scroll-target="#assigning-a-specification-to-the-protocol"><span class="header-section-number">6.5.2</span> Assigning a Specification to the Protocol</a></li>
-  <li><a href="#creating-visit-segments" id="toc-creating-visit-segments" class="nav-link" data-scroll-target="#creating-visit-segments"><span class="header-section-number">6.5.3</span> Creating Visit Segments</a></li>
-  <li><a href="#designating-arms-on-visit-segments" id="toc-designating-arms-on-visit-segments" class="nav-link" data-scroll-target="#designating-arms-on-visit-segments"><span class="header-section-number">6.5.4</span> Designating Arms on Visit Segments</a></li>
-  <li><a href="#using-calendar-features" id="toc-using-calendar-features" class="nav-link" data-scroll-target="#using-calendar-features"><span class="header-section-number">6.5.5</span> Using calendar features</a></li>
-  <li><a href="#renaming-visits-on-the-calendar-display-and-setting-visit-tolerances" id="toc-renaming-visits-on-the-calendar-display-and-setting-visit-tolerances" class="nav-link" data-scroll-target="#renaming-visits-on-the-calendar-display-and-setting-visit-tolerances"><span class="header-section-number">6.5.6</span> Renaming Visits on the Calendar Display and Setting Visit Tolerances</a></li>
-  <li><a href="#adding-procedures-to-the-calendar-and-associating-visits" id="toc-adding-procedures-to-the-calendar-and-associating-visits" class="nav-link" data-scroll-target="#adding-procedures-to-the-calendar-and-associating-visits"><span class="header-section-number">6.5.7</span> Adding Procedures to the Calendar and Associating Visits</a></li>
-  <li><a href="#preview-the-calendar" id="toc-preview-the-calendar" class="nav-link" data-scroll-target="#preview-the-calendar"><span class="header-section-number">6.5.8</span> Preview the Calendar</a></li>
+  <li><a href="#calendar-building---setting-up-arms" id="toc-calendar-building---setting-up-arms" class="nav-link" data-scroll-target="#calendar-building---setting-up-arms"><span class="header-section-number">7.5.1</span> Calendar building - Setting up Arms</a></li>
+  <li><a href="#assigning-a-specification-to-the-protocol" id="toc-assigning-a-specification-to-the-protocol" class="nav-link" data-scroll-target="#assigning-a-specification-to-the-protocol"><span class="header-section-number">7.5.2</span> Assigning a Specification to the Protocol</a></li>
+  <li><a href="#creating-visit-segments" id="toc-creating-visit-segments" class="nav-link" data-scroll-target="#creating-visit-segments"><span class="header-section-number">7.5.3</span> Creating Visit Segments</a></li>
+  <li><a href="#designating-arms-on-visit-segments" id="toc-designating-arms-on-visit-segments" class="nav-link" data-scroll-target="#designating-arms-on-visit-segments"><span class="header-section-number">7.5.4</span> Designating Arms on Visit Segments</a></li>
+  <li><a href="#using-calendar-features" id="toc-using-calendar-features" class="nav-link" data-scroll-target="#using-calendar-features"><span class="header-section-number">7.5.5</span> Using calendar features</a></li>
+  <li><a href="#renaming-visits-on-the-calendar-display-and-setting-visit-tolerances" id="toc-renaming-visits-on-the-calendar-display-and-setting-visit-tolerances" class="nav-link" data-scroll-target="#renaming-visits-on-the-calendar-display-and-setting-visit-tolerances"><span class="header-section-number">7.5.6</span> Renaming Visits on the Calendar Display and Setting Visit Tolerances</a></li>
+  <li><a href="#adding-procedures-to-the-calendar-and-associating-visits" id="toc-adding-procedures-to-the-calendar-and-associating-visits" class="nav-link" data-scroll-target="#adding-procedures-to-the-calendar-and-associating-visits"><span class="header-section-number">7.5.7</span> Adding Procedures to the Calendar and Associating Visits</a></li>
+  <li><a href="#preview-the-calendar" id="toc-preview-the-calendar" class="nav-link" data-scroll-target="#preview-the-calendar"><span class="header-section-number">7.5.8</span> Preview the Calendar</a></li>
   </ul></li>
-  <li><a href="#programming-the-financials-console" id="toc-programming-the-financials-console" class="nav-link" data-scroll-target="#programming-the-financials-console"><span class="header-section-number">6.6</span> Programming the financials console</a>
+  <li><a href="#programming-the-financials-console" id="toc-programming-the-financials-console" class="nav-link" data-scroll-target="#programming-the-financials-console"><span class="header-section-number">7.6</span> Programming the financials console</a>
   <ul class="collapse">
-  <li><a href="#parameters-tab" id="toc-parameters-tab" class="nav-link" data-scroll-target="#parameters-tab"><span class="header-section-number">6.6.1</span> Parameters Tab</a></li>
-  <li><a href="#adding-charge-master-events-and-cost-centers" id="toc-adding-charge-master-events-and-cost-centers" class="nav-link" data-scroll-target="#adding-charge-master-events-and-cost-centers"><span class="header-section-number">6.6.2</span> Adding Charge Master Events and Cost Centers</a></li>
-  <li><a href="#adding-multiple-charge-master-events-to-a-procedure" id="toc-adding-multiple-charge-master-events-to-a-procedure" class="nav-link" data-scroll-target="#adding-multiple-charge-master-events-to-a-procedure"><span class="header-section-number">6.6.3</span> Adding Multiple Charge Master Events to a Procedure</a></li>
-  <li><a href="#creating-procedure-alternatives" id="toc-creating-procedure-alternatives" class="nav-link" data-scroll-target="#creating-procedure-alternatives"><span class="header-section-number">6.6.4</span> Creating Procedure Alternatives</a></li>
-  <li><a href="#clinic-visit-procedure-details-and-more-lab-events-and-other-items" id="toc-clinic-visit-procedure-details-and-more-lab-events-and-other-items" class="nav-link" data-scroll-target="#clinic-visit-procedure-details-and-more-lab-events-and-other-items"><span class="header-section-number">6.6.5</span> Clinic Visit Procedure Details and More, Lab Events and Other Items</a></li>
-  <li><a href="#visit-overrides" id="toc-visit-overrides" class="nav-link" data-scroll-target="#visit-overrides"><span class="header-section-number">6.6.6</span> Visit Overrides</a></li>
-  <li><a href="#standard-of-care-and-charge-types" id="toc-standard-of-care-and-charge-types" class="nav-link" data-scroll-target="#standard-of-care-and-charge-types"><span class="header-section-number">6.6.7</span> Standard of Care and Charge Types</a></li>
+  <li><a href="#parameters-tab" id="toc-parameters-tab" class="nav-link" data-scroll-target="#parameters-tab"><span class="header-section-number">7.6.1</span> Parameters Tab</a></li>
+  <li><a href="#adding-charge-master-events-and-cost-centers" id="toc-adding-charge-master-events-and-cost-centers" class="nav-link" data-scroll-target="#adding-charge-master-events-and-cost-centers"><span class="header-section-number">7.6.2</span> Adding Charge Master Events and Cost Centers</a></li>
+  <li><a href="#adding-multiple-charge-master-events-to-a-procedure" id="toc-adding-multiple-charge-master-events-to-a-procedure" class="nav-link" data-scroll-target="#adding-multiple-charge-master-events-to-a-procedure"><span class="header-section-number">7.6.3</span> Adding Multiple Charge Master Events to a Procedure</a></li>
+  <li><a href="#creating-procedure-alternatives" id="toc-creating-procedure-alternatives" class="nav-link" data-scroll-target="#creating-procedure-alternatives"><span class="header-section-number">7.6.4</span> Creating Procedure Alternatives</a></li>
+  <li><a href="#clinic-visit-procedure-details-and-more-lab-events-and-other-items" id="toc-clinic-visit-procedure-details-and-more-lab-events-and-other-items" class="nav-link" data-scroll-target="#clinic-visit-procedure-details-and-more-lab-events-and-other-items"><span class="header-section-number">7.6.5</span> Clinic Visit Procedure Details and More, Lab Events and Other Items</a></li>
+  <li><a href="#visit-overrides" id="toc-visit-overrides" class="nav-link" data-scroll-target="#visit-overrides"><span class="header-section-number">7.6.6</span> Visit Overrides</a></li>
+  <li><a href="#standard-of-care-and-charge-types" id="toc-standard-of-care-and-charge-types" class="nav-link" data-scroll-target="#standard-of-care-and-charge-types"><span class="header-section-number">7.6.7</span> Standard of Care and Charge Types</a></li>
   </ul></li>
-  <li><a href="#preparing-for-ancillary-services-review-and-other-scenarios" id="toc-preparing-for-ancillary-services-review-and-other-scenarios" class="nav-link" data-scroll-target="#preparing-for-ancillary-services-review-and-other-scenarios"><span class="header-section-number">6.7</span> Preparing for Ancillary Services Review and Other Scenarios</a>
+  <li><a href="#preparing-for-ancillary-services-review-and-other-scenarios" id="toc-preparing-for-ancillary-services-review-and-other-scenarios" class="nav-link" data-scroll-target="#preparing-for-ancillary-services-review-and-other-scenarios"><span class="header-section-number">7.7</span> Preparing for Ancillary Services Review and Other Scenarios</a>
   <ul class="collapse">
-  <li><a href="#ancillary-services-review-report" id="toc-ancillary-services-review-report" class="nav-link" data-scroll-target="#ancillary-services-review-report"><span class="header-section-number">6.7.1</span> Ancillary Services Review Report</a></li>
-  <li><a href="#change-of-protocol-before-initial-version-completion" id="toc-change-of-protocol-before-initial-version-completion" class="nav-link" data-scroll-target="#change-of-protocol-before-initial-version-completion"><span class="header-section-number">6.7.2</span> Change of Protocol Before Initial Version Completion</a></li>
-  <li><a href="#charge-master-version-budget-summary-budget-calendar" id="toc-charge-master-version-budget-summary-budget-calendar" class="nav-link" data-scroll-target="#charge-master-version-budget-summary-budget-calendar"><span class="header-section-number">6.7.3</span> Charge Master Version; Budget Summary, Budget Calendar</a></li>
-  <li><a href="#protocol-related-budget-items" id="toc-protocol-related-budget-items" class="nav-link" data-scroll-target="#protocol-related-budget-items"><span class="header-section-number">6.7.4</span> Protocol Related Budget Items</a></li>
-  <li><a href="#clinical-trial-billing-checklist-and-final-ancillary-services-review-prep" id="toc-clinical-trial-billing-checklist-and-final-ancillary-services-review-prep" class="nav-link" data-scroll-target="#clinical-trial-billing-checklist-and-final-ancillary-services-review-prep"><span class="header-section-number">6.7.5</span> Clinical Trial Billing Checklist and Final Ancillary Services Review Prep</a></li>
+  <li><a href="#ancillary-services-review-report" id="toc-ancillary-services-review-report" class="nav-link" data-scroll-target="#ancillary-services-review-report"><span class="header-section-number">7.7.1</span> Ancillary Services Review Report</a></li>
+  <li><a href="#change-of-protocol-before-initial-version-completion" id="toc-change-of-protocol-before-initial-version-completion" class="nav-link" data-scroll-target="#change-of-protocol-before-initial-version-completion"><span class="header-section-number">7.7.2</span> Change of Protocol Before Initial Version Completion</a></li>
+  <li><a href="#charge-master-version-budget-summary-budget-calendar" id="toc-charge-master-version-budget-summary-budget-calendar" class="nav-link" data-scroll-target="#charge-master-version-budget-summary-budget-calendar"><span class="header-section-number">7.7.3</span> Charge Master Version; Budget Summary, Budget Calendar</a></li>
+  <li><a href="#protocol-related-budget-items" id="toc-protocol-related-budget-items" class="nav-link" data-scroll-target="#protocol-related-budget-items"><span class="header-section-number">7.7.4</span> Protocol Related Budget Items</a></li>
+  <li><a href="#clinical-trial-billing-checklist-and-final-ancillary-services-review-prep" id="toc-clinical-trial-billing-checklist-and-final-ancillary-services-review-prep" class="nav-link" data-scroll-target="#clinical-trial-billing-checklist-and-final-ancillary-services-review-prep"><span class="header-section-number">7.7.5</span> Clinical Trial Billing Checklist and Final Ancillary Services Review Prep</a></li>
   </ul></li>
-  <li><a href="#accessing-financials-in-oncore-production" id="toc-accessing-financials-in-oncore-production" class="nav-link" data-scroll-target="#accessing-financials-in-oncore-production"><span class="header-section-number">6.8</span> Accessing Financials in OnCore Production</a>
+  <li><a href="#accessing-financials-in-oncore-production" id="toc-accessing-financials-in-oncore-production" class="nav-link" data-scroll-target="#accessing-financials-in-oncore-production"><span class="header-section-number">7.8</span> Accessing Financials in OnCore Production</a>
   <ul class="collapse">
-  <li><a href="#oncore-financial-management-exercise" id="toc-oncore-financial-management-exercise" class="nav-link" data-scroll-target="#oncore-financial-management-exercise"><span class="header-section-number">6.8.1</span> OnCore Financial Management Exercise</a></li>
+  <li><a href="#oncore-financial-management-exercise" id="toc-oncore-financial-management-exercise" class="nav-link" data-scroll-target="#oncore-financial-management-exercise"><span class="header-section-number">7.8.1</span> OnCore Financial Management Exercise</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -266,9 +276,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./oncore.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Oncore</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./admin.html">Administration</a></li><li class="breadcrumb-item"><a href="./oncore.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Oncore</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Oncore</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Oncore</span></h1>
 </div>
 
 
@@ -286,15 +296,15 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p>Our protocol is 236476</p>
-<section id="system-links" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="system-links"><span class="header-section-number">6.1</span> System Links</h2>
+<section id="system-links" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="system-links"><span class="header-section-number">7.1</span> System Links</h2>
 <ul>
 <li>Login: https://one.advarracloud.com/</li>
 <li>SMPH Review Process: https://kb.wisc.edu/smph/informatics/internal/24722</li>
 </ul>
 </section>
-<section id="training-reference-links" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="training-reference-links"><span class="header-section-number">6.2</span> Training &amp; Reference Links</h2>
+<section id="training-reference-links" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="training-reference-links"><span class="header-section-number">7.2</span> Training &amp; Reference Links</h2>
 <ul>
 <li><p>OnCore: Protocol Staff Roles (with mapping info): https://kb.wisc.edu/smph/informatics/internal/70715</p></li>
 <li><p>eBinders: Roles and Permissions: https://kb.wisc.edu/smph/informatics/internal/119475</p></li>
@@ -307,11 +317,11 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Research Applications Knowledgebase: https://kb.wisc.edu/smph/informatics ( Research Applications Support: https://smph-navigator.atlassian.net/servicedesk/customer/portal/69</p></li>
 </ul>
 </section>
-<section id="reference-information" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="reference-information"><span class="header-section-number">6.3</span> Reference Information</h2>
+<section id="reference-information" class="level2" data-number="7.3">
+<h2 data-number="7.3" class="anchored" data-anchor-id="reference-information"><span class="header-section-number">7.3</span> Reference Information</h2>
 <p>The information on this page is taken from the Oncore training courses.</p>
-<section id="protocol-integrations" class="level3" data-number="6.3.1">
-<h3 data-number="6.3.1" class="anchored" data-anchor-id="protocol-integrations"><span class="header-section-number">6.3.1</span> Protocol Integrations</h3>
+<section id="protocol-integrations" class="level3" data-number="7.3.1">
+<h3 data-number="7.3.1" class="anchored" data-anchor-id="protocol-integrations"><span class="header-section-number">7.3.1</span> Protocol Integrations</h3>
 <p>integrations with OnCore include:</p>
 <ul>
 <li>Florence eBinders</li>
@@ -321,8 +331,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>“Library” field in your protocol drives the integration. (Non-oncology for us). OnCore protocol number is used in each integrated system as a unique identifier and the format differs between the oncology (alphanumeric) and non-oncology (numeric) libraries</p>
 </section>
-<section id="florence-ebinders" class="level3" data-number="6.3.2">
-<h3 data-number="6.3.2" class="anchored" data-anchor-id="florence-ebinders"><span class="header-section-number">6.3.2</span> Florence eBinders</h3>
+<section id="florence-ebinders" class="level3" data-number="7.3.2">
+<h3 data-number="7.3.2" class="anchored" data-anchor-id="florence-ebinders"><span class="header-section-number">7.3.2</span> Florence eBinders</h3>
 <p>eBinders is an electronic system that replaces paper documents and physical binders for human subject research study documents.</p>
 <p>It is an efficient, 21 CFR Part 11 compliant way to electronically sign, manage, store, and share documents.</p>
 <p>An eBinder is created in Florence when you answer the OnCore Annotations questions about eBinders. To create the binder, open the Annotations tab. You must create an Annotation for each OnCore protocol record, even if you aren’t using eBinders.</p>
@@ -334,12 +344,12 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li>To locate our binder in Florence, use the Filter By tool. The binder name comes from Oncore as “Protocol Number - PI Name”</li>
 </ul>
-<section id="subfolders" class="level4" data-number="6.3.2.1">
-<h4 data-number="6.3.2.1" class="anchored" data-anchor-id="subfolders"><span class="header-section-number">6.3.2.1</span> Subfolders</h4>
+<section id="subfolders" class="level4" data-number="7.3.2.1">
+<h4 data-number="7.3.2.1" class="anchored" data-anchor-id="subfolders"><span class="header-section-number">7.3.2.1</span> Subfolders</h4>
 <p>A drug/device binder contains two folders: Regulatory and Subject</p>
 </section>
-<section id="roles" class="level4" data-number="6.3.2.2">
-<h4 data-number="6.3.2.2" class="anchored" data-anchor-id="roles"><span class="header-section-number">6.3.2.2</span> Roles</h4>
+<section id="roles" class="level4" data-number="7.3.2.2">
+<h4 data-number="7.3.2.2" class="anchored" data-anchor-id="roles"><span class="header-section-number">7.3.2.2</span> Roles</h4>
 <p>Some (but not all) OnCore protocol staff roles map to eBinder roles.</p>
 <p>Before assigning a mapped role in OnCore to a staff person, you must confirm that they have completed and documented the correct training to perform the duties of that role in eBinders.</p>
 <p>It is acceptable for the user to exceed the eBinders training requirements for a given role, but it is unacceptable for them to have insufficient training. Use the <a href="https://kb.wisc.edu/smph/informatics/internal/page.php?id=119475">UW Florence eBinders Access &amp; Training Documentation Lookup</a></p>
@@ -351,8 +361,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Some roles require two (2) entries in the Staff tab. One of the entries is to show their role on the study (e.g., Research Lab Staff), which the other is to map access for them to eBinders (i.e., eReg Mapped Sign).</p>
 <p>It is crucial that we update staff if they leave, so that access control is maintained</p>
 </section>
-<section id="deeplinks" class="level4" data-number="6.3.2.3">
-<h4 data-number="6.3.2.3" class="anchored" data-anchor-id="deeplinks"><span class="header-section-number">6.3.2.3</span> Deeplinks</h4>
+<section id="deeplinks" class="level4" data-number="7.3.2.3">
+<h4 data-number="7.3.2.3" class="anchored" data-anchor-id="deeplinks"><span class="header-section-number">7.3.2.3</span> Deeplinks</h4>
 <p>A deeplink is a direct link available in OnCore to specific documents filed in eBinders. Deeplinks require the use of specific Document Type assignments in eBinders. Deeplinks are created through actions in eBinders that flow over to OnCore.</p>
 <ul>
 <li>Deeplinks display in OnCore on the Documents/Info tab</li>
@@ -363,8 +373,8 @@ ul.task-list li input[type="checkbox"] {
 </section>
 </section>
 </section>
-<section id="advarra-participant-payments" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="advarra-participant-payments"><span class="header-section-number">6.4</span> Advarra Participant Payments</h2>
+<section id="advarra-participant-payments" class="level2" data-number="7.4">
+<h2 data-number="7.4" class="anchored" data-anchor-id="advarra-participant-payments"><span class="header-section-number">7.4</span> Advarra Participant Payments</h2>
 <p>Used to pay research participants for stipends and travel in a single system</p>
 <p>The interface between OnCore and Payments streamlines the maintenance of protocol and subject records used in Payments.</p>
 <ul>
@@ -384,8 +394,8 @@ ul.task-list li input[type="checkbox"] {
 <li>Email address is editable directly in Payments BUT you will also have to edit Oncore. Best to edit it in Oncore so it is passed to Payments automatically</li>
 <li>If a participant is incorrectly added to an OnCore protocol, contact the Application Support Team. They will provide instructions on how to delete the record appropriately from OnCore.</li>
 </ul>
-<section id="things-to-edit-in-payments" class="level3" data-number="6.4.1">
-<h3 data-number="6.4.1" class="anchored" data-anchor-id="things-to-edit-in-payments"><span class="header-section-number">6.4.1</span> Things to edit in Payments</h3>
+<section id="things-to-edit-in-payments" class="level3" data-number="7.4.1">
+<h3 data-number="7.4.1" class="anchored" data-anchor-id="things-to-edit-in-payments"><span class="header-section-number">7.4.1</span> Things to edit in Payments</h3>
 <p>One set of fields that is not integrated with OnCore and must be built within Payments is the list of visits:<br>
 * IRB number * Financial Reference Number * Internal reference number (subid) * keywords * Visits</p>
 <ul>
@@ -394,8 +404,8 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://kb.wisc.edu/smph/informatics/internal/page.php?id=132526">creating or updating Payments visits KB</a></li>
 </ul>
 </section>
-<section id="subject-integrations" class="level3" data-number="6.4.2">
-<h3 data-number="6.4.2" class="anchored" data-anchor-id="subject-integrations"><span class="header-section-number">6.4.2</span> Subject Integrations</h3>
+<section id="subject-integrations" class="level3" data-number="7.4.2">
+<h3 data-number="7.4.2" class="anchored" data-anchor-id="subject-integrations"><span class="header-section-number">7.4.2</span> Subject Integrations</h3>
 <ul>
 <li><p>Staff tab is NOT integrated in payments</p></li>
 <li><p>Demographics can come from EPIC but we should NOT be using real MRNs as there is no need</p></li>
@@ -415,8 +425,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="financials-training" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="financials-training"><span class="header-section-number">6.5</span> Financials Training</h2>
+<section id="financials-training" class="level2" data-number="7.5">
+<h2 data-number="7.5" class="anchored" data-anchor-id="financials-training"><span class="header-section-number">7.5</span> Financials Training</h2>
 <p>There are two themes to this training - building the calendar and entering financial info.</p>
 <ol type="1">
 <li>Create Protocol calendar (identify visits and procedures)</li>
@@ -429,10 +439,10 @@ ul.task-list li input[type="checkbox"] {
 1. Complete the parameters tab 2. Identifdy cost centers for proceudres 3. Upload Clincial trial billing checklist 4. Click Complete on calendar to submit for ASR</p>
 <p>End result: You can tell in Oncore…<br>
 * Who will perform each procecure (CRU vs study staff) * What procedure will be done * Where procedure will be done * When procedure is scheduled * Which procedure is SOC or waived fees * Procedure costs * Health link billing codes for each billable procedure</p>
-<section id="calendar-building---setting-up-arms" class="level3" data-number="6.5.1">
-<h3 data-number="6.5.1" class="anchored" data-anchor-id="calendar-building---setting-up-arms"><span class="header-section-number">6.5.1</span> Calendar building - Setting up Arms</h3>
-<section id="steps-arms-levels" class="level4" data-number="6.5.1.1">
-<h4 data-number="6.5.1.1" class="anchored" data-anchor-id="steps-arms-levels"><span class="header-section-number">6.5.1.1</span> Steps, arms, levels</h4>
+<section id="calendar-building---setting-up-arms" class="level3" data-number="7.5.1">
+<h3 data-number="7.5.1" class="anchored" data-anchor-id="calendar-building---setting-up-arms"><span class="header-section-number">7.5.1</span> Calendar building - Setting up Arms</h3>
+<section id="steps-arms-levels" class="level4" data-number="7.5.1.1">
+<h4 data-number="7.5.1.1" class="anchored" data-anchor-id="steps-arms-levels"><span class="header-section-number">7.5.1.1</span> Steps, arms, levels</h4>
 <p>In OnCore, a step is a group of treatment arms. It is for organizational purposes only; it does not drive any OnCore functionality.</p>
 <ul>
 <li><p>STEPS: Choose Registration or Randomization as applicable to the protocol.</p>
@@ -483,13 +493,13 @@ ul.task-list li input[type="checkbox"] {
 <li>Use levels to identify subgroups of arms if needed, After adding an Arm, you can create subgroups of that arm by clicking the hyperlink to Levels on that arm entry line. These are for study coordinators to assign to participants</li>
 </ul>
 </section>
-<section id="modalities-drugs-and-devices" class="level4" data-number="6.5.1.2">
-<h4 data-number="6.5.1.2" class="anchored" data-anchor-id="modalities-drugs-and-devices"><span class="header-section-number">6.5.1.2</span> Modalities, Drugs, and Devices</h4>
+<section id="modalities-drugs-and-devices" class="level4" data-number="7.5.1.2">
+<h4 data-number="7.5.1.2" class="anchored" data-anchor-id="modalities-drugs-and-devices"><span class="header-section-number">7.5.1.2</span> Modalities, Drugs, and Devices</h4>
 <p>For each Arm, you have the ability to identify modalities, drugs, and devices.</p>
 <p>This is required for all protocols. * Device: identify the device(s) used for this Arm. If a modality, drug, or device you need is not appearing on the list, contact the Support Team.</p>
 </section>
-<section id="updating-arms" class="level4" data-number="6.5.1.3">
-<h4 data-number="6.5.1.3" class="anchored" data-anchor-id="updating-arms"><span class="header-section-number">6.5.1.3</span> Updating arms</h4>
+<section id="updating-arms" class="level4" data-number="7.5.1.3">
+<h4 data-number="7.5.1.3" class="anchored" data-anchor-id="updating-arms"><span class="header-section-number">7.5.1.3</span> Updating arms</h4>
 <ul>
 <li>Deleting an Arm
 <ul>
@@ -510,8 +520,8 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="assigning-a-specification-to-the-protocol" class="level3" data-number="6.5.2">
-<h3 data-number="6.5.2" class="anchored" data-anchor-id="assigning-a-specification-to-the-protocol"><span class="header-section-number">6.5.2</span> Assigning a Specification to the Protocol</h3>
+<section id="assigning-a-specification-to-the-protocol" class="level3" data-number="7.5.2">
+<h3 data-number="7.5.2" class="anchored" data-anchor-id="assigning-a-specification-to-the-protocol"><span class="header-section-number">7.5.2</span> Assigning a Specification to the Protocol</h3>
 <p>A Protocol Specification is the base of the calendar for a protocol. It is a visual schematic of the visit dates and the procedures associated with each visit.</p>
 <p>When you are ready to start building your calendar, you will want to have two pieces of information available:<br>
 1. OnCore Protocol Number 2. OnCore library</p>
@@ -519,8 +529,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Go to eCRFs/Calendars under Menu to choose your specification template, DO NOT start adding Treatment Visits or Procedures to the template. You will need to save it to your protocol first by selecting the Save As tab.</p>
 <p>When you click Save, the specification template will save to your protocol. To verify this, when you look at the top banner of the Study Specification, you should see your protocol number next to Protocol No.&nbsp;, your protocol’s short title next to Title, and Version: 1.</p>
 </section>
-<section id="creating-visit-segments" class="level3" data-number="6.5.3">
-<h3 data-number="6.5.3" class="anchored" data-anchor-id="creating-visit-segments"><span class="header-section-number">6.5.3</span> Creating Visit Segments</h3>
+<section id="creating-visit-segments" class="level3" data-number="7.5.3">
+<h3 data-number="7.5.3" class="anchored" data-anchor-id="creating-visit-segments"><span class="header-section-number">7.5.3</span> Creating Visit Segments</h3>
 <p>Segments are chunks of time that contain a group of related visits, such as all treatment visits, or all follow up visits.</p>
 <p>You might have one segment with one visit (if you have a single-visit study) or multiple segments where some have single visits and others with multiple visits.</p>
 <p>Each segment must have a trigger or anchor date that signals the beginning of the segments. For example, a participant’s treatment visits might be triggered by the participant’s status changing to On Study or On Treatment, at which point the treatment related visits can be checked in. This anchor date is captured in the “Start Date” field in OnCore.</p>
@@ -534,22 +544,22 @@ ul.task-list li input[type="checkbox"] {
 <p>Having the first segment tied to Consent Signed ensures that Study Coordinators are able to document the first visit(s) as soon as they have documented the Consent Signed Date.</p>
 <p>This is especially important so they can document screen failures (ineligible participants) without having to document additional study statuses that don’t apply.</p>
 </section>
-<section id="designating-arms-on-visit-segments" class="level3" data-number="6.5.4">
-<h3 data-number="6.5.4" class="anchored" data-anchor-id="designating-arms-on-visit-segments"><span class="header-section-number">6.5.4</span> Designating Arms on Visit Segments</h3>
+<section id="designating-arms-on-visit-segments" class="level3" data-number="7.5.4">
+<h3 data-number="7.5.4" class="anchored" data-anchor-id="designating-arms-on-visit-segments"><span class="header-section-number">7.5.4</span> Designating Arms on Visit Segments</h3>
 <p>It is possible to limit visit segments so that only participants on a particular treatment arm will have those visit segments available on their calendar.</p>
 </section>
-<section id="using-calendar-features" class="level3" data-number="6.5.5">
-<h3 data-number="6.5.5" class="anchored" data-anchor-id="using-calendar-features"><span class="header-section-number">6.5.5</span> Using calendar features</h3>
+<section id="using-calendar-features" class="level3" data-number="7.5.5">
+<h3 data-number="7.5.5" class="anchored" data-anchor-id="using-calendar-features"><span class="header-section-number">7.5.5</span> Using calendar features</h3>
 <ul>
 <li>If you have a lot of procedures or visits, you may want to use the Freeze Panes feature for viewing. No matter where your cursor is it freezes the top and leftmost row/col</li>
 </ul>
 </section>
-<section id="renaming-visits-on-the-calendar-display-and-setting-visit-tolerances" class="level3" data-number="6.5.6">
-<h3 data-number="6.5.6" class="anchored" data-anchor-id="renaming-visits-on-the-calendar-display-and-setting-visit-tolerances"><span class="header-section-number">6.5.6</span> Renaming Visits on the Calendar Display and Setting Visit Tolerances</h3>
+<section id="renaming-visits-on-the-calendar-display-and-setting-visit-tolerances" class="level3" data-number="7.5.6">
+<h3 data-number="7.5.6" class="anchored" data-anchor-id="renaming-visits-on-the-calendar-display-and-setting-visit-tolerances"><span class="header-section-number">7.5.6</span> Renaming Visits on the Calendar Display and Setting Visit Tolerances</h3>
 <p>If no tolerances are listed; you can have visits before but not after</p>
 </section>
-<section id="adding-procedures-to-the-calendar-and-associating-visits" class="level3" data-number="6.5.7">
-<h3 data-number="6.5.7" class="anchored" data-anchor-id="adding-procedures-to-the-calendar-and-associating-visits"><span class="header-section-number">6.5.7</span> Adding Procedures to the Calendar and Associating Visits</h3>
+<section id="adding-procedures-to-the-calendar-and-associating-visits" class="level3" data-number="7.5.7">
+<h3 data-number="7.5.7" class="anchored" data-anchor-id="adding-procedures-to-the-calendar-and-associating-visits"><span class="header-section-number">7.5.7</span> Adding Procedures to the Calendar and Associating Visits</h3>
 <p>After you have added the segments for your calendar, you can add the procedures that will be performed throughout the study.</p>
 <p>The first step is to add procedures to your Calendar.</p>
 <p>Often, a protocol has a Schedule of Events or similar list or grid. You can add all the procedures listed on that schedule to your OnCore calendar.</p>
@@ -571,19 +581,19 @@ ul.task-list li input[type="checkbox"] {
 <li>Any segments that were configured as cycles will be available in the Treatment Schedules tab. Select the segment for which you want to configure visits. Then select for which cycles the customization will apply. Finally, enter the days within each cycle that you want to designate at least one procedure will occur.</li>
 </ul>
 </section>
-<section id="preview-the-calendar" class="level3" data-number="6.5.8">
-<h3 data-number="6.5.8" class="anchored" data-anchor-id="preview-the-calendar"><span class="header-section-number">6.5.8</span> Preview the Calendar</h3>
+<section id="preview-the-calendar" class="level3" data-number="7.5.8">
+<h3 data-number="7.5.8" class="anchored" data-anchor-id="preview-the-calendar"><span class="header-section-number">7.5.8</span> Preview the Calendar</h3>
 <p>Before you get too far in associating your procedures with visits or schedules, it is a good idea to use the Preview Calendar feature to confirm your Treatment Visit segments are set up properly</p>
 <p>When you multi-select procedures and click Visits/Schedules, the popup will display all visits or schedules as unselected, even if any of the procedures you highlighted have visits or schedules selected on the calendar.</p>
 <p>This is even true if you multi-select procedures that have all the same visits selected; the popup will still have no visits or schedules selected.</p>
 <p>If you select visits or schedules for this group of procedures and Submit to save, any previous selections will be overwritten for all of the selected procedures.</p>
 </section>
 </section>
-<section id="programming-the-financials-console" class="level2" data-number="6.6">
-<h2 data-number="6.6" class="anchored" data-anchor-id="programming-the-financials-console"><span class="header-section-number">6.6</span> Programming the financials console</h2>
+<section id="programming-the-financials-console" class="level2" data-number="7.6">
+<h2 data-number="7.6" class="anchored" data-anchor-id="programming-the-financials-console"><span class="header-section-number">7.6</span> Programming the financials console</h2>
 <p>https://kb.wisc.edu/smph/informatics/internal/59921</p>
-<section id="parameters-tab" class="level3" data-number="6.6.1">
-<h3 data-number="6.6.1" class="anchored" data-anchor-id="parameters-tab"><span class="header-section-number">6.6.1</span> Parameters Tab</h3>
+<section id="parameters-tab" class="level3" data-number="7.6.1">
+<h3 data-number="7.6.1" class="anchored" data-anchor-id="parameters-tab"><span class="header-section-number">7.6.1</span> Parameters Tab</h3>
 <ul>
 <li>Under Menu, select Financials, then Financial Console.</li>
 <li>Automatically opens in the Parameters tabs</li>
@@ -598,8 +608,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Important fields:<br>
 * Rate Base * Sponsor Settings - make sure it matches the Rate Base above. * Withholding % is in your clinical trial agreement (uncommon with grants) * Inflation Multiplier is flat rate unless you think they will increase by inflation. * Overhead rate and indirect rate: DIFFERENT. * Indirect is required see https://rsp.wisc.edu/rates/ * Overhead rate is by department (blank for us)</p>
 </section>
-<section id="adding-charge-master-events-and-cost-centers" class="level3" data-number="6.6.2">
-<h3 data-number="6.6.2" class="anchored" data-anchor-id="adding-charge-master-events-and-cost-centers"><span class="header-section-number">6.6.2</span> Adding Charge Master Events and Cost Centers</h3>
+<section id="adding-charge-master-events-and-cost-centers" class="level3" data-number="7.6.2">
+<h3 data-number="7.6.2" class="anchored" data-anchor-id="adding-charge-master-events-and-cost-centers"><span class="header-section-number">7.6.2</span> Adding Charge Master Events and Cost Centers</h3>
 <ul>
 <li>Click to Subject Related under Budget. This is where you set cost centers and CPT codes.</li>
 <li>Click into a procedure and go to Events, Add Events
@@ -615,36 +625,36 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>FOR US ALL COST CENTER ARE RU, which means the research team completes the procedure and no charges are applied (cost of $0)</p>
 </section>
-<section id="adding-multiple-charge-master-events-to-a-procedure" class="level3" data-number="6.6.3">
-<h3 data-number="6.6.3" class="anchored" data-anchor-id="adding-multiple-charge-master-events-to-a-procedure"><span class="header-section-number">6.6.3</span> Adding Multiple Charge Master Events to a Procedure</h3>
+<section id="adding-multiple-charge-master-events-to-a-procedure" class="level3" data-number="7.6.3">
+<h3 data-number="7.6.3" class="anchored" data-anchor-id="adding-multiple-charge-master-events-to-a-procedure"><span class="header-section-number">7.6.3</span> Adding Multiple Charge Master Events to a Procedure</h3>
 <ul>
 <li>Same as above, go into procedure and add events.</li>
 <li>Add the related event in the same way. In her example, vital signs and a physical are both done at the Physical Exam procedure.</li>
 <li>Are these alternatives? Toggle can be yes or no.</li>
 </ul>
 </section>
-<section id="creating-procedure-alternatives" class="level3" data-number="6.6.4">
-<h3 data-number="6.6.4" class="anchored" data-anchor-id="creating-procedure-alternatives"><span class="header-section-number">6.6.4</span> Creating Procedure Alternatives</h3>
+<section id="creating-procedure-alternatives" class="level3" data-number="7.6.4">
+<h3 data-number="7.6.4" class="anchored" data-anchor-id="creating-procedure-alternatives"><span class="header-section-number">7.6.4</span> Creating Procedure Alternatives</h3>
 <ul>
 <li>Click the alternative toggle if you have two events where the coordinator can select one or the other and not both at your procedure</li>
 <li>If a procedure has items that are prefilled you can set the cost center at the event level OR the item level but not both. Toggle “Use item cost centers” to use the item level.</li>
 <li>Toggle Roll Up Item Charges to bring negotiated costs up top and/or edit the negotiated costs to what your contract says (none of this applicable to us)</li>
 </ul>
 </section>
-<section id="clinic-visit-procedure-details-and-more-lab-events-and-other-items" class="level3" data-number="6.6.5">
-<h3 data-number="6.6.5" class="anchored" data-anchor-id="clinic-visit-procedure-details-and-more-lab-events-and-other-items"><span class="header-section-number">6.6.5</span> Clinic Visit Procedure Details and More, Lab Events and Other Items</h3>
+<section id="clinic-visit-procedure-details-and-more-lab-events-and-other-items" class="level3" data-number="7.6.5">
+<h3 data-number="7.6.5" class="anchored" data-anchor-id="clinic-visit-procedure-details-and-more-lab-events-and-other-items"><span class="header-section-number">7.6.5</span> Clinic Visit Procedure Details and More, Lab Events and Other Items</h3>
 <ul>
 <li>https://kb.wisc.edu/smph/informatics/internal/13748</li>
 </ul>
 </section>
-<section id="visit-overrides" class="level3" data-number="6.6.6">
-<h3 data-number="6.6.6" class="anchored" data-anchor-id="visit-overrides"><span class="header-section-number">6.6.6</span> Visit Overrides</h3>
+<section id="visit-overrides" class="level3" data-number="7.6.6">
+<h3 data-number="7.6.6" class="anchored" data-anchor-id="visit-overrides"><span class="header-section-number">7.6.6</span> Visit Overrides</h3>
 <ul>
 <li>Really just for invoicing.</li>
 </ul>
 </section>
-<section id="standard-of-care-and-charge-types" class="level3" data-number="6.6.7">
-<h3 data-number="6.6.7" class="anchored" data-anchor-id="standard-of-care-and-charge-types"><span class="header-section-number">6.6.7</span> Standard of Care and Charge Types</h3>
+<section id="standard-of-care-and-charge-types" class="level3" data-number="7.6.7">
+<h3 data-number="7.6.7" class="anchored" data-anchor-id="standard-of-care-and-charge-types"><span class="header-section-number">7.6.7</span> Standard of Care and Charge Types</h3>
 <ul>
 <li>You can set if it’s SOC or Milestone (ie, is with visit)</li>
 <li>Go to Charge Type for the Event<br>
@@ -654,12 +664,12 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="preparing-for-ancillary-services-review-and-other-scenarios" class="level2" data-number="6.7">
-<h2 data-number="6.7" class="anchored" data-anchor-id="preparing-for-ancillary-services-review-and-other-scenarios"><span class="header-section-number">6.7</span> Preparing for Ancillary Services Review and Other Scenarios</h2>
-<section id="ancillary-services-review-report" class="level3" data-number="6.7.1">
-<h3 data-number="6.7.1" class="anchored" data-anchor-id="ancillary-services-review-report"><span class="header-section-number">6.7.1</span> Ancillary Services Review Report</h3>
-<section id="ancillary-services-review-report-1" class="level4" data-number="6.7.1.1">
-<h4 data-number="6.7.1.1" class="anchored" data-anchor-id="ancillary-services-review-report-1"><span class="header-section-number">6.7.1.1</span> Ancillary Services Review Report</h4>
+<section id="preparing-for-ancillary-services-review-and-other-scenarios" class="level2" data-number="7.7">
+<h2 data-number="7.7" class="anchored" data-anchor-id="preparing-for-ancillary-services-review-and-other-scenarios"><span class="header-section-number">7.7</span> Preparing for Ancillary Services Review and Other Scenarios</h2>
+<section id="ancillary-services-review-report" class="level3" data-number="7.7.1">
+<h3 data-number="7.7.1" class="anchored" data-anchor-id="ancillary-services-review-report"><span class="header-section-number">7.7.1</span> Ancillary Services Review Report</h3>
+<section id="ancillary-services-review-report-1" class="level4" data-number="7.7.1.1">
+<h4 data-number="7.7.1.1" class="anchored" data-anchor-id="ancillary-services-review-report-1"><span class="header-section-number">7.7.1.1</span> Ancillary Services Review Report</h4>
 <p>https://kb.wisc.edu/smph/informatics/internal/141371</p>
 <p>At any point while building your calendar or adding financial information in OnCore, you are welcome to run the Cost Center Verification report to check your entries for completeness. This report is available in Advarra Analytics.</p>
 <p>One caveat is that the data shared from OnCore to Analytics is not instantaneous. It takes 1-2 hours for new data to appear in Analytics after you have entered it in OnCore, so this is currently not a tool where you can immediately check after you have added procedure or event/cost center information.</p>
@@ -674,16 +684,16 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 </section>
 </section>
-<section id="change-of-protocol-before-initial-version-completion" class="level3" data-number="6.7.2">
-<h3 data-number="6.7.2" class="anchored" data-anchor-id="change-of-protocol-before-initial-version-completion"><span class="header-section-number">6.7.2</span> Change of Protocol Before Initial Version Completion</h3>
+<section id="change-of-protocol-before-initial-version-completion" class="level3" data-number="7.7.2">
+<h3 data-number="7.7.2" class="anchored" data-anchor-id="change-of-protocol-before-initial-version-completion"><span class="header-section-number">7.7.2</span> Change of Protocol Before Initial Version Completion</h3>
 <ul>
 <li>Like adding a new visit before initial completion.</li>
 </ul>
 <p>https://kb.wisc.edu/smph/informatics/internal/117779</p>
 <p>https://kb.wisc.edu/smph/informatics/internal/page.php?id=77492</p>
 </section>
-<section id="charge-master-version-budget-summary-budget-calendar" class="level3" data-number="6.7.3">
-<h3 data-number="6.7.3" class="anchored" data-anchor-id="charge-master-version-budget-summary-budget-calendar"><span class="header-section-number">6.7.3</span> Charge Master Version; Budget Summary, Budget Calendar</h3>
+<section id="charge-master-version-budget-summary-budget-calendar" class="level3" data-number="7.7.3">
+<h3 data-number="7.7.3" class="anchored" data-anchor-id="charge-master-version-budget-summary-budget-calendar"><span class="header-section-number">7.7.3</span> Charge Master Version; Budget Summary, Budget Calendar</h3>
 <ul>
 <li>Go back to Subject Related.</li>
 <li>Down at the bottom is Update Charge Master Version which is good for 3 years</li>
@@ -691,14 +701,14 @@ ul.task-list li input[type="checkbox"] {
 <li>Go to Budget Summary and click Summary and you’ll get a sample budget showign the actual costs for 1 subject on the selected arm.</li>
 </ul>
 </section>
-<section id="protocol-related-budget-items" class="level3" data-number="6.7.4">
-<h3 data-number="6.7.4" class="anchored" data-anchor-id="protocol-related-budget-items"><span class="header-section-number">6.7.4</span> Protocol Related Budget Items</h3>
+<section id="protocol-related-budget-items" class="level3" data-number="7.7.4">
+<h3 data-number="7.7.4" class="anchored" data-anchor-id="protocol-related-budget-items"><span class="header-section-number">7.7.4</span> Protocol Related Budget Items</h3>
 <ul>
 <li>We wont use these but, say, IRB fees, translation services, etc. Really only if you’re using invoicing</li>
 </ul>
 </section>
-<section id="clinical-trial-billing-checklist-and-final-ancillary-services-review-prep" class="level3" data-number="6.7.5">
-<h3 data-number="6.7.5" class="anchored" data-anchor-id="clinical-trial-billing-checklist-and-final-ancillary-services-review-prep"><span class="header-section-number">6.7.5</span> Clinical Trial Billing Checklist and Final Ancillary Services Review Prep</h3>
+<section id="clinical-trial-billing-checklist-and-final-ancillary-services-review-prep" class="level3" data-number="7.7.5">
+<h3 data-number="7.7.5" class="anchored" data-anchor-id="clinical-trial-billing-checklist-and-final-ancillary-services-review-prep"><span class="header-section-number">7.7.5</span> Clinical Trial Billing Checklist and Final Ancillary Services Review Prep</h3>
 <ul>
 <li>Upload Clin Trials Billing Checklist under Documents/Info</li>
 <li>Add protocol</li>
@@ -707,10 +717,10 @@ ul.task-list li input[type="checkbox"] {
 <p>https://kb.wisc.edu/smph/informatics/internal/24463 for more details</p>
 </section>
 </section>
-<section id="accessing-financials-in-oncore-production" class="level2" data-number="6.8">
-<h2 data-number="6.8" class="anchored" data-anchor-id="accessing-financials-in-oncore-production"><span class="header-section-number">6.8</span> Accessing Financials in OnCore Production</h2>
-<section id="oncore-financial-management-exercise" class="level3" data-number="6.8.1">
-<h3 data-number="6.8.1" class="anchored" data-anchor-id="oncore-financial-management-exercise"><span class="header-section-number">6.8.1</span> OnCore Financial Management Exercise</h3>
+<section id="accessing-financials-in-oncore-production" class="level2" data-number="7.8">
+<h2 data-number="7.8" class="anchored" data-anchor-id="accessing-financials-in-oncore-production"><span class="header-section-number">7.8</span> Accessing Financials in OnCore Production</h2>
+<section id="oncore-financial-management-exercise" class="level3" data-number="7.8.1">
+<h3 data-number="7.8.1" class="anchored" data-anchor-id="oncore-financial-management-exercise"><span class="header-section-number">7.8.1</span> OnCore Financial Management Exercise</h3>
 
 
 </section>
@@ -718,43 +728,58 @@ ul.task-list li input[type="checkbox"] {
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
@@ -762,184 +787,184 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
       return codeEl.innerText;
     }
-  });
-  clipboard.on('success', function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
-      }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -947,194 +972,170 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./qualtrics_links.html" class="pagination-link" aria-label="Qualtrics Links">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Qualtrics Links</span></span>
+      <a href="./qualtrics_mappings.html" class="pagination-link" aria-label="Qualtrics survey mappings">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Qualtrics survey mappings</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./florence.html" class="pagination-link" aria-label="Florence eBinders">
-        <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Florence eBinders</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Florence eBinders</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
