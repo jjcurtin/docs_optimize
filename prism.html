@@ -376,13 +376,17 @@ ul.task-list li input[type="checkbox"] {
 <li>I’ve ordered them by the order in which they must be used, ie. we have to download qualtrics data before we can add participants to followmee or prism.</li>
 </ul>
 <ol type="1">
-<li>optimize/automation/download_qualtrics.R: Download qualtrics surveys including screen, guid pedigree, baseline, ema, feedback, bimonthly
+<li>optimize/automation/get_qualtrics.R: Download qualtrics surveys including screen, guid pedigree, baseline, ema, feedback, bimonthly
 <ol type="a">
 <li>Input: <code>S:/other/credentials.csv</code></li>
 <li>Output: <code>S:/optimize/data_raw/surveys/</code> (one csv file for each distinct survey)</li>
-<li>Run 4?x/day at 00:00, 06:00, 12:00, 18:00</li>
-<li><strong>ready for Review</strong></li>
-<li><strong>FUTURE UPDATE</strong>:Add consent, onboard, feedback (dependent on finalizing feedback survey form), and staff scripts.</li>
+<li>Run 4x/day at 02:00 (to build feedback), 07:58 (to check for reminders), 14:00 (to build ema), 17:58 (to check for reminders)</li>
+</ol></li>
+<li>optimize/automation/mak_reminders.R: Checks latest EMA and feedback downloads and create a PRISM config file for who needs a reminder
+<ol type="a">
+<li>Input: <code>S:/optimize/data_raw/participants/study_participants.csv</code>, <code>S:/optimize/data_raw/surveys/ema.csv</code>, <code>S:/optimize/data_raw/surveys/feedback.csv</code></li>
+<li>Output: <code>C:/github/prism/prism/config/reminders.csv</code></li>
+<li>Run 2x day at 08:00:00 and 18:00:00</li>
 </ol></li>
 <li>optimize/automation/update_participants.R:
 <ol type="a">
