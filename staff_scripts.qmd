@@ -1,0 +1,115 @@
+# Staff Scripts
+
+These are text message/email scripts for use in the STAR study
+
+## Outside US detected
+
+```
+Dear XXXXXX,
+
+
+Our automated data review prior to your one-week visit has revealed that you are not located inside the United States.
+
+As mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.
+
+Sincerely,
+Susan
+STAR Study Manager
+```
+
+## Payment setup emails
+
+These messages are sent the day after participants are set up in Advarra.
+
+The subject of both types of email should be `STAR Study Payments`.
+
+* Participant payment dates will be either the 15th of the month or the 30th of the month depending on consent/onboard date:
+   * Participants onboarded between the 28th and 14th will be paid on the 15th.
+   * Participants onboarded between the 15th and 27th will be paid on the 30th.
+
+There are 2 handouts to attach for each type of email: see the appropriate subfolder in `S:\optimize\administration\financial\adverra_handouts`
+
+
+
+### Direct deposit
+
+```
+Hello ____,
+
+We have received confirmation that your study payment account is ready to to be set up and activated.
+
+Attached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.
+
+Your payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.
+
+If you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. 
+
+We have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.
+
+Thank you for being part of the STAR study!
+
+Susan
+STAR Study Coordinator
+
+```
+
+### Debit card
+```
+Hello ____,
+
+We have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.
+
+Attached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. 
+
+Your payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.
+
+If your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. 
+
+We have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.
+
+Thank you for being part of the STAR study!
+
+Susan
+STAR Study Coordinator
+```
+
+## Adherence emails
+
+Per JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.
+
+### Low GPS
+
+Subject: `STAR Study: Missing GPS Alert`
+
+```
+Hello ____,
+
+Our system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.
+
+If you'd like a call, please just let us know the best date & time for you.
+
+Thank you for being a part of the STAR Study!
+
+<NAME,>
+STAR Study STAFF
+
+```
+
+### Low EMA
+
+
+Subject: `STAR Study: Missing Daily Survey Alert`
+
+```
+Hello ____,
+
+Our system reports that we haven't received a daily survey from you since _______. We just wanted to reach out and let you know. If this is intentional, you don't need to do anything. If you haven't been getting your daily surveys, let us know and we can help troubleshoot. Missing daily surveys won't affect your participation, but completing them earns $1/ per day and up to $20 in bonuses per month.
+
+If you'd like a call to troubleshoot, please just let us know the best date & time for you.
+
+Thank you for being a part of the STAR Study!
+
+<NAME,>
+STAR Study STAFF
+
+```

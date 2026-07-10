@@ -23,7 +23,11 @@ book:
     - part: sops.qmd
       chapters: 
         - sop_recruiting.qmd
-        - sop_screening.qmd  
+        - sop_screening.qmd
+        - sop_consent.qmd
+        - sop_florence.qmd
+        - staff_scripts.qmd
+        - support_message_intro_scripts.qmd
 
     
     

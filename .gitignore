@@ -7,3 +7,5 @@
 /.quarto/
 /_book/
 .positai
+
+**/*.quarto_ipynb

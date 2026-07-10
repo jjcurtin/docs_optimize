@@ -78,13 +78,16 @@ These R scripts are run by prism.
 * NOTE these are initially in `optimize/automation/dev` until reviewed & moved by John.
 * I've ordered them by the order in which they must be used, ie. we have to download qualtrics data before we can add participants to followmee or prism.
 
-1. optimize/automation/download_qualtrics.R: Download qualtrics surveys including screen, guid pedigree, baseline, ema, feedback, bimonthly
+1. optimize/automation/get_qualtrics.R: Download qualtrics surveys including screen, guid pedigree, baseline, ema, feedback, bimonthly
    a. Input: `S:/other/credentials.csv`
    b. Output: `S:/optimize/data_raw/surveys/` (one csv file for each distinct survey)
-   c. Run 4?x/day at 00:00, 06:00, 12:00, 18:00
-   d. **ready for Review**
-   e. **FUTURE UPDATE**:Add consent, onboard, feedback (dependent on finalizing feedback survey form), and staff scripts. 
+   c. Run 4x/day at 02:00 (to build feedback), 07:58 (to check for reminders), 14:00 (to build ema), 17:58 (to check for reminders)
 
+2. optimize/automation/mak_reminders.R: Checks latest EMA and feedback downloads and create a PRISM config file for who needs a reminder
+   a. Input: `S:/optimize/data_raw/participants/study_participants.csv`, `S:/optimize/data_raw/surveys/ema.csv`, `S:/optimize/data_raw/surveys/feedback.csv`
+   b. Output: `C:/github/prism/prism/config/reminders.csv`
+   c. Run 2x day at 08:00:00 and 18:00:00
+   
 2. optimize/automation/update_participants.R: 
    a. Input: `S:/other/credentials.csv`, `S:/optimize/data_raw/surveys/guid_pedigree.csv`, `S:/optimize/data_raw/surveys/onboard.csv`, `S:/optimize/data_raw/surveys/session_form.csv`, `S:/optimize/data_raw/surveys/wog.csv`
    b. Output: `S:/optimize/data_raw/participants/study_participants.csv`, subset of columns to`C:/github/prism/prism/config/study_participants.csv` for use in PRISM.
