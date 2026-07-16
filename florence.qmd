@@ -56,19 +56,19 @@ Sidebar items all have their own training modules
 ## Annotations & redactions
 * 4 buttons at top of document view: View, Annotate, Redact, Sign
 * Annotations create new versions. You'll need to confirm
-   * Highlight works if the document hasnt been flattened
+   * Highlight works if the document hasn't been flattened
    * Rectangle works for flat documents. It creates a rectangle around an area of attention.
-      * You can propegate a rectangle to all pages by the Propegate button (looks like copy icon)
+      * You can propagate a rectangle to all pages by the Propagate button (looks like copy icon)
    * Free text, click anywhere and type. Color, background, font, style
    * Strikeout allows UNFLATTENED docs to be struck out.
-   * Timestamp - select and click anwhere to get it to show up.
+   * Timestamp - select and click anywhere to get it to show up.
  * Redaction: protect PHI/PII
-   * Only those with "View PHI" permission can see the unredacted version
-   * Can also use propegate here
+   * Only those with "View PHI" permission can see the un-redacted version
+   * Can also use propagate here
  * BE SURE TO CLICK SAVE. If you navigate away all changes are lost. 
  
 ## Downloads
- *  Any doc can be downloaded if you have poermission. From folder view, select Download from actions dropdown in the folder, or from the Manage dropdown in document view.
+ *  Any doc can be downloaded if you have permission. From folder view, select Download from actions dropdown in the folder, or from the Manage dropdown in document view.
  *  You can select to include signature addendums, and whether you wish to get all versions or just the current version.
  *  My Downloads shows all your downloads (left sidebar)
  
@@ -110,7 +110,7 @@ Addendum:
 
 Stamp: Physically stamps. 
 * You click & drag to put it where you want it.
-* Creates a new eversion of the doc
+* Creates a new e-version of the doc
 
 If you attempt to sign an expired document, the "Sign" button won't be available. Check the date in the audit trail. Contact the person who requested your signature and have them update the date.
 
@@ -123,9 +123,9 @@ You can also decline to sign, if either it doesnt require, or if the doc is inac
 
 * Can request from folder View by selecting the checkbox then actions dropdown -> request signatures
 * You can select other documents from the next modal from anywhere in your structure.
-* Then select siganture type and reason why for each document.
+* Then select signature type and reason why for each document.
   * If some needs to sign approval and others to acknowledge, you should send those separately to each group.
-* GO to signers tab and start selecting users. THere is NO option to select all.
+* Go to signers tab and start selecting users. THere is NO option to select all.
 * If someone has permission they will get a request. Only select users who can sign all docs.
 * YOu can add a sign-by date and whether you want to be notified of signatures, and if you want to email them the request. They only get one notification per request, not a separate email for each doc.
 *Pending tab shows if some are already in progress. If someone is here, they won't show up in the Signers tab. 
@@ -134,7 +134,7 @@ You can also decline to sign, if either it doesnt require, or if the doc is inac
 
 ## Sending a signature reminder
 * Navigate to document, from Manage tab select request signatures, and look at Pending tab. YOu can select to send a reminder.
-* Or navitate to report section and select Signatures Pending. Click any and click Send reminder to send.
+* Or navigate to report section and select Signatures Pending. Click any and click Send reminder to send.
 
 ## Cancel a signature request
 * Navigate to the document and select Request Signatures from Manage dropdown. 

@@ -1,0 +1,8 @@
+# Adherence SOP
+
+This SOP outlines how to check and manage participant task adherence.
+
+## Checking adherence
+
+* `make_adherence.R` is automated to run daily. It writes out an adherence snapshot for all particiapants to `S:/optimize/data_admin/adherence`. 
+* participant-level adherence can be spot-checked via `chk_adherence.qmd`, located under `staff_scripts`

@@ -5,3 +5,30 @@ This SOP lists critical information about using eBinders
 ## Required Signature Types
 
 Before requesting any signature verify the [type required](https://kb.wisc.edu/smph/informatics/internal/page.php?id=118307#SignatureRequestTypeReasonByDocumentType)
+
+
+
+## New participant data entry
+
+### Create subject level folder
+
+1. Navigate to the `Subjects/Subject Folders` subfolder.
+2. Click the subject template file, and then under the 3-dot menu, click "Duplicate"
+3. Select this folder for the location
+4. Name the duplicate `Lastname,FirstInitial (subid)` and hit "Copy without shortcuts"
+
+### Add subject data to the subject folder
+
+1. Under "Registration and Eligibility/Eligibility Checklist" upload the PDF of their screener
+2. Under "Informed Consent Documents" upload the PDF of their consent form to "Signed Informed Consent Form". Name it with the date of their signature followed by the version date of the form (see data_raw/surveys/consent.csv to get this info). It should end up with a title that looks like: "Signed Informed Consent Form_2026_0616_v2026_0612" 
+   a. If they have been re-consented, move the original into "Archived Inform Consent Documents". Drag the new PDF consent form into the main consent folder and name it with the above naming pattern.
+
+That should be all unless we hear otherwise during the next monitoring visit!
+
+## Additional data uploads to subject folder
+
+### Participant Withdrawn/Discontinued
+
+1. Under "Subject Snapshot/Continuous Progress Notes" upload a progress note. The content and document title should include the date of study termination as well as the reason (withdrawn by study staff, discontinued by subject) See the example in folder 3000 as an example. Termination reason should also be noted in the enrollment_log.
+
+

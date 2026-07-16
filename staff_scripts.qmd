@@ -113,3 +113,35 @@ Thank you for being a part of the STAR Study!
 STAR Study STAFF
 
 ```
+
+
+## Payment email
+
+Subject: `STAR Study Payment - Month ____`
+
+```
+Hello _____,
+
+A payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:
+
+$40 for your consent/intake visit
+$10 for your first bi-monthly survey
+$10 for the one-week check-in visit
+$27 for 27 completed daily surveys
+$7 to cover any daily surveys we missed due to tech issues with our system
+$20 in bonuses for completing more than 12 daily surveys in each half of the month
+$5 in GPS bonuses
+$50 to help cover your cell plan payment
+
+In total, your payment for last month comes to $169.
+
+Unfortunately, I am still waiting on confirmation that the payment request will post today. It is supposed to post immediately, but after several hours it still shows as "processing". 
+
+I have reached out to the University's financial office but have not yet received a response. I will continue to check the rest of today and through the weekend and reach out as soon as I see it post. I very much apologize for this delay!
+
+Please let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!
+
+Best,
+Susan
+STAR Study Coordinator
+```
