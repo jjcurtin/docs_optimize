@@ -625,7 +625,7 @@
     "href": "florence.html#annotations-redactions",
     "title": "8  Florence eBinders",
     "section": "8.9 Annotations & redactions",
-    "text": "8.9 Annotations & redactions\n\n4 buttons at top of document view: View, Annotate, Redact, Sign\nAnnotations create new versions. You’ll need to confirm\n\nHighlight works if the document hasnt been flattened\nRectangle works for flat documents. It creates a rectangle around an area of attention.\n\nYou can propegate a rectangle to all pages by the Propegate button (looks like copy icon)\n\nFree text, click anywhere and type. Color, background, font, style\nStrikeout allows UNFLATTENED docs to be struck out.\nTimestamp - select and click anwhere to get it to show up.\n\nRedaction: protect PHI/PII\n\nOnly those with “View PHI” permission can see the unredacted version\nCan also use propegate here\n\nBE SURE TO CLICK SAVE. If you navigate away all changes are lost.",
+    "text": "8.9 Annotations & redactions\n\n4 buttons at top of document view: View, Annotate, Redact, Sign\nAnnotations create new versions. You’ll need to confirm\n\nHighlight works if the document hasn’t been flattened\nRectangle works for flat documents. It creates a rectangle around an area of attention.\n\nYou can propagate a rectangle to all pages by the Propagate button (looks like copy icon)\n\nFree text, click anywhere and type. Color, background, font, style\nStrikeout allows UNFLATTENED docs to be struck out.\nTimestamp - select and click anywhere to get it to show up.\n\nRedaction: protect PHI/PII\n\nOnly those with “View PHI” permission can see the un-redacted version\nCan also use propagate here\n\nBE SURE TO CLICK SAVE. If you navigate away all changes are lost.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Florence eBinders</span>"
@@ -636,7 +636,7 @@
     "href": "florence.html#downloads",
     "title": "8  Florence eBinders",
     "section": "8.10 Downloads",
-    "text": "8.10 Downloads\n\nAny doc can be downloaded if you have poermission. From folder view, select Download from actions dropdown in the folder, or from the Manage dropdown in document view.\nYou can select to include signature addendums, and whether you wish to get all versions or just the current version.\nMy Downloads shows all your downloads (left sidebar)",
+    "text": "8.10 Downloads\n\nAny doc can be downloaded if you have permission. From folder view, select Download from actions dropdown in the folder, or from the Manage dropdown in document view.\nYou can select to include signature addendums, and whether you wish to get all versions or just the current version.\nMy Downloads shows all your downloads (left sidebar)",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Florence eBinders</span>"
@@ -680,7 +680,7 @@
     "href": "florence.html#signing-a-document",
     "title": "8  Florence eBinders",
     "section": "8.14 Signing a document",
-    "text": "8.14 Signing a document\n\nYou van get an email notification of a signature requests.\nGO to notifications to turn these emails on\nBlue bar at top of screen lets you know you have signatures needed\nViewing your queue goes to reports section; click any doc to go there\n\nSignature types:\n* Addendum * Stamp\n(Discussed later)\n* Form * eLog\nAddendum:\n* Clicking “Sign” pops up the signing modum. * Adds a page to the end of doc with the signature. * Left hand panel shows last update\nStamp: Physically stamps. * You click & drag to put it where you want it. * Creates a new eversion of the doc\nIf you attempt to sign an expired document, the “Sign” button won’t be available. Check the date in the audit trail. Contact the person who requested your signature and have them update the date.\nYou can also decline to sign, if either it doesnt require, or if the doc is inaccurate, or if the sig type requested is wrong.\n\nSelect decline and enter your reason. This goes in audit trail and emails requestor\nIf it’s just because the signature type requested is wrong, you first decline and then can go back and sign with any signature.",
+    "text": "8.14 Signing a document\n\nYou van get an email notification of a signature requests.\nGO to notifications to turn these emails on\nBlue bar at top of screen lets you know you have signatures needed\nViewing your queue goes to reports section; click any doc to go there\n\nSignature types:\n* Addendum * Stamp\n(Discussed later)\n* Form * eLog\nAddendum:\n* Clicking “Sign” pops up the signing modum. * Adds a page to the end of doc with the signature. * Left hand panel shows last update\nStamp: Physically stamps. * You click & drag to put it where you want it. * Creates a new e-version of the doc\nIf you attempt to sign an expired document, the “Sign” button won’t be available. Check the date in the audit trail. Contact the person who requested your signature and have them update the date.\nYou can also decline to sign, if either it doesnt require, or if the doc is inaccurate, or if the sig type requested is wrong.\n\nSelect decline and enter your reason. This goes in audit trail and emails requestor\nIf it’s just because the signature type requested is wrong, you first decline and then can go back and sign with any signature.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Florence eBinders</span>"
@@ -691,7 +691,7 @@
     "href": "florence.html#requesting-a-signature",
     "title": "8  Florence eBinders",
     "section": "8.15 Requesting a signature",
-    "text": "8.15 Requesting a signature\n\nCan request from folder View by selecting the checkbox then actions dropdown -&gt; request signatures\nYou can select other documents from the next modal from anywhere in your structure.\nThen select siganture type and reason why for each document.\n\nIf some needs to sign approval and others to acknowledge, you should send those separately to each group.\n\nGO to signers tab and start selecting users. THere is NO option to select all.\nIf someone has permission they will get a request. Only select users who can sign all docs.\nYOu can add a sign-by date and whether you want to be notified of signatures, and if you want to email them the request. They only get one notification per request, not a separate email for each doc. *Pending tab shows if some are already in progress. If someone is here, they won’t show up in the Signers tab.\nGold arrow by name or doc means a signature is in progress.\nLock shows who don’t have access to certain documents. They wont get the request for those docs.",
+    "text": "8.15 Requesting a signature\n\nCan request from folder View by selecting the checkbox then actions dropdown -&gt; request signatures\nYou can select other documents from the next modal from anywhere in your structure.\nThen select signature type and reason why for each document.\n\nIf some needs to sign approval and others to acknowledge, you should send those separately to each group.\n\nGo to signers tab and start selecting users. THere is NO option to select all.\nIf someone has permission they will get a request. Only select users who can sign all docs.\nYOu can add a sign-by date and whether you want to be notified of signatures, and if you want to email them the request. They only get one notification per request, not a separate email for each doc. *Pending tab shows if some are already in progress. If someone is here, they won’t show up in the Signers tab.\nGold arrow by name or doc means a signature is in progress.\nLock shows who don’t have access to certain documents. They wont get the request for those docs.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Florence eBinders</span>"
@@ -702,7 +702,7 @@
     "href": "florence.html#sending-a-signature-reminder",
     "title": "8  Florence eBinders",
     "section": "8.16 Sending a signature reminder",
-    "text": "8.16 Sending a signature reminder\n\nNavigate to document, from Manage tab select request signatures, and look at Pending tab. YOu can select to send a reminder.\nOr navitate to report section and select Signatures Pending. Click any and click Send reminder to send.",
+    "text": "8.16 Sending a signature reminder\n\nNavigate to document, from Manage tab select request signatures, and look at Pending tab. YOu can select to send a reminder.\nOr navigate to report section and select Signatures Pending. Click any and click Send reminder to send.",
     "crumbs": [
       "Administration",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>Florence eBinders</span>"
@@ -1537,6 +1537,28 @@
     ]
   },
   {
+    "objectID": "sop_florence.html#new-participant-data-entry",
+    "href": "sop_florence.html#new-participant-data-entry",
+    "title": "13  Florence SOP",
+    "section": "13.2 New participant data entry",
+    "text": "13.2 New participant data entry\n\n13.2.1 Create subject level folder\n\nNavigate to the Subjects/Subject Folders subfolder.\nClick the subject template file, and then under the 3-dot menu, click “Duplicate”\nSelect this folder for the location\nName the duplicate Lastname,FirstInitial (subid) and hit “Copy without shortcuts”\n\n\n\n13.2.2 Add subject data to the subject folder\n\nUnder “Registration and Eligibility/Eligibility Checklist” upload the PDF of their screener\nUnder “Informed Consent Documents” upload the PDF of their consent form to “Signed Informed Consent Form”. Name it with the date of their signature followed by the version date of the form (see data_raw/surveys/consent.csv to get this info). It should end up with a title that looks like: “Signed Informed Consent Form_2026_0616_v2026_0612”\n\nIf they have been re-consented, move the original into “Archived Inform Consent Documents”. Drag the new PDF consent form into the main consent folder and name it with the above naming pattern.\n\n\nThat should be all unless we hear otherwise during the next monitoring visit!",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Florence SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_florence.html#additional-data-uploads-to-subject-folder",
+    "href": "sop_florence.html#additional-data-uploads-to-subject-folder",
+    "title": "13  Florence SOP",
+    "section": "13.3 Additional data uploads to subject folder",
+    "text": "13.3 Additional data uploads to subject folder\n\n13.3.1 Participant Withdrawn/Discontinued\n\nUnder “Subject Snapshot/Continuous Progress Notes” upload a progress note. The content and document title should include the date of study termination as well as the reason (withdrawn by study staff, discontinued by subject) See the example in folder 3000 as an example. Termination reason should also be noted in the enrollment_log.",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Florence SOP</span>"
+    ]
+  },
+  {
     "objectID": "staff_scripts.html",
     "href": "staff_scripts.html",
     "title": "14  Staff Scripts",
@@ -1575,6 +1597,17 @@
     "title": "14  Staff Scripts",
     "section": "14.3 Adherence emails",
     "text": "14.3 Adherence emails\nPer JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.\n\n14.3.1 Low GPS\nSubject: STAR Study: Missing GPS Alert\nHello ____,\n\nOur system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.\n\nIf you'd like a call, please just let us know the best date & time for you.\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF\n\n\n\n14.3.2 Low EMA\nSubject: STAR Study: Missing Daily Survey Alert\nHello ____,\n\nOur system reports that we haven't received a daily survey from you since _______. We just wanted to reach out and let you know. If this is intentional, you don't need to do anything. If you haven't been getting your daily surveys, let us know and we can help troubleshoot. Missing daily surveys won't affect your participation, but completing them earns $1/ per day and up to $20 in bonuses per month.\n\nIf you'd like a call to troubleshoot, please just let us know the best date & time for you.\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Staff Scripts</span>"
+    ]
+  },
+  {
+    "objectID": "staff_scripts.html#payment-email",
+    "href": "staff_scripts.html#payment-email",
+    "title": "14  Staff Scripts",
+    "section": "14.4 Payment email",
+    "text": "14.4 Payment email\nSubject: STAR Study Payment - Month ____\nHello _____,\n\nA payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:\n\n$40 for your consent/intake visit\n$10 for your first bi-monthly survey\n$10 for the one-week check-in visit\n$27 for 27 completed daily surveys\n$7 to cover any daily surveys we missed due to tech issues with our system\n$20 in bonuses for completing more than 12 daily surveys in each half of the month\n$5 in GPS bonuses\n$50 to help cover your cell plan payment\n\nIn total, your payment for last month comes to $169.\n\nUnfortunately, I am still waiting on confirmation that the payment request will post today. It is supposed to post immediately, but after several hours it still shows as \"processing\". \n\nI have reached out to the University's financial office but have not yet received a response. I will continue to check the rest of today and through the weekend and reach out as soon as I see it post. I very much apologize for this delay!\n\nPlease let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!\n\nBest,\nSusan\nSTAR Study Coordinator",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Staff Scripts</span>"

@@ -250,6 +250,15 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#required-signature-types" id="toc-required-signature-types" class="nav-link active" data-scroll-target="#required-signature-types"><span class="header-section-number">13.1</span> Required Signature Types</a></li>
+  <li><a href="#new-participant-data-entry" id="toc-new-participant-data-entry" class="nav-link" data-scroll-target="#new-participant-data-entry"><span class="header-section-number">13.2</span> New participant data entry</a>
+  <ul class="collapse">
+  <li><a href="#create-subject-level-folder" id="toc-create-subject-level-folder" class="nav-link" data-scroll-target="#create-subject-level-folder"><span class="header-section-number">13.2.1</span> Create subject level folder</a></li>
+  <li><a href="#add-subject-data-to-the-subject-folder" id="toc-add-subject-data-to-the-subject-folder" class="nav-link" data-scroll-target="#add-subject-data-to-the-subject-folder"><span class="header-section-number">13.2.2</span> Add subject data to the subject folder</a></li>
+  </ul></li>
+  <li><a href="#additional-data-uploads-to-subject-folder" id="toc-additional-data-uploads-to-subject-folder" class="nav-link" data-scroll-target="#additional-data-uploads-to-subject-folder"><span class="header-section-number">13.3</span> Additional data uploads to subject folder</a>
+  <ul class="collapse">
+  <li><a href="#participant-withdrawndiscontinued" id="toc-participant-withdrawndiscontinued" class="nav-link" data-scroll-target="#participant-withdrawndiscontinued"><span class="header-section-number">13.3.1</span> Participant Withdrawn/Discontinued</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -279,8 +288,40 @@ ul.task-list li input[type="checkbox"] {
 <section id="required-signature-types" class="level2" data-number="13.1">
 <h2 data-number="13.1" class="anchored" data-anchor-id="required-signature-types"><span class="header-section-number">13.1</span> Required Signature Types</h2>
 <p>Before requesting any signature verify the <a href="https://kb.wisc.edu/smph/informatics/internal/page.php?id=118307#SignatureRequestTypeReasonByDocumentType">type required</a></p>
+</section>
+<section id="new-participant-data-entry" class="level2" data-number="13.2">
+<h2 data-number="13.2" class="anchored" data-anchor-id="new-participant-data-entry"><span class="header-section-number">13.2</span> New participant data entry</h2>
+<section id="create-subject-level-folder" class="level3" data-number="13.2.1">
+<h3 data-number="13.2.1" class="anchored" data-anchor-id="create-subject-level-folder"><span class="header-section-number">13.2.1</span> Create subject level folder</h3>
+<ol type="1">
+<li>Navigate to the <code>Subjects/Subject Folders</code> subfolder.</li>
+<li>Click the subject template file, and then under the 3-dot menu, click “Duplicate”</li>
+<li>Select this folder for the location</li>
+<li>Name the duplicate <code>Lastname,FirstInitial (subid)</code> and hit “Copy without shortcuts”</li>
+</ol>
+</section>
+<section id="add-subject-data-to-the-subject-folder" class="level3" data-number="13.2.2">
+<h3 data-number="13.2.2" class="anchored" data-anchor-id="add-subject-data-to-the-subject-folder"><span class="header-section-number">13.2.2</span> Add subject data to the subject folder</h3>
+<ol type="1">
+<li>Under “Registration and Eligibility/Eligibility Checklist” upload the PDF of their screener</li>
+<li>Under “Informed Consent Documents” upload the PDF of their consent form to “Signed Informed Consent Form”. Name it with the date of their signature followed by the version date of the form (see data_raw/surveys/consent.csv to get this info). It should end up with a title that looks like: “Signed Informed Consent Form_2026_0616_v2026_0612”
+<ol type="a">
+<li>If they have been re-consented, move the original into “Archived Inform Consent Documents”. Drag the new PDF consent form into the main consent folder and name it with the above naming pattern.</li>
+</ol></li>
+</ol>
+<p>That should be all unless we hear otherwise during the next monitoring visit!</p>
+</section>
+</section>
+<section id="additional-data-uploads-to-subject-folder" class="level2" data-number="13.3">
+<h2 data-number="13.3" class="anchored" data-anchor-id="additional-data-uploads-to-subject-folder"><span class="header-section-number">13.3</span> Additional data uploads to subject folder</h2>
+<section id="participant-withdrawndiscontinued" class="level3" data-number="13.3.1">
+<h3 data-number="13.3.1" class="anchored" data-anchor-id="participant-withdrawndiscontinued"><span class="header-section-number">13.3.1</span> Participant Withdrawn/Discontinued</h3>
+<ol type="1">
+<li>Under “Subject Snapshot/Continuous Progress Notes” upload a progress note. The content and document title should include the date of study termination as well as the reason (withdrawn by study staff, discontinued by subject) See the example in folder 3000 as an example. Termination reason should also be noted in the enrollment_log.</li>
+</ol>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
