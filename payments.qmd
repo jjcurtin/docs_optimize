@@ -7,11 +7,17 @@ Payment is via a reloadable debit card or direct deposit.
 
 ### Paying participants
 
-From Participant Search:
+Each month, Susan will calculate adherence and payments, and post payments to be made in the participant's thread.
 
-1. Search for the participant and click their name
-2. Select the appropriate study and visit
-3. Click Pay
+1. In the top menu, under Payments, select Participant Check in. 
+2. You can search by name under Participant Search, or use Protocol Search and type "Curtin" to show our protocol, and all active participants.  We do not have subid in the system so you will need to check the onboard.csv to match the name to the subid.
+3. Find the visit or visit Susan named in the participant thread.
+4. If the visit has a stipend listed, simply indicate that the visit has Occurred, and then hit Send for Review.
+5. If the visit has 0.00 as the stipend amount at the top, it means there will be an Ad Hoc Stipend. Scroll down to where you see "Have ad hoc stipends?" and change the slider to Yes.
+   * Enter the amount specified and in the comment, explain what it's for (for example, the number of EMA they completed). This can be copied from the participant thread as well.
+6. Hit Send for Review.
+7. Tag Susan in the participant thread to go in and Review/Approve the payments.
+8. Send a payment message to them by email using the template on the [Staff Scripts](staff_scripts.qmd) page
 
 ### Review payments
 

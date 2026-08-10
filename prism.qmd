@@ -61,8 +61,13 @@ Notes:
 ## To start the PRISM "GUI"
 Open a command prompt window (nb: cannot use git bash) and enter the following commands
 
+PROD  
 * `cd ../../github/prism/prism/src`
 * `python prism_interface.py`
+
+DEV  
+* `./prism.ps1 interface`
+
 
 ## Exiting the PRISM Interface
 
