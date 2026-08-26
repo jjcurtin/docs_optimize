@@ -1559,80 +1559,102 @@
     ]
   },
   {
-    "objectID": "staff_scripts.html",
-    "href": "staff_scripts.html",
-    "title": "14  Staff Scripts",
+    "objectID": "sop_adherence.html",
+    "href": "sop_adherence.html",
+    "title": "14  Adherence SOP",
     "section": "",
-    "text": "14.1 Outside US detected\nThese are text message/email scripts for use in the STAR study",
+    "text": "14.1 Checking adherence\nThis SOP outlines how to check and manage participant task adherence.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Adherence SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_adherence.html#checking-adherence",
+    "href": "sop_adherence.html#checking-adherence",
+    "title": "14  Adherence SOP",
+    "section": "",
+    "text": "14.1.1 General notes\n\nmak_adherence.R is automated to run daily. It writes out adherence snapshots to S:/optimize/data_admin/adherence.\n\nSnapshots are weekly, monthly, and all-time for onstudy participants\n\nparticipant-level adherence can be spot-checked via chk_adherence.qmd, located under scripts_staff\n\n\n\n14.1.2 GPS Instructions\n\nCheck the STAR email inbox every day for an email from FollowMee called “No-Update Notice”. This will send any time a participant has not had data for over 24 hours.\nWhen a participant newly appears in this email, comment in their participant thread with the timestamp of the last update, ie “No GPS notice received, last update 2026-07-11 05:19:36 AM”\nWhen it has been 24 hours since the last update, send an email or text using the Missing GPS script\nIf no response and GPS is not turned back on 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.\n\n\n\n14.1.3 EMA Instructions\n\nchk_adherence.qmd, located under scripts_staff will display adherence for the past 7 days. You can check a single subid at a time, or view all on-study.\nIf four EMA have been missed in a row, make a note in the participant thread, and send a call or text using the the Low EMA script.\nIf no response and no EMA submitted 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Adherence SOP</span>"
+    ]
+  },
+  {
+    "objectID": "staff_scripts.html",
+    "href": "staff_scripts.html",
+    "title": "15  Staff Scripts",
+    "section": "",
+    "text": "15.1 Outside US detected\nThese are text message/email scripts for use in the STAR study",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#outside-us-detected",
     "href": "staff_scripts.html#outside-us-detected",
-    "title": "14  Staff Scripts",
+    "title": "15  Staff Scripts",
     "section": "",
     "text": "Dear XXXXXX,\n\n\nOur automated data review prior to your one-week visit has revealed that you are not located inside the United States.\n\nAs mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.\n\nSincerely,\nSusan\nSTAR Study Manager",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#payment-setup-emails",
     "href": "staff_scripts.html#payment-setup-emails",
-    "title": "14  Staff Scripts",
-    "section": "14.2 Payment setup emails",
-    "text": "14.2 Payment setup emails\nThese messages are sent the day after participants are set up in Advarra.\nThe subject of both types of email should be STAR Study Payments.\n\nParticipant payment dates will be either the 15th of the month or the 30th of the month depending on consent/onboard date:\n\nParticipants onboarded between the 28th and 14th will be paid on the 15th.\nParticipants onboarded between the 15th and 27th will be paid on the 30th.\n\n\nThere are 2 handouts to attach for each type of email: see the appropriate subfolder in S:\\optimize\\administration\\financial\\adverra_handouts\n\n14.2.1 Direct deposit\nHello ____,\n\nWe have received confirmation that your study payment account is ready to to be set up and activated.\n\nAttached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.\n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.\n\nIf you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator\n\n\n\n14.2.2 Debit card\nHello ____,\n\nWe have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.\n\nAttached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. \n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.\n\nIf your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator",
+    "title": "15  Staff Scripts",
+    "section": "15.2 Payment setup emails",
+    "text": "15.2 Payment setup emails\nThese messages are sent the day after participants are set up in Advarra.\nThe subject of both types of email should be STAR Study Payments.\n\nParticipant payment dates will be either the 15th of the month or the 30th of the month depending on consent/onboard date:\n\nParticipants onboarded between the 28th and 14th will be paid on the 15th.\nParticipants onboarded between the 15th and 27th will be paid on the 30th.\n\n\nThere are 2 handouts to attach for each type of email: see the appropriate subfolder in S:\\optimize\\administration\\financial\\adverra_handouts\n\n15.2.1 Direct deposit\nHello ____,\n\nWe have received confirmation that your study payment account is ready to to be set up and activated.\n\nAttached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.\n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.\n\nIf you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator\n\n\n\n15.2.2 Debit card\nHello ____,\n\nWe have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.\n\nAttached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. \n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.\n\nIf your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#adherence-emails",
     "href": "staff_scripts.html#adherence-emails",
-    "title": "14  Staff Scripts",
-    "section": "14.3 Adherence emails",
-    "text": "14.3 Adherence emails\nPer JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.\n\n14.3.1 Missing GPS\nSubject: STAR Study: Missing GPS Alert\nHello ____,\n\nOur system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.\n\nIf you'd like to turn it back on &lt;insert instructions for specific OS&gt;\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF\n\n\n\n14.3.2 Low EMA\nSubject: STAR Study: Missing Daily Survey Notification\nHello _____,\n\nI'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.\n\nIf this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. \n\nThis month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.\n\nIf you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. \n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF",
+    "title": "15  Staff Scripts",
+    "section": "15.3 Adherence emails",
+    "text": "15.3 Adherence emails\nPer JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.\n\n15.3.1 Missing GPS\nSubject: STAR Study: Missing GPS Alert\nHello ____,\n\nOur system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.\n\nIf you'd like to turn it back on &lt;insert instructions for specific OS&gt;\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF\n\n\n\n15.3.2 Low EMA\nSubject: STAR Study: Missing Daily Survey Notification\nHello _____,\n\nI'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.\n\nIf this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. \n\nThis month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.\n\nIf you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. \n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#payment-email",
     "href": "staff_scripts.html#payment-email",
-    "title": "14  Staff Scripts",
-    "section": "14.4 Payment email",
-    "text": "14.4 Payment email\nSubject: STAR Study Payment - Month ____\nHello _____,\n\nA payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:\n\n$40 for your consent/intake visit\n$10 for your first bi-monthly survey\n$10 for the one-week check-in visit\n$27 for 27 completed daily surveys\n$7 to cover any daily surveys we missed due to tech issues with our system\n$20 in bonuses for completing more than 12 daily surveys in each half of the month\n$5 in GPS bonuses\n$50 to help cover your cell plan payment\n\nIn total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.\n\nPlease let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!\n\nBest,\nSusan\nSTAR Study Coordinator",
+    "title": "15  Staff Scripts",
+    "section": "15.4 Payment email",
+    "text": "15.4 Payment email\nSubject: STAR Study Payment - Month ____\nHello _____,\n\nA payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:\n\n$40 for your consent/intake visit\n$10 for your first bi-monthly survey\n$10 for the one-week check-in visit\n$27 for 27 completed daily surveys\n$7 to cover any daily surveys we missed due to tech issues with our system\n$20 in bonuses for completing more than 12 daily surveys in each half of the month\n$5 in GPS bonuses\n$50 to help cover your cell plan payment\n\nIn total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.\n\nPlease let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!\n\nBest,\nSusan\nSTAR Study Coordinator",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "support_message_intro_scripts.html",
     "href": "support_message_intro_scripts.html",
-    "title": "15  Intro to Support Messages",
+    "title": "16  Intro to Support Messages",
     "section": "",
-    "text": "15.1 General\nYou’ll enter the randomization number into the qualtrics form, and it will automatically show you the parts of the script you need to see.\nStarting about a week from today, you’ll also start receiving your daily recovery support messages. Those will come at about 6am every morning, and they’ll be available until the next message goes out, 24 hours later. As with the daily survey, there will be a link to a qualtrics survey in the text message. You’ll simply open that link to see your support message.\nYou aren’t required to do anything with the support messages - we encourage you to read & think about the message and whether you find it supportive or helpful to your recovery, but there are no questions you must answer and whether or not you use them will not affect your participation.\nThese messages are customized to you, based on the data you’ve shared with us in the daily survey and through the GPS tracking app. I want to remind you that the system is still learning about you - you may find the messages unhelpful at first, or even wrong about your recovery. That’s okay! On your first longer survey, about two months into the study, you’ll have an opportunity to tell us how you feel about the support messages and whether they’ve been helpful or useful at all.",
+    "text": "16.1 General\nYou’ll enter the randomization number into the qualtrics form, and it will automatically show you the parts of the script you need to see.\nStarting about a week from today, you’ll also start receiving your daily recovery support messages. Those will come at about 6am every morning, and they’ll be available until the next message goes out, 24 hours later. As with the daily survey, there will be a link to a qualtrics survey in the text message. You’ll simply open that link to see your support message.\nYou aren’t required to do anything with the support messages - we encourage you to read & think about the message and whether you find it supportive or helpful to your recovery, but there are no questions you must answer and whether or not you use them will not affect your participation.\nThese messages are customized to you, based on the data you’ve shared with us in the daily survey and through the GPS tracking app. I want to remind you that the system is still learning about you - you may find the messages unhelpful at first, or even wrong about your recovery. That’s okay! On your first longer survey, about two months into the study, you’ll have an opportunity to tell us how you feel about the support messages and whether they’ve been helpful or useful at all.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Intro to Support Messages</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Intro to Support Messages</span>"
     ]
   },
   {
     "objectID": "support_message_intro_scripts.html#activity-specific",
     "href": "support_message_intro_scripts.html#activity-specific",
-    "title": "15  Intro to Support Messages",
-    "section": "15.2 Activity-specific",
-    "text": "15.2 Activity-specific\nIn your case, daily support messages will also contain a brief recovery activity. These activities are based on approaches that have been studied in research and shown to be helpful for many people in recovery.\nEach activity is personalized to your recovery health score and risk factors for that day. Activities will typically take 2-5 minutes to complete and include short readings, worksheets, or reflection prompts.\n\nReadings introduce recovery-related topics, skills, and ideas.\nWorksheets provide opportunities to practice skills through written exercises. Worksheet activities will have a link to a downloadable pdf that can be printed or completed electronically.\nReflection prompts encourage you to think about your experiences, coping strategies, and recovery goals.\n\nYou may find it helpful to keep a dedicated notebook for completing your activities. Looking back on previous entries can help you notice patterns, recognize progress, and identify strategies that have worked well over time. We will never ask to look at your responses and there are no right or wrong answers. The activities are designed to support learning, self-awareness, and personal growth.\nTo get the most benefit from these activities, try to engage with them thoughtfully and consistently. You do not need to complete every activity perfectly to benefit from them. Even spending a few minutes engaging with an activity can provide useful insights and support your recovery goals.\nYou may find that it is difficult to remember to complete the activity or find time to set aside for it. Thinking of these potential barriers ahead of time will allow you to make a plan. For example, it may be helpful to set aside a specific time each day to do the activity or set a reminder on your phone. Your recovery activity will be available via the link in your support message for 24 hours.\nAs you become familiar with the activities, you may find that they fit naturally into your daily routine and become a useful part of your recovery process",
+    "title": "16  Intro to Support Messages",
+    "section": "16.2 Activity-specific",
+    "text": "16.2 Activity-specific\nIn your case, daily support messages will also contain a brief recovery activity. These activities are based on approaches that have been studied in research and shown to be helpful for many people in recovery.\nEach activity is personalized to your recovery health score and risk factors for that day. Activities will typically take 2-5 minutes to complete and include short readings, worksheets, or reflection prompts.\n\nReadings introduce recovery-related topics, skills, and ideas.\nWorksheets provide opportunities to practice skills through written exercises. Worksheet activities will have a link to a downloadable pdf that can be printed or completed electronically.\nReflection prompts encourage you to think about your experiences, coping strategies, and recovery goals.\n\nYou may find it helpful to keep a dedicated notebook for completing your activities. Looking back on previous entries can help you notice patterns, recognize progress, and identify strategies that have worked well over time. We will never ask to look at your responses and there are no right or wrong answers. The activities are designed to support learning, self-awareness, and personal growth.\nTo get the most benefit from these activities, try to engage with them thoughtfully and consistently. You do not need to complete every activity perfectly to benefit from them. Even spending a few minutes engaging with an activity can provide useful insights and support your recovery goals.\nYou may find that it is difficult to remember to complete the activity or find time to set aside for it. Thinking of these potential barriers ahead of time will allow you to make a plan. For example, it may be helpful to set aside a specific time each day to do the activity or set a reminder on your phone. Your recovery activity will be available via the link in your support message for 24 hours.\nAs you become familiar with the activities, you may find that they fit naturally into your daily routine and become a useful part of your recovery process",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Intro to Support Messages</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Intro to Support Messages</span>"
     ]
   }
 ]
