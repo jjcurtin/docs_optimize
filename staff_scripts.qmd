@@ -77,7 +77,7 @@ STAR Study Coordinator
 
 Per JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.
 
-### Low GPS
+### Missing GPS
 
 Subject: `STAR Study: Missing GPS Alert`
 

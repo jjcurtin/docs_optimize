@@ -4,5 +4,20 @@ This SOP outlines how to check and manage participant task adherence.
 
 ## Checking adherence
 
-* `make_adherence.R` is automated to run daily. It writes out an adherence snapshot for all particiapants to `S:/optimize/data_admin/adherence`. 
-* participant-level adherence can be spot-checked via `chk_adherence.qmd`, located under `staff_scripts`
+### General notes
+* `mak_adherence.R` is automated to run daily. It writes out adherence snapshots to `S:/optimize/data_admin/adherence`. 
+  * Snapshots are weekly, monthly, and all-time for onstudy participants
+* participant-level adherence can be spot-checked via `chk_adherence.qmd`, located under `scripts_staff`
+
+### GPS Instructions
+
+1. Check the STAR email inbox every day for an email from FollowMee called "No-Update Notice". This will send any time a participant has not had data for over 24 hours.
+2. When a participant newly appears in this email, comment in their participant thread with the timestamp of the last update, ie "No GPS notice received, last update 2026-07-11 05:19:36 AM"
+3. When it has been 24 hours since the last update, send an email or text using the [Missing GPS script](staff_scripts.qmd)
+4. If no response and GPS is not turned back on 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.
+
+### EMA Instructions
+
+1. `chk_adherence.qmd`, located under `scripts_staff` will display adherence for the past 7 days. You can check a single subid at a time, or view all on-study.
+2. If four EMA have been missed in a row, make a note in the participant thread, and send a call or text using the the [Low EMA script](staff_scripts.qmd).
+3. If no response and no EMA submitted 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.

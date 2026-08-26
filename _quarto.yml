@@ -26,6 +26,7 @@ book:
         - sop_screening.qmd
         - sop_consent.qmd
         - sop_florence.qmd
+        - sop_adherence.qmd
         - staff_scripts.qmd
         - support_message_intro_scripts.qmd
 
@@ -38,6 +39,7 @@ format:
     theme:
       - cosmo
       - brand
+    code-copy: true
   # pdf:
   #   documentclass: scrreprt
 
