@@ -23,6 +23,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -295,16 +330,16 @@ ul.task-list li input[type="checkbox"] {
 <p>These are text message/email scripts for use in the STAR study</p>
 <section id="outside-us-detected" class="level2" data-number="15.1">
 <h2 data-number="15.1" class="anchored" data-anchor-id="outside-us-detected"><span class="header-section-number">15.1</span> Outside US detected</h2>
-<pre><code>Dear XXXXXX,
-
-
-Our automated data review prior to your one-week visit has revealed that you are not located inside the United States.
-
-As mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.
-
-Sincerely,
-Susan
-STAR Study Manager</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Dear XXXXXX,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>Our automated data review prior to your one-week visit has revealed that you are not located inside the United States.</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>As mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Sincerely,</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>Susan</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>STAR Study Manager</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="payment-setup-emails" class="level2" data-number="15.2">
 <h2 data-number="15.2" class="anchored" data-anchor-id="payment-setup-emails"><span class="header-section-number">15.2</span> Payment setup emails</h2>
@@ -320,42 +355,41 @@ STAR Study Manager</code></pre>
 <p>There are 2 handouts to attach for each type of email: see the appropriate subfolder in <code>S:\optimize\administration\financial\adverra_handouts</code></p>
 <section id="direct-deposit" class="level3" data-number="15.2.1">
 <h3 data-number="15.2.1" class="anchored" data-anchor-id="direct-deposit"><span class="header-section-number">15.2.1</span> Direct deposit</h3>
-<pre><code>Hello ____,
-
-We have received confirmation that your study payment account is ready to to be set up and activated.
-
-Attached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.
-
-Your payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.
-
-If you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. 
-
-We have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.
-
-Thank you for being part of the STAR study!
-
-Susan
-STAR Study Coordinator
-</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Hello ____,</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>We have received confirmation that your study payment account is ready to to be set up and activated.</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>Attached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>Your payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>If you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>We have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>Thank you for being part of the STAR study!</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>Susan</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>STAR Study Coordinator</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="debit-card" class="level3" data-number="15.2.2">
 <h3 data-number="15.2.2" class="anchored" data-anchor-id="debit-card"><span class="header-section-number">15.2.2</span> Debit card</h3>
-<pre><code>Hello ____,
-
-We have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.
-
-Attached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. 
-
-Your payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.
-
-If your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. 
-
-We have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.
-
-Thank you for being part of the STAR study!
-
-Susan
-STAR Study Coordinator</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Hello ____,</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>We have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>Attached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Your payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>If your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>We have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>Thank you for being part of the STAR study!</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>Susan</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>STAR Study Coordinator</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="adherence-emails" class="level2" data-number="15.3">
@@ -364,61 +398,59 @@ STAR Study Coordinator</code></pre>
 <section id="missing-gps" class="level3" data-number="15.3.1">
 <h3 data-number="15.3.1" class="anchored" data-anchor-id="missing-gps"><span class="header-section-number">15.3.1</span> Missing GPS</h3>
 <p>Subject: <code>STAR Study: Missing GPS Alert</code></p>
-<pre><code>Hello ____,
-
-Our system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.
-
-If you'd like to turn it back on &lt;insert instructions for specific OS&gt;
-
-Thank you for being a part of the STAR Study!
-
-&lt;NAME,&gt;
-STAR Study STAFF
-</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Hello ____,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>Our system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>If you'd like to turn it back on <span class="dt">&lt;</span><span class="kw">insert</span><span class="ot"> instructions for specific OS</span><span class="dt">&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>Thank you for being a part of the STAR Study!</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">NAME</span><span class="er">,</span><span class="dt">&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>STAR Study STAFF</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 <section id="low-ema" class="level3" data-number="15.3.2">
 <h3 data-number="15.3.2" class="anchored" data-anchor-id="low-ema"><span class="header-section-number">15.3.2</span> Low EMA</h3>
 <p>Subject: <code>STAR Study: Missing Daily Survey Notification</code></p>
-<pre><code>Hello _____,
-
-I'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.
-
-If this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. 
-
-This month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.
-
-If you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. 
-
-Thank you for being a part of the STAR Study!
-
-&lt;NAME,&gt;
-STAR Study STAFF
-</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Hello _____,</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>I'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>If this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>This month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>If you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>Thank you for being a part of the STAR Study!</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">NAME</span><span class="er">,</span><span class="dt">&gt;</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>STAR Study STAFF</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </section>
 </section>
 <section id="payment-email" class="level2" data-number="15.4">
 <h2 data-number="15.4" class="anchored" data-anchor-id="payment-email"><span class="header-section-number">15.4</span> Payment email</h2>
 <p>Subject: <code>STAR Study Payment - Month ____</code></p>
-<pre><code>Hello _____,
-
-A payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:
-
-$40 for your consent/intake visit
-$10 for your first bi-monthly survey
-$10 for the one-week check-in visit
-$27 for 27 completed daily surveys
-$7 to cover any daily surveys we missed due to tech issues with our system
-$20 in bonuses for completing more than 12 daily surveys in each half of the month
-$5 in GPS bonuses
-$50 to help cover your cell plan payment
-
-In total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.
-
-Please let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!
-
-Best,
-Susan
-STAR Study Coordinator</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Hello _____,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>A payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>$40 for your consent/intake visit</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>$10 for your first bi-monthly survey</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>$10 for the one-week check-in visit</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>$27 for 27 completed daily surveys</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>$7 to cover any daily surveys we missed due to tech issues with our system</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>$20 in bonuses for completing more than 12 daily surveys in each half of the month</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>$5 in GPS bonuses</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>$50 to help cover your cell plan payment</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>In total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>Please let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>Best,</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>Susan</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>STAR Study Coordinator</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 
 
 </section>
