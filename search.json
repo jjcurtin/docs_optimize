@@ -1351,7 +1351,7 @@
     "href": "sops.html",
     "title": "SOPS",
     "section": "",
-    "text": "Pre-enrollment SOPs\nRemember, all necessary credentials can be retrieved with get_credentials(\"resource_name\") - See Susan if issues\nTO DO:",
+    "text": "Pre-enrollment SOPs\nRemember, all necessary credentials can be retrieved with get_credentials(\"resource_name\") - See Susan if issues",
     "crumbs": [
       "SOPS"
     ]
@@ -1391,7 +1391,7 @@
     "href": "sops.html#administration-sops",
     "title": "SOPS",
     "section": "Administration SOPs",
-    "text": "Administration SOPs\n\nOncore\nParticipant payments\nCT oversight\nAdherence\nData integrity\nNDA data upload",
+    "text": "Administration SOPs\n\nOncore\nPayment\nAdherence\nCT oversight\nData integrity\nNDA data upload",
     "crumbs": [
       "SOPS"
     ]
@@ -1401,7 +1401,7 @@
     "href": "sops.html#participant-communication-sops-templates",
     "title": "SOPS",
     "section": "Participant communication SOPs & Templates",
-    "text": "Participant communication SOPs & Templates\n\nOnboarding\nTech troubleshootng\nReschedulng\nPayment\nAdherence",
+    "text": "Participant communication SOPs & Templates\nAll partcipant facing communication scripts are under staff scripts",
     "crumbs": [
       "SOPS"
     ]
@@ -1411,7 +1411,7 @@
     "href": "sops.html#sop-tech-components",
     "title": "SOPS",
     "section": "SOP tech components",
-    "text": "SOP tech components\nThis section lists the required tech actions for each SOP\n\nConsent SOP\n\nSend participant the consent form link with their screen_id included in the URL\nCompletion of the consent form leads to the onboarding form\nCompletion of the onboarding form leads to the birth pedigree form\nRun the new_participant.qmd script\n\n\nAsk them to confirm their phone number\nAsk their EMA times",
+    "text": "SOP tech components\nThis section lists the required tech actions for each SOP\n\nConsent SOP\n\nSend participant the consent form link with their screen_id included in the URL\nCompletion of the consent form leads to the onboarding form\nCompletion of the onboarding form leads to the birth pedigree form\nPost visit, run the mak_new_participant.qmd script",
     "crumbs": [
       "SOPS"
     ]
@@ -1526,190 +1526,223 @@
     ]
   },
   {
-    "objectID": "sop_florence.html",
-    "href": "sop_florence.html",
-    "title": "13  Florence SOP",
+    "objectID": "sop_visit_2m.html",
+    "href": "sop_visit_2m.html",
+    "title": "13  Two-month Visit SOP",
     "section": "",
-    "text": "13.1 Required Signature Types\nThis SOP lists critical information about using eBinders\nBefore requesting any signature verify the type required",
+    "text": "13.1 Consent Session\nThis SOP outlines conducting the 2-month visit, and post-visit RA tasks.\nOpen the following:\nUse the session form to guide you through the visit.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Florence SOP</span>"
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Two-month Visit SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_visit_2m.html#consent-session",
+    "href": "sop_visit_2m.html#consent-session",
+    "title": "13  Two-month Visit SOP",
+    "section": "",
+    "text": "RA session form. You only need the subid to enter\nTLFB form (paper or qualtrics)\n\nRun staff_scipts\\chk_lapse_dates.qmd to get their reported lapses for the TLFB\n\nPRISM, to text the 2-month survey after the visit\nSTAR calendar, to verify the 4 month visit time is still good for them.",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Two-month Visit SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_visit_2m.html#post-session-activities",
+    "href": "sop_visit_2m.html#post-session-activities",
+    "title": "13  Two-month Visit SOP",
+    "section": "13.2 Post-session activities",
+    "text": "13.2 Post-session activities\n\nSend the 2-month survey text in PRISM\nIn Oncore, mark the 2 month visit as occurred.\nCheck them in for the 2 month visit in Advarra payments\nPrint PDF of the session form documents from Qualtrics to upload to the appropriate placeholder in the Visit 2 folder, and sign-stamp (acknowledge)\nOnce the 2 month survey has been completed, print the PDF and upload to their Visit 2 folder in florence, and sign-stamp (acknowledge)",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Two-month Visit SOP</span>"
+    ]
+  },
+  {
+    "objectID": "sop_florence.html",
+    "href": "sop_florence.html",
+    "title": "14  Florence SOP",
+    "section": "",
+    "text": "14.1 Required Signature Types\nThis SOP lists critical information about using eBinders\nBefore requesting any signature verify the type required",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Florence SOP</span>"
     ]
   },
   {
     "objectID": "sop_florence.html#new-participant-data-entry",
     "href": "sop_florence.html#new-participant-data-entry",
-    "title": "13  Florence SOP",
-    "section": "13.2 New participant data entry",
-    "text": "13.2 New participant data entry\n\n13.2.1 Create subject level folder\n\nNavigate to the Subjects/Subject Folders subfolder.\nClick the subject template file, and then under the 3-dot menu, click “Duplicate”\nSelect this folder for the location\nName the duplicate Lastname,FirstInitial (subid) and hit “Copy without shortcuts”\n\n\n\n13.2.2 Add subject data to the subject folder\n\nUnder “Registration and Eligibility/Eligibility Checklist” upload the PDF of their screener\nUnder “Informed Consent Documents” upload the PDF of their consent form to “Signed Informed Consent Form”. Name it with the date of their signature followed by the version date of the form (see data_raw/surveys/consent.csv to get this info). It should end up with a title that looks like: “Signed Informed Consent Form_2026_0616_v2026_0612”\n\nIf they have been re-consented, move the original into “Archived Inform Consent Documents”. Drag the new PDF consent form into the main consent folder and name it with the above naming pattern.\n\n\nThat should be all unless we hear otherwise during the next monitoring visit!",
+    "title": "14  Florence SOP",
+    "section": "14.2 New participant data entry",
+    "text": "14.2 New participant data entry\n\n14.2.1 Create subject level folder\n\nNavigate to the Subjects/Subject Folders subfolder.\nClick the subject template file, and then under the 3-dot menu, click “Duplicate”\nSelect this folder for the location\nName the duplicate Lastname,FirstInitial (subid) and hit “Copy without shortcuts”\n\n\n\n14.2.2 Add subject data to the subject folder\n\nUnder “Registration and Eligibility/Eligibility Checklist” upload the PDF of their screener\nUnder “Informed Consent Documents” upload the PDF of their consent form to “Signed Informed Consent Form”. Name it with the date of their signature followed by the version date of the form (see data_raw/surveys/consent.csv to get this info). It should end up with a title that looks like: “Signed Informed Consent Form_2026_0616_v2026_0612”\n\nIf they have been re-consented, move the original into “Archived Inform Consent Documents”. Drag the new PDF consent form into the main consent folder and name it with the above naming pattern.\n\n\nThat should be all unless we hear otherwise during the next monitoring visit!",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Florence SOP</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Florence SOP</span>"
     ]
   },
   {
     "objectID": "sop_florence.html#additional-data-uploads-to-subject-folder",
     "href": "sop_florence.html#additional-data-uploads-to-subject-folder",
-    "title": "13  Florence SOP",
-    "section": "13.3 Additional data uploads to subject folder",
-    "text": "13.3 Additional data uploads to subject folder\n\n13.3.1 Participant Withdrawn/Discontinued\n\nUnder “Subject Snapshot/Continuous Progress Notes” upload a progress note. The content and document title should include the date of study termination as well as the reason (withdrawn by study staff, discontinued by subject) See the example in folder 3000 as an example. Termination reason should also be noted in the enrollment_log.",
+    "title": "14  Florence SOP",
+    "section": "14.3 Additional data uploads to subject folder",
+    "text": "14.3 Additional data uploads to subject folder\n\n14.3.1 Participant Withdrawn/Discontinued\n\nUnder “Subject Snapshot/Continuous Progress Notes” upload a progress note. The content and document title should include the date of study termination as well as the reason (withdrawn by study staff, discontinued by subject) See the example in folder 3000 as an example. Termination reason should also be noted in the enrollment_log.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>13</span>  <span class='chapter-title'>Florence SOP</span>"
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Florence SOP</span>"
     ]
   },
   {
     "objectID": "sop_adherence.html",
     "href": "sop_adherence.html",
-    "title": "14  Adherence SOP",
+    "title": "15  Adherence SOP",
     "section": "",
-    "text": "14.1 Checking adherence\nThis SOP outlines how to check and manage participant task adherence.",
+    "text": "15.1 Checking adherence\nThis SOP outlines how to check and manage participant task adherence.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Adherence SOP</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Adherence SOP</span>"
     ]
   },
   {
     "objectID": "sop_adherence.html#checking-adherence",
     "href": "sop_adherence.html#checking-adherence",
-    "title": "14  Adherence SOP",
+    "title": "15  Adherence SOP",
     "section": "",
-    "text": "14.1.1 General notes\n\nmak_adherence.R is automated to run daily. It writes out adherence snapshots to S:/optimize/data_admin/adherence.\n\nSnapshots are weekly, monthly, and all-time for onstudy participants\n\nparticipant-level adherence can be spot-checked via chk_adherence.qmd, located under scripts_staff\nWe won’t send more than these two reminders. After this, the next message they get will be with the payment email, reminding them they can earn the bonus.\n\n\n\n14.1.2 GPS Instructions\n\nCheck the STAR email inbox every day for an email from FollowMee called “No-Update Notice”. This will send any time a participant has not had data for over 24 hours.\nWhen a participant newly appears in this email, comment in their participant thread with the timestamp of the last update, ie “No GPS notice received, last update 2026-07-11 05:19:36 AM”\nWhen it has been 24 hours since the last update, send an email or text using the Missing GPS script\nIf no response and GPS is not turned back on 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.\n\n\n\n14.1.3 EMA Instructions\n\nchk_adherence.qmd, located under scripts_staff will display adherence for the past 7 days. You can check a single subid at a time, or view all on-study.\nIf four EMA have been missed in a row, make a note in the participant thread, and send a call or text using the the Low EMA script.\nIf no response and no EMA submitted 3 days after that (7 day gap total), call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.",
+    "text": "15.1.1 General notes\n\nmak_adherence.R is automated to run daily. It writes out adherence snapshots to S:/optimize/data_admin/adherence.\n\nSnapshots are weekly, monthly, and all-time for onstudy participants\n\nparticipant-level adherence can be spot-checked via chk_adherence.qmd, located under scripts_staff\nWe won’t send more than these two reminders. After this, the next message they get will be with the payment email, reminding them they can earn the bonus.\n\n\n\n15.1.2 GPS Instructions\n\nCheck the STAR email inbox every day for an email from FollowMee called “No-Update Notice”. This will send any time a participant has not had data for over 24 hours.\nWhen a participant newly appears in this email, comment in their participant thread with the timestamp of the last update, ie “No GPS notice received, last update 2026-07-11 05:19:36 AM”\nWhen it has been 24 hours since the last update, send an email or text using the Missing GPS script\nIf no response and GPS is not turned back on 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.\n\n\n\n15.1.3 EMA Instructions\n\nchk_adherence.qmd, located under scripts_staff will display adherence for the past 7 days. You can check a single subid at a time, or view all on-study.\nIf four EMA have been missed in a row, make a note in the participant thread, and send a call or text using the the Low EMA script.\nIf no response and no EMA submitted 3 days after that (7 day gap total), call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>14</span>  <span class='chapter-title'>Adherence SOP</span>"
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Adherence SOP</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html",
     "href": "staff_scripts.html",
-    "title": "15  Staff Scripts",
+    "title": "16  Staff Scripts",
     "section": "",
-    "text": "15.1 Visit reminder message\nThese are text message/email scripts for use in the STAR study\nNOTE: Don’t try to put in any  or line break spaces in message to be sent by PRISM, PRISM can’t handle them.\nEdit the items in italics.",
+    "text": "16.1 Visit reminder message\nThese are text message/email scripts for use in the STAR study\nNOTE: Don’t try to put in any  or line break spaces in message to be sent by PRISM, PRISM can’t handle them.\nEdit the items in italics.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#visit-reminder-message",
     "href": "staff_scripts.html#visit-reminder-message",
-    "title": "15  Staff Scripts",
+    "title": "16  Staff Scripts",
     "section": "",
     "text": "_NO_REPLY: Hello, This is a reminder that you have a **consent/onboarding** session scheduled for **tomorrow, June 16, at 2:00 PM Central (Chicago) time**. Your zoom link for the visit is: **&lt;ZOOMLINK&gt;**  This visit should take around 60 minutes and you will receive $40 if you successfully complete the session and enroll. If you need to reschedule for any reason, please call and leave us a message at 608-262-1362. We thank you for your time and look forward to speaking with you. ----- **&lt;YOURNAME&gt;**, STAR Study Team",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#link-to-consent-form",
     "href": "staff_scripts.html#link-to-consent-form",
-    "title": "15  Staff Scripts",
-    "section": "15.2 Link to Consent form",
-    "text": "15.2 Link to Consent form\n\n_NO_REPLY: Hello, here is the consent form for you to review: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?screenid=**screenID**\n*",
+    "title": "16  Staff Scripts",
+    "section": "16.2 Link to Consent form",
+    "text": "16.2 Link to Consent form\n\n_NO_REPLY: Hello, here is the consent form for you to review: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?screenid=**screenID**\n*",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#reconsent-link-rarely-used",
     "href": "staff_scripts.html#reconsent-link-rarely-used",
-    "title": "15  Staff Scripts",
-    "section": "15.3 Reconsent link (rarely used)",
-    "text": "15.3 Reconsent link (rarely used)\n_NO_REPLY_: Hello, here is the revised consent form: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY&reconsent=true&subid=**SUBID**",
+    "title": "16  Staff Scripts",
+    "section": "16.3 Reconsent link (rarely used)",
+    "text": "16.3 Reconsent link (rarely used)\n_NO_REPLY_: Hello, here is the revised consent form: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY&reconsent=true&subid=**SUBID**",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#baselinepost-consent-message",
     "href": "staff_scripts.html#baselinepost-consent-message",
-    "title": "15  Staff Scripts",
-    "section": "15.4 Baseline/Post-Consent message",
-    "text": "15.4 Baseline/Post-Consent message\n_NO_REPLY: Thank you for joining the STAR study! Here is your first bi-monthly survey: https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?subid=**&lt;INSERTSUBID&gt;**. If you have any questions about the study, please call and leave us a message at 608-262-1362. We thank you for your time! --- Susan, STAR Study Staff",
+    "title": "16  Staff Scripts",
+    "section": "16.4 Baseline/Post-Consent message",
+    "text": "16.4 Baseline/Post-Consent message\n_NO_REPLY: Thank you for joining the STAR study! Here is your first bi-monthly survey: https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?subid=**&lt;INSERTSUBID&gt;**. If you have any questions about the study, please call and leave us a message at 608-262-1362. We thank you for your time! --- Susan, STAR Study Staff",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#outside-us-detected",
     "href": "staff_scripts.html#outside-us-detected",
-    "title": "15  Staff Scripts",
-    "section": "15.5 Outside US detected",
-    "text": "15.5 Outside US detected\nDear XXXXXX,\n\n\nOur automated data review prior to your one-week visit has revealed that you are not located inside the United States.\n\nAs mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.\n\nSincerely,\nSusan\nSTAR Study Manager",
+    "title": "16  Staff Scripts",
+    "section": "16.5 Outside US detected",
+    "text": "16.5 Outside US detected\nDear XXXXXX,\n\n\nOur automated data review prior to your one-week visit has revealed that you are not located inside the United States.\n\nAs mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.\n\nSincerely,\nSusan\nSTAR Study Manager",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#payment-setup-emails",
     "href": "staff_scripts.html#payment-setup-emails",
-    "title": "15  Staff Scripts",
-    "section": "15.6 Payment setup emails",
-    "text": "15.6 Payment setup emails\nThese messages are sent the day after participants are set up in Advarra.\nThe subject of both types of email should be STAR Study Payments.\n\nParticipant payment dates will be either the 15th of the month or the 30th of the month depending on consent/onboard date:\n\nParticipants onboarded between the 28th and 14th will be paid on the 15th.\nParticipants onboarded between the 15th and 27th will be paid on the 30th.\n\n\nThere are 2 handouts to attach for each type of email: see the appropriate subfolder in S:\\optimize\\administration\\financial\\adverra_handouts\n\n15.6.1 Direct deposit email\nHello ____,\n\nWe have received confirmation that your study payment account is ready to to be set up and activated.\n\nAttached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.\n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.\n\nIf you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator\n\n\n15.6.2 Debit card email\nHello ____,\n\nWe have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.\n\nAttached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. \n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.\n\nIf your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator",
+    "title": "16  Staff Scripts",
+    "section": "16.6 Payment setup emails",
+    "text": "16.6 Payment setup emails\nThese messages are sent the day after participants are set up in Advarra.\nThe subject of both types of email should be STAR Study Payments.\n\nParticipant payment dates will be either the 15th of the month or the 30th of the month depending on consent/onboard date:\n\nParticipants onboarded between the 28th and 14th will be paid on the 15th.\nParticipants onboarded between the 15th and 27th will be paid on the 30th.\n\n\nThere are 2 handouts to attach for each type of email: see the appropriate subfolder in S:\\optimize\\administration\\financial\\adverra_handouts\n\n16.6.1 Direct deposit email\nHello ____,\n\nWe have received confirmation that your study payment account is ready to to be set up and activated.\n\nAttached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.\n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.\n\nIf you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator\n\n\n16.6.2 Debit card email\nHello ____,\n\nWe have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.\n\nAttached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. \n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.\n\nIf your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#adherence-emails",
     "href": "staff_scripts.html#adherence-emails",
-    "title": "15  Staff Scripts",
-    "section": "15.7 Adherence emails",
-    "text": "15.7 Adherence emails\nPer JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.\n\n15.7.1 Missing GPS\nSubject: STAR Study: Missing GPS Alert\nHello ____,\n\nOur system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.\n\nIf you'd like to turn it back on &lt;insert instructions for specific OS&gt;\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF\n\n\n15.7.2 Low EMA\nSubject: STAR Study: Missing Daily Survey Notification\nHello _____,\n\nI'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.\n\nIf this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. \n\nThis month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.\n\nIf you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. \n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF",
+    "title": "16  Staff Scripts",
+    "section": "16.7 Adherence emails",
+    "text": "16.7 Adherence emails\nPer JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.\n\n16.7.1 Missing GPS\nSubject: STAR Study: Missing GPS Alert\nHello ____,\n\nOur system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.\n\nIf you'd like to turn it back on &lt;insert instructions for specific OS&gt;\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF\n\n\n16.7.2 Low EMA\nSubject: STAR Study: Missing Daily Survey Notification\nHello _____,\n\nI'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.\n\nIf this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. \n\nThis month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.\n\nIf you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. \n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#payment-email",
     "href": "staff_scripts.html#payment-email",
-    "title": "15  Staff Scripts",
-    "section": "15.8 Payment email",
-    "text": "15.8 Payment email\n\n15.8.1 Notes:\n\nDelete whichever items were not paid in this pay month (reference vs Susan’s post in the participant thread)\nIf participant missed the GPS or EMA bonus, add:\n\nUnfortunately, you did not earn the &lt;daily survey/GPS&gt; bonus this month. To earn this bonus, just &lt;keep your GPS on/complete at least 12 daily surveys every two weeks&gt;.\nSubject: STAR Study Payment - Month ____\nHello _____,\n\nA payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:\n\n$40 for your consent/intake visit\n$10 for your first bi-monthly survey\n$10 for the one-week check-in visit\n$27 for 27 completed daily surveys\n$7 to cover any daily surveys we missed due to tech issues with our system\n$20 in bonuses for completing more than 12 daily surveys in each half of the month\n$5 in GPS bonuses\n$50 to help cover your cell plan payment\n\nIn total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.\n\nPlease let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!\n\nBest,\nSusan\nSTAR Study Coordinator",
+    "title": "16  Staff Scripts",
+    "section": "16.8 Payment email",
+    "text": "16.8 Payment email\n\n16.8.1 Notes:\n\nDelete whichever items were not paid in this pay month (reference vs Susan’s post in the participant thread)\nIf participant missed the GPS or EMA bonus, add:\n\nUnfortunately, you did not earn the &lt;daily survey/GPS&gt; bonus this month. To earn this bonus, just &lt;keep your GPS on/complete at least 12 daily surveys every two weeks&gt;.\nSubject: STAR Study Payment - Month ____\nHello _____,\n\nA payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:\n\n$40 for your consent/intake visit\n$10 for your first bi-monthly survey\n$10 for the one-week check-in visit\n$27 for 27 completed daily surveys\n$7 to cover any daily surveys we missed due to tech issues with our system\n$20 in bonuses for completing more than 12 daily surveys in each half of the month\n$5 in GPS bonuses\n$50 to help cover your cell plan payment\n\nIn total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.\n\nPlease let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!\n\nBest,\nSusan\nSTAR Study Coordinator",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "staff_scripts.html#visit-2-4-survey-text-link",
     "href": "staff_scripts.html#visit-2-4-survey-text-link",
-    "title": "15  Staff Scripts",
-    "section": "15.9 Visit 2 & 4 survey text link",
-    "text": "15.9 Visit 2 & 4 survey text link\n_NO_REPLY: Thank you for meeting with me today! Here is the next survey for you: https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?subid=**&lt;INSERTSUBID&gt;**.  --- Susan, STAR Study Staff",
+    "title": "16  Staff Scripts",
+    "section": "16.9 Visit 2 & 4 survey text link",
+    "text": "16.9 Visit 2 & 4 survey text link\n_NO_REPLY: Thank you for meeting with me today! Here is the next survey for you: https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?subid=**&lt;INSERTSUBID&gt;**.  --- Susan, STAR Study Staff",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Staff Scripts</span>"
     ]
   },
   {
     "objectID": "support_message_intro_scripts.html",
     "href": "support_message_intro_scripts.html",
-    "title": "16  Intro to Support Messages",
+    "title": "17  Intro to Support Messages",
     "section": "",
-    "text": "16.1 General\nYou’ll enter the randomization number into the qualtrics form, and it will automatically show you the parts of the script you need to see.\nStarting about a week from today, you’ll also start receiving your daily recovery support messages. Those will come at about 6am every morning, and they’ll be available until the next message goes out, 24 hours later. As with the daily survey, there will be a link to a qualtrics survey in the text message. You’ll simply open that link to see your support message.\nYou aren’t required to do anything with the support messages - we encourage you to read & think about the message and whether you find it supportive or helpful to your recovery, but there are no questions you must answer and whether or not you use them will not affect your participation.\nThese messages are customized to you, based on the data you’ve shared with us in the daily survey and through the GPS tracking app. I want to remind you that the system is still learning about you - you may find the messages unhelpful at first, or even wrong about your recovery. That’s okay! On your first longer survey, about two months into the study, you’ll have an opportunity to tell us how you feel about the support messages and whether they’ve been helpful or useful at all.",
+    "text": "17.1 General\nYou’ll enter the randomization number into the qualtrics form, and it will automatically show you the parts of the script you need to see.\nStarting about a week from today, you’ll also start receiving your daily recovery support messages. Those will come at about 6am every morning, and they’ll be available until the next message goes out, 24 hours later. As with the daily survey, there will be a link to a qualtrics survey in the text message. You’ll simply open that link to see your support message.\nYou aren’t required to do anything with the support messages - we encourage you to read & think about the message and whether you find it supportive or helpful to your recovery, but there are no questions you must answer and whether or not you use them will not affect your participation.\nThese messages are customized to you, based on the data you’ve shared with us in the daily survey and through the GPS tracking app. I want to remind you that the system is still learning about you - you may find the messages unhelpful at first, or even wrong about your recovery. That’s okay! On your first longer survey, about two months into the study, you’ll have an opportunity to tell us how you feel about the support messages and whether they’ve been helpful or useful at all.",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Intro to Support Messages</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Intro to Support Messages</span>"
     ]
   },
   {
     "objectID": "support_message_intro_scripts.html#activity-specific",
     "href": "support_message_intro_scripts.html#activity-specific",
-    "title": "16  Intro to Support Messages",
-    "section": "16.2 Activity-specific",
-    "text": "16.2 Activity-specific\nIn your case, daily support messages will also contain a brief recovery activity. These activities are based on approaches that have been studied in research and shown to be helpful for many people in recovery.\nEach activity is personalized to your recovery health score and risk factors for that day. Activities will typically take 2-5 minutes to complete and include short readings, worksheets, or reflection prompts.\n\nReadings introduce recovery-related topics, skills, and ideas.\nWorksheets provide opportunities to practice skills through written exercises. Worksheet activities will have a link to a downloadable pdf that can be printed or completed electronically.\nReflection prompts encourage you to think about your experiences, coping strategies, and recovery goals.\n\nYou may find it helpful to keep a dedicated notebook for completing your activities. Looking back on previous entries can help you notice patterns, recognize progress, and identify strategies that have worked well over time. We will never ask to look at your responses and there are no right or wrong answers. The activities are designed to support learning, self-awareness, and personal growth.\nTo get the most benefit from these activities, try to engage with them thoughtfully and consistently. You do not need to complete every activity perfectly to benefit from them. Even spending a few minutes engaging with an activity can provide useful insights and support your recovery goals.\nYou may find that it is difficult to remember to complete the activity or find time to set aside for it. Thinking of these potential barriers ahead of time will allow you to make a plan. For example, it may be helpful to set aside a specific time each day to do the activity or set a reminder on your phone. Your recovery activity will be available via the link in your support message for 24 hours.\nAs you become familiar with the activities, you may find that they fit naturally into your daily routine and become a useful part of your recovery process",
+    "title": "17  Intro to Support Messages",
+    "section": "17.2 Activity-specific",
+    "text": "17.2 Activity-specific\nIn your case, daily support messages will also contain a brief recovery activity. These activities are based on approaches that have been studied in research and shown to be helpful for many people in recovery.\nEach activity is personalized to your recovery health score and risk factors for that day. Activities will typically take 2-5 minutes to complete and include short readings, worksheets, or reflection prompts.\n\nReadings introduce recovery-related topics, skills, and ideas.\nWorksheets provide opportunities to practice skills through written exercises. Worksheet activities will have a link to a downloadable pdf that can be printed or completed electronically.\nReflection prompts encourage you to think about your experiences, coping strategies, and recovery goals.\n\nYou may find it helpful to keep a dedicated notebook for completing your activities. Looking back on previous entries can help you notice patterns, recognize progress, and identify strategies that have worked well over time. We will never ask to look at your responses and there are no right or wrong answers. The activities are designed to support learning, self-awareness, and personal growth.\nTo get the most benefit from these activities, try to engage with them thoughtfully and consistently. You do not need to complete every activity perfectly to benefit from them. Even spending a few minutes engaging with an activity can provide useful insights and support your recovery goals.\nYou may find that it is difficult to remember to complete the activity or find time to set aside for it. Thinking of these potential barriers ahead of time will allow you to make a plan. For example, it may be helpful to set aside a specific time each day to do the activity or set a reminder on your phone. Your recovery activity will be available via the link in your support message for 24 hours.\nAs you become familiar with the activities, you may find that they fit naturally into your daily routine and become a useful part of your recovery process",
     "crumbs": [
       "SOPS",
-      "<span class='chapter-number'>16</span>  <span class='chapter-title'>Intro to Support Messages</span>"
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>Intro to Support Messages</span>"
     ]
   }
 ]
