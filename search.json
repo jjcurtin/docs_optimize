@@ -1497,7 +1497,7 @@
     "href": "sop_consent.html",
     "title": "12  Consent SOP",
     "section": "",
-    "text": "12.1 Consent Session\nThis SOP outlines conducting the consent visit and post-visit RA tasks.\nOpen the following:\nUse the session form to guide you through the visit",
+    "text": "12.1 Consent Session\nThis SOP outlines conducting the consent visit and post-visit RA tasks.\nOpen the following:\nUse the session form to guide you through the visit.",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consent SOP</span>"
@@ -1508,7 +1508,7 @@
     "href": "sop_consent.html#consent-session",
     "title": "12  Consent SOP",
     "section": "",
-    "text": "RA session form\nTheir ScreenID to enter in the session form. Name you can write down on a scrap of paper if needed but it doesn’t get entered anywhere.\nSTAR email, to see the subid when the birth data form is submitted\nPRISM, ready to text their consent link\nBoth sets of followMee instructions from S:\\optimize\\administration\\sop\nScreenshot from oncore calendar preview with ideal scheduling dates\nSTAR Calendar so we can schedule their one week and 2 followup visits\nBirth data survey open to data/analysis, to check for their subid once they submit that survey",
+    "text": "RA session form\nTheir ScreenID to enter in the session form. Also, their name you can write down on a scrap of paper if needed, but it doesn’t get entered anywhere in the form.\nSTAR email, to see the subid when the birth data form is submitted\nPRISM, ready to text their consent link\nBoth sets of followMee instructions from S:\\optimize\\administration\\sop\nScreenshot from oncore calendar preview with ideal scheduling dates\n\nIf you don’t have access to that part of Oncore, just note the dates for the 1 week visit (today + 7 days), 2 month visit (today + 67 days) and 4 month visit (today + 127 days)\n\nSTAR Calendar so we can schedule their one week and 2 followup visits\nBirth data survey open to data/analysis, to check for their subid once they submit that survey",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consent SOP</span>"
@@ -1519,7 +1519,7 @@
     "href": "sop_consent.html#post-session-activities",
     "title": "12  Consent SOP",
     "section": "12.2 Post-session activities",
-    "text": "12.2 Post-session activities\n\nSend baseline survey text\nEnter upcoming visits in calendar\nRun get_qualtrics.R to pull new consent/birth/onboard data\nRun update_participants.R to add them to the randomization CSV, Qualtrics contact list, and create their data files.\nUpdate PRISM with their subid in place of the screenID, and change to On Study.",
+    "text": "12.2 Post-session activities\n\nSend baseline survey text in PRISM\nMake their participant thread. Comment their upcoming visit(s) and any questions/concerns about the session.\nEnter upcoming visit(s) in calendar\nRun scripts\\scripts_staff\\mak_new_participants.qmd\n\nThe first chunk which sources R scripts, adds them to the randomization CSV, Qualtrics contact list, PRISM study_participants file, and creates their data files. If you get an error, alert Susan!!\nyou can then step through the rest of the chunks one at a time to perform the next steps:\nEnter them in Oncore\nEnter them in Advarra payments\nSend them the W-9 by email from Docusign\nCheck them in for the consent visit so they will get paid\nMake their avoid_places.\nNOTE: Some of the above steps may take a while (for example, you might need to wait about 24 hours between Oncore and them showing up in Advarra, or between entering them in Advarra payments and making sure they have been checked in for the consent visit.) In this case, note in their participant thread what has been done/still needs to be done so we don’t lose track\n\nIf they asked to be paid on a debit card, tag Susan to prepare and USPS the card.\nCreate their subject folder in Florence.\n\nPrint PDFs of their screening, consent, and session form documents from Qualtrics to upload to the appropriate placeholder, and sign-stamp (acknowledge)\nThe Session form document should be uploaded over the Consent Process Note placeholder",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>12</span>  <span class='chapter-title'>Consent SOP</span>"
@@ -1574,7 +1574,7 @@
     "href": "sop_adherence.html#checking-adherence",
     "title": "14  Adherence SOP",
     "section": "",
-    "text": "14.1.1 General notes\n\nmak_adherence.R is automated to run daily. It writes out adherence snapshots to S:/optimize/data_admin/adherence.\n\nSnapshots are weekly, monthly, and all-time for onstudy participants\n\nparticipant-level adherence can be spot-checked via chk_adherence.qmd, located under scripts_staff\n\n\n\n14.1.2 GPS Instructions\n\nCheck the STAR email inbox every day for an email from FollowMee called “No-Update Notice”. This will send any time a participant has not had data for over 24 hours.\nWhen a participant newly appears in this email, comment in their participant thread with the timestamp of the last update, ie “No GPS notice received, last update 2026-07-11 05:19:36 AM”\nWhen it has been 24 hours since the last update, send an email or text using the Missing GPS script\nIf no response and GPS is not turned back on 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.\n\n\n\n14.1.3 EMA Instructions\n\nchk_adherence.qmd, located under scripts_staff will display adherence for the past 7 days. You can check a single subid at a time, or view all on-study.\nIf four EMA have been missed in a row, make a note in the participant thread, and send a call or text using the the Low EMA script.\nIf no response and no EMA submitted 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.",
+    "text": "14.1.1 General notes\n\nmak_adherence.R is automated to run daily. It writes out adherence snapshots to S:/optimize/data_admin/adherence.\n\nSnapshots are weekly, monthly, and all-time for onstudy participants\n\nparticipant-level adherence can be spot-checked via chk_adherence.qmd, located under scripts_staff\nWe won’t send more than these two reminders. After this, the next message they get will be with the payment email, reminding them they can earn the bonus.\n\n\n\n14.1.2 GPS Instructions\n\nCheck the STAR email inbox every day for an email from FollowMee called “No-Update Notice”. This will send any time a participant has not had data for over 24 hours.\nWhen a participant newly appears in this email, comment in their participant thread with the timestamp of the last update, ie “No GPS notice received, last update 2026-07-11 05:19:36 AM”\nWhen it has been 24 hours since the last update, send an email or text using the Missing GPS script\nIf no response and GPS is not turned back on 3 days after that, call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.\n\n\n\n14.1.3 EMA Instructions\n\nchk_adherence.qmd, located under scripts_staff will display adherence for the past 7 days. You can check a single subid at a time, or view all on-study.\nIf four EMA have been missed in a row, make a note in the participant thread, and send a call or text using the the Low EMA script.\nIf no response and no EMA submitted 3 days after that (7 day gap total), call them. You can use the same script to talk to them; but if prompted to leave a message just state name, affiliation, and ask them to call you back.",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>14</span>  <span class='chapter-title'>Adherence SOP</span>"
@@ -1585,7 +1585,51 @@
     "href": "staff_scripts.html",
     "title": "15  Staff Scripts",
     "section": "",
-    "text": "15.1 Outside US detected\nThese are text message/email scripts for use in the STAR study",
+    "text": "15.1 Visit reminder message\nThese are text message/email scripts for use in the STAR study\nNOTE: Don’t try to put in any  or line break spaces in message to be sent by PRISM, PRISM can’t handle them.\nEdit the items in italics.",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+    ]
+  },
+  {
+    "objectID": "staff_scripts.html#visit-reminder-message",
+    "href": "staff_scripts.html#visit-reminder-message",
+    "title": "15  Staff Scripts",
+    "section": "",
+    "text": "_NO_REPLY: Hello, This is a reminder that you have a **consent/onboarding** session scheduled for **tomorrow, June 16, at 2:00 PM Central (Chicago) time**. Your zoom link for the visit is: **&lt;ZOOMLINK&gt;**  This visit should take around 60 minutes and you will receive $40 if you successfully complete the session and enroll. If you need to reschedule for any reason, please call and leave us a message at 608-262-1362. We thank you for your time and look forward to speaking with you. ----- **&lt;YOURNAME&gt;**, STAR Study Team",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+    ]
+  },
+  {
+    "objectID": "staff_scripts.html#link-to-consent-form",
+    "href": "staff_scripts.html#link-to-consent-form",
+    "title": "15  Staff Scripts",
+    "section": "15.2 Link to Consent form",
+    "text": "15.2 Link to Consent form\n\n_NO_REPLY: Hello, here is the consent form for you to review: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?screenid=**screenID**\n*",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+    ]
+  },
+  {
+    "objectID": "staff_scripts.html#reconsent-link-rarely-used",
+    "href": "staff_scripts.html#reconsent-link-rarely-used",
+    "title": "15  Staff Scripts",
+    "section": "15.3 Reconsent link (rarely used)",
+    "text": "15.3 Reconsent link (rarely used)\n_NO_REPLY_: Hello, here is the revised consent form: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY&reconsent=true&subid=**SUBID**",
+    "crumbs": [
+      "SOPS",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
+    ]
+  },
+  {
+    "objectID": "staff_scripts.html#baslinepost-consent-message",
+    "href": "staff_scripts.html#baslinepost-consent-message",
+    "title": "15  Staff Scripts",
+    "section": "15.4 Basline/Post-Consent message",
+    "text": "15.4 Basline/Post-Consent message\n_NO_REPLY: Thank you for joining the STAR study! Here is your first bi-monthly survey: https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?subid=**&lt;INSERTSUBID&gt;**. If you have any questions about the study, please call and leave us a message at 608-262-1362. We thank you for your time! --- Susan, STAR Study Staff",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
@@ -1595,8 +1639,8 @@
     "objectID": "staff_scripts.html#outside-us-detected",
     "href": "staff_scripts.html#outside-us-detected",
     "title": "15  Staff Scripts",
-    "section": "",
-    "text": "Dear XXXXXX,\n\n\nOur automated data review prior to your one-week visit has revealed that you are not located inside the United States.\n\nAs mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.\n\nSincerely,\nSusan\nSTAR Study Manager",
+    "section": "15.5 Outside US detected",
+    "text": "15.5 Outside US detected\nDear XXXXXX,\n\n\nOur automated data review prior to your one-week visit has revealed that you are not located inside the United States.\n\nAs mentioned in the screening survey and in the consent form, this study is intended for US residents only. We do not have permission to enroll people internationally, nor do we have the ability to make international payments. Therefore, you will no longer be able to participate in the study and there will be no check-in visit tomorrow. We wish you luck in your recovery.\n\nSincerely,\nSusan\nSTAR Study Manager",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
@@ -1606,8 +1650,8 @@
     "objectID": "staff_scripts.html#payment-setup-emails",
     "href": "staff_scripts.html#payment-setup-emails",
     "title": "15  Staff Scripts",
-    "section": "15.2 Payment setup emails",
-    "text": "15.2 Payment setup emails\nThese messages are sent the day after participants are set up in Advarra.\nThe subject of both types of email should be STAR Study Payments.\n\nParticipant payment dates will be either the 15th of the month or the 30th of the month depending on consent/onboard date:\n\nParticipants onboarded between the 28th and 14th will be paid on the 15th.\nParticipants onboarded between the 15th and 27th will be paid on the 30th.\n\n\nThere are 2 handouts to attach for each type of email: see the appropriate subfolder in S:\\optimize\\administration\\financial\\adverra_handouts\n\n15.2.1 Direct deposit\nHello ____,\n\nWe have received confirmation that your study payment account is ready to to be set up and activated.\n\nAttached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.\n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.\n\nIf you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator\n\n\n15.2.2 Debit card\nHello ____,\n\nWe have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.\n\nAttached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. \n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.\n\nIf your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator",
+    "section": "15.6 Payment setup emails",
+    "text": "15.6 Payment setup emails\nThese messages are sent the day after participants are set up in Advarra.\nThe subject of both types of email should be STAR Study Payments.\n\nParticipant payment dates will be either the 15th of the month or the 30th of the month depending on consent/onboard date:\n\nParticipants onboarded between the 28th and 14th will be paid on the 15th.\nParticipants onboarded between the 15th and 27th will be paid on the 30th.\n\n\nThere are 2 handouts to attach for each type of email: see the appropriate subfolder in S:\\optimize\\administration\\financial\\adverra_handouts\n\n15.6.1 Direct deposit\nHello ____,\n\nWe have received confirmation that your study payment account is ready to to be set up and activated.\n\nAttached please find an information handout for setting up direct deposit. You DO NOT need to fill out or return this handout to study staff, but follow the instructions carefully. Note that you will receive emails from up to three different companies (Advarra, Hyperwallet, and Paylution) in order to complete all steps in the setup.\n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded into your account, which will include a breakdown of your payment amount.\n\nIf you do not receive your funds as expected, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your Hyperwallet account, or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator\n\n\n15.6.2 Debit card\nHello ____,\n\nWe have received confirmation that your debit card on which you will receive study payments, has been mailed by USPS Priority Mail. It was sent _________ and the tracking number is ____________________________ (click [here](https://tools.usps.com/tracking/) to track). Delivery is expected on ___________.\n\nAttached please find a cardholder information handout. You DO NOT need to fill out or return this handout to study staff. You may register your card following the instructions on this handout. \n\nYour payments will be processed on the ____th of each month by 5pm Central (Chicago) time. You will receive an email from us when payments are loaded on your card, which will include a breakdown of your payment amount.\n\nIf your card is lost or stolen, please contact us directly as soon as possible. If outside of normal business hours, please also contact Hyperwallet Account Services at the number on the handout to deactivate the card immediately. \n\nWe have also attached a Frequently Asked Questions handout from the payment provider. If you have any other questions about setting up your debit card or about payments in general, please don't hesitate to reach out to us at (608) 262-1362.\n\nThank you for being part of the STAR study!\n\nSusan\nSTAR Study Coordinator",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
@@ -1617,8 +1661,8 @@
     "objectID": "staff_scripts.html#adherence-emails",
     "href": "staff_scripts.html#adherence-emails",
     "title": "15  Staff Scripts",
-    "section": "15.3 Adherence emails",
-    "text": "15.3 Adherence emails\nPer JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.\n\n15.3.1 Missing GPS\nSubject: STAR Study: Missing GPS Alert\nHello ____,\n\nOur system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.\n\nIf you'd like to turn it back on &lt;insert instructions for specific OS&gt;\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF\n\n\n15.3.2 Low EMA\nSubject: STAR Study: Missing Daily Survey Notification\nHello _____,\n\nI'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.\n\nIf this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. \n\nThis month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.\n\nIf you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. \n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF",
+    "section": "15.7 Adherence emails",
+    "text": "15.7 Adherence emails\nPer JC we will NOT be discontinuing people who fail to provide GPS or EMA - however, we should let them know when these are detected, just as a reminder about their payment amounts.\n\n15.7.1 Missing GPS\nSubject: STAR Study: Missing GPS Alert\nHello ____,\n\nOur system reports that we haven't received GPS from you since _______. We just wanted to reach out and let you know so you could decide if you wanted us to call you to help get it turned back on. Keeping your GPS turned off won't affect your participation, but turning it back on will earn you a $5 per month bonus.\n\nIf you'd like to turn it back on &lt;insert instructions for specific OS&gt;\n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF\n\n\n15.7.2 Low EMA\nSubject: STAR Study: Missing Daily Survey Notification\nHello _____,\n\nI'm just reaching out to let you know that our system reports that we haven't received a daily survey from you since ______.\n\nIf this is intentional, you don't need to do anything! We understand that not everyone likes completing these surveys, so missing daily surveys won't affect your participation. \n\nThis month, since our system is still not sending reminders, your payment also _won't_ be affected and you will earn full credit for all surveys. Going forward, completing daily surveys earns $1/ per day and up to $20 in bonuses per month.\n\nIf you haven't been getting your daily surveys or are having other issues completing them, please let us know and we would be happy to help you troubleshoot. \n\nThank you for being a part of the STAR Study!\n\n&lt;NAME,&gt;\nSTAR Study STAFF",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
@@ -1628,8 +1672,8 @@
     "objectID": "staff_scripts.html#payment-email",
     "href": "staff_scripts.html#payment-email",
     "title": "15  Staff Scripts",
-    "section": "15.4 Payment email",
-    "text": "15.4 Payment email\nSubject: STAR Study Payment - Month ____\nHello _____,\n\nA payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:\n\n$40 for your consent/intake visit\n$10 for your first bi-monthly survey\n$10 for the one-week check-in visit\n$27 for 27 completed daily surveys\n$7 to cover any daily surveys we missed due to tech issues with our system\n$20 in bonuses for completing more than 12 daily surveys in each half of the month\n$5 in GPS bonuses\n$50 to help cover your cell plan payment\n\nIn total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.\n\nPlease let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!\n\nBest,\nSusan\nSTAR Study Coordinator",
+    "section": "15.8 Payment email",
+    "text": "15.8 Payment email\n\n15.8.1 Notes:\n\nDelete whichever items were not paid in this pay month (reference vs Susan’s post in the participant thread)\nIf participant missed the GPS or EMA bonus, add:\n\nUnfortunately, you did not earn the &lt;daily survey/GPS&gt; bonus this month. To earn this bonus, just &lt;keep your GPS on/complete at least 12 daily surveys every two weeks&gt;.\nSubject: STAR Study Payment - Month ____\nHello _____,\n\nA payment has been requested from Advarra to your [study debit card/direct deposit account]. Over the last month, you earned the following:\n\n$40 for your consent/intake visit\n$10 for your first bi-monthly survey\n$10 for the one-week check-in visit\n$27 for 27 completed daily surveys\n$7 to cover any daily surveys we missed due to tech issues with our system\n$20 in bonuses for completing more than 12 daily surveys in each half of the month\n$5 in GPS bonuses\n$50 to help cover your cell plan payment\n\nIn total, your payment for last month comes to $169. The payment should post by midnight tonight, Central Time.\n\nPlease let me know if you have any questions or concerns about your payment, and thank you so much for being a part of our study!\n\nBest,\nSusan\nSTAR Study Coordinator",
     "crumbs": [
       "SOPS",
       "<span class='chapter-number'>15</span>  <span class='chapter-title'>Staff Scripts</span>"
