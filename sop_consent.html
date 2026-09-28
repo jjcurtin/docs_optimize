@@ -290,21 +290,22 @@ ul.task-list li input[type="checkbox"] {
 <li><a href="https://uwmadison.co1.qualtrics.com/jfe/form/SV_0rNdMAtes65dRYi">RA session form</a></li>
 <li>Their ScreenID to enter in the session form. Also, their name you can write down on a scrap of paper if needed, but it doesn’t get entered anywhere in the form.</li>
 <li>STAR email, to see the subid when the birth data form is submitted</li>
-<li>PRISM, ready to text their consent link</li>
+<li>PRISM, ready to text their <a href="./staff_scripts.html">consent link</a></li>
 <li>Both sets of followMee instructions from <code>S:\optimize\administration\sop</code></li>
-<li>Screenshot from oncore calendar preview with ideal scheduling dates
+<li>Dates for ideal scheduling of next visits
 <ol type="a">
-<li>If you don’t have access to that part of Oncore, just note the dates for the 1 week visit (today + 7 days), 2 month visit (today + 67 days) and 4 month visit (today + 127 days)</li>
+<li>Screenshot from <a href="./oncore.html">Oncore Calendar Preview</a></li>
+<li>If you don’t have access to that part of Oncore, you can calculate the dates in R by running: <code>library('lubridate') |&gt;  today() + days(7)</code> (for the 1 week). Use days(67) for the 2 month and days(127) for the 4 month - however, this won’t automatically skip weekends for you so you’ll need to validate on the STAR calendar.</li>
 </ol></li>
-<li>STAR Calendar so we can schedule their one week and 2 followup visits</li>
-<li>Birth data survey open to data/analysis, to check for their subid once they submit that survey</li>
+<li>STAR Calendar so we can schedule their one week and two followup visits</li>
+<li>Birth data survey open in Qualtrics to data/analysis, to check for their subid once they submit that survey</li>
 </ol>
 <p>Use the session form to guide you through the visit.</p>
 </section>
 <section id="post-session-activities" class="level2" data-number="12.2">
 <h2 data-number="12.2" class="anchored" data-anchor-id="post-session-activities"><span class="header-section-number">12.2</span> Post-session activities</h2>
 <ol type="1">
-<li>Send baseline survey text in PRISM</li>
+<li>Send <a href="./staff_scripts.html">baseline survey text</a> in PRISM</li>
 <li>Make their participant thread. Comment their upcoming visit(s) and any questions/concerns about the session.</li>
 <li>Enter upcoming visit(s) in calendar</li>
 <li>Run <code>scripts\scripts_staff\mak_new_participants.qmd</code>
@@ -324,6 +325,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Print PDFs of their screening, consent, and session form documents from Qualtrics to upload to the appropriate placeholder, and sign-stamp (acknowledge)</li>
 <li>The Session form document should be uploaded over the Consent Process Note placeholder</li>
 </ol></li>
+<li>Once the baseline has been completed, print the PDF and upload to their Visit 1 folder in florence, and sign-stamp (acknowledge)</li>
 </ol>
 
 
