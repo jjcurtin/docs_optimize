@@ -332,6 +332,13 @@ Click through these slides to learn about setting up cycle-based visits for proc
 
 ### Preview the Calendar
 
+1. Go to PC console and select the optimize protocol
+2. On the menu, go to eCRFs/Calendars > Specifications and hit the Calendar item in the left sidebar
+3. Enter "1" for the Arm
+4. Above the calendar display, on the right beside Charge Master Version, hit "Preview Calendar"
+5. Select today's date and hit Preview. It will display the 1 week, 2 month, and 4 month visit dates. Screenshot or just write them down and post them in the screening thread.
+
+
 Before you get too far in associating your procedures with visits or schedules, it is a good idea to use the Preview Calendar feature to confirm your Treatment Visit segments are set up properly
 
 When you multi-select procedures and click Visits/Schedules, the popup will display all visits or schedules as unselected, even if any of the procedures you highlighted have visits or schedules selected on the calendar.

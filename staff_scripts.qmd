@@ -2,6 +2,33 @@
 
 These are text message/email scripts for use in the STAR study
 
+NOTE: Don't try to put in any <enter> or line break spaces in message to be sent by PRISM, PRISM can't handle them.
+
+
+## Visit reminder message
+
+Edit the items in **italics**. 
+
+```html
+_NO_REPLY: Hello, This is a reminder that you have a **consent/onboarding** session scheduled for **tomorrow, June 16, at 2:00 PM Central (Chicago) time**. Your zoom link for the visit is: **<ZOOMLINK>**  This visit should take around 60 minutes and you will receive $40 if you successfully complete the session and enroll. If you need to reschedule for any reason, please call and leave us a message at 608-262-1362. We thank you for your time and look forward to speaking with you. ----- **<YOURNAME>**, STAR Study Team  
+```
+
+## Link to Consent form
+
+```html
+
+_NO_REPLY: Hello, here is the consent form for you to review: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY?screenid=**screenID**
+*
+```
+## Reconsent link (rarely used)
+```html
+_NO_REPLY_: Hello, here is the revised consent form: https://uwmadison.co1.qualtrics.com/jfe/form/SV_2gwLTMnX7WdgEPY&reconsent=true&subid=**SUBID**
+```
+## Baseline/Post-Consent message
+```html
+_NO_REPLY: Thank you for joining the STAR study! Here is your first bi-monthly survey: https://uwmadison.co1.qualtrics.com/jfe/form/SV_6gkdO0ZmIYoTXT0?subid=**<INSERTSUBID>**. If you have any questions about the study, please call and leave us a message at 608-262-1362. We thank you for your time! --- Susan, STAR Study Staff
+```
+
 ## Outside US detected
 
 ```html
@@ -31,7 +58,7 @@ There are 2 handouts to attach for each type of email: see the appropriate subfo
 
 
 
-### Direct deposit
+### Direct deposit email
 
 ```html
 Hello ____,
@@ -53,7 +80,7 @@ STAR Study Coordinator
 
 ```
 
-### Debit card
+### Debit card email
 ```html
 Hello ____,
 
@@ -121,6 +148,15 @@ STAR Study STAFF
 
 ## Payment email
 
+### Notes: 
+* Delete whichever items were not paid in this pay month (reference vs Susan's post in the participant thread)
+* If participant missed the GPS or EMA bonus, add:
+
+```html
+Unfortunately, you did not earn the <daily survey/GPS> bonus this month. To earn this bonus, just <keep your GPS on/complete at least 12 daily surveys every two weeks>.
+```
+
+
 Subject: `STAR Study Payment - Month ____`
 
 ```html
@@ -145,3 +181,11 @@ Best,
 Susan
 STAR Study Coordinator
 ```
+
+## Visit 2 & 4 survey text link
+```html
+_NO_REPLY: Thank you for meeting with me today! Here is the next survey for you: https://uwmadison.co1.qualtrics.com/jfe/form/SV_3w3BqdZl0fPfMa2?subid=**<INSERTSUBID>**.  --- Susan, STAR Study Staff
+```
+
+
+

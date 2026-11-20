@@ -1,0 +1,24 @@
+# Two-month Visit SOP
+
+This SOP outlines conducting the 2-month visit, and post-visit RA tasks.
+
+## Consent Session
+
+Open the following:
+
+1. [RA session form](https://uwmadison.co1.qualtrics.com/jfe/form/SV_0rNdMAtes65dRYi). You only need the subid to enter
+2. TLFB form (paper or qualtrics)
+   a) Run `staff_scipts\chk_lapse_dates.qmd` to get their reported lapses for the TLFB
+3. PRISM, to text the 2-month survey after the visit
+4. STAR calendar, to verify the 4 month visit time is still good for them.
+
+Use the session form to guide you through the visit. 
+
+## Post-session activities
+
+1. Send the [2-month survey text](staff_scripts.qmd) in PRISM
+2. In Oncore, mark the 2 month visit as occurred.
+3. Check them in for the 2 month visit in Advarra payments
+4. Print PDF of the session form documents from Qualtrics to upload to the appropriate placeholder in the Visit 2 folder, and sign-stamp (acknowledge)
+5. Once the 2 month survey has been completed, print the PDF and upload to their Visit 2 folder in florence, and sign-stamp (acknowledge)
+

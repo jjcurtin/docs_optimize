@@ -2,21 +2,6 @@
 
 Remember, all necessary credentials can be retrieved with `get_credentials("resource_name")` - See Susan if issues
 
-TO DO:
-
-* Session form qualtrics is script & SOP for visits
-  - Pre-visit checklist
-  - Consent needs to be revised
-* Install FollowMee instructions
-  - Android
-  - ✓ iOS
-* ✓ Administer FollowMee
-* Post-visit
-   - OnCore
-   - Create GUID
-* PRISM data updates
-* Payment
-* Compliance
 
 
 ## Pre-enrollment SOPs
@@ -26,8 +11,8 @@ TO DO:
 
 ## Visit SOPs
 
-1. Consent/Intake Visit
-2. Midstudy Visit
+1. [Consent/Intake Visit](sop_consent.qmd)
+2. [Midstudy Visit](sop_visit_2m.qmd)
 3. Final Visit & Exit Interview
 4. Rescheduling Instructions
 
@@ -48,19 +33,16 @@ TO DO:
 ## Administration SOPs
 
 1. Oncore
-2. Participant payments
-3. CT oversight
-4. Adherence
+2. [Payment](payments.qmd)
+3. [Adherence](sop_adherence.qmd)
+4. [CT oversight](florence.qmd)
 5. Data integrity
 6. NDA data upload
 
 ## Participant communication SOPs & Templates
 
-1. Onboarding
-2. Tech troubleshootng
-3. Reschedulng
-4. Payment
-5. Adherence
+All partcipant facing communication scripts are under [staff scripts](staff_scripts.qmd)
+
 
 
 ## SOP tech components
@@ -71,11 +53,7 @@ This section lists the required tech actions for each SOP
 1. Send participant the consent form link with their screen_id included in the URL
 2. Completion of the consent form leads to the onboarding form
 3. Completion of the onboarding form leads to the birth pedigree form
-4. Run the new_participant.qmd script
-  * Ask them to confirm their phone number
-  * Ask their EMA times
-  
-  
+4. Post visit, run the `mak_new_participant.qmd` script
 
 
 

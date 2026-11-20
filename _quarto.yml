@@ -25,6 +25,7 @@ book:
         - sop_recruiting.qmd
         - sop_screening.qmd
         - sop_consent.qmd
+        - sop_visit_2m.qmd
         - sop_florence.qmd
         - sop_adherence.qmd
         - staff_scripts.qmd

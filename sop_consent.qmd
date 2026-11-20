@@ -7,20 +7,34 @@ This SOP outlines conducting the consent visit and post-visit RA tasks.
 Open the following:
 
 1. [RA session form](https://uwmadison.co1.qualtrics.com/jfe/form/SV_0rNdMAtes65dRYi)
-2. Their ScreenID to enter in the session form. Name you can write down on a scrap of paper if needed but it doesn't get entered anywhere.
+2. Their ScreenID to enter in the session form. Also, their name you can write down on a scrap of paper if needed, but it doesn't get entered anywhere in the form.
 4. STAR email, to see the subid when the birth data form is submitted
-4. PRISM, ready to text their consent link 
+4. PRISM, ready to text their [consent link](staff_scripts.qmd)
 5. Both sets of followMee instructions from `S:\optimize\administration\sop`
-6. Screenshot from oncore calendar preview with ideal scheduling dates
-7. STAR Calendar so we can schedule their one week and 2 followup visits
-8. Birth data survey open to data/analysis, to check for their subid once they submit that survey
+6. Dates for ideal scheduling of next visits
+   a. Screenshot from [Oncore Calendar Preview](oncore.qmd)
+   b. If you don't have access to that part of Oncore, you can calculate the dates in R by running: `library('lubridate') |>  today() + days(7)` (for the 1 week). Use days(67) for the 2 month and days(127) for the 4 month - however, this won't automatically skip weekends for you so you'll need to validate on the STAR calendar.
+7. STAR Calendar so we can schedule their one week and two followup visits
+8. Birth data survey open in Qualtrics to data/analysis, to check for their subid once they submit that survey
 
-Use the session form to guide you through the visit
+Use the session form to guide you through the visit. 
 
 ## Post-session activities
 
-1. Send baseline survey text
-2. Enter upcoming visits in calendar
-3. Run get_qualtrics.R to pull new consent/birth/onboard data
-4. Run update_participants.R to add them to the randomization CSV, Qualtrics contact list, and create their data files.
-5. Update PRISM with their subid in place of the screenID, and change to On Study.
+1. Send [baseline survey text](staff_scripts.qmd) in PRISM
+2. Make their participant thread. Comment their upcoming visit(s) and any questions/concerns about the session.
+2. Enter upcoming visit(s) in calendar
+3. Run `scripts\scripts_staff\mak_new_participants.qmd` 
+   a. The first chunk which sources R scripts, adds them to the randomization CSV, Qualtrics contact list, PRISM study_participants file, and creates their data files. If you get an error, alert Susan!!
+   b. you can then step through the rest of the chunks one at a time to perform the next steps:
+   c. Enter them in Oncore 
+   d. Enter them in Advarra payments
+   e. Send them the W-9 by email from Docusign
+   f. Check them in for the consent visit so they will get paid
+   g. Make their avoid_places.
+   h. NOTE: Some of the above steps may take a while (for example, you might need to wait about 24 hours between Oncore and them showing up in Advarra, or between entering them in Advarra payments and making sure they have been checked in for the consent visit.) In this case, note in their participant thread what has been done/still needs to be done so we don't lose track
+5. If they asked to be paid on a debit card, tag Susan to prepare and USPS the card.
+6. Create their subject folder in Florence.
+   a. Print PDFs of their screening, consent, and session form documents from Qualtrics to upload to the appropriate placeholder, and sign-stamp (acknowledge)
+   b. The Session form document should be uploaded over the Consent Process Note placeholder
+7. Once the baseline has been completed, print the PDF and upload to their Visit 1 folder in florence, and sign-stamp (acknowledge)
